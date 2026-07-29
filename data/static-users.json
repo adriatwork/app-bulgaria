@@ -1,0 +1,14 @@
+{
+  "viatger1": {
+    "displayName": "Viatger 1",
+    "emoji": "🌻",
+    "salt": "0c5c43f4ee19e5abe6d462987371f23f",
+    "hash": "f968c780e907f6041462c90fc10939a5d25c656c345f134acc39c248f5b7a5a8"
+  },
+  "viatger2": {
+    "displayName": "Viatger 2",
+    "emoji": "🌊",
+    "salt": "f76bb2c7a1d1e0245854dd17252456ab",
+    "hash": "2161b9ad495be74b5177380e8461b705f37f973f7e0ba98b6bf959f68c8ccc31"
+  }
+}

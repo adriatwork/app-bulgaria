@@ -1,0 +1,531 @@
+{
+  "trip": {
+    "title": "Bulgària 2026",
+    "subtitle": "Itinerari de viatge · 3 – 15 d'agost de 2026",
+    "flightOut": "Wizz Air W64406 · Barcelona → Sofia · Arribada 01:35 (matinada del 4 d'agost)",
+    "flightBack": "Wizz Air W64405 · Sofia → Barcelona · Sortida 18:45 (15 d'agost)",
+    "car": "Cotxe de lloguer (Price Carz) · Recollida 4 d'agost 9:00 · Devolució 13 d'agost ~18:00 a l'aeroport",
+    "carPickup": "Poruchik Nedelcho Bonchev 6, Sofia · Sol·licitar pick-up a l'aeroport: +47 519 34 934",
+    "taxis": "Apps de taxi recomanades: TaxiMe o Yellow!",
+    "alternative": "ALTERNATIVA si ens cansem de la costa: Fortalesa de Belogradchik. Problema: està molt al nord-oest i afegiria unes 5-6 hores de cotxe. Caldria sacrificar algun dia de costa."
+  },
+  "days": [
+    {
+      "day": 1,
+      "date": "2026-08-03",
+      "dateLabel": "Dilluns, 3 d'agost",
+      "title": "Arribada a Sofia",
+      "area": "Sofia (aeroport)",
+      "heroImage": "sofia-night",
+      "gallery": ["sofia-night"],
+      "summary": "Vol nocturn cap a Bulgària. Arribem de matinada i dormim al costat de l'aeroport per començar el viatge descansats.",
+      "schedule": [
+        { "moment": "Nit", "plan": "Arribada a l'aeroport de Sofia", "details": "Vol Wizz Air W64406 · Arribada: 01:35 de la matinada del dia 4" }
+      ],
+      "hotel": { "name": "Hotel Ibis Sofia Airport", "address": "Aeroport de Sofia", "notes": "Reservat ✔ · A tocar de la terminal, ideal per arribar tard" },
+      "car": false,
+      "placeInfo": "Sofia és la capital de Bulgària, als peus de la muntanya Vitosha. L'aeroport és a uns 10 km del centre. La moneda és el lev (BGN, ~1,96 BGN = 1 €); molts llocs accepten targeta però va bé portar una mica d'efectiu.",
+      "food": [
+        "Si teniu gana en arribar, els supermercats 24h de l'aeroport tenen banitsa (pasta de full amb formatge sirene): el mos búlgar per excel·lència.",
+        "Aigua: l'aixeta és potable a gairebé tot el país."
+      ],
+      "nearby": [],
+      "tips": [
+        "Bulgària va 1 hora per davant de Barcelona (CEST +1).",
+        "Descarregueu els mapes offline de Bulgària a Google Maps abans de sortir.",
+        "Considereu comprar una eSIM o SIM local (A1, Yettel o Vivacom) per tenir dades tot el viatge."
+      ],
+      "activities": [
+        { "id": "d1-a1", "text": "Facturar i agafar el vol W64406" },
+        { "id": "d1-a2", "text": "Canviar o treure levs (BGN) a l'arribada" },
+        { "id": "d1-a3", "text": "Activar dades mòbils / eSIM" },
+        { "id": "d1-a4", "text": "Check-in a l'Hotel Ibis Sofia Airport" }
+      ]
+    },
+    {
+      "day": 2,
+      "date": "2026-08-04",
+      "dateLabel": "Dimarts, 4 d'agost",
+      "title": "Monestir de Rila i la Santa Cova",
+      "area": "Rila · Sapareva Banya",
+      "heroImage": "rila-monastery",
+      "gallery": ["rila-monastery", "boyana-church", "ivan-rilski-cave"],
+      "summary": "Recollim el cotxe i posem rumb al monument més estimat de Bulgària: el Monestir de Rila, Patrimoni de la UNESCO, amagat entre boscos de muntanya.",
+      "schedule": [
+        { "moment": "Matí", "plan": "Agafar el cotxe de lloguer a l'aeroport", "details": "9:00h · Poruchik Nedelcho Bonchev 6, Sofia (Price Carz). Sol·licitar pick-up a l'aeroport: +47 519 34 934" },
+        { "moment": "Matí", "plan": "Visitar el Monestir de Rila", "details": "2:00h de desplaçament. Valorar passar per l'Església de Boyana, Patrimoni de la UNESCO. Es pot esmorzar a l'Hotel Villa Boyana (esmorzar tradicional)." },
+        { "moment": "Tarda", "plan": "Visitar la Santa Cova de Sant Ivan Rilski", "details": "La tradició diu que passar per la roca estreta «purifica els pecats»." },
+        { "moment": "Nit", "plan": "Dormir a Sapareva Banya", "details": "" }
+      ],
+      "hotel": { "name": "Kavdanski Guesthouse", "address": "1, Geo Milev Str., 2650 Sapareva Banya", "notes": "Reservat ✔" },
+      "car": true,
+      "placeInfo": "El Monestir de Rila (s. X) és el cor espiritual de Bulgària: arcs a ratlles blanques i negres, frescos de colors vius i muntanyes de més de 2.500 m al voltant. La Santa Cova, a uns 4 km, és on va viure l'ermità Sant Ivan Rilski; s'hi entra per un passadís de roca molt estret.",
+      "food": [
+        "Mekitsi: bunyols búlgars acabats de fregir, al forn de darrere del monestir. Imprescindibles!",
+        "Trucha (pastarva): truita de riu a la brasa, l'especialitat dels restaurants de la vall de Rila.",
+        "Iogurt búlgar amb mel i nous: el iogurt aquí és religió (Lactobacillus bulgaricus!)."
+      ],
+      "nearby": [
+        { "name": "La Roca dels Desitjos", "desc": "A ~10 minuts a peu de la Santa Cova. La gent deixa papers escrits amb desitjos a les esquerdes de la muntanya." },
+        { "name": "Església de Boyana (Sofia)", "desc": "Patrimoni UNESCO amb frescos medievals del 1259, de camí sortint de Sofia." },
+        { "name": "Piràmides de terra de Stob", "desc": "Formacions rocoses vermelloses molt curioses, a ~20 min del monestir en cotxe, passeig fàcil d'1 hora." }
+      ],
+      "tips": [
+        "Vestimenta: espatlles i genolls coberts per entrar al monestir i a les esglésies.",
+        "L'entrada al monestir és gratuïta; el museu costa pocs levs.",
+        "Sapareva Banya és famosa pel seu gèiser d'aigua termal a 103 °C, el més calent d'Europa: mireu-lo al centre del poble."
+      ],
+      "activities": [
+        { "id": "d2-a1", "text": "Recollir el cotxe de lloguer (9:00, Price Carz)" },
+        { "id": "d2-a2", "text": "Parada opcional a l'Església de Boyana" },
+        { "id": "d2-a3", "text": "Visitar el Monestir de Rila i els seus frescos" },
+        { "id": "d2-a4", "text": "Tastar les mekitsi del forn de darrere el monestir" },
+        { "id": "d2-a5", "text": "Pujar a la Santa Cova de Sant Ivan Rilski" },
+        { "id": "d2-a6", "text": "Deixar un desig a la Roca dels Desitjos" },
+        { "id": "d2-a7", "text": "Veure el gèiser de Sapareva Banya" }
+      ]
+    },
+    {
+      "day": 3,
+      "date": "2026-08-05",
+      "dateLabel": "Dimecres, 5 d'agost",
+      "title": "Els Set Llacs de Rila",
+      "area": "Rila · Sapareva Banya",
+      "heroImage": "seven-rila-lakes",
+      "gallery": ["seven-rila-lakes", "ivan-rilski-cave"],
+      "summary": "L'excursió estrella del viatge: un circ glacial amb set llacs encadenats a més de 2.100 metres d'altitud.",
+      "schedule": [
+        { "moment": "Tot el dia", "plan": "Excursió als 7 llacs de Rila", "details": "Sapareva Banya → telecadira de Panichishte: 20-25 min. Intentar començar abans de les 9:00; a la tarda hi ha tempestes sovint. Cal portar: impermeable, aigua i menjar." },
+        { "moment": "Nit", "plan": "Dormir a Sapareva Banya", "details": "" }
+      ],
+      "hotel": { "name": "Kavdanski Guesthouse", "address": "1, Geo Milev Str., 2650 Sapareva Banya", "notes": "Reservat ✔ · 2a nit" },
+      "car": true,
+      "placeInfo": "Els Set Llacs de Rila són llacs d'origen glacial situats entre 2.100 i 2.500 m. Cada llac té nom propi segons la seva forma: l'Ull, el Ronyó, el Bessó, el Trèvol, el Peix, el Llac de Baix i la Llàgrima (el més alt i cristal·lí). La ruta circular clàssica des de dalt del telecadira dura unes 4-5 hores.",
+      "food": [
+        "Piquem amunt: entrepans i fruita comprats al poble (a dalt només hi ha un refugi bàsic).",
+        "En baixar: kavarma (estofat de carn i verdures en cassola de fang) en una mehana de Sapareva Banya.",
+        "Xopska salata: l'amanida nacional amb tomàquet, cogombre i formatge sirene ratllat."
+      ],
+      "nearby": [
+        { "name": "Mirador del llac Llàgrima", "desc": "Si les cames aguanten, pugeu fins al punt més alt del circuit: la vista dels 7 llacs alhora és la foto del viatge." },
+        { "name": "Banys termals de Sapareva Banya", "desc": "Perfectes per relaxar els músculs en baixar: piscines termals exteriors (Aqua Club Kotvata o Germanea)." }
+      ],
+      "tips": [
+        "Pàrquing de l'excursió guardat al mapa (enllaç al full de càlcul original): Parkplatz für 7-Seen-Wanderung.",
+        "El telecadira triga ~25 min per trajecte; porteu jaqueta fins i tot a l'agost.",
+        "Protecció solar imprescindible: a 2.400 m el sol pica fort."
+      ],
+      "activities": [
+        { "id": "d3-a1", "text": "Sortir abans de les 9:00 cap a Panichishte" },
+        { "id": "d3-a2", "text": "Pujar amb el telecadira" },
+        { "id": "d3-a3", "text": "Completar el circuit dels 7 llacs" },
+        { "id": "d3-a4", "text": "Foto panoràmica des del mirador de la Llàgrima" },
+        { "id": "d3-a5", "text": "Bany termal per recuperar les cames" },
+        { "id": "d3-a6", "text": "Sopar kavarma en una mehana" }
+      ]
+    },
+    {
+      "day": 4,
+      "date": "2026-08-06",
+      "dateLabel": "Dijous, 6 d'agost",
+      "title": "Parc Nacional de Pirin i nit de spa a Velingrad",
+      "area": "Pirin · Velingrad",
+      "heroImage": "pirin",
+      "gallery": ["pirin", "bansko", "velingrad"],
+      "summary": "Dia de muntanya al Pirin, Patrimoni de la UNESCO, i recompensa final: nit de luxe i balneari a la capital de l'spa dels Balcans.",
+      "schedule": [
+        { "moment": "Matí", "plan": "Sortida cap al Parc de Pirin", "details": "1:30h de desplaçament" },
+        { "moment": "Tot el dia", "plan": "Excursió al Pirin", "details": "Ruta: ca.wikiloc.com/rutes-senderisme/parque-nacional-de-pirin-bulgaria-28099144 · A l'agost hi ha molta gent, cal aparcar d'hora." },
+        { "moment": "Tarda", "plan": "Sortida cap a Velingrad", "details": "2:30h de desplaçament" },
+        { "moment": "Nit", "plan": "Dormir a Velingrad", "details": "Nit de luxe i balneari 🛁" }
+      ],
+      "hotel": { "name": "Park Hotel and Spa Vella Hills", "address": "ul. Miladin Dosev 24, Chepino, 4600 Velingrad", "notes": "Reservat ✔ · Cancel·lació gratis abans del 5 d'agost · Esmorzar inclòs · Pagament a l'allotjament" },
+      "car": true,
+      "placeInfo": "El Parc Nacional de Pirin és Patrimoni de la UNESCO: cims de granit com el Vihren (2.914 m), llacs glacials i el pi de Baikushev, un dels arbres més vells d'Europa (1.300 anys). Velingrad, a les Rhodopes occidentals, presumeix de més de 80 fonts termals.",
+      "food": [
+        "Kapama: el plat estrella de Bansko, capes de carn, arròs i xucrut cuites hores en olla de fang.",
+        "Chomlek: estofat de vedella amb patates típic de la zona de Pirin.",
+        "A Velingrad: sopar tranquil a l'hotel i, si ve de gust, un got de rakia (aiguardent local) com a digestiu."
+      ],
+      "nearby": [
+        { "name": "Bansko (nucli antic)", "desc": "Tot i ser famós per l'esquí, el seu nucli històric té cases-fortalesa de pedra molt maques i és un bon lloc per dinar en una mehana (taverna tradicional). Us agafa de camí!" },
+        { "name": "Llac Kleptuza (Velingrad)", "desc": "El llac karstic més cabalós de Bulgària, amb barquetes i passeig arbrat, a 10 min de l'hotel." },
+        { "name": "Parc de les Óssos Ballarins (Belitsa)", "desc": "Santuari d'óssos rescatats, entre Bansko i Velingrad, si sobra temps." }
+      ],
+      "tips": [
+        "Aparqueu d'hora a la cabana Vihren: a l'agost el pàrquing s'omple aviat.",
+        "Porteu banyador a mà per l'spa de l'hotel!",
+        "La carretera Bansko–Velingrad per les Rhodopes és revirada però preciosa: sense presses."
+      ],
+      "activities": [
+        { "id": "d4-a1", "text": "Matinar per aparcar al Pirin" },
+        { "id": "d4-a2", "text": "Excursió pel Parc Nacional de Pirin" },
+        { "id": "d4-a3", "text": "Dinar kapama en una mehana de Bansko" },
+        { "id": "d4-a4", "text": "Arribar a Velingrad i fer el check-in" },
+        { "id": "d4-a5", "text": "Sessió de balneari a l'hotel" },
+        { "id": "d4-a6", "text": "Passeig pel llac Kleptuza (si hi ha temps)" }
+      ]
+    },
+    {
+      "day": 5,
+      "date": "2026-08-07",
+      "dateLabel": "Divendres, 7 d'agost",
+      "title": "Cap a Plovdiv, la ciutat eterna",
+      "area": "Plovdiv",
+      "heroImage": "plovdiv-theatre",
+      "gallery": ["plovdiv-theatre", "plovdiv-oldtown", "shiroka-laka", "bachkovo", "asen-fortress"],
+      "summary": "Ruta per les Rhodopes amb parades de postal i arribada a una de les ciutats habitades més antigues d'Europa.",
+      "schedule": [
+        { "moment": "Matí", "plan": "Sortida cap a Plovdiv", "details": "1:30h de desplaçament. Valorar passar de camí per: Shiroka Laka (poblet), Monestir de Bachkovo i Fortalesa d'Asenova." },
+        { "moment": "Tot el dia", "plan": "Visitar Plovdiv", "details": "Una de les ciutats més antigues d'Europa. Imprescindibles: Ancient Theatre of Philippopolis, Barri Vell, cases del Bulgarian Revival, carrer Kapana (cafès i ambient)." },
+        { "moment": "Nit", "plan": "Dormir a Plovdiv", "details": "Plovdiv és molt agradable de nit. Val la pena sopar i passejar tard." }
+      ],
+      "hotel": { "name": "Vesi's Rooms", "address": "6 ulitsa Ladzhene, Plovdiv Center, 4000 Plovdiv", "notes": "Reservat ✔ · Cancel·lació gratis abans del 6 d'agost" },
+      "car": true,
+      "placeInfo": "Plovdiv (l'antiga Filipòpolis) té més de 6.000 anys d'història: teatre romà encara en ús, estadi romà sota el carrer principal, i un barri vell ple de cases de colors del Renaixement búlgar. El barri de Kapana («la trampa») és el racó creatiu, ple de cafès, tallers i murals.",
+      "food": [
+        "Katak: crema de formatge i pebrot picant per sucar pa, típica de la zona.",
+        "Sach: carn i verdures servides en una planxa de fang roent, per compartir.",
+        "Vins de la Vall Tràcia: Plovdiv és zona de vi Mavrud, demaneu-ne una copa!",
+        "Per esmorzar de camí: patatnik (pastís de patata i formatge de les Rhodopes) a Shiroka Laka."
+      ],
+      "nearby": [
+        { "name": "Shiroka Laka", "desc": "Poblet de postal de les Rhodopes amb cases blanques de teulada de pedra i tradició musical." },
+        { "name": "Monestir de Bachkovo", "desc": "El segon monestir més gran del país (s. XI), famós pels frescos i el mercadet del camí." },
+        { "name": "Fortalesa d'Asenova", "desc": "Església-fortalesa medieval penjada sobre un congost espectacular, a 2 min de la carretera." },
+        { "name": "Nebet Tepe (Plovdiv)", "desc": "El turó amb ruïnes tràcies i la millor posta de sol sobre la ciutat." }
+      ],
+      "tips": [
+        "El teatre romà de nit, il·luminat, és màgic: passeu-hi després de sopar.",
+        "Kapana s'omple divendres al vespre: perfecte per fer una cervesa artesana búlgara.",
+        "Compte amb les llambordes del barri vell: calçat còmode."
+      ],
+      "activities": [
+        { "id": "d5-a1", "text": "Parada a Shiroka Laka" },
+        { "id": "d5-a2", "text": "Visitar el Monestir de Bachkovo" },
+        { "id": "d5-a3", "text": "Enfilar-se a la Fortalesa d'Asenova" },
+        { "id": "d5-a4", "text": "Teatre romà de Filipòpolis" },
+        { "id": "d5-a5", "text": "Passejar pel Barri Vell i les cases del Revival" },
+        { "id": "d5-a6", "text": "Cafè o cervesa al barri de Kapana" },
+        { "id": "d5-a7", "text": "Posta de sol des de Nebet Tepe" },
+        { "id": "d5-a8", "text": "Tastar vi Mavrud amb el sopar" }
+      ]
+    },
+    {
+      "day": 6,
+      "date": "2026-08-08",
+      "dateLabel": "Dissabte, 8 d'agost",
+      "title": "Rumb al Mar Negre: Nessebar",
+      "area": "Nessebar · Sunny Beach",
+      "heroImage": "nessebar",
+      "gallery": ["nessebar", "sunny-beach"],
+      "summary": "Deixem la Bulgària interior i arribem al Mar Negre: Nessebar, la perla de la costa, amb 3.000 anys d'història en una petita península.",
+      "schedule": [
+        { "moment": "Matí", "plan": "Marxar cap a Nessebar", "details": "2:50h de desplaçament" },
+        { "moment": "Tarda", "plan": "Visitar Nessebar", "details": "Imprescindibles: muralles, esglésies bizantines i passeig marítim al vespre." },
+        { "moment": "Nit", "plan": "Dormir a Sunny Beach (Nessebar)", "details": "" }
+      ],
+      "hotel": { "name": "Continental Park Hotel", "address": "First Line, Sunny Beach, 8240 Sunny Beach", "notes": "Reservat ✔ · Primera línia de mar" },
+      "car": true,
+      "placeInfo": "Nessebar és Patrimoni de la UNESCO: una península diminuta unida a terra per un istme, amb muralles tràcies, més de 40 esglésies bizantines (moltes en ruïna romàntica) i cases de fusta del s. XIX penjades sobre el mar. Sunny Beach, al costat, és la platja gran per remullar-se.",
+      "food": [
+        "Peix fresc a la brasa al port vell de Nessebar: orada, llobarro o safrid (sorell fregit).",
+        "Midi (musclos del Mar Negre) amb all i vi blanc.",
+        "Gelat i passeig: el vespre al passeig marítim és sagrat."
+      ],
+      "nearby": [
+        { "name": "Stara Zagora (parada de camí)", "desc": "A mig camí entre Plovdiv i Nessebar: excel·lents mosaics romans. O passar de llarg i aprofitar la tarda de platja." },
+        { "name": "Platja de Sunny Beach", "desc": "8 km de sorra fina davant de l'hotel: capbussada obligatòria al Mar Negre!" }
+      ],
+      "tips": [
+        "Aparcar dins del nucli antic de Nessebar és difícil: deixeu el cotxe al pàrquing de l'entrada de la península.",
+        "L'entrada combinada a les esglésies-museu surt més a compte que pagar-les per separat.",
+        "El Mar Negre gairebé no té marees ni meduses: bany tranquil." 
+      ],
+      "activities": [
+        { "id": "d6-a1", "text": "Parada opcional als mosaics de Stara Zagora" },
+        { "id": "d6-a2", "text": "Passejar per les muralles de Nessebar" },
+        { "id": "d6-a3", "text": "Visitar les esglésies bizantines" },
+        { "id": "d6-a4", "text": "Primer bany al Mar Negre" },
+        { "id": "d6-a5", "text": "Sopar de peix al port vell" },
+        { "id": "d6-a6", "text": "Passeig marítim al vespre" }
+      ]
+    },
+    {
+      "day": 7,
+      "date": "2026-08-09",
+      "dateLabel": "Diumenge, 9 d'agost",
+      "title": "Nessebar al matí i pujada a Varna",
+      "area": "Nessebar → Varna",
+      "heroImage": "cape-emine",
+      "gallery": ["cape-emine", "nessebar", "sunny-beach"],
+      "summary": "Últim matí a Nessebar amb calma i ruta costanera cap al nord fins a Varna, la capital marítima de Bulgària.",
+      "schedule": [
+        { "moment": "Matí", "plan": "Visitar Nessebar (segona volta)", "details": "Racons que quedessin pendents, bany o compres al nucli antic." },
+        { "moment": "Tarda", "plan": "Sortida cap a Varna", "details": "2:00h de desplaçament. Opció interessant de camí: Cap Emine." },
+        { "moment": "Nit", "plan": "Dormir a Varna", "details": "" }
+      ],
+      "hotel": { "name": "Varna Hostel (Варна Хостел)", "address": "ul. Krali Marko 23, 3r pis, ap. 14, 9000 Varna", "notes": "Reservat ✔" },
+      "car": true,
+      "placeInfo": "El Cap Emine és el punt on la serralada dels Balcans (Stara Planina) mor literalment al mar: penya-segats salvatges, un far solitari i el punt que separa oficialment la costa nord i sud de Bulgària. Varna és la tercera ciutat del país, amb port, platja urbana i molta vida.",
+      "food": [
+        "Esmorzar a Nessebar: banitsa calenta i boza (beguda fermentada de mill... experiència curiosa!).",
+        "A Varna: tsatsa (peixet fregit estil sonso) amb una birra Kamenitza o Zagorka a qualsevol xiringuito.",
+        "Rachenitsa de gambes del Mar Negre si trobem una bona taverna al port."
+      ],
+      "nearby": [
+        { "name": "Cap Emine", "desc": "Desviament de ~30 min per pista: far, penya-segats i el final simbòlic de la ruta de senderisme Kom-Emine que travessa tot el país." },
+        { "name": "Irakli Beach", "desc": "Platja verge i tranquil·la just al sud del Cap Emine, per una capbussada sense gent." },
+        { "name": "Byala", "desc": "Poble costaner amb penya-segats blancs de camí a Varna." }
+      ],
+      "tips": [
+        "La pista del Cap Emine és de terra: aneu a poc a poc amb el cotxe de lloguer.",
+        "Diumenge a Varna hi ha ambient al Sea Garden fins tard: primer contacte perfecte amb la ciutat."
+      ],
+      "activities": [
+        { "id": "d7-a1", "text": "Últim tomb pel nucli antic de Nessebar" },
+        { "id": "d7-a2", "text": "Desviament al Cap Emine" },
+        { "id": "d7-a3", "text": "Bany a Irakli Beach (si el cos ho demana)" },
+        { "id": "d7-a4", "text": "Check-in a Varna" },
+        { "id": "d7-a5", "text": "Tsatsa i cervesa vora el mar" }
+      ]
+    },
+    {
+      "day": 8,
+      "date": "2026-08-10",
+      "dateLabel": "Dilluns, 10 d'agost",
+      "title": "Varna, la capital del mar",
+      "area": "Varna",
+      "heroImage": "varna-cathedral",
+      "gallery": ["varna-cathedral", "varna-seagarden"],
+      "summary": "Dia sencer per gaudir de Varna: jardins vora el mar, catedral daurada, termes romanes i l'or més antic del món.",
+      "schedule": [
+        { "moment": "Tot el dia", "plan": "Visitar Varna", "details": "Imprescindibles: Sea Garden, Catedral de Varna i Banys romans." },
+        { "moment": "Nit", "plan": "Dormir a Varna", "details": "" }
+      ],
+      "hotel": { "name": "Varna Hostel (Варна Хостел)", "address": "ul. Krali Marko 23, 3r pis, ap. 14, 9000 Varna", "notes": "Reservat ✔ · 2a nit" },
+      "car": true,
+      "placeInfo": "Varna combina platja urbana i 2.000 anys d'història: les Termes Romanes són de les més grans dels Balcans, la Catedral de la Dormició llueix cúpules daurades, i el Museu Arqueològic guarda l'or de la necròpolis de Varna, l'or treballat més antic del món (4.600 aC!).",
+      "food": [
+        "Mussaka búlgara (amb patata en lloc d'albergínia) en un menjador tradicional.",
+        "Tarator: sopa freda de iogurt, cogombre i anet, perfecta per la calor d'agost.",
+        "Palachinki (creps) dolces per berenar al Sea Garden."
+      ],
+      "nearby": [
+        { "name": "Museu Arqueològic", "desc": "L'or de Varna: 6.000 peces d'or de fa 6.600 anys. Val molt la pena." },
+        { "name": "Monestir d'Aladzha", "desc": "Monestir rupestre excavat en un penya-segat, a 15 km al nord." },
+        { "name": "El Bosc de Pedra (Pobiti Kamani)", "desc": "Columnes naturals de pedra de 50 milions d'anys en un paisatge gairebé desèrtic, a 20 min a l'oest." }
+      ],
+      "tips": [
+        "El Sea Garden és enorme: llogueu bicis o patinets per recórrer-lo.",
+        "Els banys romans tanquen aviat (~17h): aneu-hi al matí.",
+        "El pont-passarel·la del port al capvespre té les millors vistes de la badia."
+      ],
+      "activities": [
+        { "id": "d8-a1", "text": "Passeig (o bici) pel Sea Garden" },
+        { "id": "d8-a2", "text": "Catedral de la Dormició" },
+        { "id": "d8-a3", "text": "Termes romanes de Varna" },
+        { "id": "d8-a4", "text": "Museu Arqueològic i l'or de Varna" },
+        { "id": "d8-a5", "text": "Bany a la platja urbana" },
+        { "id": "d8-a6", "text": "Tarator + mussaka de dinar" }
+      ]
+    },
+    {
+      "day": 9,
+      "date": "2026-08-11",
+      "dateLabel": "Dimarts, 11 d'agost",
+      "title": "Cap a Veliko Tarnovo, la ciutat dels tsars",
+      "area": "Veliko Tarnovo",
+      "heroImage": "veliko-tarnovo",
+      "gallery": ["veliko-tarnovo", "madara-rider", "hotnitsa"],
+      "summary": "Deixem la costa i entrem a la Bulgària medieval: el Cavaller de Madara i la ciutat més bonica del país, penjada sobre el riu Yantra.",
+      "schedule": [
+        { "moment": "Matí", "plan": "Sortida cap a Veliko Tarnovo", "details": "Visites de camí: Cavall de Madara, relleu medieval excavat a la roca (UNESCO)." },
+        { "moment": "Tarda", "plan": "Visitar Veliko Tarnovo", "details": "Probablement la ciutat més bonica del país. Imprescindibles: Fortalesa de Tsarevets, carrer Samovodska Charshia i els miradors del riu." },
+        { "moment": "Nit", "plan": "Dormir a Veliko Tarnovo", "details": "⚠️ Hotel pendent de reservar!" }
+      ],
+      "hotel": { "name": "Pendent de reservar", "address": "Veliko Tarnovo", "notes": "⚠️ Encara no tenim allotjament per aquesta nit — buscar-ne un amb vistes al riu Yantra!" },
+      "car": true,
+      "placeInfo": "Veliko Tarnovo va ser la capital del Segon Imperi Búlgar (1185–1393). La fortalesa de Tsarevets corona la ciutat, i les cases s'amunteguen en terrasses sobre els meandres del riu Yantra. El carrer artesà Samovodska Charshia conserva tallers de ferrers, terrissers i pastissers.",
+      "food": [
+        "Kebapche i kyufte a la brasa amb mostassa local, en una mehana amb terrassa sobre el riu.",
+        "Gorna Oryahovitsa sudzhuk: embotit local amb denominació protegida.",
+        "Dolços artesans i melmelada de rosa als obradors de Samovodska Charshia."
+      ],
+      "nearby": [
+        { "name": "Cavaller de Madara", "desc": "Relleu del s. VIII esculpit a 23 m d'alçada en un penya-segat, Patrimoni UNESCO. Us agafa de camí des de Varna." },
+        { "name": "Cascades de Hotnitsa", "desc": "A ~20 min abans d'arribar a Veliko Tarnovo: cascada i sender ecològic amb passarel·les. Refrescant!" },
+        { "name": "Arbanasi", "desc": "Poble històric a 4 km, amb cases-fortalesa del s. XVII i l'església de la Nativitat plena de frescos." }
+      ],
+      "tips": [
+        "Si hi ha sort amb el calendari, a la nit fan l'espectacle de llums i so sobre Tsarevets: pregunteu a l'hotel.",
+        "El mirador de l'estàtua dels Assènides (Asenevtsi) té la millor panoràmica de la ciutat.",
+        "Reservar hotel per aquesta nit com més aviat millor!"
+      ],
+      "activities": [
+        { "id": "d9-a1", "text": "Reservar allotjament per aquesta nit!" },
+        { "id": "d9-a2", "text": "Parada al Cavaller de Madara" },
+        { "id": "d9-a3", "text": "Cascades de Hotnitsa o Arbanasi" },
+        { "id": "d9-a4", "text": "Fortalesa de Tsarevets" },
+        { "id": "d9-a5", "text": "Compres al carrer Samovodska Charshia" },
+        { "id": "d9-a6", "text": "Mirador dels Assènides al capvespre" }
+      ]
+    },
+    {
+      "day": 10,
+      "date": "2026-08-12",
+      "dateLabel": "Dimecres, 12 d'agost",
+      "title": "Buzludzha i Koprivshtitsa",
+      "area": "Buzludzha · Koprivshtitsa",
+      "heroImage": "buzludzha",
+      "gallery": ["buzludzha", "shipka-church", "koprivshtitsa"],
+      "summary": "El dia més cinematogràfic: l'OVNI comunista abandonat del Balcà central i el poble-museu més autèntic de Bulgària.",
+      "schedule": [
+        { "moment": "Matí", "plan": "Visitar el Monument de Buzludzha", "details": "1:45h de desplaçament" },
+        { "moment": "Tarda", "plan": "Visitar Koprivshtitsa", "details": "2:30h de desplaçament. Poble històric molt autèntic." },
+        { "moment": "Nit", "plan": "Nit prop de Koprivshtitsa", "details": "" }
+      ],
+      "hotel": { "name": "Guest rooms Colorit", "address": "22 Hadzhi Nencho Palaveev str., 2077 Koprivshtitsa", "notes": "Reservat ✔ · Cancel·lació fins al 10 d'agost · Es paga allà" },
+      "car": true,
+      "placeInfo": "Buzludzha és l'antiga casa-monument del Partit Comunista Búlgar (1981), un plat volador de formigó abandonat al cim d'una muntanya de 1.432 m. No es pot entrar (està en restauració), però l'exterior i les vistes són úniques. Koprivshtitsa és un poble-museu amb cases de colors del s. XIX, bressol de la revolta d'abril de 1876.",
+      "food": [
+        "Shkembe chorba per als valents (sopa de tripa, el remei búlgar per excel·lència) o bob chorba (sopa de mongetes) per als altres.",
+        "A Koprivshtitsa: lukanka (embotit curat) i formatges de muntanya en una mehana amb jardí.",
+        "Mel i melmelades casolanes de les parades del poble."
+      ],
+      "nearby": [
+        { "name": "Pas de Shipka i Església Memorial", "desc": "Per pujar al monument passareu pel Pas de Shipka. No us perdeu l'Església Memorial de Shipka, amb cúpules daurades brillants enmig del bosc: sembla un conte de fades rus." },
+        { "name": "Kazanlak i la Vall de les Roses", "desc": "Als peus de Buzludzha: tomba tràcia UNESCO i museu de l'oli de rosa." },
+        { "name": "Monument de la Llibertat (Shipka)", "desc": "Torre commemorativa al cim del pas, amb 894 esglaons i vistes èpiques." }
+      ],
+      "tips": [
+        "La carretera final a Buzludzha és estreta; a dalt hi fa vent fins i tot a l'agost.",
+        "Les cases-museu de Koprivshtitsa tenen entrada combinada (6 cases per un preu únic).",
+        "Koprivshtitsa de nit, amb els fanals i el silenci, és un viatge en el temps: sortiu a passejar després de sopar."
+      ],
+      "activities": [
+        { "id": "d10-a1", "text": "Foto amb l'OVNI de Buzludzha" },
+        { "id": "d10-a2", "text": "Església Memorial de Shipka" },
+        { "id": "d10-a3", "text": "Arribar a Koprivshtitsa i check-in" },
+        { "id": "d10-a4", "text": "Ruta per les cases-museu de colors" },
+        { "id": "d10-a5", "text": "Sopar en una mehana amb jardí" },
+        { "id": "d10-a6", "text": "Passeig nocturn pel poble" }
+      ]
+    },
+    {
+      "day": 11,
+      "date": "2026-08-13",
+      "dateLabel": "Dijous, 13 d'agost",
+      "title": "Tornada a Sofia i adéu al cotxe",
+      "area": "Koprivshtitsa → Sofia",
+      "heroImage": "sofia-vitosha",
+      "gallery": ["koprivshtitsa", "sofia-vitosha"],
+      "summary": "Últim matí de poble, tornada a la capital, adéu al cotxe i primeres passes pel centre de Sofia.",
+      "schedule": [
+        { "moment": "Matí", "plan": "Últim passeig per Koprivshtitsa", "details": "Esmorzar amb calma i acabar les cases-museu pendents." },
+        { "moment": "Tarda", "plan": "Sortida cap a Sofia", "details": "1:45h–2:00h de desplaçament. Retornar el cotxe a l'aeroport (~18:00) i anar al centre." },
+        { "moment": "Nit", "plan": "Dormir a Sofia", "details": "Primer vespre al centre de la capital." }
+      ],
+      "hotel": { "name": "Apartment SOFIA Center", "address": "14 ulitsa Damyan Gruev, 1606 Sofia", "notes": "Reservat ✔ · Cancel·lació gratis abans del 5 d'agost" },
+      "car": true,
+      "placeInfo": "Sofia és una capital còmoda i caminable: el centre concentra ruïnes romanes de Serdica, esglésies de tres mil·lennis, mercats i el bulevard Vitosha per passejar amb la muntanya de fons.",
+      "food": [
+        "Sopar de celebració «hem tornat el cotxe sencers»: restaurant tradicional tipus Hadjidraganov's Houses o similar al centre.",
+        "Shopska salata + skara (graellada búlgara) + rakia: el menú clàssic.",
+        "Un vespre de gelat passejant pel bulevard Vitosha."
+      ],
+      "nearby": [
+        { "name": "Bulevard Vitosha", "desc": "L'artèria de vianants de Sofia, amb terrasses i la muntanya Vitosha tancant la perspectiva." },
+        { "name": "Ruïnes de Serdica", "desc": "L'antiga ciutat romana, visible sota les places del centre, il·luminada de nit." }
+      ],
+      "tips": [
+        "Ompliu el dipòsit abans de tornar el cotxe (gasolineres a l'avinguda Brussels, prop de l'aeroport).",
+        "Feu fotos del cotxe en tornar-lo (per si de cas amb la fiança).",
+        "De l'aeroport al centre: metro línia M4, ~20 min i molt barat, o TaxiMe/Yellow!."
+      ],
+      "activities": [
+        { "id": "d11-a1", "text": "Últim tomb i esmorzar a Koprivshtitsa" },
+        { "id": "d11-a2", "text": "Omplir el dipòsit del cotxe" },
+        { "id": "d11-a3", "text": "Tornar el cotxe a l'aeroport (~18:00)" },
+        { "id": "d11-a4", "text": "Check-in a l'apartament del centre" },
+        { "id": "d11-a5", "text": "Passeig i sopar pel bulevard Vitosha" }
+      ]
+    },
+    {
+      "day": 12,
+      "date": "2026-08-14",
+      "dateLabel": "Divendres, 14 d'agost",
+      "title": "Sofia a fons",
+      "area": "Sofia",
+      "heroImage": "sofia-nevsky",
+      "gallery": ["sofia-nevsky", "sofia-ivan-vazov", "boyana-church"],
+      "summary": "Dia sencer per descobrir la capital amb el free tour reservat: catedrals daurades, ruïnes romanes i cafès amb ànima.",
+      "schedule": [
+        { "moment": "Tot el dia", "plan": "Visitar Sofia", "details": "Free Tour (ja reservat ✔)." },
+        { "moment": "Nit", "plan": "Dormir a Sofia", "details": "" }
+      ],
+      "hotel": { "name": "Apartment SOFIA Center", "address": "14 ulitsa Damyan Gruev, 1606 Sofia", "notes": "Reservat ✔ · 2a nit" },
+      "car": false,
+      "placeInfo": "Els imprescindibles de Sofia: la catedral Alexander Nevski (una de les ortodoxes més grans del món), la rotonda de Sant Jordi (s. IV) amagada en un pati, la basílica de Santa Sofia que dona nom a la ciutat, el Teatre Nacional Ivan Vazov, i el «quadrilàter de la tolerància»: església, mesquita, sinagoga i catedral catòlica a 300 metres.",
+      "food": [
+        "Esmorzar de banitsa + boza o airan en una fleca de barri.",
+        "Mercat Central (Tsentralni Hali) i Mercat de les Dones per comprar espècies i records comestibles.",
+        "Sopar al barri de Kvartal o als voltants del bulevard Vitosha: escena gastro moderna búlgara."
+      ],
+      "nearby": [
+        { "name": "Muntanya Vitosha", "desc": "Si sobren energies: telecabina fins a 1.800 m amb vistes de tota la ciutat (o deixar-ho per l'endemà al matí)." },
+        { "name": "Banys Minerals Centrals", "desc": "L'edifici més bonic de Sofia: ara museu de la ciutat. Ompliu una ampolla a les fonts d'aigua termal públiques del costat!" }
+      ],
+      "tips": [
+        "El free tour surt normalment del Palau de Justícia: confirmeu hora i punt de trobada.",
+        "Diumenge... no! Divendres: les esglésies estan obertes i amb menys cua al matí.",
+        "Al Nevski, baixeu a la cripta: té la millor col·lecció d'icones del país."
+      ],
+      "activities": [
+        { "id": "d12-a1", "text": "Free tour per Sofia (reservat)" },
+        { "id": "d12-a2", "text": "Catedral Alexander Nevski i cripta" },
+        { "id": "d12-a3", "text": "Rotonda de Sant Jordi i ruïnes de Serdica" },
+        { "id": "d12-a4", "text": "Omplir ampolla a les fonts termals públiques" },
+        { "id": "d12-a5", "text": "Mercat Central i compres comestibles" },
+        { "id": "d12-a6", "text": "Teatre Ivan Vazov i jardí de la ciutat" }
+      ]
+    },
+    {
+      "day": 13,
+      "date": "2026-08-15",
+      "dateLabel": "Dissabte, 15 d'agost",
+      "title": "Últim matí i tornada a casa",
+      "area": "Sofia → Barcelona",
+      "heroImage": "sofia-ivan-vazov",
+      "gallery": ["sofia-ivan-vazov", "sofia-night"],
+      "summary": "Compres d'última hora, últim cafè búlgar i cap a l'aeroport. Довиждане, България! (Adéu, Bulgària!)",
+      "schedule": [
+        { "moment": "Matí", "plan": "Última visita a Sofia", "details": "Compres d'última hora." },
+        { "moment": "Tarda", "plan": "Tornada a l'aeroport de Barcelona", "details": "Wizz Air W64405 · Hora de sortida: 18:45" }
+      ],
+      "hotel": { "name": "— (nit a l'avió/casa)", "address": "", "notes": "Check-out de l'Apartment SOFIA Center" },
+      "car": false,
+      "placeInfo": "Últimes hores per als records: oli i cosmètica de rosa de la Vall de les Roses, un pot de lyutenitsa (confitura de pebrot i tomàquet), vi Mavrud, rakia i llaminadures de iogurt búlgar. Tot es troba al centre o al Mercat Central.",
+      "food": [
+        "Últim esmorzar: mekitsi amb formatge sirene i melmelada, com el primer dia però amb nostàlgia.",
+        "Comprar lyutenitsa, oli de rosa i rakia per endur (a la maleta facturada!)."
+      ],
+      "nearby": [
+        { "name": "Vitosha Boulevard", "desc": "Última passejada i cafè amb la muntanya de fons." },
+        { "name": "Llibreria/souvenirs de Shishman", "desc": "El carrer Tsar Shishman té botiguetes locals més autèntiques que les de souvenirs clàssiques." }
+      ],
+      "tips": [
+        "Sortiu cap a l'aeroport 3h abans (15:45): metro M4 directe o taxi.",
+        "Recordeu: líquids (rakia, oli de rosa) a la maleta facturada.",
+        "Repassar l'apartament abans del check-out: carregadors i endolls!"
+      ],
+      "activities": [
+        { "id": "d13-a1", "text": "Compres d'última hora (records i menjar)" },
+        { "id": "d13-a2", "text": "Últim cafè al bulevard Vitosha" },
+        { "id": "d13-a3", "text": "Check-out i repassar l'apartament" },
+        { "id": "d13-a4", "text": "Arribar a l'aeroport a les 15:45" },
+        { "id": "d13-a5", "text": "Vol W64405 cap a Barcelona (18:45)" }
+      ]
+    }
+  ]
+}

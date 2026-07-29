@@ -1,0 +1,19 @@
+{
+  "name": "bulgaria-trip-app",
+  "version": "1.0.0",
+  "description": "App de viatge a Bulgària - Agost 2026. Itinerari diari, diari personal i llistes d'activitats per a dos viatgers.",
+  "main": "server/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server/server.js",
+    "set-password": "node server/set-password.js",
+    "set-static-password": "node server/set-static-password.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "license": "MIT"
+}

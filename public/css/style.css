@@ -131,7 +131,7 @@ button { font-family: inherit; cursor: pointer; }
 .nav-links { display: flex; gap: 4px; flex: 1; }
 .nav-links a {
   text-decoration: none; color: var(--ink-soft); font-weight: 500; font-size: .92rem;
-  padding: 7px 13px; border-radius: 10px; transition: all .15s;
+  padding: 7px 13px; border-radius: 10px; transition: all .15s; white-space: nowrap;
 }
 .nav-links a:hover { background: var(--green-soft); color: var(--green); }
 .nav-links a.active { background: var(--green); color: #fff; }

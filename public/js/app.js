@@ -43,6 +43,7 @@ function toast(msg, isError = false) {
 }
 
 async function api(path, opts = {}) {
+  if (S.staticMode) return staticApi(path, opts);
   const res = await fetch(path, {
     headers: { "Content-Type": "application/json" },
     ...opts,
@@ -56,6 +57,138 @@ async function api(path, opts = {}) {
   const data = await res.json().catch(() => ({}));
   if (!res.ok) throw new Error(data.error || "Error de connexió");
   return data;
+}
+
+/* ---------------- static mode (GitHub Pages, sense servidor) ----------------
+   Quan no hi ha servidor Node (p. ex. l'app publicada a GitHub Pages), tot
+   funciona al navegador: el login es valida contra data/static-users.json i
+   el diari/activitats es guarden a localStorage (només en aquest dispositiu). */
+
+const STORE_KEY = "bulgaria2026-store";
+const SESSION_KEY = "bulgaria2026-user";
+
+function staticStore() {
+  try {
+    return JSON.parse(localStorage.getItem(STORE_KEY)) || { checks: {}, customActivities: {}, diary: {} };
+  } catch {
+    return { checks: {}, customActivities: {}, diary: {} };
+  }
+}
+
+// Només persisteix; S.state l'actualitzen els handlers del frontend,
+// igual que en mode servidor (si no, les entrades es duplicarien).
+function staticSave(store) {
+  localStorage.setItem(STORE_KEY, JSON.stringify(store));
+}
+
+async function sha256Hex(text) {
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
+  return [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+function staticId(prefix) {
+  return `${prefix}-${Date.now().toString(36)}${Math.random().toString(36).slice(2, 8)}`;
+}
+
+async function staticApi(path, opts = {}) {
+  const method = (opts.method || "GET").toUpperCase();
+  const body = opts.body || {};
+  const store = staticStore();
+  const now = new Date().toISOString();
+
+  if (path === "/api/login") {
+    const u = S.staticUsers[String(body.username || "").toLowerCase().trim()];
+    if (!u) throw new Error("Usuari o contrasenya incorrectes");
+    const hash = await sha256Hex(`${u.salt}:${body.password || ""}`);
+    if (hash !== u.hash) throw new Error("Usuari o contrasenya incorrectes");
+    localStorage.setItem(SESSION_KEY, body.username);
+    S.user = { username: body.username, displayName: u.displayName, emoji: u.emoji };
+    return { ok: true, user: S.user };
+  }
+
+  if (path === "/api/logout") {
+    localStorage.removeItem(SESSION_KEY);
+    return { ok: true };
+  }
+
+  const dayMatch = path.match(/^\/api\/days\/(\d+)\/(check|activities|diary)(?:\/([\w-]+))?$/);
+  if (!dayMatch) throw new Error("Ruta desconeguda");
+  const [, day, kind, id] = dayMatch;
+
+  if (kind === "check") {
+    store.checks[day] = store.checks[day] || {};
+    if (body.done) store.checks[day][body.itemId] = { by: S.user.username, at: now };
+    else delete store.checks[day][body.itemId];
+    staticSave(store);
+    return { ok: true, checks: store.checks[day] };
+  }
+
+  if (kind === "activities") {
+    if (method === "POST") {
+      const text = String(body.text || "").trim();
+      if (!text) throw new Error("Escriu alguna cosa!");
+      const item = { id: staticId("c"), text, by: S.user.username, at: now };
+      (store.customActivities[day] = store.customActivities[day] || []).push(item);
+      staticSave(store);
+      return { ok: true, item };
+    }
+    if (method === "DELETE") {
+      store.customActivities[day] = (store.customActivities[day] || []).filter((i) => i.id !== id);
+      if (store.checks[day]) delete store.checks[day][id];
+      staticSave(store);
+      return { ok: true };
+    }
+  }
+
+  if (kind === "diary") {
+    const list = (store.diary[day] = store.diary[day] || []);
+    if (method === "POST") {
+      const text = String(body.text || "").trim();
+      if (!text) throw new Error("El teu diari no pot estar buit!");
+      const entry = { id: staticId("e"), text, by: S.user.username, at: now };
+      list.push(entry);
+      staticSave(store);
+      return { ok: true, entry };
+    }
+    const entry = list.find((e) => e.id === id);
+    if (!entry) throw new Error("No trobat");
+    if (entry.by !== S.user.username) throw new Error("Només pots editar les teves notes");
+    if (method === "PUT") {
+      const text = String(body.text || "").trim();
+      if (!text) throw new Error("El teu diari no pot estar buit!");
+      entry.text = text;
+      entry.editedAt = now;
+      staticSave(store);
+      return { ok: true, entry };
+    }
+    if (method === "DELETE") {
+      store.diary[day] = list.filter((e) => e.id !== id);
+      staticSave(store);
+      return { ok: true };
+    }
+  }
+  throw new Error("Ruta desconeguda");
+}
+
+async function enterStaticMode() {
+  S.staticMode = true;
+  const [itinerary, credits, users] = await Promise.all([
+    fetch("data/itinerary.json").then((r) => r.json()),
+    fetch("data/image-credits.json").then((r) => r.json()).catch(() => ({})),
+    fetch("data/static-users.json").then((r) => r.json())
+  ]);
+  S.itinerary = itinerary;
+  S.imageCredits = credits;
+  S.staticUsers = users;
+  S.users = Object.entries(users).map(([username, u]) => ({
+    username, displayName: u.displayName, emoji: u.emoji
+  }));
+  const saved = localStorage.getItem(SESSION_KEY);
+  if (saved && users[saved]) {
+    S.user = { username: saved, displayName: users[saved].displayName, emoji: users[saved].emoji };
+    S.state = staticStore();
+  }
+  render();
 }
 
 function userName(username) {
@@ -194,7 +327,7 @@ function renderOverview() {
   }
 
   const content = `
-    <div class="hero" style="background-image:url('/images/rila-monastery.jpg')">
+    <div class="hero" style="background-image:url('images/rila-monastery.jpg')">
       <div class="hero-content">
         <h1>${esc(trip.title)}</h1>
         <p>${esc(trip.subtitle)}</p>
@@ -216,7 +349,7 @@ function renderOverview() {
         const hasDiary = (S.state.diary[d.day] || []).length > 0;
         return `
         <a class="day-card" href="#/dia/${d.day}">
-          <div class="thumb" style="background-image:url('/images/${esc(d.heroImage)}.jpg')">
+          <div class="thumb" style="background-image:url('images/${esc(d.heroImage)}.jpg')">
             <span class="day-chip">Dia ${d.day}</span>
             ${today === d.day ? '<span class="today-chip">AVUI</span>' : ""}
           </div>
@@ -295,7 +428,7 @@ function renderDay(n) {
       </div>
     </div>
 
-    <div class="day-hero" style="background-image:url('/images/${esc(day.heroImage)}.jpg')">
+    <div class="day-hero" style="background-image:url('images/${esc(day.heroImage)}.jpg')">
       <div class="inner">
         <div class="kicker">Dia ${day.day} · ${esc(day.dateLabel)} · 📍 ${esc(day.area)}</div>
         <h1>${esc(day.title)}</h1>
@@ -346,12 +479,13 @@ function renderDay(n) {
         <div class="card">
           <h2><span class="ico">📷</span> Imatges</h2>
           <div class="gallery">
-            ${day.gallery.map((g) => `<img src="/images/${esc(g)}.jpg" alt="${esc(day.title)}" loading="lazy" data-zoom />`).join("")}
+            ${day.gallery.map((g) => `<img src="images/${esc(g)}.jpg" alt="${esc(day.title)}" loading="lazy" data-zoom />`).join("")}
           </div>
         </div>` : ""}
 
         <div class="card">
           <h2><span class="ico">✍️</span> El diari del dia ${day.day}</h2>
+          ${S.staticMode ? `<p class="static-note">📱 Versió web sense servidor: les notes i activitats es guarden només en aquest dispositiu.</p>` : ""}
           ${entries.length ? diaryHtml : `<p class="diary-empty">Encara no hi ha cap nota d'aquest dia. Sigues el primer a escriure-hi!</p>`}
           <form class="diary-form" id="diary-form" style="margin-top:16px">
             <textarea id="diary-text" placeholder="Com ha anat el dia? Escriu aquí els teus records, anècdotes i moments..."></textarea>
@@ -538,6 +672,7 @@ function renderDiaryPage() {
   const content = `
     <h1 class="page-title">📖 El nostre diari de viatge</h1>
     <p class="page-sub">Totes les notes que hem anat escrivint, dia a dia. Per afegir-ne, entra al dia corresponent.</p>
+    ${S.staticMode ? `<p class="static-note" style="margin-bottom:20px">📱 Versió web sense servidor: aquí només es veuen les notes escrites des d'aquest dispositiu.</p>` : ""}
     ${hasAny ? sections : `
       <div class="card" style="text-align:center;padding:50px 20px">
         <div style="font-size:2.4rem;margin-bottom:10px">🌻</div>
@@ -600,15 +735,23 @@ function renderInfoPage() {
 
 async function bootstrap() {
   try {
-    const data = await api("/api/bootstrap");
-    S.user = data.user;
-    S.users = data.users;
-    S.itinerary = data.itinerary;
-    S.imageCredits = data.imageCredits;
-    S.state = data.state;
-    render();
+    const res = await fetch("api/bootstrap", { headers: { "Content-Type": "application/json" } });
+    if (res.status === 404) {
+      // No hi ha servidor (p. ex. GitHub Pages) → mode estàtic al navegador
+      await enterStaticMode();
+      return;
+    }
+    if (res.ok) {
+      const data = await res.json();
+      S.user = data.user;
+      S.users = data.users;
+      S.itinerary = data.itinerary;
+      S.imageCredits = data.imageCredits;
+      S.state = data.state;
+    }
+    render(); // si 401: pantalla de login del mode servidor
   } catch {
-    render(); // not logged in → login screen
+    render();
   }
 }
 

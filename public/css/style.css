@@ -52,7 +52,7 @@ button { font-family: inherit; cursor: pointer; }
   padding: 24px;
   background:
     linear-gradient(rgba(20, 40, 30, 0.55), rgba(20, 30, 25, 0.75)),
-    url("/images/seven-rila-lakes.jpg") center/cover no-repeat fixed;
+    url("../images/seven-rila-lakes.jpg") center/cover no-repeat fixed;
 }
 
 .login-card {
@@ -336,6 +336,11 @@ button { font-family: inherit; cursor: pointer; }
 .diary-entry .txt { font-size: .93rem; white-space: pre-wrap; color: var(--ink-soft); }
 .diary-entry textarea { width: 100%; min-height: 90px; }
 .diary-empty { color: var(--ink-faint); font-size: .9rem; font-style: italic; }
+
+.static-note {
+  background: var(--gold-soft); border-radius: 10px; padding: 8px 13px;
+  font-size: .8rem; color: var(--ink-soft); margin-bottom: 12px;
+}
 
 .diary-form textarea {
   width: 100%; min-height: 100px; padding: 12px 15px; border: 2px solid var(--line);

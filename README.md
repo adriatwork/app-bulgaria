@@ -16,18 +16,40 @@ App web per al viatge a Bulgària del **3 al 15 d'agost de 2026**, generada a pa
 
 ## Com engegar-la
 
-Cal [Node.js](https://nodejs.org) 18 o superior.
+Hi ha dues maneres de fer servir l'app:
+
+### Opció A · En un enllaç de GitHub (GitHub Pages) 🌐
+
+L'app es publica sola a **https://adriatwork.github.io/app-bulgaria/** cada cop que es fa un push a `main`. Només cal activar-ho un cop:
+
+1. Al repositori de GitHub, aneu a **Settings → Pages**.
+2. A **Build and deployment → Source**, trieu **GitHub Actions**.
+3. Feu merge d'aquesta branca a `main` (o aneu a **Actions → "Publicar a GitHub Pages" → Run workflow**).
+4. En un minut, l'app estarà a `https://adriatwork.github.io/app-bulgaria/`. Guardeu-la a la pantalla d'inici del mòbil!
+
+En aquesta versió no hi ha servidor, així que **el diari i les activitats marcades es guarden al dispositiu de cadascú** (no es comparteixen entre mòbils). El login funciona igual, amb les mateixes contrasenyes per defecte; per canviar-les:
+
+```bash
+npm run set-static-password -- viatger1 laMevaNovaContrasenya
+# i després: git add data/static-users.json && git commit && git push
+```
+
+> ⚠️ Si el repositori és públic, qualsevol pot veure l'itinerari al codi. El login de la versió web és una barrera senzilla, no seguretat forta.
+
+### Opció B · Amb servidor propi (diari compartit) 🖥️
+
+Amb [Node.js](https://nodejs.org) 18 o superior:
 
 ```bash
 npm install
 npm start
 ```
 
-Obre [http://localhost:3000](http://localhost:3000).
+Obre [http://localhost:3000](http://localhost:3000). En aquest mode el diari i les activitats **es comparteixen entre tots dos** (es guarden al servidor). Per tenir-ho al mòbil durant el viatge, desplegueu-lo a un servei gratuït tipus Render o Railway.
 
 ## Usuaris i contrasenyes
 
-En arrencar per primera vegada es crea `data/users.json` amb dos usuaris:
+En arrencar per primera vegada (mode servidor) es crea `data/users.json` amb dos usuaris:
 
 | Usuari     | Contrasenya per defecte |
 |------------|-------------------------|
@@ -52,12 +74,15 @@ npm run set-password -- viatger1 laMevaNovaContrasenya
 ## Estructura
 
 ```
-├── server/server.js        # servidor Express: login, diari, checklists
-├── server/set-password.js  # utilitat per canviar contrasenyes
-├── data/itinerary.json     # itinerari complet (generat des de l'Excel + contingut extra)
-├── data/image-credits.json # crèdits de les imatges
-└── public/                 # frontend (HTML + CSS + JS, sense build)
-    └── images/             # fotos dels llocs (Wikimedia Commons)
+├── .github/workflows/deploy-pages.yml  # publicació automàtica a GitHub Pages
+├── server/server.js               # servidor Express: login, diari, checklists
+├── server/set-password.js         # canviar contrasenyes (mode servidor)
+├── server/set-static-password.js  # canviar contrasenyes (versió GitHub Pages)
+├── data/itinerary.json            # itinerari complet (generat des de l'Excel + contingut extra)
+├── data/static-users.json         # usuaris de la versió GitHub Pages (contrasenyes xifrades)
+├── data/image-credits.json        # crèdits de les imatges
+└── public/                        # frontend (HTML + CSS + JS, sense build)
+    └── images/                    # fotos dels llocs (Wikimedia Commons)
 ```
 
 Bon viatge! 🌹✈️

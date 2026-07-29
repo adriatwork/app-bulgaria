@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "node server/server.js",
-    "set-password": "node server/set-password.js"
+    "set-password": "node server/set-password.js",
+    "set-static-password": "node server/set-static-password.js"
   },
   "engines": {
     "node": ">=18"

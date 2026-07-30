@@ -27,7 +27,7 @@ jobs:
         run: |
           mkdir -p site/data
           cp -r public/* site/
-          cp data/itinerary.json data/image-credits.json data/static-users.json site/data/
+          cp data/itinerary.json data/image-credits.json data/static-users.json data/travel-guide.json data/food-passport.json site/data/
 
       - uses: actions/configure-pages@v5
 

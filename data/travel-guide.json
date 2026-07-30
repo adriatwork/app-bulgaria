@@ -1,0 +1,2120 @@
+{
+  "days": {
+    "1": {
+      "destination": [
+        "Welcome to Sofia — a city that wears its 7,000-year history like a vintage jacket over a startup hoodie. Bulgaria's capital sprawls at the foot of Vitosha Mountain, where Ottoman mosques share skylines with Soviet monuments and sleek cocktail bars. You'll land at Sofia Airport (SOF), a compact hub about 20 minutes from the city center.",
+        "Don't expect a postcard-perfect old town on arrival. Sofia reveals itself slowly: a Roman serdica wall beside a metro station, street art in a communist-era underpass, a hidden wine bar in a 19th-century townhouse. That's the charm — layers upon layers, and you're about to peel them back.",
+        "Tonight is about easing in. Drop your bags, grab a banitsa and ayran from a corner bakery, and let the city hum around you. Tomorrow the mountains call, but for now, Sofia is yours to wander."
+      ],
+      "history": [
+        "Sofia's story starts long before Bulgaria existed. Thracian tribes settled here around 5000 BC. The Romans built Serdica — Emperor Constantine allegedly called it 'my Rome.' Slavs arrived in the 6th century, and by 809 AD, Khan Krum had made it the heart of the First Bulgarian Empire.",
+        "Centuries of Byzantine and Ottoman rule left their mark: the Banya Bashi Mosque still serves worshippers, while Alexander Nevsky Cathedral — built in the 1880s after liberation — became the symbol of a nation reborn. Soviet occupation added brutalist blocks and a red star atop Mount Vitosha.",
+        "Today Sofia is Bulgaria's youngest, fastest-growing city. EU membership in 2007 sparked a creative renaissance. Walk any boulevard and you're tracing 7,000 years — not in a museum, but under your feet."
+      ],
+      "highlights": [
+        {
+          "name": "Alexander Nevsky Cathedral",
+          "what": "Bulgaria's largest Orthodox cathedral with golden domes and a cavernous interior.",
+          "why": "It's the postcard shot and an emotional anchor — built to honor soldiers who died freeing Bulgaria from Ottoman rule.",
+          "notice": "Dress modestly (shoulders and knees covered). Photography inside is restricted in some areas."
+        },
+        {
+          "name": "Serdica Archaeological Complex",
+          "what": "Roman ruins integrated into the modern metro and city center.",
+          "why": "You literally walk on 2,000-year-old streets while heading to a coffee shop. Nowhere else feels this seamless.",
+          "notice": "Free to view from above; small museum section has an entry fee. Best at golden hour."
+        },
+        {
+          "name": "Vitosha Boulevard",
+          "what": "Sofia's main pedestrian strip lined with cafés, shops, and people-watching gold.",
+          "why": "This is where locals come to see and be seen. Grab a seat, order a kafe, and soak in the energy.",
+          "notice": "Prices jump 30% on the boulevard itself — side streets offer better value."
+        },
+        {
+          "name": "National Palace of Culture (NDK)",
+          "what": "A massive brutalist cultural complex and surrounding park.",
+          "why": "Love it or hate it architecturally, NDK is Sofia's living room — festivals, fountains, and sunset views.",
+          "notice": "Check the events calendar; free concerts happen often in the park."
+        },
+        {
+          "name": "Ivan Vazov National Theatre",
+          "what": "Neoclassical theatre building framed by a park and yellow-paved square.",
+          "why": "The most photogenic building in Sofia, especially when lit up at night.",
+          "notice": "Book tickets ahead for performances — they're excellent and absurdly affordable."
+        },
+        {
+          "name": "Sofia Synagogue",
+          "what": "The largest Sephardic synagogue in Europe, with a stunning Moorish interior.",
+          "why": "A powerful reminder of Bulgaria's diverse past and the remarkable story of how Bulgarian leaders resisted deporting Jews during WWII.",
+          "notice": "Visit during opening hours only; security is tight. Modest dress required."
+        }
+      ],
+      "funFacts": [
+        "Sofia is one of the few European capitals where you can ski and sunbathe on the same day — Vitosha is 30 minutes from downtown.",
+        "The yellow-brick road through the city center was a gift from Austria-Hungary and was laid by hand in the 1900s.",
+        "Bulgaria uses the Cyrillic alphabet, but 'Sofia' is spelled София — same phonetically, different script.",
+        "The hot mineral springs in the city center have been flowing for 2,000 years. Locals fill bottles for free.",
+        "Sofia has more green space per capita than most European capitals — over 40% of the city is parks and gardens.",
+        "The lion is Bulgaria's national symbol, and you'll spot lion statues everywhere — on fountains, facades, and the national football team's crest.",
+        "Bulgaria is the world's largest producer of rose oil, and Sofia's best cocktail bars are quietly putting it in drinks."
+      ],
+      "photoSpot": {
+        "viewpoint": "Alexander Nevsky Cathedral from the park behind it, facing the golden domes with Vitosha Mountain in the background.",
+        "time": "Golden hour, roughly 7–8 PM in summer.",
+        "why": "The warm light hits the gold domes and turns them molten. With Vitosha behind, you get city-meets-mountain in one frame.",
+        "tips": "Stand near the fountain for a reflection shot. Portrait mode works beautifully here. Avoid midday — flat light kills the drama."
+      },
+      "food": [
+        {
+          "name": "Banitsa",
+          "description": "Flaky filo pastry stuffed with cheese (or pumpkin, or spinach). The ultimate Bulgarian comfort food.",
+          "special": "Order 'banitsa s kashkaval' — cheese-filled is the classic.",
+          "where": "Any 'хлебарница' (bakery) — try Happy Bakery near Serdica metro."
+        },
+        {
+          "name": "Shopska Salad",
+          "description": "Tomatoes, cucumbers, peppers, and onions topped with a mountain of sirene cheese. Simple, fresh, perfect.",
+          "special": "Pair it with rakia (fruit brandy) for the full Bulgarian experience.",
+          "where": "Made in Home restaurant on Vitosha Blvd — cozy and authentic."
+        },
+        {
+          "name": "Kebapche",
+          "description": "Grilled minced meat rolls seasoned with cumin and herbs. Bulgaria's answer to the kebab, but better.",
+          "special": "Get the 'troyka' — three kebapche with lyutenitsa (pepper relish) and fries.",
+          "where": "SkaraBar in the city center — casual, cheap, and packed with locals."
+        },
+        {
+          "name": "Tarator",
+          "description": "Cold yogurt soup with cucumber, garlic, and dill. Sounds weird, tastes incredible on a hot day.",
+          "special": "Ask for it as a starter — it's refreshing and light.",
+          "where": "Shtastlivitsa restaurant — traditional Bulgarian menu done right."
+        }
+      ],
+      "phrase": {
+        "cyrillic": "Здравейте",
+        "transliteration": "Zdraveyte",
+        "english": "Hello (formal/plural)",
+        "when": "Use when entering a shop, restaurant, or greeting someone older. Bulgarians appreciate the effort — smiles guaranteed."
+      },
+      "challenges": [
+        "Find the free hot mineral spring in the city center and fill a bottle.",
+        "Spot all five different architectural styles on one block of Vitosha Boulevard.",
+        "Count how many lion statues you see between the cathedral and NDK.",
+        "Order a meal using only Bulgarian words (pointing at menus counts as half credit).",
+        "Take a selfie with the yellow brick road — bonus points if a tram rolls through the background."
+      ],
+      "insiderTips": [
+        "The metro from the airport costs about 1.60 BGN (~€0.80) and takes 20 minutes to Serdica station. Taxis exist but Uber doesn't — use Yellow Taxi or request via the TaxiMe app.",
+        "Exchange money at a bank or use an ATM — avoid airport exchange booths (terrible rates).",
+        "Sofia is very safe, but pickpockets work the tourist strips. Front pocket, not back.",
+        "Tap water is safe to drink. Bring a reusable bottle.",
+        "Dinner starts late — 8 PM is normal. Restaurants that look empty at 7 will be buzzing by 9."
+      ],
+      "movie": {
+        "genre": "Urban exploration / coming-of-age",
+        "atmosphere": "Think 'Before Sunrise' meets Eastern European grit — wandering unfamiliar streets, stumbling into hidden courtyards, conversations with strangers over cheap wine.",
+        "resembles": "The Sofia scenes in 'The Expendables 2' (yes, really) — but swap the action for a sunset walk through Borisova Gradina park."
+      },
+      "historicalFigure": {
+        "name": "Vasil Levski",
+        "who": "Bulgaria's national hero — a revolutionary who fought for independence from Ottoman rule in the 1870s.",
+        "why": "His statue stands in the city center, and Bulgarians speak of him with reverence usually reserved for saints.",
+        "detail": "Levski was captured and executed in 1873, but his vision of a free, equal Bulgaria outlived him. February 19 is a national holiday in his honor."
+      },
+      "visualGuide": [
+        {
+          "name": "Golden Domes",
+          "what": "The onion-shaped golden roofs of Alexander Nevsky Cathedral.",
+          "why": "They're Sofia's visual signature — you'll see them on every postcard and fridge magnet.",
+          "detail": "Look for the green and gold pattern — each dome is covered in gold leaf that was restored in the 1990s."
+        },
+        {
+          "name": "Yellow Pavement",
+          "what": "Distinctive yellow cobblestones on main boulevards.",
+          "why": "Austrian-made bricks that have survived over a century of traffic. They glow in afternoon light.",
+          "detail": "The yellow comes from a specific clay mix — Sofia is one of the only cities in the world with this paving."
+        },
+        {
+          "name": "Red Stars and Soviet Relics",
+          "what": "Communist-era monuments, mosaics, and the removed star from Vitosha.",
+          "why": "Bulgaria's Soviet past isn't hidden — it's debated, preserved, and sometimes turned into art.",
+          "detail": "The red star that topped the Party House is now in the Museum of Socialist Art, southeast of the center."
+        },
+        {
+          "name": "Street Art",
+          "what": "Murals and graffiti covering underpasses, building facades, and entire alleyways.",
+          "why": "Sofia's creative scene is exploding — street art is the gallery.",
+          "detail": "Check the underpass near NDK and the Osogovo Street mural corridor for the best pieces."
+        },
+        {
+          "name": "Rose Motifs",
+          "what": "Rose imagery on products, shop signs, and souvenirs throughout the city.",
+          "why": "Bulgaria produces 70% of the world's rose oil from the Rose Valley — it's a point of national pride.",
+          "detail": "The best rose products aren't in tourist shops — look for brands like Alteya or Bulgarian Rose in pharmacies."
+        },
+        {
+          "name": "Trams",
+          "what": "Vintage yellow and red trams rattling through the city.",
+          "why": "They're photogenic, cheap, and a living piece of Sofia's transport history.",
+          "detail": "Line 4 runs past the cathedral — ride it one stop just for the experience (1.60 BGN)."
+        }
+      ]
+    },
+    "2": {
+      "destination": [
+        "Today you leave the city behind and head into Bulgaria's spiritual heartland. Rila Monastery is the country's most sacred site — a fortress of faith tucked into a forested valley beneath jagged peaks. Founded in the 10th century by the hermit Saint Ivan Rilski, it's survived fires, earthquakes, and Ottoman raids.",
+        "After the monastery, you'll visit the Holy Cave of Saint Ivan — a tiny chapel built into the rock where the saint lived and prayed. It's quiet, eerie, and deeply moving. Then unwind in Sapareva Banya, a spa town famous for having Europe's hottest geyser (103°C!).",
+        "This is a day of contrasts: medieval devotion in the morning, geothermal bliss in the afternoon. Bring layers — the monastery sits at 1,147 meters and mornings can be crisp even in summer."
+      ],
+      "history": [
+        "Saint Ivan Rilski (876–946 AD) was a hermit who chose solitude in the Rila wilderness. His reputation for miracles drew disciples, and after his death, a community formed around his tomb. The monastery was founded in 927 AD on the site of his original hermitage.",
+        "Destroyed by fire in the early 19th century, the current complex was rebuilt between 1834 and 1862 in the Bulgarian National Revival style — bold stripes, intricate woodcarving, and frescoes covering every surface. It became a symbol of Bulgarian identity during Ottoman rule, when the church was one of the few institutions Bulgarians controlled.",
+        "Rila Monastery was declared a UNESCO World Heritage Site in 1983. The Holy Cave, located a short drive away, is where Ivan Rilski spent the last years of his life in complete isolation. Pilgrims have visited for over a thousand years."
+      ],
+      "highlights": [
+        {
+          "name": "Rila Monastery Main Church",
+          "what": "The Nativity of the Virgin Church, covered inside and out with vivid frescoes.",
+          "why": "Every square inch tells a biblical story in blazing color. It's like stepping into an illustrated manuscript.",
+          "notice": "No photography inside the church. Dress modestly — scarves are available at the entrance."
+        },
+        {
+          "name": "Monastery Courtyard",
+          "what": "A vast stone courtyard surrounded by striped colonnades and wooden balconies.",
+          "why": "The black-and-white striped arches are iconic — one of the most photographed spots in Bulgaria.",
+          "notice": "Visit early (before 10 AM) to avoid tour bus crowds. The light in the courtyard is magical in the morning."
+        },
+        {
+          "name": "Rafail's Cross",
+          "what": "A wooden cross carved with 104 biblical scenes and 650 tiny figures — carved by a single monk with a magnifying glass.",
+          "why": "It took 12 years to complete and is considered one of the greatest achievements of Bulgarian woodcarving.",
+          "notice": "On display in the monastery museum (small entry fee). Look closely — some figures are just millimeters tall."
+        },
+        {
+          "name": "Holy Cave of Saint Ivan Rilski",
+          "what": "A small chapel built into the cliff face where the saint lived as a hermit.",
+          "why": "The atmosphere is haunting and intimate — candles, icons, and absolute silence inside the cave.",
+          "notice": "A steep 15-minute walk from the parking area. Wear sturdy shoes. Very narrow inside — claustrophobes beware."
+        },
+        {
+          "name": "Sapareva Banya Geyser",
+          "what": "Europe's hottest geothermal geyser, shooting water 18 meters into the air.",
+          "why": "It's surreal to watch boiling water erupt against a mountain backdrop. The town built a glass pavilion around it.",
+          "notice": "The geyser runs on a schedule (check locally). The water is way too hot to touch — admire from a distance."
+        },
+        {
+          "name": "Rila Monastery Museum",
+          "what": "Housing Rafail's Cross, ancient manuscripts, and royal gifts spanning centuries.",
+          "why": "Gives context to everything you've seen — the monastery wasn't just religious, it was a cultural fortress.",
+          "notice": "Combined ticket with the church tower. Allow 30–45 minutes."
+        }
+      ],
+      "funFacts": [
+        "Rila Monastery's kitchen once fed 500 people at a single long table — the original 'family dinner' energy.",
+        "The monastery has its own fire brigade, bakery, and farm. It's essentially a self-sufficient medieval village.",
+        "Saint Ivan Rilski's relics are still kept in the main church — pilgrims queue to venerate them.",
+        "Sapareva Banya's geyser water is 103°C — hot enough to boil an egg (locals actually do this for tourists).",
+        "The monastery was a secret printing press during Ottoman rule — Bulgarian books were smuggled out from here.",
+        "Rila is the highest mountain range in the Balkans, with Musala peak at 2,925 meters.",
+        "The striped pattern on the monastery walls isn't decorative — it's traditional Bulgarian Revival architecture found only in this region."
+      ],
+      "photoSpot": {
+        "viewpoint": "The monastery courtyard, standing near the fountain looking up at the striped colonnades and church dome.",
+        "time": "Before 10 AM — soft morning light fills the courtyard and tour groups haven't arrived yet.",
+        "why": "The black-and-white stripes create incredible leading lines, and the church dome frames perfectly between the arches.",
+        "tips": "Use the fountain for reflection shots. Wide-angle lens essential. Climb the church tower (small fee) for an aerial perspective."
+      },
+      "food": [
+        {
+          "name": "Monastery Bean Soup (Bob Chorba)",
+          "description": "Hearty white bean soup cooked in a clay pot with paprika and mint. Monastic comfort food.",
+          "special": "The monastery restaurant serves an authentic version — recipes unchanged for generations.",
+          "where": "Rila Monastery's own restaurant, just outside the gates."
+        },
+        {
+          "name": "Kachamak",
+          "description": "Bulgarian polenta — cornmeal mash topped with cheese and butter. Stick-to-your-ribs mountain food.",
+          "special": "Best in winter, but mountain restaurants serve it year-round.",
+          "where": "Any 'механа' (tavern) in the Rila villages on the drive up."
+        },
+        {
+          "name": "Mineral Water Tasting",
+          "description": "Sapareva Banya sits on mineral springs — local cafés serve naturally carbonated mineral water.",
+          "special": "The water has a distinct sulfur taste. Locals swear by its healing properties.",
+          "where": "The outdoor pools and cafés along the main street in Sapareva Banya."
+        },
+        {
+          "name": "Mekitsa",
+          "description": "Deep-fried dough served with powdered sugar, cheese, or jam. Bulgarian donut energy.",
+          "special": "Order with 'sirene' (cheese) for the sweet-savory combo locals love.",
+          "where": "Roadside stands between Sofia and Rila — look for the fried-dough smell."
+        }
+      ],
+      "phrase": {
+        "cyrillic": "Благодаря",
+        "transliteration": "Blagodarya",
+        "english": "Thank you",
+        "when": "Say it after meals, when someone helps you, or when buying from a stall. Bulgarians nod and smile — it's the universal icebreaker."
+      },
+      "challenges": [
+        "Count the biblical scenes on Rafail's Cross (hint: there are 104).",
+        "Find the hidden monk figure carved into the monastery woodwork.",
+        "Touch the holy spring water at the cave — is it as cold as they say?",
+        "Time the geyser eruption in Sapareva Banya and film it in slow motion.",
+        "Spot the difference between the original 10th-century foundations and the 19th-century rebuild."
+      ],
+      "insiderTips": [
+        "Leave Sofia by 8 AM to beat the tour buses — the monastery gets packed by 11.",
+        "Parking at the monastery is free but limited. Arrive early or park in the lower lot and walk up.",
+        "The road to the Holy Cave is narrow and winding. If you're driving, take it slow.",
+        "Sapareva Banya has public geothermal pools — bring a swimsuit if you want a soak (separate entry fee).",
+        "There's no ATM at the monastery. Bring cash for museum tickets, food, and souvenirs."
+      ],
+      "movie": {
+        "genre": "Spiritual drama / historical epic",
+        "atmosphere": "Think 'The Name of the Rose' meets 'Into the Wild' — ancient faith, solitary wilderness, and the weight of centuries in stone and fresco.",
+        "resembles": "The monastery scenes evoke 'The Chronicles of Narnia' — if Narnia were a real place in the Balkans with better food."
+      },
+      "historicalFigure": {
+        "name": "Saint Ivan Rilski",
+        "who": "A 10th-century hermit and miracle worker, considered the patron saint of Bulgaria.",
+        "why": "He chose poverty and solitude over power, and Bulgarians see him as the ultimate symbol of spiritual strength.",
+        "detail": "Ivan gave away everything he owned, retreated to the Rila mountains, and lived in a cave for decades. After his death, his followers founded the monastery that still bears his name."
+      },
+      "visualGuide": [
+        {
+          "name": "Striped Colonnades",
+          "what": "Black-and-white alternating stone stripes on the monastery's outer arcades.",
+          "why": "The defining visual of Rila — instantly recognizable and uniquely Bulgarian.",
+          "detail": "The pattern is called 'брадва' (axe) style and was popular during the National Revival period (1762–1878)."
+        },
+        {
+          "name": "Frescoes",
+          "what": "Vivid biblical murals covering church walls, ceilings, and exterior porches.",
+          "why": "They served as 'books for the illiterate' — every scene teaches a moral lesson in blazing color.",
+          "detail": "Look for the Last Judgment fresco on the exterior — demons and sinners are depicted in graphic detail."
+        },
+        {
+          "name": "Wooden Balconies",
+          "what": "Intricately carved wooden overhangs on the upper floors of the monastery.",
+          "why": "The craftsmanship is extraordinary — geometric patterns, floral motifs, and hidden symbols.",
+          "detail": "Each balcony was carved by a different master craftsman. Compare the styles as you walk around."
+        },
+        {
+          "name": "The Geyser Pavilion",
+          "what": "A modern glass structure built around Sapareva Banya's geothermal geyser.",
+          "why": "The contrast between ancient monastery and sci-fi geyser pavilion captures Bulgaria's range.",
+          "detail": "The geyser was discovered in 1957 during drilling. Water shoots up every few hours on a timer."
+        },
+        {
+          "name": "Mountain Mist",
+          "what": "Low clouds that roll through the Rila valley in the early morning.",
+          "why": "It transforms the monastery into something ethereal — like a painting coming to life.",
+          "detail": "September and October are peak mist season. Set your alarm early."
+        },
+        {
+          "name": "Iconostasis",
+          "what": "The gilded icon screen inside the main church, covered in painted saints.",
+          "why": "It's one of the finest examples of Bulgarian religious art — overwhelming in gold and detail.",
+          "detail": "The central royal doors (tsar's doors) are only opened during liturgy. Even closed, the surrounding icons are stunning."
+        }
+      ]
+    },
+    "3": {
+      "destination": [
+        "Lace up your hiking boots — today is all about the Seven Rila Lakes, one of the most spectacular alpine circuits in Europe. Seven glacial lakes stacked at different elevations, each with its own name, legend, and personality. The highest, Salzata (The Tear), sits at 2,535 meters and is so clear you can see straight to the bottom.",
+        "You'll take a lift from the Rila Lakes hut area (or hike up if you're feeling heroic), then trek between lakes with panoramic views of rugged peaks in every direction. The full circuit takes 4–6 hours depending on pace and how long you linger at each lake.",
+        "Return to Sapareva Banya for a well-earned soak. Your legs will thank you. This is the day that makes the whole trip worth it — raw, wild, and absurdly beautiful."
+      ],
+      "history": [
+        "The Seven Rila Lakes were carved by glaciers during the last Ice Age, roughly 10,000 years ago. The Rila range is the youngest and highest in the Balkans, pushed up by tectonic forces that are still shaping the landscape.",
+        "Each lake has a name rooted in folklore. Salzata (The Tear) is said to be the tear of a giant mourning his lost love. Okoto (The Eye) is the deepest and most perfectly circular — locals believed it had no bottom. Trilistnika (The Trefoil) has three lobes shaped like a clover.",
+        "The area became Bulgaria's first national park in 1992. Before that, shepherds grazed flocks here in summer. Today it's one of the country's most visited natural sites, but the trails still feel wild and untamed."
+      ],
+      "highlights": [
+        {
+          "name": "Lake Salzata (The Tear)",
+          "what": "The highest lake at 2,535m — small, crystal-clear, and perfectly named.",
+          "why": "On calm days the reflection of the surrounding peaks is mirror-perfect. It's the first lake you'll reach from the lift.",
+          "notice": "The trail here is rocky and exposed. Stay on the marked path — weather changes fast at this altitude."
+        },
+        {
+          "name": "Lake Okoto (The Eye)",
+          "what": "The deepest cirque lake, with an almost perfectly oval shape.",
+          "why": "Standing above Okoto looking down feels like peering into a sapphire set in stone.",
+          "notice": "The viewpoint requires a short scramble. Not technical, but steep. Skip if the weather is bad."
+        },
+        {
+          "name": "Lake Babreka (The Kidney)",
+          "what": "A kidney-shaped lake nestled between two ridges.",
+          "why": "Less visited than Okoto but equally stunning — and you'll likely have it to yourself.",
+          "notice": "The trail between Babreka and Okoto is the most scenic section. Take your time."
+        },
+        {
+          "name": "Rila Lakes Lift",
+          "what": "A chairlift from the parking area to the high trailhead near Salzata.",
+          "why": "Saves 2+ hours of steep uphill hiking. Worth every lev for the views alone.",
+          "notice": "Runs roughly 8 AM–4 PM in season. Last ride down is strict — don't miss it or you're hiking down in the dark."
+        },
+        {
+          "name": "Panoramic Ridge Walk",
+          "what": "The high trail connecting all seven lakes along a rocky ridge.",
+          "why": "360-degree views of the entire Rila range, including Musala peak (Bulgaria's highest at 2,925m).",
+          "notice": "Bring windproof layers. Even in August, the ridge can be cold and gusty."
+        },
+        {
+          "name": "Sapareva Banya Evening Soak",
+          "what": "Geothermal pools and spa facilities in town after the hike.",
+          "why": "Nothing beats sinking into hot mineral water with aching legs. Pure recovery bliss.",
+          "notice": "Public pools are basic but cheap. Private spa hotels offer more comfort for a higher price."
+        },
+        {
+          "name": "Lake Dolno (The Lower Lake)",
+          "what": "The lowest of the seven, where the meltwater eventually flows out of the cirque.",
+          "why": "Wildflowers in summer and the starting point if you hike the full loop counterclockwise.",
+          "notice": "Muddy sections after rain — waterproof boots recommended."
+        }
+      ],
+      "funFacts": [
+        "The seven lakes are stacked like a staircase — each one sits 100–150 meters above the next.",
+        "Lake Okoto is 37.5 meters deep — divers have explored it but legend says it connects to the Black Sea underground (it doesn't, but it's a great story).",
+        "The Rila Lakes area is home to the Balkan chamois — a goat-antelope that looks like it belongs on a wildlife documentary.",
+        "Musala peak, visible from the trail, is higher than any mountain in the Alps east of Mont Blanc.",
+        "Shepherds still bring flocks to the lower meadows in summer — you might share the trail with goats.",
+        "The lift was built in the 1970s and hasn't changed much — it's charmingly retro and slightly terrifying.",
+        "On a clear day you can see into three countries from the ridge: Bulgaria, North Macedonia, and Serbia."
+      ],
+      "photoSpot": {
+        "viewpoint": "The ridge between Lake Okoto and Lake Babreka, looking down into the cirque.",
+        "time": "10–11 AM — the sun illuminates the lakes without harsh shadows, and morning mist often lingers.",
+        "why": "You get multiple lakes in one frame, plus the dramatic cirque walls and sky. It's the money shot of the entire hike.",
+        "tips": "Use a wide-angle lens or panorama mode. Include a person for scale — the landscape is vast. Shoot both directions; each side is different."
+      },
+      "food": [
+        {
+          "name": "Mountain Hut Bean Soup",
+          "description": "The Rila Lakes hut serves simple, hot bean soup and bread. Exactly what you need at 2,200 meters.",
+          "special": "Eat before you hike — the hut is the only food source on the mountain.",
+          "where": "Rila Lakes Hut (Rilski Ezera hut) at the lift base."
+        },
+        {
+          "name": "Banitsa to Go",
+          "description": "Grab a cheese banitsa from a bakery in Sapareva Banya before heading up. Perfect trail snack.",
+          "special": "Pair with a bottle of water and a chocolate bar for the summit.",
+          "where": "Any bakery on Sapareva Banya's main street."
+        },
+        {
+          "name": "Shkembe Chorba",
+          "description": "Tripe soup — Bulgaria's legendary hangover cure and post-hike recovery meal.",
+          "special": "Loaded with garlic and vinegar. Sounds intense, tastes incredible after a long day.",
+          "where": "A local mehana in Sapareva Banya — ask your hotel for the best one."
+        },
+        {
+          "name": "Bulgarian Yogurt (Kiselo Mlyako)",
+          "description": "Thick, tangy yogurt that's been a Bulgarian staple for 4,000 years. Eat it with honey.",
+          "special": "Bulgarian yogurt contains the unique Lactobacillus bulgaricus strain — the original probiotic.",
+          "where": "Any supermarket or the breakfast spread at your hotel."
+        }
+      ],
+      "phrase": {
+        "cyrillic": "Къде е пътят?",
+        "transliteration": "Kade e patyat?",
+        "english": "Where is the path?",
+        "when": "Essential on the mountain if you're unsure which trail to take. Locals and fellow hikers will point you right."
+      },
+      "challenges": [
+        "Visit all seven lakes and photograph each one.",
+        "Spot a Balkan chamois on the ridge (binoculars help).",
+        "Dip your hand in Salzata — how cold is the highest lake?",
+        "Complete the full circuit without taking the lift (hardcore mode).",
+        "Find the shepherd's hut near the lower lakes and say hello."
+      ],
+      "insiderTips": [
+        "Start early — the lift opens at 8 AM and queues build fast on weekends.",
+        "Wear proper hiking boots, not sneakers. The terrain is rocky and uneven.",
+        "Pack layers, rain jacket, sunscreen, and at least 2 liters of water. No shops on the trail.",
+        "The full circuit is moderate difficulty — doable for anyone with basic fitness. Take breaks.",
+        "Check the weather forecast. Clouds at altitude mean zero visibility and dangerous conditions."
+      ],
+      "movie": {
+        "genre": "Adventure / nature documentary",
+        "atmosphere": "Think 'Lord of the Rings' hiking montage meets 'Free Solo' — epic landscapes, physical challenge, and the quiet awe of being small in a vast world.",
+        "resembles": "The alpine scenes from 'The Sound of Music' — but wilder, higher, and with fewer musical numbers."
+      },
+      "historicalFigure": {
+        "name": "Neofit Rilski",
+        "who": "A 19th-century monk, scholar, and the father of Bulgarian secular education.",
+        "why": "He lived and taught at Rila Monastery, created the first Bulgarian grammar book, and helped preserve the nation's language during Ottoman rule.",
+        "detail": "Neofit translated the Bible into modern Bulgarian and trained generations of teachers. His work ensured Bulgarian culture survived when it mattered most."
+      },
+      "visualGuide": [
+        {
+          "name": "Glacial Cirques",
+          "what": "Bowl-shaped valleys carved by ancient glaciers, now holding the lakes.",
+          "why": "They create the dramatic amphitheater effect — lakes nestled in stone bowls surrounded by peaks.",
+          "detail": "The cirques face north, which is why snow lingers on the peaks well into summer."
+        },
+        {
+          "name": "Alpine Wildflowers",
+          "what": "Edelweiss, gentians, and alpine roses blooming along the trails in July and August.",
+          "why": "Bursts of color against grey rock — look down as much as you look up.",
+          "detail": "Edelweiss is protected — admire but don't pick. It grows above 2,000 meters."
+        },
+        {
+          "name": "Chairlift Views",
+          "what": "The slow ride up through pine forest opening to alpine meadow.",
+          "why": "A preview of the grandeur above — and a chance to rest before the real hike begins.",
+          "detail": "Sit on the right side going up for the best views of the valley."
+        },
+        {
+          "name": "Rock Cairns",
+          "what": "Stacks of stones marking the trail, built by hikers over the years.",
+          "why": "They guide the way and add a human touch to the wild landscape.",
+          "detail": "Don't build new ones off-trail — it confuses other hikers and disturbs the ecosystem."
+        },
+        {
+          "name": "Mountain Huts",
+          "what": "Basic wooden shelters dotting the trail — some with beds, all with character.",
+          "why": "They represent Bulgaria's deep mountaineering culture — these huts have hosted climbers since the 1930s.",
+          "detail": "The Ivan Vazov Hut near Okoto is a great rest stop with a terrace overlooking the lake."
+        },
+        {
+          "name": "Limestone Peaks",
+          "what": "Jagged grey-white rock formations towering above the lakes.",
+          "why": "They create the dramatic backdrop that makes every photo look professional.",
+          "detail": "The limestone is riddled with caves — over 200 documented in the Rila range."
+        }
+      ]
+    },
+    "4": {
+      "destination": [
+        "Trade Rila's lakes for Pirin's peaks — today you're exploring Pirin National Park, a UNESCO World Heritage Site of granite spires, turquoise lakes, and ancient Bosnian pine forests. Pirin feels wilder and less visited than Rila, with a raw, untamed energy that hikers dream about.",
+        "The park's centerpiece is the Vihren massif, home to Bulgaria's second-highest peak (Vihren, 2,914m). Even if you don't summit, the trails around the Banderitsa and Vasilashki cirques deliver jaw-dropping scenery with less effort.",
+        "Afternoon brings a complete vibe shift: Velingrad, Bulgaria's spa capital. Nestled in the Rhodope foothills, it's a town built on hot mineral water — over 70 springs bubble up here. Soak, unwind, and let the mountains fade into steam."
+      ],
+      "history": [
+        "Pirin takes its name from Perun, the Slavic god of thunder — fitting for a range that looks like it was forged in a storm. The mountains have been inhabited since Thracian times, with archaeological sites dating back to the 4th century BC.",
+        "The Bosnian pines in Pirin are over 1,300 years old — some of the oldest trees in Europe. They survived because the terrain was too harsh for logging. The park was established in 1962 and UNESCO-listed in 1983.",
+        "Velingrad's spa tradition goes back to Thracian and Roman times. The town's name comes from 'velis' (health) and the abundance of mineral springs. During communism, it became a popular sanatorium destination. Today it's being rediscovered by a new generation of wellness travelers."
+      ],
+      "highlights": [
+        {
+          "name": "Banderitsa Chalet Area",
+          "what": "The main trailhead for Pirin's most popular hikes, at 1,810 meters.",
+          "why": "Starting point for lake circuits and Vihren approaches. The chalet serves hot food and coffee.",
+          "notice": "Parking fills up by 9 AM in summer. Arrive early or use the shuttle from Bansko."
+        },
+        {
+          "name": "Vasilashki Lakes",
+          "what": "A chain of nine alpine lakes in a stunning cirque below Vihren peak.",
+          "why": "More lakes than Rila, fewer tourists, and the turquoise water against grey granite is unreal.",
+          "notice": "Moderate hike — 3–4 hours round trip from Banderitsa. Well-marked but rocky."
+        },
+        {
+          "name": "Baikushev's Pine",
+          "what": "A 1,300-year-old Bosnian pine — one of the oldest trees in Bulgaria.",
+          "why": "Standing next to a tree that was alive during the First Bulgarian Empire is humbling.",
+          "notice": "Short walk from the road near Banderitsa. Well-signed. Don't climb on it."
+        },
+        {
+          "name": "Velingrad Mineral Springs",
+          "what": "Over 70 geothermal springs feeding public baths, hotel spas, and drinking fountains.",
+          "why": "The water ranges from warm to piping hot and is rich in minerals. Each spring has a different character.",
+          "notice": "Public outdoor pools are basic but authentic. Hotel spas are pricier but more comfortable."
+        },
+        {
+          "name": "Kleptuza Karst Spring",
+          "what": "The largest karst spring in Bulgaria — crystal-clear water gushing from a cave.",
+          "why": "You can take a boat ride into the cave. The water is so clear the bottom looks inches away when it's meters deep.",
+          "notice": "Near Velingrad, not in the park itself. Worth the 20-minute detour."
+        },
+        {
+          "name": "Pirin Granite Peaks",
+          "what": "Sharp, angular granite spires that define Pirin's skyline.",
+          "why": "They look like something from Patagonia — raw, dramatic, and utterly photogenic.",
+          "notice": "Best viewed from the Vasilashki cirque trail or the road to Banderitsa."
+        }
+      ],
+      "funFacts": [
+        "Pirin National Park covers 40,000 hectares but has no roads through its core — it's pure wilderness.",
+        "The Bosnian pines here are a relic species from the Ice Age — they survived when glaciers retreated.",
+        "Velingrad produces more mineral water than any other town in Bulgaria — over 17 million liters per day.",
+        "Bansko, at Pirin's base, is Bulgaria's top ski resort — the gondola runs in summer for hikers too.",
+        "The park is home to brown bears, wolves, and golden eagles — you'll probably see none, but they're watching.",
+        "Kleptuza cave has two levels — the upper cave is dry, the lower is filled with impossibly clear water.",
+        "Velingrad's altitude (750m) combined with mineral springs creates a microclimate — it's warm in winter, cool in summer."
+      ],
+      "photoSpot": {
+        "viewpoint": "The Vasilashki cirque trail, looking across the turquoise lakes to Vihren peak.",
+        "time": "Early morning (7–9 AM) for mirror-calm lake reflections and empty trails.",
+        "why": "Granite peaks, turquoise water, and ancient pines in one frame — Pirin's greatest hit.",
+        "tips": "Polarizing filter helps cut glare on the water. Include foreground wildflowers for depth. The best spot is about 30 minutes above the first Vasilashko lake."
+      },
+      "food": [
+        {
+          "name": "Rhodope Patatnik",
+          "description": "A potato and cheese bake from the Rhodope region — crispy outside, creamy inside.",
+          "special": "Made with local potatoes and sirene cheese. Comfort food perfection.",
+          "where": "Any Rhodope mehana in Velingrad — Hotel Radenski's restaurant is excellent."
+        },
+        {
+          "name": "Trout from Mountain Streams",
+          "description": "Fresh rainbow trout grilled over open fire, caught in Pirin's streams.",
+          "special": "Order 'pastrav na skara' — grilled trout with lemon and herbs.",
+          "where": "Restaurants in Bansko and Velingrad — Chevermeto in Bansko is a local favorite."
+        },
+        {
+          "name": "Velingrad Mineral Water",
+          "description": "Naturally carbonated, mineral-rich water straight from the springs.",
+          "special": "Each spring has a different mineral profile. Try water from multiple fountains.",
+          "where": "Public drinking fountains throughout Velingrad — free and flowing 24/7."
+        },
+        {
+          "name": "Kurabiiki",
+          "description": "Honey-dipped cookies spiced with cinnamon and cloves. A Rhodope specialty.",
+          "special": "Best paired with Turkish coffee at a local café.",
+          "where": "Bakeries and cafés along Velingrad's main pedestrian street."
+        }
+      ],
+      "phrase": {
+        "cyrillic": "Един бира, моля",
+        "transliteration": "Edin bira, molya",
+        "english": "One beer, please",
+        "when": "After a long hike, nothing beats a cold Zagorka or Kamenitza beer. Use at any bar or restaurant."
+      },
+      "challenges": [
+        "Find Baikushev's Pine and estimate its age (hint: over 1,000 years).",
+        "Drink from three different mineral springs in Velingrad and compare the taste.",
+        "Spot the difference between Bosnian pine and regular pine (needle count is the clue).",
+        "Take a boat into Kleptuza cave and touch the cave wall.",
+        "Count how many spa hotels you can see from Velingrad's main street."
+      ],
+      "insiderTips": [
+        "If driving from Sapareva Banya, the route through Bansko is scenic but slow — allow 2.5 hours.",
+        "Pirin park entry is free, but parking at Banderitsa costs a few lev.",
+        "Velingrad has dozens of spa hotels — book one with a thermal pool for the full experience.",
+        "Kleptuza is best visited in the afternoon after your hike, before dinner.",
+        "Bring cash to Velingrad — many smaller establishments don't take cards."
+      ],
+      "movie": {
+        "genre": "Nature epic / wellness retreat",
+        "atmosphere": "Morning feels like 'The Revenant' in the mountains — raw, vast, primal. Afternoon shifts to 'Eat Pray Love' — steam, silence, and mineral water.",
+        "resembles": "The mountain sequences from 'The Secret Life of Walter Mitty' paired with the thermal baths of 'Thermae Romae.'"
+      },
+      "historicalFigure": {
+        "name": "Yane Sandanski",
+        "who": "A revolutionary leader who fought for Macedonian and Bulgarian autonomy in the early 20th century.",
+        "why": "The Pirin region was his base of operations. He's a controversial but pivotal figure in Balkan history.",
+        "detail": "Sandanski organized the Ilinden Uprising of 1903 and operated from hideouts in these mountains. A peak in Pirin bears his name."
+      },
+      "visualGuide": [
+        {
+          "name": "Granite Spires",
+          "what": "Sharp, angular rock towers that dominate Pirin's skyline.",
+          "why": "Unlike Rila's rounded peaks, Pirin's granite looks sculpted — almost artificial in its perfection.",
+          "detail": "Vihren's north face is a 400-meter vertical wall. Climbers come from across Europe to tackle it."
+        },
+        {
+          "name": "Turquoise Cirque Lakes",
+          "what": "Glacial lakes with an intense blue-green color from mineral content.",
+          "why": "The color against grey granite is Pirin's signature visual — impossibly vivid.",
+          "detail": "The color peaks in July when snowmelt is highest. By late August, some lakes shrink significantly."
+        },
+        {
+          "name": "Ancient Bosnian Pines",
+          "what": "Twisted, gnarled pines that have stood for over a millennium.",
+          "why": "They look like bonsai trees scaled up to forest size — living sculptures.",
+          "detail": "Bosnian pines have five needles per cluster (regular pines have two). Count them."
+        },
+        {
+          "name": "Steam Rising from Springs",
+          "what": "Visible vapor from hot mineral springs in Velingrad, especially in cool mornings.",
+          "why": "It gives the town an otherworldly quality — like a Bulgarian Yellowstone.",
+          "detail": "The hottest springs reach 91°C. Steam is most visible before 9 AM in autumn and spring."
+        },
+        {
+          "name": "Karst Cave Water",
+          "what": "Impossibly clear water flowing from limestone caves at Kleptuza.",
+          "why": "The clarity is disorienting — you can't tell how deep the water is.",
+          "detail": "The spring produces 1,200 liters per second. The cave extends over 5 kilometers underground."
+        },
+        {
+          "name": "Rhodope Architecture",
+          "what": "Stone houses with wide eaves and wooden balconies in Velingrad's old quarter.",
+          "why": "A different aesthetic from Sofia or Rila — earthy, grounded, and distinctly Rhodope.",
+          "detail": "Look for houses with 'erker' (bay window) extensions — a signature Rhodope design feature."
+        }
+      ]
+    },
+    "5": {
+      "destination": [
+        "Plovdiv is Europe's oldest continuously inhabited city — 8,000 years and counting. But forget the history lesson for a second: this place is effortlessly cool. Ancient Roman ruins sit next to craft beer bars, and the Kapana creative district buzzes with street art, galleries, and the best coffee in Bulgaria.",
+        "You'll wander the Old Town's cobblestone lanes, climb to the ancient theatre (still used for concerts), and cross the Roman stadium buried beneath the main shopping street. Every corner reveals another layer — Thracian, Roman, Ottoman, Bulgarian Revival.",
+        "The drive from Velingrad takes you through the Rhodope Mountains — plan for stops at viewpoints and villages. The journey is half the experience, with winding roads, pine forests, and sudden vistas over green valleys."
+      ],
+      "history": [
+        "Plovdiv started as a Thracian settlement around 6000 BC. The Thracians called it Eumolpia. Philip II of Macedon (Alexander the Great's father) conquered it in 342 BC and renamed it Philippopolis. The Romans later built Trimontium — 'City of Three Hills' — and left an amphitheater, stadium, and aqueduct.",
+        "Under Ottoman rule (1364–1878), Plovdiv became a wealthy trading hub. Bulgarian Revival mansions from this era still line the Old Town — painted in ochre, blue, and terracotta, with ornate wooden facades.",
+        "In 2019, Plovdiv was a European Capital of Culture, sparking a renaissance in public art, festivals, and creative industries. Today it's Bulgaria's second city and arguably its most livable — a place where ancient history and modern creativity coexist without trying too hard."
+      ],
+      "highlights": [
+        {
+          "name": "Ancient Theatre of Philippopolis",
+          "what": "A 2nd-century Roman amphitheater carved into the hillside, still hosting performances.",
+          "why": "One of the best-preserved ancient theatres in the world. Sitting on original marble seats watching a concert at sunset is magic.",
+          "notice": "Entry fee applies. Check the events schedule — seeing a show here is unforgettable."
+        },
+        {
+          "name": "Kapana Creative District",
+          "what": "A maze of streets filled with street art, boutiques, bars, and workshops.",
+          "why": "Plovdiv's answer to Shoreditch or Kreuzberg — young, vibrant, and constantly evolving.",
+          "notice": "Best in the evening when bars and galleries open. Follow the murals."
+        },
+        {
+          "name": "Old Town (Staria Grad)",
+          "what": "A hilltop neighborhood of Revival-era mansions, churches, and cobblestone alleys.",
+          "why": "Getting lost here is the point. Every turn reveals a painted facade, a hidden courtyard, or a view over the city.",
+          "notice": "Cobblestones are slippery when wet. Wear shoes with grip."
+        },
+        {
+          "name": "Roman Stadium",
+          "what": "A 240-meter-long Roman stadium buried beneath the main pedestrian street.",
+          "why": "You can see the exposed northern end — 14 rows of marble seats right next to a H&M. Surreal urban layering.",
+          "notice": "The visible section is free. An underground museum shows more (small entry fee)."
+        },
+        {
+          "name": "Nebet Tepe",
+          "what": "The oldest hill in Plovdiv, with Thracian fortress ruins and panoramic city views.",
+          "why": "Stand where people have stood for 8,000 years and watch the modern city sprawl below.",
+          "notice": "Free and open 24/7. Best at sunset. A short but steep climb."
+        },
+        {
+          "name": "Dzhumaya Mosque",
+          "what": "A 14th-century Ottoman mosque on the main square, still active.",
+          "why": "The minaret rising above Roman ruins and modern cafés captures Plovdiv's layered identity perfectly.",
+          "notice": "Non-Muslims can visit outside prayer times. Remove shoes and dress modestly."
+        },
+        {
+          "name": "Rhodope Mountain Stops",
+          "what": "Scenic viewpoints and villages on the drive from Velingrad.",
+          "why": "The Trigrad Gorge and Devil's Throat Cave are detour-worthy if you have time.",
+          "notice": "Roads are winding. Allow extra time. Devil's Throat Cave requires a guided tour."
+        }
+      ],
+      "funFacts": [
+        "Plovdiv is built on seven hills, like Rome — but only six remain (one was quarried away).",
+        "The Roman stadium could hold 30,000 spectators. Plovdiv's population at the time was about 100,000.",
+        "Kapana means 'the trap' — named because once you wander in, you won't want to leave.",
+        "Plovdiv has been called Philippopolis, Trimontium, Filibe, and Paldin before getting its current name.",
+        "The city's clock tower in the Old Town has been telling time since 1883.",
+        "Plovdiv hosts an annual opera festival in the ancient theatre — imagine Aida with 2,000-year-old acoustics.",
+        "The longest pedestrian street in Europe runs through Plovdiv's center — 1.8 km of strolling."
+      ],
+      "photoSpot": {
+        "viewpoint": "Nebet Tepe hill at sunset, looking down over the Old Town rooftops to the modern city and Rhodope Mountains.",
+        "time": "Sunset — roughly 7:30–8:30 PM in summer.",
+        "why": "The golden light on the Revival houses, the ancient ruins at your feet, and the mountains on the horizon — it's Plovdiv's greatest panorama.",
+        "tips": "Bring a wide-angle lens. The painted house facades glow at golden hour. Stay after sunset for blue hour city lights."
+      },
+      "food": [
+        {
+          "name": "Kapama",
+          "description": "A slow-cooked stew of multiple meats, sauerkraut, and spices baked in a clay pot for hours.",
+          "special": "A Plovdiv New Year's tradition, but available year-round at traditional restaurants.",
+          "where": "Pavaj restaurant in the Old Town — rustic, authentic, and beloved by locals."
+        },
+        {
+          "name": "Plovdiv Craft Beer",
+          "description": "Kapana district has Bulgaria's best craft beer scene — IPAs, stouts, and local wheat beers.",
+          "special": "Try Haze from Beer Bastards or anything on tap at Cat and Mouse.",
+          "where": "Cat and Mouse Brewing in Kapana — the epicenter of Plovdiv's beer revolution."
+        },
+        {
+          "name": "Baklava",
+          "description": "Honey-soaked pastry layers with walnuts. Ottoman legacy, Bulgarian perfection.",
+          "special": "Plovdiv's Old Town bakeries make it fresh daily. Still warm is best.",
+          "where": "Any bakery on Saborna Street in the Old Town."
+        },
+        {
+          "name": "Gyuvetch",
+          "description": "Vegetable and meat stew cooked in a traditional clay pot (the dish is named after the pot).",
+          "special": "Each restaurant has its own recipe. Rich, hearty, and deeply comforting.",
+          "where": "Rahat Tepe restaurant — terrace views over the city."
+        }
+      ],
+      "phrase": {
+        "cyrillic": "Колко струва?",
+        "transliteration": "Kolko struva?",
+        "english": "How much does it cost?",
+        "when": "Essential for markets, taxis, and souvenir shops. Bulgarians appreciate when you try — they'll often switch to English to help."
+      },
+      "challenges": [
+        "Find the Roman mosaics visible through glass panels on the main shopping street.",
+        "Count how many different street art pieces you spot in Kapana (aim for 10+).",
+        "Climb all the hills of the Old Town without using Google Maps.",
+        "Watch street musicians perform near the Roman stadium and tip at least 2 BGN.",
+        "Find the 'Hills of Plovdiv' sign and photograph all six remaining hills from one spot."
+      ],
+      "insiderTips": [
+        "Park outside the Old Town — the cobblestone streets are pedestrian-only and parking is nightmare-ish.",
+        "The ancient theatre is worth the entry fee, but the exterior is partially visible from the hill above for free.",
+        "Kapana comes alive after 6 PM. Plan dinner there.",
+        "Plovdiv is walkable — don't bother with taxis within the center.",
+        "If driving from Velingrad, stop at the Asen's Fortress viewpoint for a 10-minute photo break."
+      ],
+      "movie": {
+        "genre": "Historical romance / indie drama",
+        "atmosphere": "Think 'Midnight in Paris' — wandering ancient streets that inspired civilizations, stumbling into art galleries, and falling in love with a city that has seen everything.",
+        "resembles": "The Plovdiv scenes evoke 'Before Sunset' — intimate conversations on cobblestone streets as history watches from every wall."
+      },
+      "historicalFigure": {
+        "name": "Philip II of Macedon",
+        "who": "King of Macedon, father of Alexander the Great, who conquered and renamed the city Philippopolis in 342 BC.",
+        "why": "He saw strategic and economic potential in this Thracian settlement — and his renaming stuck for centuries.",
+        "detail": "Philip II reformed the Macedonian army and laid the groundwork for Alexander's empire. Plovdiv's ancient theatre was built during the Roman era that followed his conquest."
+      },
+      "visualGuide": [
+        {
+          "name": "Revival House Facades",
+          "what": "Ochre, blue, and terracotta painted mansions with ornate wooden overhangs.",
+          "why": "Each house is a different color and style — it's like walking through a living museum.",
+          "detail": "The colors weren't just decorative — they indicated the owner's wealth and status. Brighter colors meant bigger budgets."
+        },
+        {
+          "name": "Roman Marble",
+          "what": "White marble seats, columns, and paving stones from the 2nd century AD.",
+          "why": "You're literally sitting on 2,000-year-old stone. The theatre's marble gleams in sunlight.",
+          "detail": "Look for Latin inscriptions on stones reused in later buildings — Romans recycled too."
+        },
+        {
+          "name": "Kapana Street Art",
+          "what": "Murals, stencil work, and installations covering building walls throughout the district.",
+          "why": "Plovdiv's 2019 Capital of Culture legacy lives on in ever-changing street art.",
+          "detail": "New pieces appear monthly. The mural on Gladstone Street changes every summer."
+        },
+        {
+          "name": "Cobblestone Alleys",
+          "what": "Irregular stone-paved lanes winding through the Old Town.",
+          "why": "They force you to slow down — no cars, no rush, just wandering.",
+          "detail": "The stones are original Ottoman-era paving. Watch your step — they're uneven and slippery."
+        },
+        {
+          "name": "Minaret and Dome Skyline",
+          "what": "Ottoman mosque minarets alongside Orthodox church domes.",
+          "why": "The skyline tells Plovdiv's story of coexistence — different faiths, same city.",
+          "detail": "From Nebet Tepe, you can spot at least three mosques and five churches in one panoramic view."
+        },
+        {
+          "name": "Hills and Valleys",
+          "what": "The city draped across six hills with the Maritsa River running through.",
+          "why": "The topography creates constant surprises — turn a corner and there's another vista.",
+          "detail": "Each hill has a name and character. Nebet Tepe is ancient, Bunardzhik has the Soviet monument, Sahat Tepe has the clock tower."
+        }
+      ]
+    },
+    "6": {
+      "destination": [
+        "The mountains give way to the sea — today you're heading to Nessebar, one of the oldest towns on the Bulgarian Black Sea coast. This tiny peninsula (just 850 meters long) packs more history per square meter than almost anywhere in Europe. UNESCO calls it 'a place where millennia of human history are layered like pages of a book.'",
+        "The Old Town is a labyrinth of cobblestone lanes, medieval churches, and wooden houses perched above the water. Outside the ancient walls, modern Nessebar sprawls along Sunny Beach — Bulgaria's most famous resort strip. The contrast is stark and fascinating.",
+        "This is a day to slow down. Swim in the Black Sea, explore churches from the 5th century, eat fresh fish by the harbor, and watch the sunset paint the peninsula gold. You've earned this coast."
+      ],
+      "history": [
+        "Nessebar was founded as a Thracian settlement called Mesembria around 3000 BC. The Greeks turned it into a thriving colony (Mesembria) in the 6th century BC, building temples, a fortress, and a theater. The Romans, Byzantines, and Bulgarians each added their layer.",
+        "At its medieval peak, Nessebar had over 40 churches — earning it the nickname 'Bulgaria's Dubrovnik.' Today about a dozen remain, mostly from the 13th–14th centuries. The peninsula was a key Byzantine outpost and later a Bulgarian spiritual center.",
+        "Connected to the mainland by a narrow isthmus (originally a causeway, now a road), Nessebar was an island for most of its history. UNESCO listed it in 1983. The modern resort development of Sunny Beach began in the 1960s, creating the fascinating old-meets-new dynamic you see today."
+      ],
+      "highlights": [
+        {
+          "name": "Church of Saint Sofia",
+          "what": "The oldest church in Nessebar, dating to the 5th–6th century.",
+          "why": "Its ruined state is hauntingly beautiful — stone walls open to the sky, with the sea visible through empty windows.",
+          "notice": "Free to visit. Best photographed in afternoon light when the stone glows warm."
+        },
+        {
+          "name": "Church of Christ Pantocrator",
+          "what": "A 14th-century church with intricate brick and stone patterns on its exterior.",
+          "why": "Considered the most beautiful medieval church in Nessebar — the alternating brickwork is mesmerizing.",
+          "notice": "Small entry fee. Interior frescoes are faded but still visible."
+        },
+        {
+          "name": "Old Town Cobblestone Lanes",
+          "what": "A maze of narrow pedestrian streets winding through the peninsula.",
+          "why": "Getting lost is mandatory. Every lane opens to a church, a sea view, or a hidden courtyard.",
+          "notice": "Wear comfortable shoes — the stones are ancient and uneven."
+        },
+        {
+          "name": "Nessebar South Beach",
+          "what": "A sandy beach on the peninsula's south side with calm, clear water.",
+          "why": "Swim with medieval churches behind you. Where else does that happen?",
+          "notice": "Beach chairs cost extra (15–20 BGN/day). Bring a towel and find a free spot."
+        },
+        {
+          "name": "Windmill at the Entrance",
+          "what": "A restored wooden windmill marking the entrance to the Old Town.",
+          "why": "The iconic photo spot — windmill, ancient walls, and sea in one frame.",
+          "notice": "Best at sunrise or sunset. Midday is crowded with tour groups."
+        },
+        {
+          "name": "Archaeological Museum",
+          "what": "Artifacts from 3,000 years of Nessebar's history — Greek, Roman, Byzantine, Bulgarian.",
+          "why": "Puts everything you've walked through into context. Ancient anchors, amphorae, and jewelry.",
+          "notice": "Near the windmill. Allow 45 minutes. Air-conditioned refuge on hot days."
+        },
+        {
+          "name": "Harbor Sunset Walk",
+          "what": "The western waterfront path along the Old Town's sea wall.",
+          "why": "Golden hour here is unreal — fishing boats, church silhouettes, and the sun dropping into the Black Sea.",
+          "notice": "Restaurants along the harbor are tourist-priced but the views are worth a drink."
+        }
+      ],
+      "funFacts": [
+        "Nessebar's peninsula is only 850 meters long and 350 meters wide — you can walk it in 20 minutes, but you'll want hours.",
+        "The Black Sea is less salty than the Mediterranean and has almost no tides — the water level barely changes.",
+        "Over 40 churches once stood on this tiny peninsula. About 12 survive today.",
+        "Sunny Beach, next door, has over 800 hotels — it's one of the largest resort complexes in the Balkans.",
+        "The name Nessebar may come from the Thracian 'Melsambria' meaning 'town of Melsas.'",
+        "Bulgarian beaches consistently rank among Europe's cheapest — sunbed, umbrella, and beer for under €10.",
+        "The Black Sea is called 'Morye' (море) in Bulgarian — the same word Russians use. You'll hear it everywhere."
+      ],
+      "photoSpot": {
+        "viewpoint": "The harbor walk on the west side of the peninsula, facing the windmill and ancient walls at sunset.",
+        "time": "Sunset — roughly 7:30–8:30 PM in summer.",
+        "why": "The sun sets over the water behind the windmill and church silhouettes. Fishing boats add foreground interest.",
+        "tips": "Use silhouette mode for dramatic church outlines. The light reflects off the water for double the color. Arrive 30 minutes early to claim a spot."
+      },
+      "food": [
+        {
+          "name": "Grilled Sea Bass",
+          "description": "Fresh-caught sea bass grilled whole with lemon, olive oil, and herbs.",
+          "special": "Order 'lavrak na skara' — the Black Sea version is especially flavorful.",
+          "where": "Restaurant Panorama in the Old Town — terrace overlooking the harbor."
+        },
+        {
+          "name": "Tarator",
+          "description": "Cold yogurt-cucumber soup — even better on the coast where the yogurt is freshest.",
+          "special": "Coastal restaurants serve it thicker and with more garlic. Perfect beach-day starter.",
+          "where": "Any Old Town restaurant — try The Old Nessebar."
+        },
+        {
+          "name": "Mussels in White Wine",
+          "description": "Black Sea mussels steamed with garlic, white wine, and parsley.",
+          "special": "Bulgaria's coast has excellent mussels — plump, cheap, and abundant.",
+          "where": "Captain's Fish Tavern near the harbor — casual and reliable."
+        },
+        {
+          "name": "Bulgarian Rosé",
+          "description": "The Black Sea region produces surprisingly good rosé wines — light, fruity, and perfect for beach evenings.",
+          "special": "Try a bottle from Domaine Boyar or Black Sea Gold winery.",
+          "where": "Wine bars and restaurants throughout the Old Town."
+        }
+      ],
+      "phrase": {
+        "cyrillic": "Още една, моля",
+        "transliteration": "Oshte edna, molya",
+        "english": "One more, please",
+        "when": "Works for beers, coffees, or any round of drinks. You'll use this more than you'd expect on the coast."
+      },
+      "challenges": [
+        "Visit at least 5 churches and photograph the exterior of each.",
+        "Find the ancient Greek fortress walls (hint: near the north end of the peninsula).",
+        "Swim in the Black Sea and compare the saltiness to any ocean you've been in.",
+        "Spot the difference between the Old Town and Sunny Beach from the windmill viewpoint.",
+        "Count the fishing boats in the harbor at sunset."
+      ],
+      "insiderTips": [
+        "Park on the mainland side of the isthmus — Old Town parking is limited and expensive.",
+        "Visit churches early morning or late afternoon to avoid tour groups.",
+        "Sunny Beach is a party town — if that's your vibe, great. If not, stay in the Old Town.",
+        "The beach on the south side of the peninsula is calmer than Sunny Beach.",
+        "Book accommodation in the Old Town itself — waking up inside the ancient walls is worth the premium."
+      ],
+      "movie": {
+        "genre": "Romantic drama / travelogue",
+        "atmosphere": "Think 'The Talented Mr. Ripley' Amalfi scenes — ancient stone, turquoise water, golden light, and the lazy rhythm of coastal life.",
+        "resembles": "Nessebar's Old Town channels 'Mamma Mia' energy — if the Greek islands were Bulgarian and had 1,000 more years of history."
+      },
+      "historicalFigure": {
+        "name": "Saint Nicholas of Nessebar",
+        "who": "A medieval bishop and spiritual leader who helped establish Nessebar as a center of Orthodox Christianity.",
+        "why": "The Church of Saint Nicholas (newer than the saint) and the town's deep Christian heritage trace back to figures like him.",
+        "detail": "Medieval Nessebar was a bishopric — a seat of church power. Its churches weren't just places of worship but statements of cultural identity during centuries of foreign rule."
+      },
+      "visualGuide": [
+        {
+          "name": "Medieval Church Brickwork",
+          "what": "Alternating rows of stone and red brick on church exteriors — a Byzantine technique.",
+          "why": "It's Nessebar's visual signature. No two churches use the pattern exactly the same way.",
+          "detail": "The pattern is called 'opus mixtum' — Romans invented it, Byzantines perfected it, Bulgarians made it art."
+        },
+        {
+          "name": "Wooden Houses on Stone Foundations",
+          "what": "19th-century wooden upper floors built atop ancient stone ground floors.",
+          "why": "Layers of history made visible — the stone is medieval, the wood is Revival era.",
+          "detail": "Many ground-floor stones are reused from demolished churches or fortress walls."
+        },
+        {
+          "name": "Black Sea Color",
+          "what": "The sea here shifts from deep navy to bright turquoise depending on depth and light.",
+          "why": "It's not the Caribbean blue — it's darker, moodier, and more dramatic.",
+          "detail": "The color is deepest at midday and turns golden-green at sunset when the light hits the water."
+        },
+        {
+          "name": "The Windmill",
+          "what": "A restored 19th-century wooden windmill at the Old Town entrance.",
+          "why": "The postcard image of Nessebar — every visitor photographs it.",
+          "detail": "It's a reconstruction (the original was demolished in the 19th century), but the location and design are historically accurate."
+        },
+        {
+          "name": "Church Ruins",
+          "what": "Several churches stand as roofless stone shells — open to sky and sea.",
+          "why": "They're more evocative than the intact ones — you feel the weight of time.",
+          "detail": "Saint Sofia church is the most dramatic — its walls frame the sky like a stone picture window."
+        },
+        {
+          "name": "Fishing Nets and Boats",
+          "what": "Colorful wooden fishing boats and drying nets along the harbor.",
+          "why": "They remind you this isn't just a museum — people still live and work here.",
+          "detail": "Morning is best for boat photos — fishermen return with their catch around 7–8 AM."
+        }
+      ]
+    },
+    "7": {
+      "destination": [
+        "Your last morning on the coast starts slow. Nessebar at dawn is a different world — no tour groups, no beach parties, just fishermen preparing boats and churches glowing in early light. Take one more walk through the Old Town before the road calls you north to Varna.",
+        "The drive to Varna is about 2 hours along the Black Sea coast — one of Bulgaria's most scenic routes. You'll pass through Obzor, Byala, and Chernomorets, with sea views most of the way. If time and energy allow, detour to Cape Emine — the easternmost point of the Balkan Mountains, where the range plunges into the sea.",
+        "Varna is Bulgaria's maritime capital — a lively port city with Roman baths, a beautiful seaside garden, and a beach culture that's more local than Nessebar's resort scene. End your week with a sunset on Varna's coast."
+      ],
+      "history": [
+        "Varna is one of Europe's oldest cities, with evidence of settlement dating to 4,600 BC. The discovery of the Varna Necropolis — gold treasure from 4,500 BC — makes it one of the world's earliest known gold-working civilizations. The Thracians called it Odessos.",
+        "The Romans built massive thermal baths here (still visible in the city center) and a port that connected the empire to the Black Sea trade routes. Varna became a key Byzantine and later Bulgarian naval base.",
+        "Cape Emine, on the drive north, marks where the Balkan Mountains meet the Black Sea. It's been a landmark for sailors for millennia — the cape's lighthouse has guided ships since 1880. The area around it was a sacred site for Thracians and later a strategic military position."
+      ],
+      "highlights": [
+        {
+          "name": "Nessebar at Dawn",
+          "what": "The Old Town in early morning light — empty lanes, golden stone, and absolute peace.",
+          "why": "You've seen it crowded. Now see it as locals do — quiet, luminous, and timeless.",
+          "notice": "Shops won't be open yet. Bring coffee from your hotel and just walk."
+        },
+        {
+          "name": "Cape Emine",
+          "what": "The easternmost point of the Balkan Mountains, where the range meets the Black Sea.",
+          "why": "Dramatic cliffs, a lighthouse, and the feeling of standing at the edge of a continent.",
+          "notice": "The road is rough — last section is unpaved. Allow 30 minutes from the main coastal road. Windy."
+        },
+        {
+          "name": "Varna Archaeological Museum",
+          "what": "Home to the Varna Gold — the oldest processed gold treasure in the world (4,500 BC).",
+          "why": "You're looking at gold jewelry made 1,500 years before the Egyptian pyramids. Mind-blowing.",
+          "notice": "In Varna city center. Allow 1–2 hours. The necropolis exhibit is the highlight."
+        },
+        {
+          "name": "Roman Thermal Baths",
+          "what": "The fourth-largest Roman bath complex in Europe, right in Varna's city center.",
+          "why": "2nd-century ruins you can walk through for free — columns, hypocaust floors, and scale that rivals Rome.",
+          "notice": "Open-air and free. Best in morning or late afternoon — midday heat is intense."
+        },
+        {
+          "name": "Varna Sea Garden",
+          "what": "A vast seaside park stretching 8 km along the coast — gardens, fountains, and beach access.",
+          "why": "Varna's living room. Locals jog, stroll, and sunset-watch here every evening.",
+          "notice": "Free and open 24/7. Rent a bike to cover more ground."
+        },
+        {
+          "name": "Coastal Drive",
+          "what": "The road from Nessebar to Varna hugs the Black Sea coastline with constant views.",
+          "why": "One of Bulgaria's best drives — cliffs, beaches, and fishing villages rolling past your window.",
+          "notice": "Stop at Obzor or Byala for a beach break. Road is well-maintained but busy in summer."
+        },
+        {
+          "name": "Varna Beach at Sunset",
+          "what": "The city's main beach strip at golden hour, with the Sea Garden behind you.",
+          "why": "A local, unpretentious beach scene — families, volleyball, and cold beers from beach bars.",
+          "notice": "Less glamorous than Nessebar but more authentic. Grab a beer and watch the day end."
+        }
+      ],
+      "funFacts": [
+        "The Varna Gold Treasure is 6,500 years old — older than the Sumerians, the Indus Valley, and Stonehenge.",
+        "Varna hosts the Bulgarian Navy's headquarters — you'll see warships in the harbor.",
+        "Cape Emine is where the Balkan Mountains end — they've run 530 km from Serbia to here.",
+        "Varna's Sea Garden was designed by Czech landscape architect Anton Novák in the 1860s.",
+        "The Black Sea coast of Bulgaria is 378 km long — you've covered a good chunk of it this week.",
+        "Varna has a festival called 'The Golden Rose' celebrating Bulgaria's perfume industry every June.",
+        "The Roman baths in Varna could accommodate 3,000 bathers at once — ancient social networking."
+      ],
+      "photoSpot": {
+        "viewpoint": "Cape Emine lighthouse, looking south along the cliff coast with the Black Sea stretching to the horizon.",
+        "time": "Late afternoon — 4–6 PM for warm side-light on the cliffs.",
+        "why": "It's the dramatic punctuation mark on your coastal drive — mountains, cliffs, lighthouse, and endless sea.",
+        "tips": "Wind is constant — secure your hat. Wide-angle for the cliff panorama, telephoto for the lighthouse detail. The unpaved road is worth the bumpy ride."
+      },
+      "food": [
+        {
+          "name": "Varna Breakfast by the Sea",
+          "description": "Grab a banitsa and coffee from a bakery near the Sea Garden and eat on a bench overlooking the water.",
+          "special": "Morning is Varna at its best — calm, local, and beautiful.",
+          "where": "Any bakery along the Sea Garden's main path."
+        },
+        {
+          "name": "Fried Sprat (Tsatsa)",
+          "description": "Tiny fried fish eaten whole — crunchy, salty, and the ultimate beach snack.",
+          "special": "Order a paper cone from a beach vendor and eat with your fingers.",
+          "where": "Beach vendors along Varna's main beach strip."
+        },
+        {
+          "name": "Varna Seafood Platter",
+          "description": "A mixed grill of calamari, shrimp, mussels, and fish — built for sharing.",
+          "special": "Varna's port means incredibly fresh seafood at reasonable prices.",
+          "where": "La Pastaria on the Sea Garden — reliable quality and sea views."
+        },
+        {
+          "name": "Garash Cake",
+          "description": "Bulgaria's beloved walnut layer cake covered in chocolate glaze. The national dessert.",
+          "special": "Every Bulgarian grandmother has her recipe. Restaurant versions are denser and richer.",
+          "where": "Any patisserie in Varna — Sweet Things on Slivnitsa Blvd is excellent."
+        }
+      ],
+      "phrase": {
+        "cyrillic": "Довиждане",
+        "transliteration": "Dovizhdane",
+        "english": "Goodbye (until we meet again)",
+        "when": "Your farewell word for Bulgaria. Say it to shopkeepers, waiters, and anyone who's made your trip memorable."
+      },
+      "challenges": [
+        "Wake up early enough to see Nessebar's Old Town with zero tourists.",
+        "Drive to Cape Emine and stand at the easternmost point of the Balkan Mountains.",
+        "Find the Varna Gold in the Archaeological Museum and photograph your favorite piece.",
+        "Walk the full length of Varna's Sea Garden (it's 8 km — or do a section).",
+        "Watch the sunset from Varna beach and raise a toast to seven days in Bulgaria."
+      ],
+      "insiderTips": [
+        "Leave Nessebar by 9 AM to have time for Cape Emine and a full afternoon in Varna.",
+        "The Cape Emine detour adds about 1 hour. Skip it if you're short on time — the coastal drive itself is scenic enough.",
+        "Varna's Archaeological Museum is a must — don't skip it for the beach.",
+        "Parking in Varna center is easier than Sofia or Plovdiv. Use the lot near the Roman baths.",
+        "If you're flying out of Varna Airport (VAR), it's 15 minutes from the city center."
+      ],
+      "movie": {
+        "genre": "Road movie / reflective drama",
+        "atmosphere": "Think 'The Motorcycle Diaries' coastal scenes — open road, sea stretching to the horizon, and the bittersweet feeling of a journey ending.",
+        "resembles": "The final act of 'Call Me by Your Name' — golden light, sea breeze, and the ache of a perfect trip coming to a close."
+      },
+      "historicalFigure": {
+        "name": "The Varna Goldsmiths",
+        "who": "Unknown craftsmen of the Varna Culture (4,600 BC) who created the world's oldest processed gold.",
+        "why": "Their work proves that sophisticated civilization existed on the Black Sea coast millennia before the pyramids.",
+        "detail": "Over 3,000 gold artifacts were found in a single necropolis in 1972. The craftsmen used techniques like hammering, casting, and filigree that wouldn't be matched for thousands of years."
+      },
+      "visualGuide": [
+        {
+          "name": "Varna Gold",
+          "what": "Exquisitely crafted gold jewelry and ornaments from 4,500 BC.",
+          "why": "Seeing 6,500-year-old gold in person recalibrates your sense of history.",
+          "detail": "Look for the gold bull figurines and the scepter — symbols of power from a world we barely understand."
+        },
+        {
+          "name": "Roman Bath Columns",
+          "what": "Towering brick and stone columns from Varna's 2nd-century thermae.",
+          "why": "They rise from a modern city block like a portal to another era.",
+          "detail": "The hypocaust (underfloor heating) system is still visible — ancient Roman engineering at its finest."
+        },
+        {
+          "name": "Cape Emine Cliffs",
+          "what": "Steep rocky cliffs where the Balkan Mountains plunge into the Black Sea.",
+          "why": "The raw edge of the continent — land giving way to water.",
+          "detail": "The cliffs are composed of limestone and sandstone layers — you can read millions of years in the rock strata."
+        },
+        {
+          "name": "Sea Garden Fountains",
+          "what": "Ornate fountains and sculptures throughout Varna's seaside park.",
+          "why": "They give the Sea Garden a Belle Époque elegance — European grandeur on the Black Sea.",
+          "detail": "The main fountain near the entrance performs a light-and-music show on summer evenings."
+        },
+        {
+          "name": "Fishing Village Colors",
+          "what": "Brightly painted boats and nets in coastal villages along the drive.",
+          "why": "Pops of color against the blue sea — quintessentially Black Sea.",
+          "detail": "Chernomorets village (before Varna) has the prettiest harbor — worth a 15-minute stop."
+        },
+        {
+          "name": "Morning Mist on Nessebar",
+          "what": "Sea mist rolling over the Old Town peninsula in early morning.",
+          "why": "It transforms the churches into ghostly silhouettes — haunting and beautiful.",
+          "detail": "September mornings are mistiest. Combined with dawn light, it's the most photogenic moment of the entire trip."
+        }
+      ]
+    },
+    "8": {
+      "destination": [
+        "Welcome to Varna — Bulgaria's seaside queen and your reward after days of mountains and ancient towns. This is where the Black Sea meets 2,000 years of history, and honestly, it feels like the city was designed for people who want culture in the morning and a swim by lunch.",
+        "Start in the Sea Garden, a waterfront park so long you'll think it never ends. Palm-lined paths, open-air stages, quirky sculptures, and the sound of waves just beyond the trees — it's the kind of place where you lose track of time with an ice cream and zero regrets.",
+        "Then peel back the layers: golden cathedral domes above the old town, Roman baths that once steamed with senators, and a museum holding the oldest worked gold on Earth. Varna isn't just a beach stop — it's a full plot twist in your Bulgaria story."
+      ],
+      "history": [
+        "Varna began life as Odessos, a Greek colony founded around the 6th century BC on a natural harbor that traders had coveted for millennia. Romans turned it into a major port and built the thermae you can still walk through today — among the largest surviving Roman baths in the Balkans.",
+        "Medieval Bulgarians and Byzantines fought over this strategic coast for centuries. The city rose again in the 19th century as Bulgaria's gateway to the world, and the Dormition Cathedral — completed in 1886 — became a symbol of national revival after centuries of Ottoman rule.",
+        "The discovery that rewrote prehistory happened here in 1972: the Varna Chalcolithic Necropolis, where archaeologists unearthed over 6,000 gold artifacts dating to roughly 4600 BC. That find pushed back our understanding of early European civilization by thousands of years — and it's all sitting in the Archaeological Museum downtown."
+      ],
+      "highlights": [
+        {
+          "name": "Sea Garden (Morska Gradina)",
+          "what": "A vast seaside park stretching several kilometers along the coast, with paths, fountains, a casino building, open-air theater, and endless spots to sit and people-watch.",
+          "why": "It's Varna's living room — locals jog here at dawn, families stroll at sunset, and you'll understand why this city feels so relaxed compared to the capital.",
+          "notice": "The park is huge; rent a bike or e-scooter near the main entrance if you want to cover it without melting in August heat."
+        },
+        {
+          "name": "Dormition Cathedral",
+          "what": "Varna's landmark Orthodox cathedral with striking golden domes and a richly painted interior, dominating the skyline above the old town.",
+          "why": "It's the postcard shot — and the view from the bell tower (if open) gives you the whole city and the sea in one sweep.",
+          "notice": "Dress modestly (shoulders and knees covered). Photography inside may be restricted during services — check before snapping."
+        },
+        {
+          "name": "Roman Thermae",
+          "what": "Ruins of a 4th-century Roman bath complex with visible hypocaust heating systems, columns, and the layout of frigidarium and caldarium rooms.",
+          "why": "Walking through ancient steam rooms on a modern summer day is surreal — you can literally see how Romans lived the good life here.",
+          "notice": "Closes around 5 PM and is easy to miss if you sleep in. Hit this in the morning before the cathedral."
+        },
+        {
+          "name": "Varna Archaeological Museum",
+          "what": "The home of the Varna Gold — thousands of prehistoric gold pieces from the Chalcolithic Necropolis, plus Thracian, Greek, and Roman collections.",
+          "why": "You're standing inches from jewelry made 6,600 years ago. No exaggeration: this is one of the most important archaeological finds on the planet.",
+          "notice": "Allow at least 90 minutes. The gold gallery on the top floor is the main event — don't rush it."
+        },
+        {
+          "name": "Varna Beach",
+          "what": "The city's central urban beach with golden sand, beach bars, and the full summer Black Sea experience just steps from downtown.",
+          "why": "Where else can you see a cathedral, Roman baths, and prehistoric gold before lunch, then swim in the afternoon?",
+          "notice": "August crowds are real. Mornings are calmer; afternoons bring music, drinks, and energy."
+        },
+        {
+          "name": "Port Promenade Bridge",
+          "what": "A pedestrian bridge and walkway along the harbor with panoramic views of the bay, yachts, and the Sea Garden coastline.",
+          "why": "Golden hour here is chef's kiss — the light hits the water and the cathedral domes glow from across the bay.",
+          "notice": "Wind picks up in the evening; bring a light layer even in summer."
+        },
+        {
+          "name": "Aladzha Rock Monastery",
+          "what": "A medieval monastery carved into a limestone cliff face about 15 km north of the city, with monk cells and a small museum.",
+          "why": "If you have a car and want something off the main circuit, this cliffside monastery feels like a secret chapter of Bulgarian spirituality.",
+          "notice": "It's a short drive north — budget 1–2 hours total if you go. Paths involve stairs."
+        }
+      ],
+      "funFacts": [
+        "The Varna Gold predates the Egyptian pyramids and Stonehenge — humans were crafting sophisticated jewelry here while much of Europe was still in the Stone Age.",
+        "Varna hosts the International Ballet Competition, one of the most prestigious in the world — the Sea Garden's open-air stage was built for exactly this kind of grandeur.",
+        "The city was called Stalin for a brief period (1949–1956) before reclaiming its ancient name.",
+        "Varna's Roman baths could accommodate hundreds of bathers at once — the ancient version of a luxury spa day.",
+        "The Black Sea here is less salty than the Mediterranean, which makes floating surprisingly easy.",
+        "Bulgaria's oldest processed gold was found by accident during construction work in 1972 — a bulldozer literally uncovered a burial site.",
+        "The Sea Garden was designed in the late 19th century and has been expanded ever since — locals treat it like their personal backyard."
+      ],
+      "photoSpot": {
+        "viewpoint": "The port promenade bridge at the Sea Garden's eastern end, looking back toward the golden cathedral domes and the curve of the bay.",
+        "time": "Sunset, roughly 7:30–8:30 PM in August — the sky goes pink and gold, and the cathedral domes catch the last light.",
+        "why": "You get water, skyline, cathedral, and park in one frame — the definitive 'I'm in Varna' shot without fighting beach crowds.",
+        "tips": "Face west along the promenade for the best light on the domes. Portrait mode works beautifully with the bay as backdrop. Weekday sunsets are less crowded than weekends."
+      },
+      "food": [
+        {
+          "name": "Tarator",
+          "description": "A cold yogurt soup with cucumber, garlic, dill, and walnuts — Bulgaria's answer to gazpacho.",
+          "special": "Refreshing, light, and perfect after walking in August heat. Locals eat it like a drink.",
+          "where": "Any traditional restaurant near the Sea Garden or in the old town — try a mehana with a terrace."
+        },
+        {
+          "name": "Mussaka",
+          "description": "Bulgarian-style baked casserole with minced meat, potatoes, and eggs on top — not the Greek eggplant version.",
+          "special": "The potato layer makes it heartier and distinctly Bulgarian. Comfort food after a museum marathon.",
+          "where": "Restaurants along ulitsa Knyaz Boris I in the center — look for places with handwritten menus."
+        },
+        {
+          "name": "Tsatsa",
+          "description": "Small fried fish (sprat or similar) served by the plateful, eaten whole with a squeeze of lemon.",
+          "special": "The classic Black Sea beach snack — salty, crispy, and meant to pair with a cold Kamenitza beer.",
+          "where": "Beach bars along the central coast or casual spots near the port."
+        },
+        {
+          "name": "Palachinki",
+          "description": "Thin Bulgarian crepes filled with jam, chocolate, or sweet cheese — the go-to afternoon treat.",
+          "special": "Street vendors and bakeries near the Sea Garden sell them warm. Share a stack on a park bench.",
+          "where": "Stands inside the Sea Garden and bakeries on the streets leading to the park."
+        }
+      ],
+      "phrase": {
+        "cyrillic": "Колко струва?",
+        "transliteration": "Kolko struva?",
+        "english": "How much does it cost?",
+        "when": "At market stalls, beach vendors, museum gift shops, or when the menu has no prices — essential for market day and souvenir bargaining."
+      },
+      "challenges": [
+        "Fit the Roman baths, cathedral, gold museum, and Sea Garden into one day without rushing — prioritize baths in the morning since they close early.",
+        "August heat is intense — schedule indoor museums during peak sun (11 AM–3 PM) and save the park for late afternoon.",
+        "Parking near the center fills up fast; your hostel area may be easier to leave the car and walk.",
+        "The Archaeological Museum's gold collection is overwhelming — decide in advance how long you'll stay or you'll miss the beach.",
+        "Tourist restaurants near the beach charge more — walk two blocks inland for better prices and food."
+      ],
+      "insiderTips": [
+        "Rent a bike at the Sea Garden entrance — you'll cover three times more ground and feel like a local.",
+        "Buy a combined ticket if available for museums; ask at the Archaeological Museum desk.",
+        "The free public beach is just south of the Sea Garden — skip the overpriced lounger setups unless you want full service.",
+        "Grab coffee at a kiosk inside the park and walk to the open-air theater — even empty, the architecture is stunning.",
+        "Locals swim until late September — the water in August is at its warmest, so don't skip the beach guilt."
+      ],
+      "movie": {
+        "genre": "Coastal drama / historical epic",
+        "atmosphere": "Sun-drenched Mediterranean energy with ancient secrets buried beneath a modern resort town — think glamour meets archaeology.",
+        "resembles": "The seaside chapters of The Talented Mr. Ripley meets the museum intrigue of The Da Vinci Code, with a Black Sea twist."
+      },
+      "historicalFigure": {
+        "name": "The Varna Goldsmith (unknown)",
+        "who": "An anonymous master craftsman from the Chalcolithic period, circa 4600 BC, whose work survives in the world's oldest known gold treasure.",
+        "why": "Their creations — rings, bracelets, breastplates, and scepters — prove that sophisticated society existed here millennia before written history.",
+        "detail": "Over 3,000 gold artifacts weighing more than 6 kg were found in just 300 graves. The craftsmanship includes techniques like hammering, casting, and filigree that were thought impossible for the era."
+      },
+      "visualGuide": [
+        {
+          "name": "Golden Domes",
+          "what": "The five domes of the Dormition Cathedral, especially the central one, glowing in sunlight.",
+          "why": "They're the visual anchor of the entire city — spot them from almost anywhere and orient yourself.",
+          "detail": "Best angle is from the Sea Garden looking west, or from the cathedral square looking up. Late afternoon light turns them from gold to amber."
+        },
+        {
+          "name": "Sea Garden Alley",
+          "what": "The main tree-lined promenade running parallel to the coast, with benches and sea glimpses through the foliage.",
+          "why": "This is the rhythm of Varna — understanding the park's layout helps you navigate the whole waterfront.",
+          "detail": "Look for the sundial sculpture and the old casino building — both are local landmarks for meetups."
+        },
+        {
+          "name": "Roman Hypocaust",
+          "what": "The raised floor pillars in the thermae ruins that once circulated hot air beneath the bathers' feet.",
+          "why": "It's the 'aha' moment that makes Roman engineering tangible — you'll never look at a modern spa the same way.",
+          "detail": "Stand in the caldarium section and imagine steam rising. Information panels explain the heating system."
+        },
+        {
+          "name": "Gold Grave 43",
+          "what": "The centerpiece display in the Archaeological Museum — a high-status burial with over 1.5 kg of gold ornaments.",
+          "why": "This single grave rewrote European prehistory. The sheer quantity of gold is jaw-dropping.",
+          "detail": "The museum labels explain each piece. Spend time on the scepter and the gold bull figurines — they're iconic."
+        },
+        {
+          "name": "Black Sea Horizon",
+          "what": "The open water view from the beach or Sea Garden, with the curve of the bay and distant headlands.",
+          "why": "You've been inland for days — this is the moment the trip opens up to the sea.",
+          "detail": "Morning light is softer for photos; afternoon brings deeper blue water and more beach life."
+        },
+        {
+          "name": "Old Town Streets",
+          "what": "Narrow lanes between the cathedral and the Roman baths, with 19th-century buildings and small shops.",
+          "why": "The human scale of old Varna contrasts with the grand monuments — this is where you feel the city's daily pulse.",
+          "detail": "Walk ulitsa Han Krum for architecture and quiet corners away from the main tourist flow."
+        }
+      ]
+    },
+    "9": {
+      "destination": [
+        "Today you trade the sea for the Yantra River gorge and one of the most dramatic cityscapes in Eastern Europe. Veliko Tarnovo was the capital of medieval Bulgaria — the 'City of the Tsars' — and it still looks like something from a fantasy map.",
+        "The drive from Varna is part of the adventure. Stop at the Madara Rider, a UNESCO-listed horseman carved into a cliff face in the 8th century, then watch the landscape shift from flat coast to rolling hills and finally to a river canyon with houses stacked on impossible terraces.",
+        "By afternoon you'll be climbing Tsarevets Fortress, wandering artisan streets, and finding viewpoints where the whole city spills down the gorge in layers of red roofs and stone walls. This is the day your camera earns its keep."
+      ],
+      "history": [
+        "Veliko Tarnovo became the capital of the Second Bulgarian Empire in 1185 after the brothers Asen and Peter led an uprising against Byzantine rule. For two centuries it was the political, cultural, and military heart of Bulgaria — a rival to Constantinople in ambition if not in size.",
+        "The fortress of Tsarevets was the imperial citadel: palaces, churches, and walls crowning the hill where tsars ruled and patriarchs prayed. The empire fell to the Ottomans in 1393 after a three-month siege, and the city spent nearly 500 years under Ottoman control before re-emerging as a symbol of Bulgarian identity.",
+        "The Madara Rider, which you'll see en route, is even older: a rock relief from the early 8th century, possibly depicting a Bulgar ruler. It's the only monument of its kind from medieval Europe and has become a national emblem — you'll find it on coins and official seals."
+      ],
+      "highlights": [
+        {
+          "name": "Madara Rider",
+          "what": "A 23-meter-high cliff relief of a horseman spearing a lion, carved into the rock at Madara Plateau, with pagan cave temples below.",
+          "why": "It's a UNESCO World Heritage Site and one of Bulgaria's most mysterious monuments — no one knows exactly who it depicts or why it was made.",
+          "notice": "It's a 15-minute detour from the main road between Varna and Tarnovo. Paths to the base involve stairs; the best view is from the platform below the relief."
+        },
+        {
+          "name": "Tsarevets Fortress",
+          "what": "The restored medieval citadel on the main hill, with ramparts, the Patriarchal Cathedral ruins, Baldwin's Tower, and panoramic views over the gorge.",
+          "why": "This is the soul of Veliko Tarnovo — walking the walls at sunset feels like stepping into the age of tsars.",
+          "notice": "Wear sturdy shoes — lots of stone steps and uneven surfaces. Check if the Sound and Light show runs tonight (seasonal, spectacular)."
+        },
+        {
+          "name": "Samovodska Charshia",
+          "what": "The restored 19th-century craftsmen's street with workshops for pottery, woodcarving, blacksmithing, and traditional sweets.",
+          "why": "It's touristy but genuinely charming — you can watch artisans work and buy something that isn't a fridge magnet.",
+          "notice": "Shops close earlier than you'd expect. Visit before dinner if you want to browse properly."
+        },
+        {
+          "name": "Asenevtsi Monument",
+          "what": "A striking modern monument with four giant swords and statues of the Asen dynasty founders, on a terrace above the river.",
+          "why": "The viewpoint from here is arguably the best in the city — the whole Yantra bend, Tsarevets, and the terraced houses in one panorama.",
+          "notice": "Go at golden hour. The terrace gets windy but the light on the fortress is unbeatable."
+        },
+        {
+          "name": "Gurko Street",
+          "what": "A steep, cobbled lane of Revival-era houses clinging to the hillside, with cafes and galleries tucked into old stone buildings.",
+          "why": "It's the most photogenic street in town — every turn is a postcard of 19th-century Bulgaria.",
+          "notice": "Cobblestones are slippery when wet and brutal on ankles. Wear good shoes and take it slow."
+        },
+        {
+          "name": "Arbanasi Village",
+          "what": "A hilltop village 4 km away with fortress-like 17th-century houses and the Church of the Nativity, covered in frescoes.",
+          "why": "If you have extra time, Arbanasi feels like a time capsule — wealthy merchants built stone mansions that still stand.",
+          "notice": "Short drive or taxi uphill. The church interior is dark but the frescoes are extraordinary — bring small change for lighting."
+        },
+        {
+          "name": "Hotnitsa Waterfall",
+          "what": "A scenic waterfall and eco-trail with wooden walkways through a forested gorge, about 20 minutes before Tarnovo if coming from Varna.",
+          "why": "Perfect leg-stretcher on the drive — cool mist, green canyon, and a break from the car.",
+          "notice": "Trail is easy but can be slippery near the falls. Allow 45–60 minutes if you stop."
+        }
+      ],
+      "funFacts": [
+        "Veliko Tarnovo's name means 'Great Tarnovo' — the 'veliko' was added in 1965 to reflect its historical importance.",
+        "The Madara Rider appears on Bulgarian coins and was a candidate for one of the new Seven Wonders of the World.",
+        "Tsarevets was destroyed and rebuilt multiple times — what you see today is a 20th-century reconstruction based on archaeological evidence.",
+        "The Yantra River makes a near-complete loop around the fortress hill, creating a natural moat that defenders used for centuries.",
+        "During the Sound and Light show, colored lasers and music tell the fortress's history — it's dramatic and slightly camp in the best way.",
+        "Arbanasi was so wealthy in Ottoman times that its churches were built to look like barns from outside to avoid tax penalties.",
+        "The Asen brothers started their rebellion with a fake wedding as a cover to gather supporters — medieval espionage at its finest."
+      ],
+      "photoSpot": {
+        "viewpoint": "The terrace at the Asenevtsi Monument, facing Tsarevets Fortress across the Yantra River bend.",
+        "time": "Golden hour, about 30–45 minutes before sunset — the fortress walls turn warm orange and the river reflects the sky.",
+        "why": "This is the money shot of Veliko Tarnovo: fortress on the hill, houses cascading down, river curving below. It's the image on every Bulgaria travel poster.",
+        "tips": "Use a wide-angle lens or phone panorama. Stay after sunset if the Sound and Light show is on — the fortress lights up dramatically. Weekday evenings have fewer tour groups blocking the railing."
+      },
+      "food": [
+        {
+          "name": "Kebapche",
+          "description": "Grilled minced meat rolls seasoned with spices, served with fries, salad, and a mound of lyutenitsa.",
+          "special": "The Bulgarian barbecue staple — pair with mustard and a cold beer on a terrace overlooking the river.",
+          "where": "Mehanas along Gurko Street or near Samovodska Charshia with outdoor seating."
+        },
+        {
+          "name": "Kyufte",
+          "description": "Spiced meat patties, similar to kebapche but round, grilled over charcoal until crispy outside and juicy inside.",
+          "special": "Order a mixed plate of kyufte and kebapche to sample both — locals do this all the time.",
+          "where": "Any skara (grill) restaurant in the old town; follow the smoke and the smell."
+        },
+        {
+          "name": "Gorna Oryahovitsa Sudzhuk",
+          "description": "A dry-cured sausage from the nearby town, with a protected designation — garlicky, firm, and meant for slicing thin.",
+          "special": "Regional pride on a plate. Ask for it as a starter with cheese and rakia.",
+          "where": "Traditional restaurants and some artisan shops on Samovodska Charshia."
+        },
+        {
+          "name": "Rose Jam Pastries",
+          "description": "Sweet pastries and cookies filled with rose petal jam, a specialty of the region's rose-growing tradition.",
+          "special": "Floral without being perfume-y — the bakeries on the craftsmen's street sell them fresh.",
+          "where": "Pastry shops on Samovodska Charshia and small bakeries in the old town."
+        }
+      ],
+      "phrase": {
+        "cyrillic": "Къде е крепостта?",
+        "transliteration": "Kade e krepostta?",
+        "english": "Where is the fortress?",
+        "when": "Useful when navigating the old town's winding streets — everyone knows Tsarevets, and locals are happy to point you uphill."
+      },
+      "challenges": [
+        "The drive from Varna takes 2+ hours with the Madara stop — don't dawdle if you want a full afternoon at the fortress.",
+        "Tsarevets involves serious uphill walking — pace yourself if yesterday was a long day.",
+        "Parking in the old town is limited; follow signs to public lots and walk in.",
+        "Hotel with river views is worth booking ahead — this night is popular and options fill up.",
+        "Cobblestones everywhere — leave the flip-flops in the car."
+      ],
+      "insiderTips": [
+        "Ask your hotel about the Sound and Light show schedule — it's seasonal but unforgettable if it's running.",
+        "Visit Hotnitsa waterfall on the way in, not on the way out — it's a better energy boost than a detour when you're tired.",
+        "The fortress ticket office accepts cards, but small shops on Gurko Street may be cash-only.",
+        "Sunset from Baldwin's Tower inside Tsarevets is incredible, but the Asenevtsi viewpoint is better for photos of the fortress itself.",
+        "Book dinner with a terrace — eating while watching the fortress light up beats any indoor restaurant."
+      ],
+      "movie": {
+        "genre": "Medieval epic / fantasy adventure",
+        "atmosphere": "Dramatic cliffs, fortress walls, and a river gorge that looks like it was built for siege warfare and dragon flights.",
+        "resembles": "Game of Thrones filming locations meet The Lord of the Rings — Minas Tirith vibes without the CGI budget."
+      },
+      "historicalFigure": {
+        "name": "Tsar Ivan Asen II",
+        "who": "One of the greatest rulers of the Second Bulgarian Empire (ruled 1218–1241), who expanded Bulgaria to its largest territorial extent.",
+        "why": "His reign was the golden age of medieval Tarnovo — trade flourished, churches were built, and the empire rivaled its neighbors.",
+        "detail": "The Asenevtsi Monument honors his dynasty. Ivan Asen II's victory column inscription boasted that he had 'conquered from the Adriatic to the Black Sea' — and for a time, it was true."
+      },
+      "visualGuide": [
+        {
+          "name": "Tsarevets Walls",
+          "what": "The reconstructed stone ramparts wrapping the hilltop citadel, visible from every corner of the city.",
+          "why": "They're your orientation point — wherever you are, look up and you'll see the fortress.",
+          "detail": "The walls are lit at night. During the day, climb to the Patriarchal Cathedral ruins for the highest viewpoint inside."
+        },
+        {
+          "name": "Yantra River Bend",
+          "what": "The horseshoe curve of the river wrapping around the fortress hill, with houses built on the steep banks.",
+          "why": "The geography explains why this was the capital — natural defense on three sides.",
+          "detail": "Best seen from Asenevtsi Monument or from the trail below the fortress. Morning mist in the gorge is magical."
+        },
+        {
+          "name": "Revival Houses",
+          "what": "19th-century Bulgarian houses with overhanging upper floors, wooden balconies, and stone ground levels on Gurko Street.",
+          "why": "This architectural style is uniquely Bulgarian — the overhangs were a tax trick (only ground-floor footprint was taxed).",
+          "detail": "Look for the different colors and bay windows. Many are now guesthouses or cafes."
+        },
+        {
+          "name": "Baldwin's Tower",
+          "what": "A reconstructed tower on the fortress's northern tip, named after a Latin emperor supposedly imprisoned nearby.",
+          "why": "It's the most dramatic point on the fortress walls — sheer drops on both sides.",
+          "detail": "The climb is steep but short. The legend says Baldwin Flanders was locked in a cave below and died here."
+        },
+        {
+          "name": "Madara Horseman Silhouette",
+          "what": "The cliff-carved relief of rider and horse, visible from the viewing platform at Madara.",
+          "why": "It's Bulgaria's national symbol — recognizing it helps you understand local pride and iconography.",
+          "detail": "The lion under the horse's hooves and the dog running behind are key details. The relief faces east."
+        },
+        {
+          "name": "Craftsman Workshops",
+          "what": "Open workshops on Samovodska Charshia where potters, woodcarvers, and metalsmiths work in traditional styles.",
+          "why": "Watching something made by hand connects you to the street's original purpose.",
+          "detail": "Potters often let you try the wheel for a small fee. Great souvenir opportunity."
+        }
+      ]
+    },
+    "10": {
+      "destination": [
+        "Brace yourself for the most cinematic day of the trip. You're driving into the Balkan Mountains to stand before Buzludzha — a crumbling UFO of a communist monument on a windy peak — and then dropping into Koprivshtitsa, a village so perfectly preserved it feels like a museum where people still actually live.",
+        "Buzludzha is the abandoned House-Monument of the Bulgarian Communist Party, opened in 1981 and left to decay after 1989. You can't go inside (it's sealed for restoration), but the exterior alone — a concrete flying saucer with a red star and mosaic fragments — is one of the most haunting and photographed ruins in Europe.",
+        "By afternoon you'll be in Koprivshtitsa, a 19th-century town of brightly painted houses with overhanging eaves, where the April Uprising of 1876 began. Walk the cobbled streets, visit museum-houses, and fall asleep in a place that time forgot."
+      ],
+      "history": [
+        "Buzludzha Peak was chosen for its symbolism: here in 1868, Bulgarian revolutionary Hadzhi Dimitar made his last stand against the Ottomans, and in 1891, the Bulgarian Socialist movement was founded nearby. The monument, completed in 1981 for the 1300th anniversary of the Bulgarian state, was meant to awe — and it still does, even in ruin.",
+        "The building's design is deliberately futuristic: a circular assembly hall under a saucer roof, surrounded by mosaic portraits of Marx, Engels, Lenin, and Bulgarian leaders. After the fall of communism in 1989, it was abandoned and looted. Today it's a pilgrimage site for urban explorers and a symbol of a vanished era.",
+        "Koprivshtitsa (the name means 'nettle place') became a wealthy merchant town in the 18th and 19th centuries. Its colorful houses and revolutionary spirit made it the cradle of the April Uprising — a failed but catalytic rebellion that drew international attention to Bulgaria's struggle for independence from Ottoman rule."
+      ],
+      "highlights": [
+        {
+          "name": "Buzludzha Monument",
+          "what": "The iconic abandoned communist monument — a concrete saucer on Buzludzha Peak at 1,432 m, with broken mosaics and epic mountain views.",
+          "why": "It's one of the most extraordinary ruins on the planet — equal parts architecture, politics, and post-apocalyptic beauty.",
+          "notice": "Entry inside is prohibited and dangerous. Admire from outside only. The road up is narrow and winding — drive carefully."
+        },
+        {
+          "name": "Shipka Memorial Church",
+          "what": "A stunning Russian-style church with golden domes in the Shipka Pass, built to honor those who died in the 1877–78 Russo-Turkish War.",
+          "why": "You'll pass it on the way to Buzludzha — it looks like a jewel box dropped in the forest and is worth a stop.",
+          "notice": "It's right on the main route. Allow 20–30 minutes. Dress modestly inside."
+        },
+        {
+          "name": "Koprivshtitsa Old Town",
+          "what": "A preserved 19th-century village with cobbled streets, colorful National Revival houses, and a quiet mountain atmosphere.",
+          "why": "This is the most authentic historic town in Bulgaria — not a theme park, but a living community in a time capsule.",
+          "notice": "The town is small and walkable. Park near the center and explore on foot."
+        },
+        {
+          "name": "Museum-Houses of Koprivshtitsa",
+          "what": "Six restored merchant and revolutionary homes open as museums, each with original furnishings, murals, and stories.",
+          "why": "The combined ticket is a bargain — each house reveals a different layer of Bulgarian Revival life and revolutionary history.",
+          "notice": "Buy the combined pass at any house. They close around 5 PM — start by 2 PM if you want to see several."
+        },
+        {
+          "name": "Oslekov House",
+          "what": "One of the most beautiful museum-houses, with a blue facade and rich interior showing how a wealthy merchant family lived.",
+          "why": "The painted walls and carved ceilings are the best introduction to Koprivshtitsa style.",
+          "notice": "Included in the combined ticket. Photography rules vary — ask at the entrance."
+        },
+        {
+          "name": "Dimcho Debelyanov House",
+          "what": "The birthplace of one of Bulgaria's most beloved poets, preserved as a museum to his life and work.",
+          "why": "Even if you don't know the poetry, the house is a perfect example of a smaller, intimate Revival home.",
+          "notice": "Short visit — 20 minutes. Good starting point before the larger houses."
+        },
+        {
+          "name": "Shipka Pass Monument",
+          "what": "A 31-meter stone tower on Shipka Peak commemorating the 1877 battle, with 894 steps to the top and panoramic views.",
+          "why": "If you have energy after Buzludzha, the climb rewards you with one of the best vistas in the Balkans.",
+          "notice": "894 steps is real. Skip if you're tired from driving — the church below is enough."
+        }
+      ],
+      "funFacts": [
+        "Buzludzha's interior once held 950 seats and the largest mosaic in Eastern Europe — portraits covered 1,000 square meters.",
+        "The monument cost roughly 14 million leva to build in 1981 — an enormous sum for communist Bulgaria.",
+        "Koprivshtitsa has a festival every five years celebrating Bulgarian folk music — musicians from across the country converge here.",
+        "The April Uprising lasted only a few weeks but inspired international support that eventually led to Bulgarian independence in 1878.",
+        "Buzludzha appears in documentaries, music videos, and video games — it's become a global icon of brutalist decay.",
+        "Koprivshtitsa's houses use bright colors to show wealth — blue, yellow, and red facades were status symbols.",
+        "The road to Buzludzha is often closed in winter snow — you're here in August, but the peak still gets cold wind."
+      ],
+      "photoSpot": {
+        "viewpoint": "The approach road to Buzludzha, about 200 meters before the monument, looking up at the saucer shape against the sky.",
+        "time": "Late morning, 10–11 AM — clouds often sit below the peak, and the light is even on the concrete facade.",
+        "why": "The low-angle shot makes the monument look like it landed from space — the definitive Buzludzha image that floods Instagram.",
+        "tips": "Wide angle is essential. Include a person for scale — the building is massive. Wind is fierce; secure your hat. Drone shots are epic but check local rules."
+      },
+      "food": [
+        {
+          "name": "Bob Chorba",
+          "description": "Traditional bean soup with herbs, paprika, and sometimes smoked meat — hearty mountain comfort food.",
+          "special": "The safe choice if you're not ready for tripe. Warming and filling after a windy morning at Buzludzha.",
+          "where": "Mehanas in Koprivshtitsa with garden seating — ask your guesthouse for a recommendation."
+        },
+        {
+          "name": "Shkembe Chorba",
+          "description": "Tripe soup with garlic, vinegar, and chili — Bulgaria's legendary hangover cure and late-night ritual.",
+          "special": "For the adventurous. Locals swear by it after a night of rakia. The smell is strong; the taste is surprisingly good.",
+          "where": "Traditional restaurants in Koprivshtitsa or Sofia-style mehanas along the route."
+        },
+        {
+          "name": "Lukanka",
+          "description": "Dry-cured salami with spices, sliced thin and served with cheese and bread.",
+          "special": "Mountain-region specialty — the air-drying in Koprivshtitsa's climate gives it a distinct flavor.",
+          "where": "Guesthouse breakfasts and mehana starters in the old town."
+        },
+        {
+          "name": "Homemade Jam and Honey",
+          "description": "Jars of wild berry jam, pine honey, and rose petal preserves sold at village stalls and guesthouses.",
+          "special": "Breakfast on the terrace with fresh bread and local honey is a Koprivshtitsa ritual.",
+          "where": "Small shops along the main street and your guesthouse kitchen."
+        }
+      ],
+      "phrase": {
+        "cyrillic": "Много е красиво!",
+        "transliteration": "Mnogo e krasivo!",
+        "english": "It's very beautiful!",
+        "when": "Say it to your guesthouse host, a shopkeeper, or anyone showing you their town — Bulgarians are proud of Koprivshtitsa and love hearing it."
+      },
+      "challenges": [
+        "The road to Buzludzha is narrow with hairpin turns — take it slow, especially if you're not used to mountain driving.",
+        "Wind at the peak is no joke even in August — bring a jacket and hold onto your phone at the viewpoint.",
+        "You cannot enter Buzludzha — manage expectations and enjoy the exterior only.",
+        "Museum-houses close mid-afternoon — time your arrival in Koprivshtitsa to allow 2–3 hours of visiting.",
+        "GPS can be unreliable on the mountain roads — download offline maps before leaving Veliko Tarnovo."
+      ],
+      "insiderTips": [
+        "Stop at Shipka Church even if you're tempted to skip — it's five minutes and utterly gorgeous.",
+        "Fill up on gas before the mountain stretch — stations are sparse on the Buzludzha road.",
+        "Buy the Koprivshtitsa museum combined ticket at the first house you visit — saves time and money.",
+        "Walk Koprivshtitsa after dark — gas lamps and silence make it feel like the 1800s.",
+        "Ask your guesthouse about breakfast on the terrace — that's half the magic of staying here."
+      ],
+      "movie": {
+        "genre": "Sci-fi dystopia / period drama",
+        "atmosphere": "Morning on a communist moon base; afternoon in a 19th-century period piece — whiplash in the best way.",
+        "resembles": "Blade Runner 2049's abandoned Vegas meets The Grand Budapest Hotel's colorful village — same day, two worlds."
+      },
+      "historicalFigure": {
+        "name": "Todor Zhivkov",
+        "who": "Bulgaria's communist leader from 1954 to 1989, who commissioned the Buzludzha monument as a symbol of party power.",
+        "why": "His vision (and excess) created the building you're photographing — understanding him explains the monument's scale and ambition.",
+        "detail": "Zhivkov ruled longer than any other Eastern Bloc leader except Honecker. Buzludzha was his grand statement — opened in 1981, abandoned eight years later when he fell from power."
+      },
+      "visualGuide": [
+        {
+          "name": "Buzludzha Saucer Roof",
+          "what": "The circular flying-saucer roof with a red star frame (often broken) on top of the main hall.",
+          "why": "It's the silhouette that defines the monument — recognize it and you've nailed the visual story.",
+          "detail": "Mosaic letters around the entrance once spelled communist slogans. Fragments still cling to the walls."
+        },
+        {
+          "name": "Broken Mosaics",
+          "what": "Shattered portraits of workers, leaders, and heroes that once covered the exterior and interior walls.",
+          "why": "The decay is part of the art now — colors bleeding through cracks tell a story of ideology and abandonment.",
+          "detail": "Don't touch or remove pieces — restoration efforts are ongoing and looting is illegal."
+        },
+        {
+          "name": "Koprivshtitsa House Colors",
+          "what": "Bright blue, yellow, ochre, and red facades with white trim and dark wooden overhangs.",
+          "why": "The color palette is the town's signature — each hue was a statement of prosperity.",
+          "detail": "Oslekov House is blue; Todor Kableshkov House is yellow. Compare them as you walk."
+        },
+        {
+          "name": "Cobbled Lanes",
+          "what": "Stone-paved streets sloping between houses, often with small bridges over streams.",
+          "why": "The texture underfoot and the narrow corridors between walls create intimacy and charm.",
+          "detail": "Walk the lane behind the Oslekov House for the quietest, most photogenic stretch."
+        },
+        {
+          "name": "Shipka Church Domes",
+          "what": "Five golden onion domes on a striped stone church in the middle of forested Shipka Pass.",
+          "why": "The contrast between gold, green, and sky is surreal — it doesn't look real.",
+          "detail": "The church was funded by Russians and Bulgarians together. Interior frescoes tell the battle story."
+        },
+        {
+          "name": "Mountain Panorama from Buzludzha",
+          "what": "360-degree views from the peak across the Balkan range, often with clouds below.",
+          "why": "The setting explains why they built here — visibility and symbolism at the heart of Bulgaria.",
+          "detail": "On clear days you can see for 100 km. On cloudy days, you're above the cloud line — also stunning."
+        }
+      ]
+    },
+    "11": {
+      "destination": [
+        "It's transition day — and honestly, it's a good one. You'll sip coffee in a 19th-century village, drive through green hills back toward Sofia, and hand back the rental car keys that have been your ticket to freedom for nine days.",
+        "Start slow in Koprivshtitsa: one last stroll past painted houses, maybe a museum you missed yesterday, and breakfast with a view. Then point the car west — the highway to Sofia is straightforward, and you'll be at the airport by late afternoon.",
+        "After dropping the car, you'll metro or taxi into the city center, check into your apartment, and celebrate with an evening on Vitosha Boulevard. No more parking stress, no more navigation — just Sofia on foot and the feeling of having survived Bulgarian roads like a champion."
+      ],
+      "history": [
+        "Sofia is one of Europe's oldest continuously inhabited cities — Thracians, Romans, Byzantines, Ottomans, and Bulgarians all left layers here. The Roman city of Serdica lies beneath the modern center, and you can walk over glass floors and see streets and mosaics from the 3rd century AD.",
+        "The city became the capital of newly independent Bulgaria in 1879, chosen for its central location and historical significance. The name Sofia comes from the Church of St. Sophia, itself named for the divine wisdom (Hagia Sophia) — not the city in Turkey.",
+        "Your drive today follows routes that merchants and armies have used for centuries — through the Sub-Balkan valleys and past towns that supplied the Ottoman Empire and later the young Bulgarian state. Koprivshtitsa's merchants once traded along these same roads."
+      ],
+      "highlights": [
+        {
+          "name": "Morning in Koprivshtitsa",
+          "what": "A final wander through the village — unfinished museum-houses, quiet lanes, and breakfast on a terrace.",
+          "why": "You'll miss this pace of life tomorrow — soak it in before the capital's energy takes over.",
+          "notice": "Check out is usually by 11 AM. Pack the car the night before if you can."
+        },
+        {
+          "name": "Car Return at Sofia Airport",
+          "what": "Drop off your rental at Price Carz near the airport, roughly by 6 PM as planned.",
+          "why": "Freedom has a deadline — return the car full of gas, document any scratches, and breathe a sigh of relief.",
+          "notice": "Fill the tank at a station near the airport (Brussels Avenue has options). Take photos of the car at return."
+        },
+        {
+          "name": "Sofia Metro to Center",
+          "what": "Line M4 from the airport to the city center — fast, cheap, and avoids taxi scams.",
+          "why": "Your first car-free moment. The metro is clean, efficient, and drops you near your apartment.",
+          "notice": "Buy a ticket at the machine (card or cash). Validate before boarding. Peak hours can be crowded."
+        },
+        {
+          "name": "Vitosha Boulevard",
+          "what": "Sofia's main pedestrian street, lined with cafes, shops, and terraces, with Mount Vitosha visible at the end.",
+          "why": "The classic Sofia evening — stroll, people-watch, and feel the capital's relaxed vibe.",
+          "notice": "It's long — pick a section near your apartment. Evening is when locals come out."
+        },
+        {
+          "name": "Serdica Ruins (evening walk)",
+          "what": "Roman streets and building foundations visible under glass in the metro underpass and near the Presidency.",
+          "why": "Even a quick look tonight sets up tomorrow's deep dive — ancient Rome under your feet.",
+          "notice": "Well lit at night. Free to view from above. Full exploration tomorrow."
+        },
+        {
+          "name": "Apartment Check-in",
+          "what": "Your base for the last two nights — Apartment SOFIA Center on ulitsa Damyan Gruev.",
+          "why": "Having a kitchen and space beats a hostel for the final stretch — store souvenirs, do laundry, spread out.",
+          "notice": "Confirm check-in time with the host. Ask about parking if they offered it (you won't need it now)."
+        }
+      ],
+      "funFacts": [
+        "Sofia is the only European capital where you can ski and reach a vineyard within 30 minutes of the city center.",
+        "The Serdica ruins were discovered during metro construction — Sofia literally builds on top of Rome.",
+        "Vitosha Boulevard was pedestrianized in the 1990s and is now the social heart of the city.",
+        "Bulgaria drives on the right — if you've survived nine days, you've mastered some of Europe's most creative road signage.",
+        "The airport metro opened in 2015 and cut transfer times dramatically — you're lucky to have it.",
+        "Sofia has more than 200 archaeological sites — most are still being excavated or integrated into modern buildings.",
+        "The city's symbol is a lion — you'll see it on monuments, manhole covers, and the metro logo."
+      ],
+      "photoSpot": {
+        "viewpoint": "Vitosha Boulevard looking south toward Mount Vitosha at dusk, with cafe lights and the mountain silhouette.",
+        "time": "Blue hour, roughly 8–8:30 PM in August — streetlights glow, the sky is deep blue, and Vitosha floats behind the buildings.",
+        "why": "Your first Sofia shot — it captures the capital's personality: urban, walkable, with wilderness on the horizon.",
+        "tips": "Stand near the intersection with ulitsa Graf Ignatiev for the best mountain alignment. Grab a gelato for a prop. Portrait mode with the mountain blurred behind works great."
+      },
+      "food": [
+        {
+          "name": "Shopska Salata",
+          "description": "The national salad: tomatoes, cucumbers, onions, and sirene cheese grated on top — simple and perfect.",
+          "special": "Order it everywhere in Bulgaria, but your first Sofia one marks the transition back to city dining.",
+          "where": "Any restaurant on or near Vitosha Boulevard — look for busy terraces."
+        },
+        {
+          "name": "Skara Mixed Grill",
+          "description": "A platter of kebapche, kyufte, pork steak, and sausages with fries and lyutenitsa.",
+          "special": "Celebration food — you returned the car intact, you earned a feast.",
+          "where": "Hadjidraganov's Houses or similar traditional spots in the center."
+        },
+        {
+          "name": "Rakia",
+          "description": "Bulgarian fruit brandy, usually grape or plum, served as an aperitif in small glasses.",
+          "special": "Toast with 'Nazdrave!' (cheers) — one small glass, sipped slowly. It's stronger than it looks.",
+          "where": "Traditional restaurants will offer it. Plum (slivova) is the classic."
+        },
+        {
+          "name": "Gelato on Vitosha",
+          "description": "Italian-style gelato from shops along the boulevard — because you can.",
+          "special": "Walking with gelato on a pedestrian street is peak European summer energy.",
+          "where": "Gelateria near the Vitosha metro stop or midway down the boulevard."
+        }
+      ],
+      "phrase": {
+        "cyrillic": "Наздраве!",
+        "transliteration": "Nazdrave!",
+        "english": "Cheers! / To your health!",
+        "when": "When toasting with rakia or wine at your celebration dinner — make eye contact and say it with conviction."
+      },
+      "challenges": [
+        "Allow buffer time for car return — inspection, paperwork, and getting to the metro can take 45 minutes.",
+        "Rush-hour traffic on the Sofia ring road can add 30 minutes — don't cut it too close to 6 PM return.",
+        "Luggage in the metro is fine but awkward — consider a taxi if you're overloaded with souvenirs.",
+        "Apartment check-in might not be until afternoon — confirm if you can drop bags early.",
+        "After nine days of driving, not having a car feels weird — plan tomorrow entirely on foot or metro."
+      ],
+      "insiderTips": [
+        "Photograph the rental car at return — all sides, fuel gauge, mileage. Insurance peace of mind.",
+        "Gas stations on Brussels Avenue near the airport are convenient for the final fill-up.",
+        "Metro M4 goes directly to the center — no line changes needed from the airport.",
+        "Download TaxiMe or Yellow! as backup if the metro feels like too much with luggage.",
+        "Keep one lev coin for a shopping cart at the supermarket if you stock the apartment tonight."
+      ],
+      "movie": {
+        "genre": "Road movie finale / urban transition",
+        "atmosphere": "The quiet satisfaction of a journey's last leg — village morning, highway afternoon, city lights at night.",
+        "resembles": "Before Sunset's walking conversations meet the car-return relief of Planes, Trains and Automobiles — but you made it."
+      },
+      "historicalFigure": {
+        "name": "Emperor Constantine the Great",
+        "who": "Roman emperor born in Naissus (modern Niš, nearby) who famously said 'Serdica is my Rome' — he loved this city.",
+        "why": "His reign transformed Serdica into a major imperial residence — the ruins you'll walk over tomorrow are partly his legacy.",
+        "detail": "Constantine considered making Serdica the capital of the Roman Empire. The phrase 'Serdica is my Rome' is carved into Sofia's cultural memory."
+      },
+      "visualGuide": [
+        {
+          "name": "Koprivshtitsa Morning Mist",
+          "what": "Low fog between the house rooftops and the hills, usually before 9 AM.",
+          "why": "Your last village moment — soft light and silence before the drive.",
+          "detail": "Walk to the stream bridges east of the center for the mistiest views."
+        },
+        {
+          "name": "Sofia Metro Stations",
+          "what": "Clean, modern metro with yellow and blue signage, art in some central stations.",
+          "why": "Your new transport — learning the system tonight saves time tomorrow.",
+          "detail": "Serdika station connects M1 and M2 and has Roman ruins visible in the concourse."
+        },
+        {
+          "name": "Vitosha Mountain Silhouette",
+          "what": "The broad, flat-topped mountain south of Sofia, visible from Vitosha Boulevard and many rooftops.",
+          "why": "It's Sofia's backdrop — orient yourself south and you'll always find the mountain.",
+          "detail": "Cherni Vrah peak is 2,290 m. Snow sometimes visible even in summer."
+        },
+        {
+          "name": "Serdica Glass Floors",
+          "what": "Walkable glass panels in the city center revealing Roman streets and foundations below.",
+          "why": "The visual proof that Sofia is ancient — you'll literally walk on history.",
+          "detail": "Best lit at night. Located near the Presidency and in the metro underpass at Serdika station."
+        },
+        {
+          "name": "Apartment Balcony View",
+          "what": "Your home base view — whatever street or courtyard your apartment overlooks.",
+          "why": "Unpack, breathe, and notice the details — this is your Sofia neighborhood for two nights.",
+          "detail": "Note the nearest bakery, metro entrance, and grocery for tomorrow morning."
+        }
+      ]
+    },
+    "12": {
+      "destination": [
+        "Full day in Sofia — no car, no schedule pressure, just a capital city built on Roman ruins and Orthodox gold. You've got a free walking tour booked, which is the smartest way to orient yourself and hear the stories behind the buildings.",
+        "Hit the highlights: Alexander Nevsky Cathedral with its cascading domes, the tiny 4th-century Rotunda of St. George hidden in a courtyard, the ruins of Serdica beneath your feet, and the National Theatre framed by a city garden. Sofia is compact — you can walk almost everything.",
+        "This is also your day for markets, coffee culture, and filling your water bottle at the public mineral springs. By evening you'll understand why Bulgarians are proud of their capital — it's understated, layered, and full of surprises."
+      ],
+      "history": [
+        "Sofia's story starts with the Serdi, a Thracian tribe, and grows through Roman Serdica — a city important enough for Constantine the Great to visit and enlarge. The Rotunda of St. George, built in the 4th century, still stands and still holds services.",
+        "Ottoman rule from the 14th to the 19th century turned Sofia into a provincial center. Liberation came in 1878, and the city was chosen as capital of the new Bulgarian state the following year. The grand buildings of the early 20th century — Nevsky Cathedral, the National Theatre, the Mineral Baths — were statements of national identity.",
+        "The 20th century brought wars, communism, and transition. Sofia's center preserves all of it: ancient ruins, Ottoman mosques (now museums), Orthodox churches, a synagogue, a mosque, and a Catholic cathedral within walking distance — the 'Square of Religious Tolerance.'"
+      ],
+      "highlights": [
+        {
+          "name": "Free Walking Tour",
+          "what": "A tip-based guided tour of central Sofia, usually starting near the Palace of Justice, covering history, landmarks, and local stories.",
+          "why": "Two hours with a local who loves their city beats any guidebook — and you'll find the hidden Rotunda and Serdica entrances.",
+          "notice": "Confirm meeting point and time — you have it booked. Tip generously (10–20 BGN per person is fair). Wear comfortable shoes."
+        },
+        {
+          "name": "Alexander Nevsky Cathedral",
+          "what": "Sofia's iconic Neo-Byzantine cathedral with green and gold domes, one of the largest Eastern Orthodox churches in the world.",
+          "why": "The interior glows with gold leaf and icons — and the crypt below holds Bulgaria's finest icon collection.",
+          "notice": "Dress modestly. The crypt has a separate entrance on the north side — don't miss it. Photography may have fees inside."
+        },
+        {
+          "name": "Rotunda of St. George",
+          "what": "A 4th-century red-brick round church tucked in a courtyard behind the Sheraton Hotel, with Roman ruins around it.",
+          "why": "It's the oldest building in Sofia — still active, still stunning, and almost invisible from the street.",
+          "notice": "Easy to walk past. Enter through the courtyard off bul. Knyaz Dondukov. Free entry."
+        },
+        {
+          "name": "Serdica Archaeological Complex",
+          "what": "Exposed Roman streets, mosaics, and building foundations in the metro underpass and around the Serdika II station.",
+          "why": "You're walking on 1,700-year-old pavements — glass floors and open excavations make ancient Sofia visible.",
+          "notice": "Free and open during metro hours. Combine with the underpass walk between Nevsky and the Presidency."
+        },
+        {
+          "name": "Church of St. Sophia",
+          "what": "The 6th-century church that gave the city its name, with a simple stone exterior and atmospheric interior.",
+          "why": "The namesake — understanding this church explains why the city is called Sofia.",
+          "notice": "Next to Serdica ruins and the tomb of Ivan Vazov. Quiet and less crowded than Nevsky."
+        },
+        {
+          "name": "Central Mineral Baths",
+          "what": "A stunning yellow and white building (now the Sofia History Museum) with public hot springs fountains outside.",
+          "why": "Fill your bottle with free mineral water — locals swear by it. The building itself is architectural eye candy.",
+          "notice": "Bring an empty bottle. The fountains are on the east side. Museum inside is optional."
+        },
+        {
+          "name": "Ivan Vazov National Theatre",
+          "what": "Bulgaria's grandest theatre in Neo-Classical style, facing the City Garden park.",
+          "why": "The postcard shot of Sofia culture — fountains, gardens, and a facade that looks like Vienna.",
+          "notice": "The park is perfect for a break. Check if any performances are on — tickets are affordable."
+        },
+        {
+          "name": "Central Market Hall (Tsentralni Hali)",
+          "what": "A covered market from 1911 with food stalls, spices, local products, and eateries.",
+          "why": "Lunch and souvenir shopping in one — lyutenitsa, honey, rose oil, and spices to take home.",
+          "notice": "Open daytime. Compare prices before buying. Sample before you commit."
+        }
+      ],
+      "funFacts": [
+        "Alexander Nevsky Cathedral can hold 10,000 people — it was built to honor Russian soldiers who died liberating Bulgaria.",
+        "The Rotonda of St. George was a mosque during Ottoman rule, then restored as a church — layers upon layers.",
+        "Sofia's mineral water has been used since Roman times — the springs are why the city thrived here.",
+        "The 'Square of Religious Tolerance' packs an Orthodox church, Catholic cathedral, synagogue, and mosque within 300 meters.",
+        "Ivan Vazov is Bulgaria's national writer — his tomb is in the garden behind the church named for him.",
+        "Sofia was bombed in World War II but much of the center survived — the mix of old and new is accidental preservation.",
+        "The lion on Sofia's coat of arms appears everywhere — even the metro logo has a stylized lion."
+      ],
+      "photoSpot": {
+        "viewpoint": "The City Garden in front of the Ivan Vazov National Theatre, facing the facade with fountains in the foreground.",
+        "time": "Late afternoon, 4–5 PM — soft light on the yellow facade, fewer tour groups, locals arriving for evening strolls.",
+        "why": "Classic Sofia composition: theatre, gardens, fountains, and the energy of a capital that loves its culture.",
+        "tips": "Include the fountain spray for movement. Step back to the garden's north end for the full facade. Pair with a coffee from a nearby kiosk."
+      },
+      "food": [
+        {
+          "name": "Banitsa and Boza",
+          "description": "Flaky pastry with cheese (banitsa) paired with fermented wheat drink (boza) — Bulgaria's classic breakfast combo.",
+          "special": "Boza is sweet, thick, and polarizing — try it once for the experience. Banitsa is universally loved.",
+          "where": "Any neighborhood bakery (furna) near your apartment — look for morning queues."
+        },
+        {
+          "name": "Meshana Skara",
+          "description": "Mixed grill platter for sharing — kebapche, kyufte, steaks, and sausages with sides.",
+          "special": "The reliable lunch after a long walk — feeds two easily.",
+          "where": "Tsentralni Hali food stalls or a mehana in the center."
+        },
+        {
+          "name": "Lyutenitsa",
+          "description": "Roasted red pepper and tomato spread — Bulgaria's answer to ajvar, eaten on bread or with everything.",
+          "special": "Buy jars at the market to take home — it's the taste of Bulgaria in a jar.",
+          "where": "Central Market Hall stalls — compare homemade vs commercial."
+        },
+        {
+          "name": "Modern Bulgarian at Kvartal",
+          "description": "Contemporary restaurants in the Kvartal district serving updated Bulgarian cuisine with craft cocktails.",
+          "special": "If you want one 'nice' dinner in Sofia, this is the vibe — still local, but elevated.",
+          "where": "Kvartal neighborhood, south of the center — reserve ahead for Friday night."
+        }
+      ],
+      "phrase": {
+        "cyrillic": "Благодаря за обиколката!",
+        "transliteration": "Blagodarya za obikolkata!",
+        "english": "Thank you for the tour!",
+        "when": "Say it to your free tour guide at the end — they work for tips and genuine thanks matter."
+      },
+      "challenges": [
+        "The free tour is 2+ hours of walking — wear your best shoes and hydrate.",
+        "Nevsky Cathedral crypt has separate hours — check they're open before you visit.",
+        "Market vendors can be pushy — polite 'ne, blagodarya' (no, thank you) works fine.",
+        "August heat in the city is real — schedule indoor sites (museums, churches) at midday.",
+        "Don't try to do Vitosha mountain AND full city tour — pick one or you'll burn out."
+      ],
+      "insiderTips": [
+        "The crypt at Alexander Nevsky has the best icon museum in the country — don't skip it.",
+        "Public mineral springs are free — bring a bottle and join locals filling up.",
+        "Serdika metro station lets you walk through ruins during a transfer — even if you're not riding, it's worth seeing.",
+        "Friday evenings on Vitosha Boulevard have live music and street energy — extend your day if you can.",
+        "Book Kvartal dinner for tonight if you want a special last-full-day meal."
+      ],
+      "movie": {
+        "genre": "Urban discovery / historical documentary",
+        "atmosphere": "A walk through centuries in a single afternoon — ancient, imperial, communist, and modern Sofia stacked like layers of cake.",
+        "resembles": "Woody Allen's city love letters meet a BBC history documentary — intimate, layered, and surprisingly moving."
+      },
+      "historicalFigure": {
+        "name": "Ivan Vazov",
+        "who": "Bulgaria's national poet and novelist (1850–1921), author of 'Under the Yoke,' the defining novel of Ottoman-era Bulgaria.",
+        "why": "His work shaped Bulgarian identity — the national theatre and his tomb in Sofia honor his cultural legacy.",
+        "detail": "Vazov lived through liberation and wrote the stories Bulgarians still read in school. His poem 'Shipka's Defenders' is recited at every patriotic ceremony."
+      },
+      "visualGuide": [
+        {
+          "name": "Nevsky Green Domes",
+          "what": "The cluster of green and gold onion domes rising above Alexander Nevsky Cathedral.",
+          "why": "Sofia's skyline signature — spot them from across the city and navigate toward the center.",
+          "detail": "Best exterior photo from the square to the south. Interior gold is overwhelming — let your eyes adjust."
+        },
+        {
+          "name": "Rotunda Red Brick",
+          "what": "The cylindrical 4th-century brick church, one of the oldest buildings in the Balkans.",
+          "why": "The contrast with modern Sofia around it is jarring and beautiful — time travel in a courtyard.",
+          "detail": "Look for Roman ruins in the same courtyard — columns and foundations beside the church."
+        },
+        {
+          "name": "Serdica Mosaic Floors",
+          "what": "Roman mosaic pavements visible through glass floors in the archaeological complex.",
+          "why": "The patterns and colors are still vivid — proof that Romans lived well here.",
+          "detail": "Located in the underpass near Serdika station. Walk slowly and look down."
+        },
+        {
+          "name": "Mineral Baths Facade",
+          "what": "The striped yellow and white Neo-Byzantine building of the former Central Mineral Baths.",
+          "why": "One of Sofia's most photogenic buildings — now the History Museum, but the exterior is the star.",
+          "detail": "The public fountains bubble on the east side — join the queue with your bottle."
+        },
+        {
+          "name": "Theatre Facade and Fountains",
+          "what": "The Ivan Vazov National Theatre's classical columns and the fountain plaza before it.",
+          "why": "The gathering place — understanding this space helps you feel Sofia's rhythm.",
+          "detail": "Evening illuminations are lovely. The City Garden behind is shady and full of benches."
+        },
+        {
+          "name": "Square of Religious Tolerance",
+          "what": "The cluster of St. Nedelya Church, Banya Bashi Mosque, Sofia Synagogue, and Catholic Cathedral within a short walk.",
+          "why": "Four faiths, one neighborhood — Sofia's multicultural history in a five-minute walk.",
+          "detail": "The synagogue is one of the largest in Europe. The mosque has a mineral bath foundation visible inside."
+        }
+      ]
+    },
+    "13": {
+      "destination": [
+        "Last morning in Bulgaria — make it count without making it stressful. You've got until checkout, then a flight to Barcelona at 6:45 PM, which means airport by 3:45 PM latest. That's enough time for one more coffee, final souvenirs, and a slow goodbye to Sofia.",
+        "Keep it light: a stroll down Vitosha Boulevard, maybe grab lyutenitsa and rose oil at the market if you didn't yesterday, and one last banitsa from a bakery. Don't try to squeeze in new sights — revisit a favorite corner or just sit with a coffee and watch the city wake up.",
+        "By afternoon you'll metro to the airport, board Wizz Air W64405, and start processing two weeks of memories — gold older than the pyramids, UFO monuments, fortress sunsets, and more kebapche than you thought possible. Довиждане, Bulgaria. Until next time."
+      ],
+      "history": [
+        "Sofia has been a farewell city for travelers for millennia — Roman roads, Ottoman caravans, and modern flights all passed through here. The Serdica gate once sent merchants south toward Constantinople; today the airport sends you west toward Barcelona.",
+        "The souvenirs you'll carry — rose oil, rakia, lyutenitsa — connect to Bulgaria's agricultural and craft traditions. Rose oil from Kazanlak, wine from Thrace, and yogurt cultures that changed the world all fit in a suitcase.",
+        "Bulgaria joined the EU in 2007 but kept the lev as its currency — those coins and bills in your wallet are a last tactile memory of a country that punches far above its weight in history and hospitality."
+      ],
+      "highlights": [
+        {
+          "name": "Last Walk on Vitosha Boulevard",
+          "what": "A final stroll down Sofia's pedestrian spine, coffee in hand, mountain in view.",
+          "why": "Closure — the same street you celebrated on Day 11, now with the weight of the whole trip behind you.",
+          "notice": "Morning is quieter and cooler. Don't lose track of checkout time."
+        },
+        {
+          "name": "Souvenir Shopping on Tsar Shishman",
+          "what": "Boutiques and local shops on ulitsa Tsar Shishman — less tacky than main tourist strips, more curated.",
+          "why": "Last chance for rose cosmetics, handmade jewelry, and books about Bulgaria that aren't generic.",
+          "notice": "Shops open around 10 AM. Card accepted in most; keep some cash for small vendors."
+        },
+        {
+          "name": "Central Market Hall (if missed)",
+          "what": "Final run for edible souvenirs — lyutenitsa, honey, spices, dried peppers.",
+          "why": "Food memories last longest — a jar of lyutenitsa in Barcelona will transport you back instantly.",
+          "notice": "Liquids (rakia, rose oil) go in checked luggage only. Wrap jars well."
+        },
+        {
+          "name": "Apartment Check-out",
+          "what": "Pack, tidy, and leave the keys as instructed — usually by 11 AM.",
+          "why": "The unglamorous but essential finale. Check drawers, chargers, and under the bed.",
+          "notice": "Take photos of the apartment condition if the host requires it. Metro to airport from Serdika or Vitosha stations."
+        },
+        {
+          "name": "Metro to Sofia Airport",
+          "what": "Line M1 or M4 to the airport terminal — about 30 minutes from the center.",
+          "why": "Cheaper and more predictable than a taxi at rush hour. You know the system now.",
+          "notice": "Leave the apartment by 3 PM latest for a 3:45 PM airport arrival. Metro runs frequently."
+        },
+        {
+          "name": "Flight W64405 to Barcelona",
+          "what": "Wizz Air evening flight departing 18:45, landing back in Catalonia tonight.",
+          "why": "The bookend — you arrived in darkness two weeks ago; you leave in golden evening light.",
+          "notice": "Online check-in saves hassle. Have boarding pass ready. Duty-free is limited but exists."
+        }
+      ],
+      "funFacts": [
+        "Bulgaria is the world's largest producer of rose oil — your souvenirs are literally liquid gold.",
+        "The Bulgarian lev is pegged to the euro — roughly 1.96 BGN = 1 EUR, easy mental math.",
+        "Wizz Air is Hungarian but dominates Balkan routes — you'll probably fly them again.",
+        "Sofia Airport's Terminal 2 handles most international flights — follow signs for Wizz Air.",
+        "Bulgarian yogurt contains Lactobacillus bulgaricus — the bacteria was named after the country.",
+        "You can legally bring 1 liter of spirits and 4 liters of wine into the EU from Bulgaria.",
+        "Довиждане (dovizhdane) means 'until we meet again' — more hopeful than goodbye."
+      ],
+      "photoSpot": {
+        "viewpoint": "Vitosha Boulevard from a cafe terrace, morning light, coffee cup in frame, mountain at the end of the street.",
+        "time": "Morning, 9–10 AM — soft light, locals heading to work, the city in its everyday mode.",
+        "why": "The 'last morning in Sofia' shot — intimate, not touristy, and personal to your trip.",
+        "tips": "Selfie with the mountain behind works. Don't overthink it — the best last photo is the one you actually take."
+      },
+      "food": [
+        {
+          "name": "Final Banitsa",
+          "description": "One more cheese-filled pastry from a neighborhood bakery — bookend the trip with the same comfort food you started with.",
+          "special": "Eat it warm, standing outside the bakery, like a local rushing to work.",
+          "where": "The nearest furna to your apartment — you know the drill by now."
+        },
+        {
+          "name": "Lyutenitsa to Go",
+          "description": "Jars of the red pepper-tomato spread from the market — your edible postcard.",
+          "special": "Homemade jars from market vendors beat supermarket versions. Check the seal for travel.",
+          "where": "Tsentralni Hali or Tsar Shishman food shops."
+        },
+        {
+          "name": "Airport Coffee",
+          "description": "A final Bulgarian coffee at the airport — probably overpriced, but it's the ritual.",
+          "special": "Bulgarian coffee is often Turkish-style — strong, small, unfiltered. One last jolt before the gate.",
+          "where": "Cafe airside after security — allow time before boarding."
+        }
+      ],
+      "phrase": {
+        "cyrillic": "Довиждане!",
+        "transliteration": "Dovizhdane!",
+        "english": "Until we meet again!",
+        "when": "Your farewell to shopkeepers, the city, and Bulgaria — warmer than 'goodbye' and perfectly appropriate as you head to the airport."
+      },
+      "challenges": [
+        "Checkout at 11 AM but flight at 6:45 PM — you need a plan for luggage (carry with you or ask host about late checkout).",
+        "Don't over-shop — weight limits and liquid rules will ruin your day at security.",
+        "August Saturday airport can be busy — three hours before flight is not optional.",
+        "Easy to feel rushed and miss the last morning vibe — set an alarm for 'leave for airport' not just 'flight time.'",
+        "Re-entry to Barcelona with food products — declare if required; lyutenitsa is usually fine within EU limits."
+      ],
+      "insiderTips": [
+        "Pack rakia and rose oil in checked luggage only — learned the hard way by many travelers.",
+        "Wrap glass jars in clothes in the center of your suitcase — Bulgarian roads already tested your packing skills.",
+        "Charge everything last night — airport outlets are competitive.",
+        "Download boarding pass and any transit cards before leaving the apartment Wi-Fi.",
+        "Keep one small lev coin as a trip token — or spend it all on airport gum. Your choice."
+      ],
+      "movie": {
+        "genre": "Bittersweet closing credits / travel memoir",
+        "atmosphere": "The quiet last chapter — morning light, final coffee, and the plane window reflecting two weeks of adventure.",
+        "resembles": "Before Sunrise's final platform scene meets Eat Pray Love's closing reflection — grateful, not sad."
+      },
+      "historicalFigure": {
+        "name": "St. Sofia (personification)",
+        "who": "Not a person but the divine wisdom (Hagia Sophia) the city was named after — the Church of St. Sophia consecrated the name.",
+        "why": "You're leaving the city that embodies wisdom — a fitting end to a trip that taught you more than you expected.",
+        "detail": "The church is modest compared to Nevsky, but it's the reason Sofia is Sofia. A quick final nod to it on the way to the metro is a nice bookend."
+      },
+      "visualGuide": [
+        {
+          "name": "Morning Vitosha Street Life",
+          "what": "Cafes opening, terraces being wiped down, locals with newspapers and espresso.",
+          "why": "Sofia as residents live it — not the tourist highlight reel, but the real city you'll miss.",
+          "detail": "Sit for 20 minutes minimum. Watch the rhythm. This is the memory that sticks."
+        },
+        {
+          "name": "Souvenir Jar Labels",
+          "what": "Cyrillic labels on lyutenitsa, honey, and rose products — colorful and foreign and now familiar.",
+          "why": "You'll see these in your pantry for months — choose ones that look good on a shelf.",
+          "detail": "Rose oil comes in tiny vials — a little goes a long way. Honey with comb is a premium gift."
+        },
+        {
+          "name": "Packed Suitcase",
+          "what": "Your bag with Bulgarian treasures nestled between clothes — the physical proof of the trip.",
+          "why": "The visual of return — messy but satisfying.",
+          "detail": "Weigh it before leaving the apartment. Wizz Air charges for overweight."
+        },
+        {
+          "name": "Metro Escalator to Airport",
+          "what": "The descent to the platform, luggage in tow, same system you learned on Day 11.",
+          "why": "Full circle — you arrived lost, you leave competent.",
+          "detail": "M4 from Serdika or M1 depending on your station — both reach the airport."
+        },
+        {
+          "name": "Runway Takeoff View",
+          "what": "Sofia shrinking below as the plane climbs — Vitosha mountain on one side, the city spreading out.",
+          "why": "The last visual of Bulgaria — get a window seat if you can.",
+          "detail": "Right side (rows D-F) often has mountain views on departure. Have your phone ready but wait for the signal."
+        }
+      ]
+    }
+  }
+}

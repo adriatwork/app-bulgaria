@@ -57,6 +57,8 @@ if (!fs.existsSync(USERS_FILE)) {
 
 const users = loadJSON(USERS_FILE, {});
 const itinerary = loadJSON(path.join(DATA_DIR, "itinerary.json"), { trip: {}, days: [] });
+const travelGuide = loadJSON(path.join(DATA_DIR, "travel-guide.json"), { days: {} });
+const foodPassport = loadJSON(path.join(DATA_DIR, "food-passport.json"), {});
 const imageCredits = loadJSON(path.join(DATA_DIR, "image-credits.json"), {});
 
 // Shared app state: checked activities, custom activities and diary entries.
@@ -153,6 +155,8 @@ app.get("/api/bootstrap", requireAuth, (req, res) => {
     user: publicUser(req.username),
     users: Object.keys(users).map(publicUser),
     itinerary,
+    travelGuide,
+    foodPassport,
     imageCredits,
     state: store
   });

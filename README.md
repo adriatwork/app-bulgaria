@@ -12,7 +12,8 @@ App web per al viatge a Bulgària del **3 al 15 d'agost de 2026**, generada a pa
   - On dormim cada nit (hotels de l'Excel).
 - **Llista d'activitats per completar cada dia**, adaptada a cada zona. Es poden marcar com a fetes (es veu qui i quan) i **afegir-ne de noves o canvis** sobre la marxa.
 - **Diari de viatge**: cada dia, cada viatger pot escriure les seves notes. Es veuen les notes de tots dos, però només pots editar o esborrar les teves.
-- Pàgina d'**informació pràctica**: vols, cotxe de lloguer, taxis, pla B, bàsics del país.
+- **Travel Guide (English)** — for each of the 13 days: destination story, history, highlights, fun facts, photo spots, food, Bulgarian phrase, daily challenges, insider tips, movie vibe, historical figure, and visual guide. Open any day → **Travel Guide** tab.
+- **Bulgarian Food Passport** — full gastronomic guide with 20 must-try dishes, regional food map, 25 food challenges, interactive checklist (mark what you've tasted + rate 1–10), trivia, and restaurant vocabulary.
 
 ## Com engegar-la
 

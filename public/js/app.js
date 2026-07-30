@@ -6,10 +6,26 @@ const S = {
   user: null,
   users: [],
   itinerary: null,
+  travelGuide: null,
+  foodPassport: null,
   imageCredits: {},
   state: { checks: {}, customActivities: {}, diary: {} },
   selectedLoginUser: null
 };
+
+const FOOD_PASSPORT_KEY = "bulgaria2026-food";
+
+function foodPassportState() {
+  try {
+    return JSON.parse(localStorage.getItem(FOOD_PASSPORT_KEY)) || { tasted: {}, ratings: {} };
+  } catch {
+    return { tasted: {}, ratings: {} };
+  }
+}
+
+function saveFoodPassportState(fp) {
+  localStorage.setItem(FOOD_PASSPORT_KEY, JSON.stringify(fp));
+}
 
 /* ---------------- utils ---------------- */
 
@@ -172,13 +188,17 @@ async function staticApi(path, opts = {}) {
 
 async function enterStaticMode() {
   S.staticMode = true;
-  const [itinerary, credits, users] = await Promise.all([
+  const [itinerary, credits, users, guide, food] = await Promise.all([
     fetch("data/itinerary.json").then((r) => r.json()),
     fetch("data/image-credits.json").then((r) => r.json()).catch(() => ({})),
-    fetch("data/static-users.json").then((r) => r.json())
+    fetch("data/static-users.json").then((r) => r.json()),
+    fetch("data/travel-guide.json").then((r) => r.json()).catch(() => ({ days: {} })),
+    fetch("data/food-passport.json").then((r) => r.json()).catch(() => null)
   ]);
   S.itinerary = itinerary;
   S.imageCredits = credits;
+  S.travelGuide = guide;
+  S.foodPassport = food;
   S.staticUsers = users;
   S.users = Object.entries(users).map(([username, u]) => ({
     username, displayName: u.displayName, emoji: u.emoji
@@ -215,8 +235,9 @@ function route() {
   const hash = location.hash || "#/";
   const parts = hash.replace(/^#\//, "").split("/").filter(Boolean);
   if (!S.user) return renderLogin();
-  if (parts[0] === "dia" && parts[1]) return renderDay(parseInt(parts[1], 10));
+  if (parts[0] === "dia" && parts[1]) return renderDay(parseInt(parts[1], 10), parts[2] || "plan");
   if (parts[0] === "diari") return renderDiaryPage();
+  if (parts[0] === "food") return renderFoodPassportPage();
   if (parts[0] === "info") return renderInfoPage();
   return renderOverview();
 }
@@ -286,6 +307,7 @@ function chrome(active, content) {
         <a class="brand" href="#/">Bulgària <span>2026</span></a>
         <div class="nav-links">
           <a href="#/" class="${active === "home" ? "active" : ""}">Itinerari</a>
+          <a href="#/food" class="${active === "food" ? "active" : ""}">Food Passport</a>
           <a href="#/diari" class="${active === "diari" ? "active" : ""}">El nostre diari</a>
           <a href="#/info" class="${active === "info" ? "active" : ""}">Info pràctica</a>
         </div>
@@ -342,7 +364,7 @@ function renderOverview() {
       </div>
     </div>
     <h2 class="page-title" style="font-size:1.6rem">El viatge, dia a dia</h2>
-    <p class="page-sub">Clica un dia per veure el pla, les activitats i el diari.</p>
+    <p class="page-sub">Clica un dia per veure el pla, el travel guide en anglès i el diari.</p>
     <div class="days-grid">
       ${days.map((d) => {
         const p = dayProgress(d);
@@ -371,6 +393,81 @@ function renderOverview() {
   afterChrome();
 }
 
+/* ---------------- travel guide helpers ---------------- */
+
+function paras(arr) {
+  return (arr || []).map((p) => `<p class="guide-p">${esc(p)}</p>`).join("");
+}
+
+function renderGuideSection(title, inner) {
+  return `<section class="guide-section"><h3 class="guide-h3">${title}</h3>${inner}</section>`;
+}
+
+function renderDayGuide(g) {
+  if (!g) return `<div class="card"><p class="guide-empty">Travel guide content coming soon for this day.</p></div>`;
+
+  const highlights = (g.highlights || []).map((h) => `
+    <div class="guide-highlight">
+      <div class="gh-name">${esc(h.name)}</div>
+      <div class="gh-what"><b>What:</b> ${esc(h.what)}</div>
+      <div class="gh-why"><b>Why:</b> ${esc(h.why)}</div>
+      <div class="gh-notice"><b>Look for:</b> ${esc(h.notice)}</div>
+    </div>`).join("");
+
+  const visual = (g.visualGuide || []).map((v) => `
+    <div class="guide-highlight">
+      <div class="gh-name">${esc(v.name)}</div>
+      <div class="gh-what">${esc(v.what)}</div>
+      <div class="gh-why"><b>Why it matters:</b> ${esc(v.why)}</div>
+      <div class="gh-notice"><b>Detail:</b> ${esc(v.detail)}</div>
+    </div>`).join("");
+
+  const food = (g.food || []).map((f) => `
+    <div class="guide-food-item">
+      <div class="gf-name">${esc(f.name)}</div>
+      <div class="gf-desc">${esc(f.description)}</div>
+      <div class="gf-special">✨ ${esc(f.special)}</div>
+      <div class="gf-where">📍 ${esc(f.where)}</div>
+    </div>`).join("");
+
+  const ps = g.photoSpot || {};
+  const phr = g.phrase || {};
+  const mov = g.movie || {};
+  const fig = g.historicalFigure || {};
+
+  return `
+    <div class="guide-content">
+      ${renderGuideSection("🏛️ Today's Destination", paras(g.destination))}
+      ${renderGuideSection("📖 History & Cultural Context", paras(g.history))}
+      ${renderGuideSection("👀 Don't Miss These Highlights", `<div class="guide-list">${highlights}</div>`)}
+      ${renderGuideSection("🤯 Fun Facts & Surprising Trivia", `<ul class="guide-bullets">${(g.funFacts || []).map((f) => `<li>${esc(f)}</li>`).join("")}</ul>`)}
+      ${renderGuideSection("📸 The Perfect Photo Spot", `
+        <p class="guide-p"><b>Best viewpoint:</b> ${esc(ps.viewpoint)}</p>
+        <p class="guide-p"><b>Best time:</b> ${esc(ps.time)}</p>
+        <p class="guide-p"><b>Why it's photogenic:</b> ${esc(ps.why)}</p>
+        <p class="guide-p"><b>Tips:</b> ${esc(ps.tips)}</p>`)}
+      ${renderGuideSection("🍴 What to Eat Today", `<div class="guide-food-list">${food}</div>`)}
+      ${renderGuideSection("🗣️ Bulgarian Phrase of the Day", `
+        <div class="phrase-box">
+          <div class="phrase-cyr">${esc(phr.cyrillic)}</div>
+          <div class="phrase-trans">${esc(phr.transliteration)}</div>
+          <div class="phrase-en">"${esc(phr.english)}"</div>
+          <div class="phrase-when">${esc(phr.when)}</div>
+        </div>`)}
+      ${renderGuideSection("🎯 Daily Challenges", `<ul class="guide-bullets challenge-list">${(g.challenges || []).map((c) => `<li>${esc(c)}</li>`).join("")}</ul>`)}
+      ${renderGuideSection("💡 Local Insider Tips", `<ul class="guide-bullets">${(g.insiderTips || []).map((t) => `<li>${esc(t)}</li>`).join("")}</ul>`)}
+      ${renderGuideSection("🎬 If This Place Were a Movie...", `
+        <p class="guide-p"><b>Genre:</b> ${esc(mov.genre)}</p>
+        <p class="guide-p"><b>Atmosphere:</b> ${esc(mov.atmosphere)}</p>
+        <p class="guide-p"><b>Feels like:</b> ${esc(mov.resembles)}</p>`)}
+      ${renderGuideSection("👤 Historical Figure of the Day", `
+        <p class="guide-p"><b>${esc(fig.name)}</b> — ${esc(fig.who)}</p>
+        <p class="guide-p">${esc(fig.why)}</p>
+        <p class="guide-p"><i>Fun detail:</i> ${esc(fig.detail)}</p>`)}
+      ${renderGuideSection("🔍 Visual Guide", `<div class="guide-list">${visual}</div>`)}
+    </div>`;
+}
+
 /* ---------------- day detail ---------------- */
 
 function momentClass(moment) {
@@ -381,11 +478,12 @@ function momentClass(moment) {
   return "";
 }
 
-function renderDay(n) {
+function renderDay(n, tab = "plan") {
   const days = S.itinerary.days;
   const day = days.find((d) => d.day === n);
   if (!day) { location.hash = "#/"; return; }
 
+  const guide = S.travelGuide?.days?.[String(n)];
   const prev = days.find((d) => d.day === n - 1);
   const next = days.find((d) => d.day === n + 1);
   const customs = S.state.customActivities[n] || [];
@@ -436,6 +534,16 @@ function renderDay(n) {
       </div>
     </div>
 
+    <div class="day-tabs">
+      <a href="#/dia/${n}/plan" class="day-tab ${tab === "plan" ? "active" : ""}">🗓️ Plan</a>
+      <a href="#/dia/${n}/guide" class="day-tab ${tab === "guide" ? "active" : ""}">📖 Travel Guide</a>
+    </div>
+
+    ${tab === "guide" ? `
+    <div class="card guide-card">
+      <p class="guide-intro">Your pocket guide for today — read this while you're on the ground.</p>
+      ${renderDayGuide(guide)}
+    </div>` : `
     <div class="day-columns">
       <div>
         <div class="card">
@@ -529,11 +637,11 @@ function renderDay(n) {
           <ul class="tips-list">${day.tips.map((t) => `<li>${linkify(t)}</li>`).join("")}</ul>
         </div>` : ""}
       </div>
-    </div>`;
+    </div>`}`;
 
   app.innerHTML = chrome("home", content);
   afterChrome();
-  wireDayEvents(n);
+  if (tab === "plan") wireDayEvents(n);
 }
 
 function wireDayEvents(n) {
@@ -684,6 +792,177 @@ function renderDiaryPage() {
   afterChrome();
 }
 
+/* ---------------- food passport page ---------------- */
+
+function renderFoodPassportPage() {
+  const fp = S.foodPassport;
+  if (!fp) {
+    app.innerHTML = chrome("food", `<p class="guide-empty">Food passport loading…</p>`);
+    afterChrome();
+    return;
+  }
+
+  const state = foodPassportState();
+  const tastedCount = Object.keys(state.tasted).filter((k) => state.tasted[k]).length;
+  const total = fp.checklist.length;
+
+  const levelBadge = (level) => {
+    const cls = level === "Must Try" ? "must" : level === "Highly Recommended" ? "high" : "curio";
+    return `<span class="fp-badge ${cls}">${esc(level)}</span>`;
+  };
+
+  const dishesHtml = fp.topDishes.map((d) => `
+    <div class="fp-dish">
+      <div class="fp-dish-head">${esc(d.name)} ${levelBadge(d.level)}</div>
+      <div class="fp-meta">${esc(d.category)} · ${esc(d.region)}</div>
+      <p>${esc(d.description)}</p>
+      <p class="fp-ing"><b>Ingredients:</b> ${esc(d.ingredients)}</p>
+    </div>`).join("");
+
+  const dessertsHtml = fp.desserts.map((d) => `
+    <div class="fp-dish"><div class="fp-dish-head">${esc(d.name)}</div><p>${esc(d.description)}</p></div>`).join("");
+
+  const drinks = fp.drinks;
+  const drinksHtml = Object.entries(drinks).map(([k, v]) => `
+    <div class="fp-drink"><b>${esc(k.charAt(0).toUpperCase() + k.slice(1))}</b><p>${esc(v)}</p></div>`).join("");
+
+  const mapLabels = {
+    sofia: "Sofia", rila: "Rila", pirinBansko: "Pirin / Bansko", plovdiv: "Plovdiv",
+    nessebar: "Nessebar", varna: "Varna", velikoTarnovo: "Veliko Tarnovo", koprivshtitsa: "Koprivshtitsa"
+  };
+  const mapHtml = Object.entries(fp.foodMap).map(([k, v]) => `
+    <div class="fp-region">
+      <h4>${esc(mapLabels[k] || k)}</h4>
+      <p><b>Eat:</b> ${esc(v.eat)}</p>
+      <p><b>Drink:</b> ${esc(v.drink)}</p>
+      <p><b>Specialties:</b> ${esc(v.specialties)}</p>
+    </div>`).join("");
+
+  const checklistHtml = fp.checklist.map((item) => {
+    const done = state.tasted[item.id];
+    const rating = state.ratings[item.id];
+    return `
+      <label class="check-item fp-check ${done ? "done" : ""}">
+        <input type="checkbox" data-fp-item="${esc(item.id)}" ${done ? "checked" : ""} />
+        <span class="txt">${esc(item.name)} <span class="fp-cat">${esc(item.category)}</span>
+          ${rating ? `<span class="by">⭐ ${rating.overall}/10</span>` : ""}
+        </span>
+        <button class="btn danger-ghost fp-rate-btn" data-fp-rate="${esc(item.id)}" title="Rate">⭐</button>
+      </label>`;
+  }).join("");
+
+  const vocabHtml = fp.vocabulary.map((v) => `
+    <div class="vocab-row">
+      <span class="vocab-cyr">${esc(v.cyrillic)}</span>
+      <span class="vocab-trans">${esc(v.transliteration)}</span>
+      <span class="vocab-en">${esc(v.english)}</span>
+    </div>`).join("");
+
+  const content = `
+    <h1 class="page-title">🍽️ Bulgarian Food Passport</h1>
+    <p class="page-sub">Eat your way across Bulgaria — mark what you've tried and rate your favorites.</p>
+    <div class="fp-progress card">
+      <div class="fp-progress-head">
+        <span><b>${tastedCount}/${total}</b> items tasted</span>
+        <div class="progress" style="flex:1;max-width:200px"><div style="width:${total ? (tastedCount/total)*100 : 0}%"></div></div>
+      </div>
+    </div>
+
+    <div class="card">${renderGuideSection("🍴 Introduction to Bulgarian Cuisine", paras(fp.introduction))}</div>
+
+    <div class="card">
+      <h2 class="guide-h2">🥇 Top 20 Must-Try Dishes</h2>
+      <div class="fp-dish-grid">${dishesHtml}</div>
+    </div>
+
+    <div class="card">
+      <h2 class="guide-h2">🍰 Traditional Desserts</h2>
+      ${dessertsHtml}
+    </div>
+
+    <div class="card">
+      <h2 class="guide-h2">🍷 Drinks of Bulgaria</h2>
+      <div class="fp-drinks">${drinksHtml}</div>
+    </div>
+
+    <div class="card">
+      <h2 class="guide-h2">🗺️ Food Map of Bulgaria</h2>
+      <div class="fp-map-grid">${mapHtml}</div>
+    </div>
+
+    <div class="card">
+      <h2 class="guide-h2">🎯 Food Challenges</h2>
+      <ul class="guide-bullets challenge-list">${fp.challenges.map((c) => `<li>${esc(c)}</li>`).join("")}</ul>
+    </div>
+
+    <div class="card">
+      <h2 class="guide-h2">🏆 Food Passport Checklist</h2>
+      <p class="guide-intro">Mark each dish or drink as you try it. Tap ⭐ to rate (1–10).</p>
+      <div class="check-list">${checklistHtml}</div>
+    </div>
+
+    <div class="card">
+      <h2 class="guide-h2">⭐ Rating System</h2>
+      <p class="guide-p">Rate each item on: ${fp.ratingSystem.criteria.join(", ")} (1–10 each).</p>
+      <p class="guide-p">${esc(fp.ratingSystem.scale)}</p>
+      <p class="guide-p"><b>Overall score:</b> ${esc(fp.ratingSystem.formula)}</p>
+    </div>
+
+    <div class="card">
+      <h2 class="guide-h2">🥇 End-of-Trip Food Awards</h2>
+      <ul class="guide-bullets">${fp.endOfTripAwards.map((a) => `<li><b>${esc(a.category)}:</b> ${esc(a.description)}</li>`).join("")}</ul>
+    </div>
+
+    <div class="card">
+      <h2 class="guide-h2">🤯 Food Trivia</h2>
+      <ul class="guide-bullets">${fp.trivia.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>
+    </div>
+
+    <div class="card">
+      <h2 class="guide-h2">🗣️ Restaurant Survival Vocabulary</h2>
+      <div class="vocab-table">${vocabHtml}</div>
+    </div>`;
+
+  app.innerHTML = chrome("food", content);
+  afterChrome();
+  wireFoodPassportEvents();
+}
+
+function wireFoodPassportEvents() {
+  app.querySelectorAll("[data-fp-item]").forEach((cb) => {
+    cb.addEventListener("change", () => {
+      const st = foodPassportState();
+      if (cb.checked) st.tasted[cb.dataset.fpItem] = { at: new Date().toISOString(), by: S.user?.username };
+      else delete st.tasted[cb.dataset.fpItem];
+      saveFoodPassportState(st);
+      renderFoodPassportPage();
+    });
+  });
+
+  app.querySelectorAll("[data-fp-rate]").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const id = btn.dataset.fpRate;
+      const item = S.foodPassport.checklist.find((x) => x.id === id);
+      const st = foodPassportState();
+      const cur = st.ratings[id] || {};
+      const taste = prompt(`Rate "${item?.name}" — Taste (1-10):`, cur.taste || "8");
+      if (taste === null) return;
+      const auth = prompt("Authenticity (1-10):", cur.authenticity || "8");
+      if (auth === null) return;
+      const val = prompt("Value for money (1-10):", cur.value || "8");
+      if (val === null) return;
+      const t = +taste, a = +auth, v = +val;
+      const overall = Math.round(((t + a + v) / 3) * 10) / 10;
+      st.ratings[id] = { taste: t, authenticity: a, value: v, overall, at: new Date().toISOString() };
+      st.tasted[id] = st.tasted[id] || { at: new Date().toISOString(), by: S.user?.username };
+      saveFoodPassportState(st);
+      toast(`Rated ${overall}/10 ⭐`);
+      renderFoodPassportPage();
+    });
+  });
+}
+
 /* ---------------- info page ---------------- */
 
 function renderInfoPage() {
@@ -746,6 +1025,8 @@ async function bootstrap() {
       S.user = data.user;
       S.users = data.users;
       S.itinerary = data.itinerary;
+      S.travelGuide = data.travelGuide;
+      S.foodPassport = data.foodPassport;
       S.imageCredits = data.imageCredits;
       S.state = data.state;
     }

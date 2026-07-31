@@ -24,146 +24,161 @@
       ],
       "hotel": { "name": "Hotel Ibis Sofia Airport", "address": "Aeroport de Sofia", "notes": "Reservat ✔ · A tocar de la terminal, ideal per arribar tard" },
       "car": false,
-      "placeInfo": "Sofia és la capital de Bulgària, als peus de la muntanya Vitosha. L'aeroport és a uns 10 km del centre. La moneda és el lev (BGN, ~1,96 BGN = 1 €); molts llocs accepten targeta però va bé portar una mica d'efectiu.",
+      "placeInfo": "Sofia és una de les capitals més antigues d'Europa, assentada sobre l'antiga ciutat romana de Serdica. Està situada als peus de la majestuosa muntanya Vitosha (2.290 m), visible des de gairebé qualsevol punt de la ciutat. La moneda és el lev búlgar (BGN), fixat a l'euro (~1,96 BGN = 1 €). Recomanable portar una mica d'efectiu per a pobles i mercats.",
+      "culturalInfo": {
+        "history": "El nom de 'Sofia' ve de la basílica de Santa Sofia (s. VI) i significa 'saviesa'. Constantí el Gran admirava tant aquesta ciutat que sovint deia: 'Serdica és la meva Roma'.",
+        "curiosities": [
+          "A Bulgària el gest de 'sí' i 'no' amb el cap està INVERTIT: dir 'sí' es fa movent el cap d'un costat a l'altre, i dir 'no' és un moviment vertical cap amunt.",
+          "El ciríl·lic va ser creat a Bulgària al segle IX pels deixebles dels sants Ciril i Metodi, no a Rússia com es creu comunament!"
+        ]
+      },
       "food": [
-        "Si teniu gana en arribar, els supermercats 24h de l'aeroport tenen banitsa (pasta de full amb formatge sirene): el mos búlgar per excel·lència.",
-        "Aigua: l'aixeta és potable a gairebé tot el país."
+        "Si teniu gana en arribar, busqueu banitsa (pasta de full farcida de formatge sirene) als супермаркет 24h.",
+        "Aigua: l'aixeta és potable a gairebé tot el país i trobareu fonts d'aigua termal natural per tota Sofia."
       ],
       "nearby": [],
       "tips": [
-        "Bulgària va 1 hora per davant de Barcelona (CEST +1).",
-        "Descarregueu els mapes offline de Bulgària a Google Maps abans de sortir.",
-        "Considereu comprar una eSIM o SIM local (A1, Yettel o Vivacom) per tenir dades tot el viatge."
+        "Bulgària va 1 hora per davant de Barcelona (EET / UTC+2).",
+        "Descarregueu els mapes offline de Bulgària a Google Maps / Maps.me abans de sortir.",
+        "Targetes SIM/eSIM: A1 o Yettel tenen molt bona cobertura a muntanya."
       ],
       "activities": [
-        { "id": "d1-a1", "text": "Facturar i agafar el vol W64406" },
-        { "id": "d1-a2", "text": "Canviar o treure levs (BGN) a l'arribada" },
-        { "id": "d1-a3", "text": "Activar dades mòbils / eSIM" },
-        { "id": "d1-a4", "text": "Check-in a l'Hotel Ibis Sofia Airport" }
+        { "id": "d1-a1", "text": "Facturar i agafar el vol W64406", "type": "task" },
+        { "id": "d1-a2", "text": "Activar dades mòbils / eSIM i treure els primers levs", "type": "task" },
+        { "id": "d1-r1", "text": "Repte de grup: Fer el primer intent de dir 'SÍ' i 'NO' amb el cap al revés davant del recepcionista de l'hotel sense riure.", "type": "fun" },
+        { "id": "d1-r2", "text": "Repte Culinari: Aconseguir la primera banitsa de matinada i avaluar el nivell de greix en una escala de 1 a 10.", "type": "fun" }
       ]
     },
     {
       "day": 2,
       "date": "2026-08-04",
       "dateLabel": "Dimarts, 4 d'agost",
-      "title": "Monestir de Rila i la Santa Cova",
+      "title": "Monestir de Rila i la Cova del Pecat",
       "area": "Rila · Sapareva Banya",
       "heroImage": "rila-monastery",
       "gallery": ["rila-monastery", "boyana-church", "ivan-rilski-cave"],
-      "summary": "Recollim el cotxe i posem rumb al monument més estimat de Bulgària: el Monestir de Rila, Patrimoni de la UNESCO, amagat entre boscos de muntanya.",
+      "summary": "Recollim el cotxe i posem rumb al cor espiritual de Bulgària: el Monestir de Rila (UNESCO), amagat entre frondosos boscos de muntanya.",
       "schedule": [
-        { "moment": "Matí", "plan": "Agafar el cotxe de lloguer a l'aeroport", "details": "9:00h · Poruchik Nedelcho Bonchev 6, Sofia (Price Carz). Sol·licitar pick-up a l'aeroport: +47 519 34 934" },
-        { "moment": "Matí", "plan": "Visitar el Monestir de Rila", "details": "2:00h de desplaçament. Valorar passar per l'Església de Boyana, Patrimoni de la UNESCO. Es pot esmorzar a l'Hotel Villa Boyana (esmorzar tradicional)." },
-        { "moment": "Tarda", "plan": "Visitar la Santa Cova de Sant Ivan Rilski", "details": "La tradició diu que passar per la roca estreta «purifica els pecats»." },
-        { "moment": "Nit", "plan": "Dormir a Sapareva Banya", "details": "" }
+        { "moment": "Matí", "plan": "Agafar el cotxe de lloguer", "details": "9:00h · Price Carz (Poruchik Nedelcho Bonchev 6). Tel: +47 519 34 934" },
+        { "moment": "Matí", "plan": "Visitar l'Església de Boyana i el Monestir de Rila", "details": "Boyana té frescos del 1259 que van avançar el Renaixement. Després, 2h de cotxe fins a Rila." },
+        { "moment": "Tarda", "plan": "Excursió a la Santa Cova de Sant Ivan Rilski", "details": "Caminada fàcil de 30 min entre boscos centenaris fins a la cova de l'ermità." },
+        { "moment": "Nit", "plan": "Sapareva Banya i sopar tradicional", "details": "Veure el gèiser i relaxar-se." }
       ],
       "hotel": { "name": "Kavdanski Guesthouse", "address": "1, Geo Milev Str., 2650 Sapareva Banya", "notes": "Reservat ✔" },
       "car": true,
-      "placeInfo": "El Monestir de Rila (s. X) és el cor espiritual de Bulgària: arcs a ratlles blanques i negres, frescos de colors vius i muntanyes de més de 2.500 m al voltant. La Santa Cova, a uns 4 km, és on va viure l'ermità Sant Ivan Rilski; s'hi entra per un passadís de roca molt estret.",
+      "placeInfo": "El Monestir de Rila (fundat al s. X) és la joia cultural del país. Sembla una fortalesa per fora, però per dins és un esclat de colors, arcs de ratlles blanques i negres i més de 1.200 frescos detallats.",
+      "culturalInfo": {
+        "history": "Fundat per Sant Ivan Rilski, un ermità que vivia en una cova sense possessions. Durant els 500 anys d'ocupació otomana, aquest monestir va ser el refugi secret que va mantenir viva la llengua, la religió i la cultura búlgara.",
+        "curiosities": [
+          "Els frescos de l'exterior de l'església mostren escenes molt gràfiques del Judici Final: dimonis torturant pecadors, lladres, usurers i dones xafarderes!",
+          "La Cova de Sant Ivan té un passadís de roca vertical molt estreta. La llegenda diu que qualsevol persona que aconsegueixi passar-hi queda immediatament absolta de tots els seus pecats. Si et quedes encallat... tens un problema moral (i físic)."
+        ]
+      },
       "food": [
-        "Mekitsi: bunyols búlgars acabats de fregir, al forn de darrere del monestir. Imprescindibles!",
-        "Trucha (pastarva): truita de riu a la brasa, l'especialitat dels restaurants de la vall de Rila.",
-        "Iogurt búlgar amb mel i nous: el iogurt aquí és religió (Lactobacillus bulgaricus!)."
+        "Mekitsi: Bunyols búlgars tradicionals tallats a mà i fregits, servits amb sucre de llustre o mel, al forn de fusta darrere del monestir.",
+        "Pastarva (Truita de riu): Feta a la brasa en les mehanes (tavernes) a la vora del riu Rilska.",
+        "Iogurt búlgar (Kiselo Mlyako) de llet de búfala amb mel i nous."
       ],
       "nearby": [
-        { "name": "La Roca dels Desitjos", "desc": "A ~10 minuts a peu de la Santa Cova. La gent deixa papers escrits amb desitjos a les esquerdes de la muntanya." },
-        { "name": "Església de Boyana (Sofia)", "desc": "Patrimoni UNESCO amb frescos medievals del 1259, de camí sortint de Sofia." },
-        { "name": "Piràmides de terra de Stob", "desc": "Formacions rocoses vermelloses molt curioses, a ~20 min del monestir en cotxe, passeig fàcil d'1 hora." }
+        { "name": "La Roca dels Desitjos", "desc": "A 10 min de la cova. Escriu un desig en un paperet i amaga'l a les esquerdes de la roca." },
+        { "name": "Piràmides de Stob", "desc": "Erosions de terra vermellosa de 12 metres d'alçada amb 'barrets' de pedra." }
       ],
       "tips": [
-        "Vestimenta: espatlles i genolls coberts per entrar al monestir i a les esglésies.",
-        "L'entrada al monestir és gratuïta; el museu costa pocs levs.",
-        "Sapareva Banya és famosa pel seu gèiser d'aigua termal a 103 °C, el més calent d'Europa: mireu-lo al centre del poble."
+        "Normes de vestimenta: genolls i espatlles cobertes (no es permeten samarretes de tirants ni pantalons curts per sobre del genoll).",
+        "A Sapareva Banya hi ha el gèiser d'aigua termal més calent d'Europa (103 °C) expulsant aigua cada 20 segons."
       ],
       "activities": [
-        { "id": "d2-a1", "text": "Recollir el cotxe de lloguer (9:00, Price Carz)" },
-        { "id": "d2-a2", "text": "Parada opcional a l'Església de Boyana" },
-        { "id": "d2-a3", "text": "Visitar el Monestir de Rila i els seus frescos" },
-        { "id": "d2-a4", "text": "Tastar les mekitsi del forn de darrere el monestir" },
-        { "id": "d2-a5", "text": "Pujar a la Santa Cova de Sant Ivan Rilski" },
-        { "id": "d2-a6", "text": "Deixar un desig a la Roca dels Desitjos" },
-        { "id": "d2-a7", "text": "Veure el gèiser de Sapareva Banya" }
+        { "id": "d2-a1", "text": "Recollir el cotxe i superar la prova de conducció per Sofia", "type": "task" },
+        { "id": "d2-a2", "text": "Comprar mekitsi calentes al forn secret de Rila", "type": "task" },
+        { "id": "d2-r1", "text": "Repte de la Purificació: Creuar la fissura de la Santa Cova. Qui no passi paga la primera ronda de cerveses!", "type": "fun" },
+        { "id": "d2-r2", "text": "Repte Artístic: Trobar el dimoni més estrany o divertit pintat als frescos del Judici Final i fer-s'hi una foto fent la mateixa cara.", "type": "fun" },
+        { "id": "d2-r3", "text": "Repte dels Desitjos: Deixar un desig secret a la Roca dels Desitjos. (Prohibit demanar que el cotxe no s'espatlli).", "type": "fun" }
       ]
     },
     {
       "day": 3,
       "date": "2026-08-05",
       "dateLabel": "Dimecres, 5 d'agost",
-      "title": "Els Set Llacs de Rila",
-      "area": "Rila · Sapareva Banya",
+      "title": "Els Set Llacs de Rila: El Circ Glacial",
+      "area": "Parc Nacional de Rila",
       "heroImage": "seven-rila-lakes",
-      "gallery": ["seven-rila-lakes", "ivan-rilski-cave"],
-      "summary": "L'excursió estrella del viatge: un circ glacial amb set llacs encadenats a més de 2.100 metres d'altitud.",
+      "gallery": ["seven-rila-lakes", "panichishte"],
+      "summary": "L'excursió estrella del viatge: un recorregut a peu per un paisatge d'alta muntanya envoltats de 7 llacs glacials cristal·lins.",
       "schedule": [
-        { "moment": "Tot el dia", "plan": "Excursió als 7 llacs de Rila", "details": "Sapareva Banya → telecadira de Panichishte: 20-25 min. Intentar començar abans de les 9:00; a la tarda hi ha tempestes sovint. Cal portar: impermeable, aigua i menjar." },
-        { "moment": "Nit", "plan": "Dormir a Sapareva Banya", "details": "" }
+        { "moment": "08:00h", "plan": "Arribar al Telecadira de Panichishte", "details": "Matinar és clau per evitar cues d'1-2 hores al telecadira i les tempestes de tarda." },
+        { "moment": "Matí/Tarda", "plan": "Ruta a peu pels 7 Llacs (4-5 hores)", "details": "Pujada fins al mirador de 'La Llàgrima' (2.535 m) per veure els 7 llacs alhora." },
+        { "moment": "Tarda/Vespre", "plan": "Sessió de relax als Banys Termals", "details": "Recuperar les cames a les aigües sulfuroses d'Aqua Club Kotvata a Sapareva Banya." }
       ],
-      "hotel": { "name": "Kavdanski Guesthouse", "address": "1, Geo Milev Str., 2650 Sapareva Banya", "notes": "Reservat ✔ · 2a nit" },
+      "hotel": { "name": "Kavdanski Guesthouse", "address": "Sapareva Banya", "notes": "Reservat ✔ · 2a nit" },
       "car": true,
-      "placeInfo": "Els Set Llacs de Rila són llacs d'origen glacial situats entre 2.100 i 2.500 m. Cada llac té nom propi segons la seva forma: l'Ull, el Ronyó, el Bessó, el Trèvol, el Peix, el Llac de Baix i la Llàgrima (el més alt i cristal·lí). La ruta circular clàssica des de dalt del telecadira dura unes 4-5 hores.",
+      "placeInfo": "Els Set Llacs de Rila estan situats entre els 2.100 m i 2.500 m d'altitud. Cada llac rep el nom de la seva forma o característica principal.",
+      "culturalInfo": {
+        "history": "Aquest lloc és considerat un centre d'energia espiritual mundial per la 'Fraternitat Blanca' (seguidors del mestre espiritual Peter Deunov). Cada agost es reuneixen centenaris de persones vestides de blanc per fer una dansa mística anomenada Paneurítmia en cercles concentrics al voltant del Llac del Ronyó.",
+        "curiosities": [
+          "Noms dels 7 Llacs de baix a dalt: Dolnoto (El de Baix), Ribnoto (El del Peix), Trilistnika (El Trèvol), Bliznaka (El Bessó - el més gran), Babreka (El Ronyó - la riba més famosa), Okoto (L'Ull - el més profund de Bulgària, 37,5m) i Sulzata (La Llàgrima - aigua tan clara que es veu el fons a metres)."
+        ]
+      },
       "food": [
-        "Piquem amunt: entrepans i fruita comprats al poble (a dalt només hi ha un refugi bàsic).",
-        "En baixar: kavarma (estofat de carn i verdures en cassola de fang) en una mehana de Sapareva Banya.",
-        "Xopska salata: l'amanida nacional amb tomàquet, cogombre i formatge sirene ratllat."
+        "Pícnic de muntanya: Comprar pa, formatge sirene, tomàquets i embotit (lukanka) abans de pujar.",
+        "Kavarma: Estofat tradicional de porc o pollastre amb verdures cuit lentament en un pot de fang (gjuvec).",
+        "Shopska Salata: L'amanida nacional (tomàquet, cogombre, pebrot i formatge ratllat). Té els colors de la bandera búlgara: blanc, verd i vermell!"
       ],
       "nearby": [
-        { "name": "Mirador del llac Llàgrima", "desc": "Si les cames aguanten, pugeu fins al punt més alt del circuit: la vista dels 7 llacs alhora és la foto del viatge." },
-        { "name": "Banys termals de Sapareva Banya", "desc": "Perfectes per relaxar els músculs en baixar: piscines termals exteriors (Aqua Club Kotvata o Germanea)." }
+        { "name": "Refugi dels 7 Llacs (Sedemte Ezera)", "desc": "Ideal per fer un te calent de muntanya (Mursalski Chay) abans de començar la pujada més dura." }
       ],
       "tips": [
-        "Pàrquing de l'excursió guardat al mapa (enllaç al full de càlcul original): Parkplatz für 7-Seen-Wanderung.",
-        "El telecadira triga ~25 min per trajecte; porteu jaqueta fins i tot a l'agost.",
-        "Protecció solar imprescindible: a 2.400 m el sol pica fort."
+        "Està estrictament PROHIBIT banyar-se als llacs o llençar-hi pedres (és parc nacional protegit i multen).",
+        "El telecadira triga 25 minuts i fa fred a dalt: portar tallavents/jaqueta tot i ser agost."
       ],
       "activities": [
-        { "id": "d3-a1", "text": "Sortir abans de les 9:00 cap a Panichishte" },
-        { "id": "d3-a2", "text": "Pujar amb el telecadira" },
-        { "id": "d3-a3", "text": "Completar el circuit dels 7 llacs" },
-        { "id": "d3-a4", "text": "Foto panoràmica des del mirador de la Llàgrima" },
-        { "id": "d3-a5", "text": "Bany termal per recuperar les cames" },
-        { "id": "d3-a6", "text": "Sopar kavarma en una mehana" }
+        { "id": "d3-a1", "text": "Pujar al telecadira abans que es formi cua", "type": "task" },
+        { "id": "d3-a2", "text": "Arribar al cim del mirador 'Ezeren Vrah' (La Llàgrima)", "type": "task" },
+        { "id": "d3-r1", "text": "Repte de Foto Èpica: Fer la millor foto de postureig de tot el viatge davant del llac 'El Ronyó' (Babrek).", "type": "fun" },
+        { "id": "d3-r2", "text": "Repte Esotèric: Intentar 'recarregar l'energia' fent una postura de ioga o meditació ridícula a la riba del Llac del Bessó.", "type": "fun" },
+        { "id": "d3-r3", "text": "Repte Gastronòmic: Menjar-se una Shopska Salata en una mehana i comprovar si realment porta els colors de la bandera búlgara.", "type": "fun" }
       ]
     },
     {
       "day": 4,
       "date": "2026-08-06",
       "dateLabel": "Dijous, 6 d'agost",
-      "title": "Parc Nacional de Pirin i nit de spa a Velingrad",
-      "area": "Pirin · Velingrad",
+      "title": "Muntanyes de Pirin i Nit de Relax a Velingrad",
+      "area": "Bansko · Pirin · Velingrad",
       "heroImage": "pirin",
       "gallery": ["pirin", "bansko", "velingrad"],
-      "summary": "Dia de muntanya al Pirin, Patrimoni de la UNESCO, i recompensa final: nit de luxe i balneari a la capital de l'spa dels Balcans.",
+      "summary": "Explorem el Parc Nacional de Pirin, veiem l'arbre més vell del país i acabem relaxant-nos a la capital dels balnearis dels Balcans.",
       "schedule": [
-        { "moment": "Matí", "plan": "Sortida cap al Parc de Pirin", "details": "1:30h de desplaçament" },
-        { "moment": "Tot el dia", "plan": "Excursió al Pirin", "details": "Ruta: ca.wikiloc.com/rutes-senderisme/parque-nacional-de-pirin-bulgaria-28099144 · A l'agost hi ha molta gent, cal aparcar d'hora." },
-        { "moment": "Tarda", "plan": "Sortida cap a Velingrad", "details": "2:30h de desplaçament" },
-        { "moment": "Nit", "plan": "Dormir a Velingrad", "details": "Nit de luxe i balneari 🛁" }
+        { "moment": "Matí", "plan": "Ruta cap a Bansko i la Cabana Vihren", "details": "Petita excursió per la zona alta del Parc Nacional de Pirin i visita a l'arbre mil·lenari." },
+        { "moment": "Dinar", "plan": "Dinar en una mehana tradicional a Bansko", "details": "Poble famós per l'esquí amb un nucli antic de pedra espectacular." },
+        { "moment": "Tarda", "plan": "Carretera panorama cap a Velingrad", "details": "Carretera de muntanya entre les Rhodopes i el Pirin." },
+        { "moment": "Nit", "plan": "Circuit de Spa a l'hotel Vella Hills", "details": "Sopar i relax total." }
       ],
-      "hotel": { "name": "Park Hotel and Spa Vella Hills", "address": "ul. Miladin Dosev 24, Chepino, 4600 Velingrad", "notes": "Reservat ✔ · Cancel·lació gratis abans del 5 d'agost · Esmorzar inclòs · Pagament a l'allotjament" },
+      "hotel": { "name": "Park Hotel and Spa Vella Hills", "address": "ul. Miladin Dosev 24, Chepino, 4600 Velingrad", "notes": "Reservat ✔ · Esmorzar inclòs" },
       "car": true,
-      "placeInfo": "El Parc Nacional de Pirin és Patrimoni de la UNESCO: cims de granit com el Vihren (2.914 m), llacs glacials i el pi de Baikushev, un dels arbres més vells d'Europa (1.300 anys). Velingrad, a les Rhodopes occidentals, presumeix de més de 80 fonts termals.",
+      "placeInfo": "El Parc Nacional de Pirin (UNESCO) és conegut pels seus paisatges de tipus alpí, cims àrids de granit com el Vihren (2.914 m) i la seva fauna salvatge (ossos, llops i rebecs). Velingrad té més de 80 fonts d'aigua termal medicinal.",
+      "culturalInfo": {
+        "history": "Bansko va ser un centre clau de la resistència i el renaixement cultural búlgar al segle XIX. Les seves cases estan dissenyades com a autèntiques fortaleses de pedra amb passadissos secrets per escapar dels otomans.",
+        "curiosities": [
+          "Aquí hi viu el 'Baikushevata Mura': un pi de la raó de més de 1.300 anys d'antiguitat. Va germinar cap a l'any 681, exactament quan es va fundar el primer estat búlgar! És l'arbre conífer més vell de Bulgària."
+        ]
+      },
       "food": [
-        "Kapama: el plat estrella de Bansko, capes de carn, arròs i xucrut cuites hores en olla de fang.",
-        "Chomlek: estofat de vedella amb patates típic de la zona de Pirin.",
-        "A Velingrad: sopar tranquil a l'hotel i, si ve de gust, un got de rakia (aiguardent local) com a digestiu."
+        "Kapama: El plat rei de Bansko. Porta capes de diferents carns (porc, vedella, xoriço), xucrut i arròs, cuit durant 5 hores en una olla de fang segellada amb massa de pa.",
+        "Chomlek: Estofat de vedella amb patates senceres, ceba i vi negre.",
+        "Rakia: Aiguardent tradicional de fruita (feta de raïm o pruna) que es beu a l'inici del àpat com a aperitiu."
       ],
       "nearby": [
-        { "name": "Bansko (nucli antic)", "desc": "Tot i ser famós per l'esquí, el seu nucli històric té cases-fortalesa de pedra molt maques i és un bon lloc per dinar en una mehana (taverna tradicional). Us agafa de camí!" },
-        { "name": "Llac Kleptuza (Velingrad)", "desc": "El llac karstic més cabalós de Bulgària, amb barquetes i passeig arbrat, a 10 min de l'hotel." },
-        { "name": "Parc de les Óssos Ballarins (Belitsa)", "desc": "Santuari d'óssos rescatats, entre Bansko i Velingrad, si sobra temps." }
+        { "name": "Llac Kleptuza (Velingrad)", "desc": "El llac karstic més gran del país, d'on surten més de 1.200 litres d'aigua freda per segon." }
       ],
       "tips": [
-        "Aparqueu d'hora a la cabana Vihren: a l'agost el pàrquing s'omple aviat.",
-        "Porteu banyador a mà per l'spa de l'hotel!",
-        "La carretera Bansko–Velingrad per les Rhodopes és revirada però preciosa: sense presses."
+        "Porteu el banyador i la gorra de piscina ben a mà a les motxilles per a l'arribada a l'hotel de Velingrad!"
       ],
       "activities": [
-        { "id": "d4-a1", "text": "Matinar per aparcar al Pirin" },
-        { "id": "d4-a2", "text": "Excursió pel Parc Nacional de Pirin" },
-        { "id": "d4-a3", "text": "Dinar kapama en una mehana de Bansko" },
-        { "id": "d4-a4", "text": "Arribar a Velingrad i fer el check-in" },
-        { "id": "d4-a5", "text": "Sessió de balneari a l'hotel" },
-        { "id": "d4-a6", "text": "Passeig pel llac Kleptuza (si hi ha temps)" }
+        { "id": "d4-a1", "text": "Veure l'arbre de 1.300 anys (Baikushevata Mura)", "type": "task" },
+        { "id": "d4-a2", "text": "Provar la Kapama a Bansko", "type": "task" },
+        { "id": "d4-r1", "text": "Repte Botànic: Abraçar l'arbre de 1.300 anys entre tots els membres del grup per veure si travesseu els braços.", "type": "fun" },
+        { "id": "d4-r2", "text": "Repte Valent: Fer el primer glop de 'Rakia' sense fer cap cara estranya ni tossir.", "type": "fun" },
+        { "id": "d4-r3", "text": "Repte de l'Spa: Trobar la sauna més calenta de l'hotel i aguantar 3 minuts mentre es canta una cançó catalana tradicional.", "type": "fun" }
       ]
     },
     {

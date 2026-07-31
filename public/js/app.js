@@ -1,4 +1,4 @@
-/* Bulgària 2026 · SPA del viatge */
+/* Bulgària 2026 · App de viatge */
 
 const app = document.getElementById("app");
 
@@ -6,26 +6,29 @@ const S = {
   user: null,
   users: [],
   itinerary: null,
-  travelGuide: null,
-  foodPassport: null,
+  guide: { days: {} },
+  food: null,
   imageCredits: {},
-  state: { checks: {}, customActivities: {}, diary: {} },
+  staticMode: false,
+  staticUsers: null,
+  store: null,
+  checks: {},
+  customActivities: {},
+  diary: {},
+  foodState: {},
+  foodFilters: { region: "", type: "", level: "", sort: "default", q: "" },
   selectedLoginUser: null
 };
 
-const FOOD_PASSPORT_KEY = "bulgaria2026-food";
+const SESSION_KEY = "bulgaria2026-user";
 
-function foodPassportState() {
-  try {
-    return JSON.parse(localStorage.getItem(FOOD_PASSPORT_KEY)) || { tasted: {}, ratings: {} };
-  } catch {
-    return { tasted: {}, ratings: {} };
-  }
-}
-
-function saveFoodPassportState(fp) {
-  localStorage.setItem(FOOD_PASSPORT_KEY, JSON.stringify(fp));
-}
+const TYPE_LABELS = {
+  entrant: "Entrant", principal: "Plat principal", postre: "Postre",
+  beguda: "Beguda", esmorzar: "Esmorzar", snack: "Snack"
+};
+const TYPE_ICONS = {
+  entrant: "🥗", principal: "🍽️", postre: "🍰", beguda: "🍷", esmorzar: "🥐", snack: "🍿"
+};
 
 /* ---------------- utils ---------------- */
 
@@ -36,14 +39,15 @@ function esc(str) {
 }
 
 function linkify(text) {
-  const escaped = esc(text);
-  return escaped.replace(/(https?:\/\/[^\s<]+|[a-z0-9.-]+\.(?:com|cat|org|net)\/[^\s<]+)/gi, (m) => {
+  return esc(text).replace(/(https?:\/\/[^\s<]+|[a-z0-9.-]+\.(?:com|cat|org|net)\/[^\s<]+)/gi, (m) => {
     const href = m.startsWith("http") ? m : "https://" + m;
-    return `<a href="${href}" target="_blank" rel="noopener">${m}</a>`;
+    const label = m.length > 40 ? m.slice(0, 38) + "…" : m;
+    return `<a href="${href}" target="_blank" rel="noopener">${label}</a>`;
   });
 }
 
 function fmtWhen(iso) {
+  if (!iso) return "";
   const d = new Date(iso);
   return d.toLocaleDateString("ca-ES", { day: "numeric", month: "short" }) +
     " · " + d.toLocaleTimeString("ca-ES", { hour: "2-digit", minute: "2-digit" });
@@ -58,169 +62,33 @@ function toast(msg, isError = false) {
   setTimeout(() => el.remove(), 2800);
 }
 
-async function api(path, opts = {}) {
-  if (S.staticMode) return staticApi(path, opts);
-  const res = await fetch(path, {
-    headers: { "Content-Type": "application/json" },
-    ...opts,
-    body: opts.body ? JSON.stringify(opts.body) : undefined
-  });
-  if (res.status === 401 && !path.includes("/login")) {
-    S.user = null;
-    render();
-    throw new Error("Sessió caducada");
-  }
-  const data = await res.json().catch(() => ({}));
-  if (!res.ok) throw new Error(data.error || "Error de connexió");
-  return data;
-}
-
-/* ---------------- static mode (GitHub Pages, sense servidor) ----------------
-   Quan no hi ha servidor Node (p. ex. l'app publicada a GitHub Pages), tot
-   funciona al navegador: el login es valida contra data/static-users.json i
-   el diari/activitats es guarden a localStorage (només en aquest dispositiu). */
-
-const STORE_KEY = "bulgaria2026-store";
-const SESSION_KEY = "bulgaria2026-user";
-
-function staticStore() {
-  try {
-    return JSON.parse(localStorage.getItem(STORE_KEY)) || { checks: {}, customActivities: {}, diary: {} };
-  } catch {
-    return { checks: {}, customActivities: {}, diary: {} };
-  }
-}
-
-// Només persisteix; S.state l'actualitzen els handlers del frontend,
-// igual que en mode servidor (si no, les entrades es duplicarien).
-function staticSave(store) {
-  localStorage.setItem(STORE_KEY, JSON.stringify(store));
-}
-
-async function sha256Hex(text) {
-  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
-  return [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, "0")).join("");
-}
-
-function staticId(prefix) {
-  return `${prefix}-${Date.now().toString(36)}${Math.random().toString(36).slice(2, 8)}`;
-}
-
-async function staticApi(path, opts = {}) {
-  const method = (opts.method || "GET").toUpperCase();
-  const body = opts.body || {};
-  const store = staticStore();
-  const now = new Date().toISOString();
-
-  if (path === "/api/login") {
-    const u = S.staticUsers[String(body.username || "").toLowerCase().trim()];
-    if (!u) throw new Error("Usuari o contrasenya incorrectes");
-    const hash = await sha256Hex(`${u.salt}:${body.password || ""}`);
-    if (hash !== u.hash) throw new Error("Usuari o contrasenya incorrectes");
-    localStorage.setItem(SESSION_KEY, body.username);
-    S.user = { username: body.username, displayName: u.displayName, emoji: u.emoji };
-    return { ok: true, user: S.user };
-  }
-
-  if (path === "/api/logout") {
-    localStorage.removeItem(SESSION_KEY);
-    return { ok: true };
-  }
-
-  const dayMatch = path.match(/^\/api\/days\/(\d+)\/(check|activities|diary)(?:\/([\w-]+))?$/);
-  if (!dayMatch) throw new Error("Ruta desconeguda");
-  const [, day, kind, id] = dayMatch;
-
-  if (kind === "check") {
-    store.checks[day] = store.checks[day] || {};
-    if (body.done) store.checks[day][body.itemId] = { by: S.user.username, at: now };
-    else delete store.checks[day][body.itemId];
-    staticSave(store);
-    return { ok: true, checks: store.checks[day] };
-  }
-
-  if (kind === "activities") {
-    if (method === "POST") {
-      const text = String(body.text || "").trim();
-      if (!text) throw new Error("Escriu alguna cosa!");
-      const item = { id: staticId("c"), text, by: S.user.username, at: now };
-      (store.customActivities[day] = store.customActivities[day] || []).push(item);
-      staticSave(store);
-      return { ok: true, item };
-    }
-    if (method === "DELETE") {
-      store.customActivities[day] = (store.customActivities[day] || []).filter((i) => i.id !== id);
-      if (store.checks[day]) delete store.checks[day][id];
-      staticSave(store);
-      return { ok: true };
-    }
-  }
-
-  if (kind === "diary") {
-    const list = (store.diary[day] = store.diary[day] || []);
-    if (method === "POST") {
-      const text = String(body.text || "").trim();
-      if (!text) throw new Error("El teu diari no pot estar buit!");
-      const entry = { id: staticId("e"), text, by: S.user.username, at: now };
-      list.push(entry);
-      staticSave(store);
-      return { ok: true, entry };
-    }
-    const entry = list.find((e) => e.id === id);
-    if (!entry) throw new Error("No trobat");
-    if (entry.by !== S.user.username) throw new Error("Només pots editar les teves notes");
-    if (method === "PUT") {
-      const text = String(body.text || "").trim();
-      if (!text) throw new Error("El teu diari no pot estar buit!");
-      entry.text = text;
-      entry.editedAt = now;
-      staticSave(store);
-      return { ok: true, entry };
-    }
-    if (method === "DELETE") {
-      store.diary[day] = list.filter((e) => e.id !== id);
-      staticSave(store);
-      return { ok: true };
-    }
-  }
-  throw new Error("Ruta desconeguda");
-}
-
-async function enterStaticMode() {
-  S.staticMode = true;
-  const [itinerary, credits, users, guide, food] = await Promise.all([
-    fetch("data/itinerary.json").then((r) => r.json()),
-    fetch("data/image-credits.json").then((r) => r.json()).catch(() => ({})),
-    fetch("data/static-users.json").then((r) => r.json()),
-    fetch("data/travel-guide.json").then((r) => r.json()).catch(() => ({ days: {} })),
-    fetch("data/food-passport.json").then((r) => r.json()).catch(() => null)
-  ]);
-  S.itinerary = itinerary;
-  S.imageCredits = credits;
-  S.travelGuide = guide;
-  S.foodPassport = food;
-  S.staticUsers = users;
-  S.users = Object.entries(users).map(([username, u]) => ({
-    username, displayName: u.displayName, emoji: u.emoji
-  }));
-  const saved = localStorage.getItem(SESSION_KEY);
-  if (saved && users[saved]) {
-    S.user = { username: saved, displayName: users[saved].displayName, emoji: users[saved].emoji };
-    S.state = staticStore();
-  }
-  render();
-}
-
 function userName(username) {
   const u = S.users.find((x) => x.username === username);
-  return u ? `${u.emoji} ${u.displayName}` : username;
+  return u ? `${u.emoji} ${u.displayName}` : username || "";
+}
+
+function currentUserLabel() {
+  return S.user ? `${S.user.emoji} ${S.user.displayName}` : "";
+}
+
+function dayGuide(n) {
+  return S.guide?.days?.[String(n)] || null;
+}
+
+/** Activitats + reptes del guia + activitats afegides = tot el que es pot marcar. */
+function dayCheckItems(day) {
+  const g = dayGuide(day.day);
+  return [
+    ...(day.activities || []),
+    ...((g?.challenges) || []).map((c) => ({ id: c.id, text: c.text, type: "challenge" })),
+    ...(S.customActivities[day.day] || [])
+  ];
 }
 
 function dayProgress(day) {
-  const items = [...day.activities, ...(S.state.customActivities[day.day] || [])];
-  const checks = S.state.checks[day.day] || {};
-  const done = items.filter((i) => checks[i.id]).length;
-  return { done, total: items.length };
+  const items = dayCheckItems(day);
+  const checks = S.checks[day.day] || {};
+  return { done: items.filter((i) => checks[i.id]).length, total: items.length };
 }
 
 function todayDayNumber() {
@@ -229,29 +97,42 @@ function todayDayNumber() {
   return d ? d.day : null;
 }
 
-/* ---------------- router ---------------- */
-
-function route() {
-  const hash = location.hash || "#/";
-  const parts = hash.replace(/^#\//, "").split("/").filter(Boolean);
-  if (!S.user) return renderLogin();
-  if (parts[0] === "dia" && parts[1]) return renderDay(parseInt(parts[1], 10), parts[2] || "plan");
-  if (parts[0] === "diari") return renderDiaryPage();
-  if (parts[0] === "food") return renderFoodPassportPage();
-  if (parts[0] === "info") return renderInfoPage();
-  return renderOverview();
-}
-
-function render() { route(); }
-window.addEventListener("hashchange", route);
-
 /* ---------------- login ---------------- */
 
+async function doLogin(username, password) {
+  if (S.staticMode) {
+    const u = S.staticUsers[String(username || "").toLowerCase().trim()];
+    if (!u) throw new Error("Usuari o contrasenya incorrectes");
+    const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(`${u.salt}:${password || ""}`));
+    const hash = [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, "0")).join("");
+    if (hash !== u.hash) throw new Error("Usuari o contrasenya incorrectes");
+    localStorage.setItem(SESSION_KEY, username);
+    S.user = { username, displayName: u.displayName, emoji: u.emoji };
+    return;
+  }
+  const res = await fetch("api/login", {
+    method: "POST", headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ username, password })
+  });
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(data.error || "Error de connexió");
+  S.user = data.user;
+}
+
+async function doLogout() {
+  if (S.staticMode) localStorage.removeItem(SESSION_KEY);
+  else await fetch("api/logout", { method: "POST" });
+  S.user = null;
+  S.diary = {}; S.foodState = {};
+  location.hash = "#/";
+  render();
+}
+
 function renderLogin() {
-  const users = S.users.length
-    ? S.users
-    : [{ username: "viatger1", displayName: "Viatger 1", emoji: "🌻" },
-       { username: "viatger2", displayName: "Viatger 2", emoji: "🌊" }];
+  const users = S.users.length ? S.users : [
+    { username: "viatger1", displayName: "Viatger 1", emoji: "🌻" },
+    { username: "viatger2", displayName: "Viatger 2", emoji: "🌊" }
+  ];
   if (!S.selectedLoginUser) S.selectedLoginUser = users[0].username;
 
   app.innerHTML = `
@@ -287,11 +168,9 @@ function renderLogin() {
     const errEl = document.getElementById("login-error");
     errEl.textContent = "";
     try {
-      await api("/api/login", {
-        method: "POST",
-        body: { username: S.selectedLoginUser, password: document.getElementById("password").value }
-      });
-      await bootstrap();
+      await doLogin(S.selectedLoginUser, document.getElementById("password").value);
+      await loadUserData();
+      render();
     } catch (err) {
       errEl.textContent = err.message;
     }
@@ -307,8 +186,8 @@ function chrome(active, content) {
         <a class="brand" href="#/">Bulgària <span>2026</span></a>
         <div class="nav-links">
           <a href="#/" class="${active === "home" ? "active" : ""}">Itinerari</a>
-          <a href="#/food" class="${active === "food" ? "active" : ""}">Food Passport</a>
-          <a href="#/diari" class="${active === "diari" ? "active" : ""}">El nostre diari</a>
+          <a href="#/food" class="${active === "food" ? "active" : ""}">Passaport 🍴</a>
+          <a href="#/diari" class="${active === "diari" ? "active" : ""}">El meu diari</a>
           <a href="#/info" class="${active === "info" ? "active" : ""}">Info pràctica</a>
         </div>
         <div class="who">
@@ -321,12 +200,7 @@ function chrome(active, content) {
 }
 
 function afterChrome() {
-  document.getElementById("logout-btn")?.addEventListener("click", async () => {
-    await api("/api/logout", { method: "POST" });
-    S.user = null;
-    location.hash = "#/";
-    render();
-  });
+  document.getElementById("logout-btn")?.addEventListener("click", doLogout);
 }
 
 /* ---------------- overview ---------------- */
@@ -334,19 +208,9 @@ function afterChrome() {
 function renderOverview() {
   const { trip, days } = S.itinerary;
   const today = todayDayNumber();
-  const start = new Date("2026-08-03T06:00:00");
-  const now = new Date();
-  const diffDays = Math.ceil((start - now) / 86400000);
-
-  let countdownHtml = "";
-  if (diffDays > 0) {
-    countdownHtml = `
-      <div class="countdown">
-        <div class="unit"><div class="num">${diffDays}</div><div class="lbl">dies</div></div>
-        <div class="unit"><div class="num">13</div><div class="lbl">dies de ruta</div></div>
-        <div class="unit"><div class="num">10</div><div class="lbl">destins</div></div>
-      </div>`;
-  }
+  const diffDays = Math.ceil((new Date("2026-08-03T06:00:00") - new Date()) / 86400000);
+  const totalDone = days.reduce((s, d) => s + dayProgress(d).done, 0);
+  const totalItems = days.reduce((s, d) => s + dayProgress(d).total, 0);
 
   const content = `
     <div class="hero" style="background-image:url('images/rila-monastery.jpg')">
@@ -360,15 +224,20 @@ function renderOverview() {
           <span class="badge">🛸 Buzludzha</span>
           <span class="badge">🌹 Sofia</span>
         </div>
-        ${countdownHtml}
+        <div class="countdown">
+          ${diffDays > 0 ? `<div class="unit"><div class="num">${diffDays}</div><div class="lbl">dies per marxar</div></div>` : ""}
+          <div class="unit"><div class="num">13</div><div class="lbl">dies de ruta</div></div>
+          <div class="unit"><div class="num">${totalDone}/${totalItems}</div><div class="lbl">fetes</div></div>
+        </div>
       </div>
     </div>
+
     <h2 class="page-title" style="font-size:1.6rem">El viatge, dia a dia</h2>
-    <p class="page-sub">Clica un dia per veure el pla, el travel guide en anglès i el diari.</p>
+    <p class="page-sub">Toca un dia per veure el pla, la guia i el teu diari.</p>
     <div class="days-grid">
       ${days.map((d) => {
         const p = dayProgress(d);
-        const hasDiary = (S.state.diary[d.day] || []).length > 0;
+        const hasDiary = (S.diary[d.day] || []).length > 0;
         return `
         <a class="day-card" href="#/dia/${d.day}">
           <div class="thumb" style="background-image:url('images/${esc(d.heroImage)}.jpg')">
@@ -382,7 +251,7 @@ function renderOverview() {
             <div class="meta-row">
               <div class="progress"><div style="width:${p.total ? (p.done / p.total) * 100 : 0}%"></div></div>
               <span class="progress-label">${p.done}/${p.total}</span>
-              ${hasDiary ? '<span class="diary-dot" title="Hi ha notes al diari">📖</span>' : ""}
+              ${hasDiary ? '<span class="diary-dot" title="Tens notes al diari">📖</span>' : ""}
             </div>
           </div>
         </a>`;
@@ -393,136 +262,233 @@ function renderOverview() {
   afterChrome();
 }
 
-/* ---------------- travel guide helpers ---------------- */
-
-function paras(arr) {
-  return (arr || []).map((p) => `<p class="guide-p">${esc(p)}</p>`).join("");
-}
-
-function renderGuideSection(title, inner) {
-  return `<section class="guide-section"><h3 class="guide-h3">${title}</h3>${inner}</section>`;
-}
-
-function renderDayGuide(g) {
-  if (!g) return `<div class="card"><p class="guide-empty">Travel guide content coming soon for this day.</p></div>`;
-
-  const highlights = (g.highlights || []).map((h) => `
-    <div class="guide-highlight">
-      <div class="gh-name">${esc(h.name)}</div>
-      <div class="gh-what"><b>What:</b> ${esc(h.what)}</div>
-      <div class="gh-why"><b>Why:</b> ${esc(h.why)}</div>
-      <div class="gh-notice"><b>Look for:</b> ${esc(h.notice)}</div>
-    </div>`).join("");
-
-  const visual = (g.visualGuide || []).map((v) => `
-    <div class="guide-highlight">
-      <div class="gh-name">${esc(v.name)}</div>
-      <div class="gh-what">${esc(v.what)}</div>
-      <div class="gh-why"><b>Why it matters:</b> ${esc(v.why)}</div>
-      <div class="gh-notice"><b>Detail:</b> ${esc(v.detail)}</div>
-    </div>`).join("");
-
-  const food = (g.food || []).map((f) => `
-    <div class="guide-food-item">
-      <div class="gf-name">${esc(f.name)}</div>
-      <div class="gf-desc">${esc(f.description)}</div>
-      <div class="gf-special">✨ ${esc(f.special)}</div>
-      <div class="gf-where">📍 ${esc(f.where)}</div>
-    </div>`).join("");
-
-  const ps = g.photoSpot || {};
-  const phr = g.phrase || {};
-  const mov = g.movie || {};
-  const fig = g.historicalFigure || {};
-
-  return `
-    <div class="guide-content">
-      ${renderGuideSection("🏛️ Today's Destination", paras(g.destination))}
-      ${renderGuideSection("📖 History & Cultural Context", paras(g.history))}
-      ${renderGuideSection("👀 Don't Miss These Highlights", `<div class="guide-list">${highlights}</div>`)}
-      ${renderGuideSection("🤯 Fun Facts & Surprising Trivia", `<ul class="guide-bullets">${(g.funFacts || []).map((f) => `<li>${esc(f)}</li>`).join("")}</ul>`)}
-      ${renderGuideSection("📸 The Perfect Photo Spot", `
-        <p class="guide-p"><b>Best viewpoint:</b> ${esc(ps.viewpoint)}</p>
-        <p class="guide-p"><b>Best time:</b> ${esc(ps.time)}</p>
-        <p class="guide-p"><b>Why it's photogenic:</b> ${esc(ps.why)}</p>
-        <p class="guide-p"><b>Tips:</b> ${esc(ps.tips)}</p>`)}
-      ${renderGuideSection("🍴 What to Eat Today", `<div class="guide-food-list">${food}</div>`)}
-      ${renderGuideSection("🗣️ Bulgarian Phrase of the Day", `
-        <div class="phrase-box">
-          <div class="phrase-cyr">${esc(phr.cyrillic)}</div>
-          <div class="phrase-trans">${esc(phr.transliteration)}</div>
-          <div class="phrase-en">"${esc(phr.english)}"</div>
-          <div class="phrase-when">${esc(phr.when)}</div>
-        </div>`)}
-      ${renderGuideSection("🎯 Daily Challenges", `<ul class="guide-bullets challenge-list">${(g.challenges || []).map((c) => `<li>${esc(c)}</li>`).join("")}</ul>`)}
-      ${renderGuideSection("💡 Local Insider Tips", `<ul class="guide-bullets">${(g.insiderTips || []).map((t) => `<li>${esc(t)}</li>`).join("")}</ul>`)}
-      ${renderGuideSection("🎬 If This Place Were a Movie...", `
-        <p class="guide-p"><b>Genre:</b> ${esc(mov.genre)}</p>
-        <p class="guide-p"><b>Atmosphere:</b> ${esc(mov.atmosphere)}</p>
-        <p class="guide-p"><b>Feels like:</b> ${esc(mov.resembles)}</p>`)}
-      ${renderGuideSection("👤 Historical Figure of the Day", `
-        <p class="guide-p"><b>${esc(fig.name)}</b> — ${esc(fig.who)}</p>
-        <p class="guide-p">${esc(fig.why)}</p>
-        <p class="guide-p"><i>Fun detail:</i> ${esc(fig.detail)}</p>`)}
-      ${renderGuideSection("🔍 Visual Guide", `<div class="guide-list">${visual}</div>`)}
-    </div>`;
-}
-
-/* ---------------- day detail ---------------- */
+/* ---------------- guia del dia ---------------- */
 
 function momentClass(moment) {
-  const m = moment.toLowerCase();
+  const m = (moment || "").toLowerCase();
   if (m.includes("tarda")) return "tarda";
   if (m.includes("nit")) return "nit";
   if (m.includes("tot")) return "totdia";
   return "";
 }
 
-function renderDay(n, tab = "plan") {
+function section(icon, title, inner, open = false, badge = "") {
+  return `<details class="gsec" ${open ? "open" : ""}>
+    <summary><span class="gsec-ico">${icon}</span><span class="gsec-title">${esc(title)}</span>
+      ${badge ? `<span class="gsec-badge">${badge}</span>` : ""}
+      <span class="gsec-arrow">›</span></summary>
+    <div class="gsec-body">${inner}</div>
+  </details>`;
+}
+
+function paras(arr) {
+  return (arr || []).map((p) => `<p class="gp">${esc(p)}</p>`).join("");
+}
+
+function renderGuide(day) {
+  const g = dayGuide(day.day);
+  if (!g) return `<div class="card"><p class="empty-note">Encara no hi ha guia per a aquest dia.</p></div>`;
+
+  const checks = S.checks[day.day] || {};
+  const chDone = (g.challenges || []).filter((c) => checks[c.id]).length;
+  const chTotal = (g.challenges || []).length;
+
+  const cards = (list, fields) => `<div class="ilist">${(list || []).map((h) => `
+    <div class="icard">
+      <div class="ic-name">${esc(h.name)}</div>
+      ${fields.map(([k, lbl]) => h[k] ? `<div class="ic-row">${lbl ? `<b>${lbl}</b> ` : ""}${esc(h[k])}</div>` : "").join("")}
+    </div>`).join("")}</div>`;
+
+  const bullets = (arr, cls = "") => `<ul class="gbul ${cls}">${(arr || []).map((f) => `<li>${esc(f)}</li>`).join("")}</ul>`;
+
+  const foodHtml = `<div class="gfood">${(g.food || []).map((f) => `
+    <div class="gfood-item">
+      <div class="gf-name">${esc(f.name)}</div>
+      <div class="gf-row">${esc(f.description)}</div>
+      ${f.special ? `<div class="gf-row alt">✨ ${esc(f.special)}</div>` : ""}
+      ${f.where ? `<div class="gf-row alt">📍 ${esc(f.where)}</div>` : ""}
+    </div>`).join("")}</div>`;
+
+  const phr = g.phrase || {};
+  const fig = g.historicalFigure || {};
+
+  const challengeHtml = `
+    <div class="checklist-progress">
+      <div class="progress"><div style="width:${chTotal ? (chDone / chTotal) * 100 : 0}%"></div></div>
+      <span class="progress-label">${chDone}/${chTotal}</span>
+    </div>
+    <div class="check-list">
+      ${(g.challenges || []).map((c) => {
+        const ck = checks[c.id];
+        return `<label class="check-item ${ck ? "done" : ""}">
+          <input type="checkbox" data-item="${esc(c.id)}" ${ck ? "checked" : ""} />
+          <span class="txt">${esc(c.text)}
+            ${ck ? `<span class="by">✔ ${esc(userName(ck.by))} · ${fmtWhen(ck.at)}</span>` : ""}
+          </span>
+        </label>`;
+      }).join("")}
+    </div>`;
+
+  return `
+    ${section("🏛️", "El lloc d'avui", paras(g.destination), true)}
+    ${section("🎯", "Reptes del dia", challengeHtml, true, `${chDone}/${chTotal}`)}
+    ${section("👀", "No et pots perdre", cards(g.highlights, [["what", ""], ["why", "Per què:"], ["notice", "Fixa't en:"]]), false, String((g.highlights || []).length))}
+    ${section("📖", "Història i context", paras(g.history))}
+    ${section("🤯", "Curiositats", bullets(g.funFacts), false, String((g.funFacts || []).length))}
+    ${section("🍴", "Què tastar avui", foodHtml, false, String((g.food || []).length))}
+    ${section("🗣️", "Frase del dia", `
+      <div class="phrase-box">
+        <div class="phrase-cyr">${esc(phr.cyrillic)}</div>
+        <div class="phrase-trans">${esc(phr.transliteration)}</div>
+        <div class="phrase-ca">«${esc(phr.catalan)}»</div>
+        <div class="phrase-when">${esc(phr.when)}</div>
+      </div>`)}
+    ${section("💡", "Consells locals", bullets(g.insiderTips, "tips"), false, String((g.insiderTips || []).length))}
+    ${section("👤", "Personatge del dia", `
+      <div class="figure-box">
+        <div class="fig-name">${esc(fig.name)}</div>
+        <div class="gp">${esc(fig.who)}</div>
+        <div class="gp">${esc(fig.why)}</div>
+        ${fig.detail ? `<div class="fig-detail">💫 ${esc(fig.detail)}</div>` : ""}
+      </div>`)}
+    ${section("🔍", "Guia visual", cards(g.visualGuide, [["what", ""], ["why", "Importa perquè:"], ["detail", "Mira:"]]), false, String((g.visualGuide || []).length))}`;
+}
+
+/* ---------------- detall del dia ---------------- */
+
+function renderDay(n, tab) {
   const days = S.itinerary.days;
   const day = days.find((d) => d.day === n);
   if (!day) { location.hash = "#/"; return; }
+  tab = tab || "pla";
 
-  const guide = S.travelGuide?.days?.[String(n)];
   const prev = days.find((d) => d.day === n - 1);
   const next = days.find((d) => d.day === n + 1);
-  const customs = S.state.customActivities[n] || [];
-  const checks = S.state.checks[n] || {};
-  const entries = S.state.diary[n] || [];
+  const checks = S.checks[n] || {};
+  const customs = S.customActivities[n] || [];
+  const entries = S.diary[n] || [];
   const p = dayProgress(day);
-  const hotelWarn = /pendent/i.test(day.hotel.name);
+  const hotelWarn = /pendent/i.test(day.hotel?.name || "");
+  const ci = day.culturalInfo;
 
-  const checklistHtml = (items, isCustom) => items.map((item) => {
-    const check = checks[item.id];
-    return `
-      <label class="check-item ${check ? "done" : ""}">
-        <input type="checkbox" data-item="${esc(item.id)}" ${check ? "checked" : ""} />
-        <span class="txt">${esc(item.text)}
-          ${check ? `<span class="by">✔ ${esc(userName(check.by))} · ${fmtWhen(check.at)}</span>` : ""}
-          ${isCustom ? `<span class="by">➕ afegit per ${esc(userName(item.by))}</span>` : ""}
-        </span>
-        ${isCustom ? `<button class="btn danger-ghost" data-del-activity="${esc(item.id)}" title="Esborrar">✕</button>` : ""}
-      </label>`;
+  const activityHtml = (items, isCustom) => items.map((item) => {
+    const ck = checks[item.id];
+    const isFun = item.type === "fun";
+    return `<label class="check-item ${ck ? "done" : ""}">
+      <input type="checkbox" data-item="${esc(item.id)}" ${ck ? "checked" : ""} />
+      <span class="txt">${isFun ? "🎲 " : ""}${esc(item.text)}
+        ${ck ? `<span class="by">✔ ${esc(userName(ck.by))} · ${fmtWhen(ck.at)}</span>` : ""}
+        ${isCustom ? `<span class="by">➕ ${esc(userName(item.by))}</span>` : ""}
+      </span>
+      ${isCustom ? `<button class="btn danger-ghost" data-del-activity="${esc(item.id)}" title="Esborrar">✕</button>` : ""}
+    </label>`;
   }).join("");
 
-  const diaryHtml = entries.map((e) => `
-    <div class="diary-entry" data-entry="${esc(e.id)}">
-      <div class="head">
-        <span class="author">${esc(userName(e.by))}</span>
-        <span class="when">${fmtWhen(e.at)}${e.editedAt ? " · editat" : ""}</span>
-        ${e.by === S.user.username ? `
-          <button class="btn danger-ghost" data-edit-entry="${esc(e.id)}">✏️ Edita</button>
-          <button class="btn danger-ghost" data-del-entry="${esc(e.id)}">🗑️</button>` : ""}
+  const planTab = `
+    <div class="day-columns">
+      <div>
+        <div class="card">
+          <h2><span class="ico">🗓️</span> El pla del dia</h2>
+          <div class="timeline">
+            ${(day.schedule || []).map((s) => `
+              <div class="tl-item">
+                <span class="tl-moment ${momentClass(s.moment)}">${esc(s.moment)}</span>
+                <div>
+                  <div class="tl-plan">${esc(s.plan)}</div>
+                  ${s.details ? `<div class="tl-details">${linkify(s.details)}</div>` : ""}
+                </div>
+              </div>`).join("")}
+          </div>
+        </div>
+
+        <div class="card">
+          <h2><span class="ico">📍</span> Sobre aquest lloc</h2>
+          <p class="place-info">${esc(day.placeInfo)}</p>
+          ${ci ? `
+            ${ci.history ? `<div class="ci-block"><b>Història</b><p>${esc(ci.history)}</p></div>` : ""}
+            ${(ci.curiosities || []).length ? `<div class="ci-block"><b>Curiositats</b>
+              <ul class="gbul">${ci.curiosities.map((c) => `<li>${esc(c)}</li>`).join("")}</ul></div>` : ""}
+          ` : ""}
+        </div>
+
+        ${(day.food || []).length ? `
+        <div class="card">
+          <h2><span class="ico">🍽️</span> Què hi mengem?</h2>
+          <ul class="food-list">${day.food.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>
+        </div>` : ""}
+
+        ${(day.nearby || []).length ? `
+        <div class="card">
+          <h2><span class="ico">🧭</span> A prop d'aquí</h2>
+          <div class="nearby-list">
+            ${day.nearby.map((nb) => `
+              <div class="nearby-item"><div class="n">${esc(nb.name)}</div><div class="d">${esc(nb.desc)}</div></div>`).join("")}
+          </div>
+        </div>` : ""}
+
+        ${(day.gallery || []).length > 1 ? `
+        <div class="card">
+          <h2><span class="ico">📷</span> Imatges</h2>
+          <div class="gallery">
+            ${day.gallery.map((g) => `<img src="images/${esc(g)}.jpg" alt="${esc(day.title)}" loading="lazy" data-zoom />`).join("")}
+          </div>
+        </div>` : ""}
       </div>
-      <div class="txt">${linkify(e.text)}</div>
-    </div>`).join("");
+
+      <div>
+        <div class="card">
+          <h2><span class="ico">🛏️</span> On dormim</h2>
+          <div class="hotel-card ${hotelWarn ? "warn" : ""}">
+            <div class="h-name">${esc(day.hotel?.name)}</div>
+            ${day.hotel?.address ? `<div class="h-addr">📍 ${esc(day.hotel.address)}</div>` : ""}
+            ${day.hotel?.notes ? `<div class="h-notes">${esc(day.hotel.notes)}</div>` : ""}
+          </div>
+          <div class="car-line">🚗 Cotxe aquest dia: <b>${day.car ? "Sí" : "No"}</b></div>
+        </div>
+
+        <div class="card">
+          <h2><span class="ico">✅</span> Activitats</h2>
+          <div class="checklist-progress">
+            <div class="progress"><div style="width:${p.total ? (p.done / p.total) * 100 : 0}%"></div></div>
+            <span class="progress-label">${p.done}/${p.total}</span>
+          </div>
+          <div class="check-list">
+            ${activityHtml(day.activities || [], false)}
+            ${activityHtml(customs, true)}
+          </div>
+          <form class="add-activity" id="add-activity-form">
+            <input type="text" id="new-activity" placeholder="Afegir activitat o canvi..." maxlength="300" />
+            <button class="btn small" type="submit">Afegir</button>
+          </form>
+        </div>
+
+        ${(day.tips || []).length ? `
+        <div class="card">
+          <h2><span class="ico">💡</span> Consells</h2>
+          <ul class="tips-list">${day.tips.map((t) => `<li>${linkify(t)}</li>`).join("")}</ul>
+        </div>` : ""}
+      </div>
+    </div>`;
+
+  const guideTab = `<div class="guide-wrap">
+    <p class="guide-intro">La teva guia de butxaca per avui. Toca cada secció per obrir-la.</p>
+    ${renderGuide(day)}
+  </div>`;
+
+  const diaryTab = `
+    <div class="card diary-card">
+      <h2><span class="ico">✍️</span> El meu diari · dia ${day.day}</h2>
+      <p class="private-note">🔒 Privat: només tu veus aquestes notes.</p>
+      <div id="diary-list">${diaryEntriesHtml(entries)}</div>
+      ${diaryFormHtml(day.day)}
+    </div>`;
 
   const content = `
     <div class="day-nav">
       <a href="#/" class="back">← Tots els dies</a>
-      <div style="display:flex;gap:8px">
-        <a href="#/dia/${n - 1}" class="${prev ? "" : "disabled"}">← Dia ${n - 1}</a>
-        <a href="#/dia/${n + 1}" class="${next ? "" : "disabled"}">Dia ${n + 1} →</a>
+      <div class="day-nav-arrows">
+        <a href="#/dia/${n - 1}${tab === "pla" ? "" : "/" + tab}" class="${prev ? "" : "disabled"}">←</a>
+        <a href="#/dia/${n + 1}${tab === "pla" ? "" : "/" + tab}" class="${next ? "" : "disabled"}">→</a>
       </div>
     </div>
 
@@ -535,435 +501,501 @@ function renderDay(n, tab = "plan") {
     </div>
 
     <div class="day-tabs">
-      <a href="#/dia/${n}/plan" class="day-tab ${tab === "plan" ? "active" : ""}">🗓️ Plan</a>
-      <a href="#/dia/${n}/guide" class="day-tab ${tab === "guide" ? "active" : ""}">📖 Travel Guide</a>
+      <a href="#/dia/${n}" class="day-tab ${tab === "pla" ? "active" : ""}">🗓️ Pla</a>
+      <a href="#/dia/${n}/guia" class="day-tab ${tab === "guia" ? "active" : ""}">📖 Guia</a>
+      <a href="#/dia/${n}/diari" class="day-tab ${tab === "diari" ? "active" : ""}">✍️ Diari${entries.length ? ` (${entries.length})` : ""}</a>
     </div>
 
-    ${tab === "guide" ? `
-    <div class="card guide-card">
-      <p class="guide-intro">Your pocket guide for today — read this while you're on the ground.</p>
-      ${renderDayGuide(guide)}
-    </div>` : `
-    <div class="day-columns">
-      <div>
-        <div class="card">
-          <h2><span class="ico">🗓️</span> El pla del dia</h2>
-          <div class="timeline">
-            ${day.schedule.map((s) => `
-              <div class="tl-item">
-                <span class="tl-moment ${momentClass(s.moment)}">${esc(s.moment)}</span>
-                <div>
-                  <div class="tl-plan">${esc(s.plan)}</div>
-                  ${s.details ? `<div class="tl-details">${linkify(s.details)}</div>` : ""}
-                </div>
-              </div>`).join("")}
-          </div>
-        </div>
-
-        <div class="card">
-          <h2><span class="ico">📖</span> Sobre aquest lloc</h2>
-          <p class="place-info">${esc(day.placeInfo)}</p>
-        </div>
-
-        ${day.food.length ? `
-        <div class="card">
-          <h2><span class="ico">🍽️</span> Què hi mengem?</h2>
-          <ul class="food-list">${day.food.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>
-        </div>` : ""}
-
-        ${day.nearby.length ? `
-        <div class="card">
-          <h2><span class="ico">🧭</span> A prop d'aquí</h2>
-          <div class="nearby-list">
-            ${day.nearby.map((nb) => `
-              <div class="nearby-item">
-                <div class="n">${esc(nb.name)}</div>
-                <div class="d">${esc(nb.desc)}</div>
-              </div>`).join("")}
-          </div>
-        </div>` : ""}
-
-        ${day.gallery.length > 1 ? `
-        <div class="card">
-          <h2><span class="ico">📷</span> Imatges</h2>
-          <div class="gallery">
-            ${day.gallery.map((g) => `<img src="images/${esc(g)}.jpg" alt="${esc(day.title)}" loading="lazy" data-zoom />`).join("")}
-          </div>
-        </div>` : ""}
-
-        <div class="card">
-          <h2><span class="ico">✍️</span> El diari del dia ${day.day}</h2>
-          ${S.staticMode ? `<p class="static-note">📱 Versió web sense servidor: les notes i activitats es guarden només en aquest dispositiu.</p>` : ""}
-          ${entries.length ? diaryHtml : `<p class="diary-empty">Encara no hi ha cap nota d'aquest dia. Sigues el primer a escriure-hi!</p>`}
-          <form class="diary-form" id="diary-form" style="margin-top:16px">
-            <textarea id="diary-text" placeholder="Com ha anat el dia? Escriu aquí els teus records, anècdotes i moments..."></textarea>
-            <div class="row"><button class="btn small" type="submit">Guardar al diari 📖</button></div>
-          </form>
-        </div>
-      </div>
-
-      <div>
-        <div class="card">
-          <h2><span class="ico">🛏️</span> On dormim</h2>
-          <div class="hotel-card ${hotelWarn ? "warn" : ""}">
-            <div class="h-name">${esc(day.hotel.name)}</div>
-            ${day.hotel.address ? `<div class="h-addr">📍 ${esc(day.hotel.address)}</div>` : ""}
-            ${day.hotel.notes ? `<div class="h-notes">${esc(day.hotel.notes)}</div>` : ""}
-          </div>
-          <div style="margin-top:12px;font-size:.85rem;color:var(--ink-soft)">
-            🚗 Cotxe aquest dia: <b>${day.car ? "Sí" : "No"}</b>
-          </div>
-        </div>
-
-        <div class="card">
-          <h2><span class="ico">✅</span> Activitats del dia</h2>
-          <div class="checklist-progress">
-            <div class="progress"><div style="width:${p.total ? (p.done / p.total) * 100 : 0}%"></div></div>
-            <span class="progress-label">${p.done}/${p.total}</span>
-          </div>
-          <div class="check-list">
-            ${checklistHtml(day.activities, false)}
-            ${checklistHtml(customs, true)}
-          </div>
-          <form class="add-activity" id="add-activity-form">
-            <input type="text" id="new-activity" placeholder="Afegir activitat o canvi..." maxlength="300" />
-            <button class="btn small" type="submit">Afegir</button>
-          </form>
-        </div>
-
-        ${day.tips.length ? `
-        <div class="card">
-          <h2><span class="ico">💡</span> Consells</h2>
-          <ul class="tips-list">${day.tips.map((t) => `<li>${linkify(t)}</li>`).join("")}</ul>
-        </div>` : ""}
-      </div>
-    </div>`}`;
+    ${tab === "guia" ? guideTab : tab === "diari" ? diaryTab : planTab}`;
 
   app.innerHTML = chrome("home", content);
   afterChrome();
-  if (tab === "plan") wireDayEvents(n);
+  wireChecks(n);
+  if (tab === "pla") wirePlanTab(n);
+  if (tab === "diari") wireDiaryForm(n);
+  wireZoom();
 }
 
-function wireDayEvents(n) {
-  // checklist toggles
-  app.querySelectorAll('input[type="checkbox"][data-item]').forEach((cb) => {
-    cb.addEventListener("change", async () => {
-      try {
-        const data = await api(`/api/days/${n}/check`, {
-          method: "POST",
-          body: { itemId: cb.dataset.item, done: cb.checked }
-        });
-        S.state.checks[n] = data.checks;
-        renderDay(n);
-      } catch (err) { toast(err.message, true); }
+/* ---------------- diari ---------------- */
+
+function diaryEntriesHtml(entries) {
+  if (!entries.length) {
+    return `<p class="empty-note">Encara no hi ha cap nota d'aquest dia. Comença a escriure!</p>`;
+  }
+  return entries.map((e) => `
+    <div class="diary-entry" data-entry="${esc(e.id)}">
+      <div class="head">
+        <span class="when">${fmtWhen(e.createdAt)}${e.edited ? " · editat" : ""}</span>
+        <button class="btn danger-ghost" data-edit-entry="${esc(e.id)}">✏️</button>
+        <button class="btn danger-ghost" data-del-entry="${esc(e.id)}">🗑️</button>
+      </div>
+      <div class="txt">${linkify(e.text)}</div>
+      ${(e.images || []).length ? `<div class="diary-imgs">
+        ${e.images.map((src) => `<img src="${src}" alt="" data-zoom />`).join("")}
+      </div>` : ""}
+    </div>`).join("");
+}
+
+function diaryFormHtml(day) {
+  return `
+    <form class="diary-form" id="diary-form" data-day="${day}">
+      <textarea id="diary-text" placeholder="Com ha anat el dia? Escriu els teus records, anècdotes i moments..."></textarea>
+      <div class="diary-form-row">
+        <label class="btn ghost small photo-btn">
+          📷 Afegir fotos
+          <input type="file" id="diary-images" accept="image/*" multiple hidden />
+        </label>
+        <div id="img-preview" class="img-preview"></div>
+        <button class="btn small" type="submit">Guardar 📖</button>
+      </div>
+    </form>`;
+}
+
+let pendingImages = [];
+
+function wireDiaryForm(day) {
+  pendingImages = [];
+  const form = document.getElementById("diary-form");
+  if (!form) return;
+  const fileInput = document.getElementById("diary-images");
+  const preview = document.getElementById("img-preview");
+
+  const renderPreview = () => {
+    preview.innerHTML = pendingImages.map((src, i) =>
+      `<span class="prev-thumb"><img src="${src}" alt="" /><button type="button" data-rm="${i}">✕</button></span>`).join("");
+    preview.querySelectorAll("[data-rm]").forEach((b) => {
+      b.addEventListener("click", () => {
+        pendingImages.splice(Number(b.dataset.rm), 1);
+        renderPreview();
+      });
     });
-  });
+  };
 
-  // add custom activity
-  document.getElementById("add-activity-form").addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const input = document.getElementById("new-activity");
-    if (!input.value.trim()) return;
-    try {
-      const data = await api(`/api/days/${n}/activities`, { method: "POST", body: { text: input.value } });
-      (S.state.customActivities[n] = S.state.customActivities[n] || []).push(data.item);
-      renderDay(n);
-      toast("Activitat afegida ✔");
-    } catch (err) { toast(err.message, true); }
-  });
-
-  // delete custom activity
-  app.querySelectorAll("[data-del-activity]").forEach((btn) => {
-    btn.addEventListener("click", async (e) => {
-      e.preventDefault();
-      if (!confirm("Segur que vols esborrar aquesta activitat?")) return;
+  fileInput?.addEventListener("change", async () => {
+    const files = [...fileInput.files];
+    fileInput.value = "";
+    for (const f of files) {
+      if (pendingImages.length >= 6) { toast("Màxim 6 fotos per nota", true); break; }
       try {
-        await api(`/api/days/${n}/activities/${btn.dataset.delActivity}`, { method: "DELETE" });
-        S.state.customActivities[n] = (S.state.customActivities[n] || []).filter((i) => i.id !== btn.dataset.delActivity);
-        if (S.state.checks[n]) delete S.state.checks[n][btn.dataset.delActivity];
-        renderDay(n);
-      } catch (err) { toast(err.message, true); }
-    });
+        pendingImages.push(await TripStore.fileToCompressedDataUrl(f));
+      } catch { toast("No s'ha pogut llegir la imatge", true); }
+    }
+    renderPreview();
   });
 
-  // diary add
-  document.getElementById("diary-form").addEventListener("submit", async (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const ta = document.getElementById("diary-text");
-    if (!ta.value.trim()) return;
+    const text = ta.value.trim();
+    if (!text && !pendingImages.length) { toast("Escriu alguna cosa o afegeix una foto", true); return; }
     try {
-      const data = await api(`/api/days/${n}/diary`, { method: "POST", body: { text: ta.value } });
-      (S.state.diary[n] = S.state.diary[n] || []).push(data.entry);
-      renderDay(n);
-      toast("Nota guardada al diari 📖");
+      const entry = await S.store.addDiary(day, text, pendingImages);
+      (S.diary[day] = S.diary[day] || []).push(entry);
+      pendingImages = [];
+      renderDay(day, "diari");
+      toast("Nota guardada 📖");
     } catch (err) { toast(err.message, true); }
   });
 
-  // diary edit
+  wireDiaryEntryActions(day);
+}
+
+function wireDiaryEntryActions(day) {
+  app.querySelectorAll("[data-del-entry]").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      if (!confirm("Segur que vols esborrar aquesta nota?")) return;
+      try {
+        await S.store.deleteDiary(btn.dataset.delEntry);
+        S.diary[day] = (S.diary[day] || []).filter((x) => x.id !== btn.dataset.delEntry);
+        renderDay(day, "diari");
+        toast("Nota esborrada");
+      } catch (err) { toast(err.message, true); }
+    });
+  });
+
   app.querySelectorAll("[data-edit-entry]").forEach((btn) => {
     btn.addEventListener("click", () => {
       const id = btn.dataset.editEntry;
-      const entryEl = app.querySelector(`[data-entry="${CSS.escape(id)}"]`);
-      const entry = (S.state.diary[n] || []).find((x) => x.id === id);
-      if (!entry || entryEl.querySelector("textarea")) return;
-      const txtEl = entryEl.querySelector(".txt");
+      const wrapEl = app.querySelector(`[data-entry="${CSS.escape(id)}"]`);
+      const entry = (S.diary[day] || []).find((x) => x.id === id);
+      if (!entry || wrapEl.querySelector("textarea")) return;
+      const txtEl = wrapEl.querySelector(".txt");
       txtEl.innerHTML = "";
       const ta = document.createElement("textarea");
+      ta.className = "edit-area";
       ta.value = entry.text;
       const save = document.createElement("button");
       save.className = "btn small";
-      save.style.marginTop = "8px";
       save.textContent = "Guardar canvis";
       save.addEventListener("click", async () => {
         try {
-          const data = await api(`/api/days/${n}/diary/${id}`, { method: "PUT", body: { text: ta.value } });
-          Object.assign(entry, data.entry);
-          renderDay(n);
+          const upd = await S.store.updateDiary(id, ta.value.trim(), entry.images);
+          Object.assign(entry, upd);
+          renderDay(day, "diari");
         } catch (err) { toast(err.message, true); }
       });
       txtEl.append(ta, save);
       ta.focus();
     });
   });
-
-  // diary delete
-  app.querySelectorAll("[data-del-entry]").forEach((btn) => {
-    btn.addEventListener("click", async () => {
-      if (!confirm("Segur que vols esborrar aquesta nota del diari?")) return;
-      try {
-        await api(`/api/days/${n}/diary/${btn.dataset.delEntry}`, { method: "DELETE" });
-        S.state.diary[n] = (S.state.diary[n] || []).filter((x) => x.id !== btn.dataset.delEntry);
-        renderDay(n);
-      } catch (err) { toast(err.message, true); }
-    });
-  });
-
-  // lightbox
-  app.querySelectorAll("[data-zoom]").forEach((img) => {
-    img.addEventListener("click", () => {
-      const lb = document.createElement("div");
-      lb.className = "lightbox";
-      lb.innerHTML = `<img src="${img.src}" alt="" />`;
-      lb.addEventListener("click", () => lb.remove());
-      document.body.appendChild(lb);
-    });
-  });
 }
 
-/* ---------------- diary page ---------------- */
-
-function renderDiaryPage() {
+async function renderDiaryPage() {
   const days = S.itinerary.days;
+  const total = Object.values(S.diary).reduce((s, l) => s + (l?.length || 0), 0);
+  const withPhotos = Object.values(S.diary).flat().filter((e) => (e.images || []).length).length;
+  const daysWritten = Object.keys(S.diary).filter((k) => S.diary[k]?.length).length;
+
   const sections = days.map((d) => {
-    const entries = S.state.diary[d.day] || [];
+    const entries = S.diary[d.day] || [];
     if (!entries.length) return "";
     return `
       <div class="diary-day-section">
         <div class="diary-day-head">
           <h2>Dia ${d.day} · ${esc(d.title)}</h2>
           <span class="d">${esc(d.dateLabel)}</span>
-          <a href="#/dia/${d.day}">veure el dia →</a>
+          <a href="#/dia/${d.day}/diari">escriure-hi →</a>
         </div>
         ${entries.map((e) => `
           <div class="diary-entry">
-            <div class="head">
-              <span class="author">${esc(userName(e.by))}</span>
-              <span class="when">${fmtWhen(e.at)}</span>
-            </div>
+            <div class="head"><span class="when">${fmtWhen(e.createdAt)}${e.edited ? " · editat" : ""}</span></div>
             <div class="txt">${linkify(e.text)}</div>
+            ${(e.images || []).length ? `<div class="diary-imgs">
+              ${e.images.map((src) => `<img src="${src}" alt="" data-zoom />`).join("")}</div>` : ""}
           </div>`).join("")}
       </div>`;
   }).join("");
 
-  const hasAny = Object.values(S.state.diary).some((l) => l && l.length);
-
   const content = `
-    <h1 class="page-title">📖 El nostre diari de viatge</h1>
-    <p class="page-sub">Totes les notes que hem anat escrivint, dia a dia. Per afegir-ne, entra al dia corresponent.</p>
-    ${S.staticMode ? `<p class="static-note" style="margin-bottom:20px">📱 Versió web sense servidor: aquí només es veuen les notes escrites des d'aquest dispositiu.</p>` : ""}
-    ${hasAny ? sections : `
+    <h1 class="page-title">📖 El meu diari de viatge</h1>
+    <p class="page-sub">Les teves notes, dia a dia. 🔒 Privades: l'altre viatger no les veu.</p>
+
+    <div class="card export-bar">
+      <div class="export-stats">
+        <span><b>${total}</b> ${total === 1 ? "nota" : "notes"}</span>
+        <span><b>${withPhotos}</b> amb fotos</span>
+        <span><b>${daysWritten}</b> ${daysWritten === 1 ? "dia escrit" : "dies escrits"}</span>
+      </div>
+      <div class="export-actions">
+        <button class="btn small" id="exp-pdf">📄 Descarregar PDF</button>
+        <button class="btn ghost small" id="exp-word">📝 Descarregar Word</button>
+        <button class="btn ghost small" id="exp-cal">🗓️ Itinerari en PDF</button>
+      </div>
+    </div>
+
+    ${total ? sections : `
       <div class="card" style="text-align:center;padding:50px 20px">
         <div style="font-size:2.4rem;margin-bottom:10px">🌻</div>
-        <p style="color:var(--ink-soft)">El diari encara està en blanc.<br/>Quan comenci el viatge, obriu cada dia i escriviu-hi els vostres records!</p>
-        <a class="btn" style="margin-top:18px;text-decoration:none" href="#/dia/1">Anar al dia 1 →</a>
+        <p style="color:var(--ink-soft)">El teu diari encara està en blanc.<br/>Obre un dia i escriu-hi els teus records!</p>
+        <a class="btn" style="margin-top:18px;text-decoration:none" href="#/dia/1/diari">Anar al dia 1 →</a>
       </div>`}`;
 
   app.innerHTML = chrome("diari", content);
   afterChrome();
+  wireZoom();
+
+  const label = currentUserLabel();
+  document.getElementById("exp-pdf")?.addEventListener("click", () => {
+    TripExport.toPdf("Diari de viatge · Bulgària 2026", label,
+      TripExport.diaryBody(days, S.diary, label, fmtWhen));
+  });
+  document.getElementById("exp-word")?.addEventListener("click", () => {
+    TripExport.toWord("Diari de viatge · Bulgària 2026", label,
+      TripExport.diaryBody(days, S.diary, label, fmtWhen), "diari-bulgaria-2026.doc");
+    toast("Descarregant Word…");
+  });
+  document.getElementById("exp-cal")?.addEventListener("click", () => {
+    TripExport.toPdf("Itinerari · Bulgària 2026", S.itinerary.trip.subtitle || "",
+      TripExport.itineraryBody(S.itinerary.trip, days));
+  });
 }
 
-/* ---------------- food passport page ---------------- */
+/* ---------------- passaport gastronòmic ---------------- */
 
-function renderFoodPassportPage() {
-  const fp = S.foodPassport;
+function foodStars(itemId, stars, interactive) {
+  return `<span class="stars ${interactive ? "interactive" : ""}" ${interactive ? `data-stars-for="${esc(itemId)}"` : ""}>
+    ${[1, 2, 3, 4, 5].map((n) => `<span class="star ${n <= stars ? "on" : ""}" ${interactive ? `data-star="${n}"` : ""}>★</span>`).join("")}
+  </span>`;
+}
+
+function filteredFoodItems() {
+  const f = S.foodFilters;
+  let items = [...(S.food?.items || [])];
+  if (f.region) items = items.filter((i) => i.region === f.region || (i.cities || []).includes(f.region));
+  if (f.type) items = items.filter((i) => i.type === f.type);
+  if (f.level) items = items.filter((i) => i.level === f.level);
+  if (f.q) {
+    const q = f.q.toLowerCase();
+    items = items.filter((i) => (i.name + " " + i.nameBg + " " + i.summary + " " + i.region).toLowerCase().includes(q));
+  }
+  const st = (id) => S.foodState[id] || {};
+  if (f.sort === "stars") items.sort((a, b) => (st(b.id).stars || 0) - (st(a.id).stars || 0) || a.name.localeCompare(b.name));
+  else if (f.sort === "starsAsc") items.sort((a, b) => (st(a.id).stars || 0) - (st(b.id).stars || 0) || a.name.localeCompare(b.name));
+  else if (f.sort === "name") items.sort((a, b) => a.name.localeCompare(b.name));
+  else if (f.sort === "tasted") items.sort((a, b) => (st(b.id).tasted ? 1 : 0) - (st(a.id).tasted ? 1 : 0));
+  return items;
+}
+
+function renderFoodPage() {
+  const fp = S.food;
   if (!fp) {
-    app.innerHTML = chrome("food", `<p class="guide-empty">Food passport loading…</p>`);
+    app.innerHTML = chrome("food", `<p class="empty-note">Carregant el passaport…</p>`);
     afterChrome();
     return;
   }
+  const items = fp.items || [];
+  const tasted = items.filter((i) => S.foodState[i.id]?.tasted);
+  const rated = tasted.filter((i) => (S.foodState[i.id]?.stars || 0) > 0);
+  const avg = rated.length ? (rated.reduce((s, i) => s + S.foodState[i.id].stars, 0) / rated.length).toFixed(1) : "—";
+  const shown = filteredFoodItems();
 
-  const state = foodPassportState();
-  const tastedCount = Object.keys(state.tasted).filter((k) => state.tasted[k]).length;
-  const total = fp.checklist.length;
-
-  const levelBadge = (level) => {
-    const cls = level === "Must Try" ? "must" : level === "Highly Recommended" ? "high" : "curio";
-    return `<span class="fp-badge ${cls}">${esc(level)}</span>`;
-  };
-
-  const dishesHtml = fp.topDishes.map((d) => `
-    <div class="fp-dish">
-      <div class="fp-dish-head">${esc(d.name)} ${levelBadge(d.level)}</div>
-      <div class="fp-meta">${esc(d.category)} · ${esc(d.region)}</div>
-      <p>${esc(d.description)}</p>
-      <p class="fp-ing"><b>Ingredients:</b> ${esc(d.ingredients)}</p>
-    </div>`).join("");
-
-  const dessertsHtml = fp.desserts.map((d) => `
-    <div class="fp-dish"><div class="fp-dish-head">${esc(d.name)}</div><p>${esc(d.description)}</p></div>`).join("");
-
-  const drinks = fp.drinks;
-  const drinksHtml = Object.entries(drinks).map(([k, v]) => `
-    <div class="fp-drink"><b>${esc(k.charAt(0).toUpperCase() + k.slice(1))}</b><p>${esc(v)}</p></div>`).join("");
-
-  const mapLabels = {
-    sofia: "Sofia", rila: "Rila", pirinBansko: "Pirin / Bansko", plovdiv: "Plovdiv",
-    nessebar: "Nessebar", varna: "Varna", velikoTarnovo: "Veliko Tarnovo", koprivshtitsa: "Koprivshtitsa"
-  };
-  const mapHtml = Object.entries(fp.foodMap).map(([k, v]) => `
-    <div class="fp-region">
-      <h4>${esc(mapLabels[k] || k)}</h4>
-      <p><b>Eat:</b> ${esc(v.eat)}</p>
-      <p><b>Drink:</b> ${esc(v.drink)}</p>
-      <p><b>Specialties:</b> ${esc(v.specialties)}</p>
-    </div>`).join("");
-
-  const checklistHtml = fp.checklist.map((item) => {
-    const done = state.tasted[item.id];
-    const rating = state.ratings[item.id];
-    return `
-      <label class="check-item fp-check ${done ? "done" : ""}">
-        <input type="checkbox" data-fp-item="${esc(item.id)}" ${done ? "checked" : ""} />
-        <span class="txt">${esc(item.name)} <span class="fp-cat">${esc(item.category)}</span>
-          ${rating ? `<span class="by">⭐ ${rating.overall}/10</span>` : ""}
-        </span>
-        <button class="btn danger-ghost fp-rate-btn" data-fp-rate="${esc(item.id)}" title="Rate">⭐</button>
-      </label>`;
-  }).join("");
-
-  const vocabHtml = fp.vocabulary.map((v) => `
-    <div class="vocab-row">
-      <span class="vocab-cyr">${esc(v.cyrillic)}</span>
-      <span class="vocab-trans">${esc(v.transliteration)}</span>
-      <span class="vocab-en">${esc(v.english)}</span>
-    </div>`).join("");
+  const regions = [...new Set(items.map((i) => i.region))].sort();
+  const cities = [...new Set(items.flatMap((i) => i.cities || []))].sort();
+  const f = S.foodFilters;
 
   const content = `
-    <h1 class="page-title">🍽️ Bulgarian Food Passport</h1>
-    <p class="page-sub">Eat your way across Bulgaria — mark what you've tried and rate your favorites.</p>
-    <div class="fp-progress card">
-      <div class="fp-progress-head">
-        <span><b>${tastedCount}/${total}</b> items tasted</span>
-        <div class="progress" style="flex:1;max-width:200px"><div style="width:${total ? (tastedCount/total)*100 : 0}%"></div></div>
+    <h1 class="page-title">🍽️ Passaport gastronòmic</h1>
+    <p class="page-sub">Menja't Bulgària. 🔒 Les teves notes i puntuacions són privades.</p>
+
+    <div class="card fp-top">
+      <div class="fp-stats">
+        <div class="fp-stat"><div class="n">${tasted.length}<span>/${items.length}</span></div><div class="l">tastats</div></div>
+        <div class="fp-stat"><div class="n">${avg}</div><div class="l">nota mitjana</div></div>
+        <div class="fp-stat"><div class="n">${Math.round(items.length ? (tasted.length / items.length) * 100 : 0)}%</div><div class="l">del passaport</div></div>
+      </div>
+      <div class="progress big"><div style="width:${items.length ? (tasted.length / items.length) * 100 : 0}%"></div></div>
+      <div class="export-actions">
+        <button class="btn small" id="fp-pdf">📄 PDF per compartir</button>
+        <button class="btn ghost small" id="fp-word">📝 Word</button>
       </div>
     </div>
 
-    <div class="card">${renderGuideSection("🍴 Introduction to Bulgarian Cuisine", paras(fp.introduction))}</div>
-
-    <div class="card">
-      <h2 class="guide-h2">🥇 Top 20 Must-Try Dishes</h2>
-      <div class="fp-dish-grid">${dishesHtml}</div>
+    <div class="card filters">
+      <input type="search" id="f-q" class="f-input" placeholder="🔍 Buscar un plat..." value="${esc(f.q)}" />
+      <div class="filter-row">
+        <select id="f-type" class="f-input">
+          <option value="">Tots els tipus</option>
+          ${Object.entries(TYPE_LABELS).map(([k, v]) =>
+            `<option value="${k}" ${f.type === k ? "selected" : ""}>${TYPE_ICONS[k]} ${v}</option>`).join("")}
+        </select>
+        <select id="f-region" class="f-input">
+          <option value="">Tota Bulgària</option>
+          <optgroup label="Regió">
+            ${regions.map((r) => `<option value="${esc(r)}" ${f.region === r ? "selected" : ""}>${esc(r)}</option>`).join("")}
+          </optgroup>
+          <optgroup label="Ciutat">
+            ${cities.map((c) => `<option value="${esc(c)}" ${f.region === c ? "selected" : ""}>${esc(c)}</option>`).join("")}
+          </optgroup>
+        </select>
+        <select id="f-sort" class="f-input">
+          <option value="default" ${f.sort === "default" ? "selected" : ""}>Ordre del passaport</option>
+          <option value="stars" ${f.sort === "stars" ? "selected" : ""}>⭐ Millor puntuats</option>
+          <option value="starsAsc" ${f.sort === "starsAsc" ? "selected" : ""}>⭐ Pitjor puntuats</option>
+          <option value="tasted" ${f.sort === "tasted" ? "selected" : ""}>✔ Tastats primer</option>
+          <option value="name" ${f.sort === "name" ? "selected" : ""}>A–Z</option>
+        </select>
+      </div>
+      <div class="filter-row chips">
+        ${["Imprescindible", "Molt recomanable", "Curiositat"].map((l) =>
+          `<button class="chip ${f.level === l ? "on" : ""}" data-level="${esc(l)}">${esc(l)}</button>`).join("")}
+        ${(f.q || f.type || f.region || f.level) ? `<button class="chip clear" id="f-clear">✕ Netejar</button>` : ""}
+      </div>
+      <div class="filter-count">${shown.length} ${shown.length === 1 ? "plat" : "plats"}</div>
     </div>
 
-    <div class="card">
-      <h2 class="guide-h2">🍰 Traditional Desserts</h2>
-      ${dessertsHtml}
+    <div class="fp-grid">
+      ${shown.map((i) => {
+        const st = S.foodState[i.id] || {};
+        return `
+        <a class="fp-card ${st.tasted ? "tasted" : ""}" href="#/food/${esc(i.id)}">
+          <div class="fp-card-img" style="background-image:url('images/food/${esc(i.image)}.jpg')">
+            ${st.tasted ? `<span class="fp-tick">✔ Tastat</span>` : ""}
+            <span class="fp-type">${TYPE_ICONS[i.type] || "🍴"} ${esc(TYPE_LABELS[i.type] || i.type)}</span>
+          </div>
+          <div class="fp-card-body">
+            <div class="fp-card-name">${esc(i.name)}</div>
+            <div class="fp-card-region">📍 ${esc(i.region)}</div>
+            <p class="fp-card-sum">${esc(i.summary)}</p>
+            <div class="fp-card-foot">
+              ${foodStars(i.id, st.stars || 0, false)}
+              <span class="fp-level ${i.level === "Imprescindible" ? "must" : i.level === "Molt recomanable" ? "high" : "curio"}">${esc(i.level)}</span>
+            </div>
+            ${st.notes ? `<div class="fp-card-note">📝 ${esc(st.notes.slice(0, 60))}${st.notes.length > 60 ? "…" : ""}</div>` : ""}
+          </div>
+        </a>`;
+      }).join("")}
     </div>
+    ${shown.length === 0 ? `<p class="empty-note">Cap plat amb aquests filtres.</p>` : ""}
 
-    <div class="card">
-      <h2 class="guide-h2">🍷 Drinks of Bulgaria</h2>
-      <div class="fp-drinks">${drinksHtml}</div>
-    </div>
-
-    <div class="card">
-      <h2 class="guide-h2">🗺️ Food Map of Bulgaria</h2>
-      <div class="fp-map-grid">${mapHtml}</div>
-    </div>
-
-    <div class="card">
-      <h2 class="guide-h2">🎯 Food Challenges</h2>
-      <ul class="guide-bullets challenge-list">${fp.challenges.map((c) => `<li>${esc(c)}</li>`).join("")}</ul>
-    </div>
-
-    <div class="card">
-      <h2 class="guide-h2">🏆 Food Passport Checklist</h2>
-      <p class="guide-intro">Mark each dish or drink as you try it. Tap ⭐ to rate (1–10).</p>
-      <div class="check-list">${checklistHtml}</div>
-    </div>
-
-    <div class="card">
-      <h2 class="guide-h2">⭐ Rating System</h2>
-      <p class="guide-p">Rate each item on: ${fp.ratingSystem.criteria.join(", ")} (1–10 each).</p>
-      <p class="guide-p">${esc(fp.ratingSystem.scale)}</p>
-      <p class="guide-p"><b>Overall score:</b> ${esc(fp.ratingSystem.formula)}</p>
-    </div>
-
-    <div class="card">
-      <h2 class="guide-h2">🥇 End-of-Trip Food Awards</h2>
-      <ul class="guide-bullets">${fp.endOfTripAwards.map((a) => `<li><b>${esc(a.category)}:</b> ${esc(a.description)}</li>`).join("")}</ul>
-    </div>
-
-    <div class="card">
-      <h2 class="guide-h2">🤯 Food Trivia</h2>
-      <ul class="guide-bullets">${fp.trivia.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>
-    </div>
-
-    <div class="card">
-      <h2 class="guide-h2">🗣️ Restaurant Survival Vocabulary</h2>
-      <div class="vocab-table">${vocabHtml}</div>
+    <div class="fp-extras">
+      ${section("🍴", "La cuina búlgara en 3 minuts", paras(fp.introduction))}
+      ${section("🍷", "Begudes de Bulgària", `<div class="fp-drinks">${Object.entries(fp.drinks || {}).map(([k, v]) =>
+        `<div class="fp-drink"><b>${esc(k.charAt(0).toUpperCase() + k.slice(1))}</b><p>${esc(v)}</p></div>`).join("")}</div>`)}
+      ${section("🗺️", "Mapa gastronòmic", `<div class="fp-map-grid">${Object.entries(fp.foodMap || {}).map(([k, v]) => `
+        <div class="fp-region"><h4>${esc(({ sofia: "Sofia", rila: "Rila", pirinBansko: "Pirin / Bansko", plovdiv: "Plovdiv", nessebar: "Nessebar", varna: "Varna", velikoTarnovo: "Veliko Tarnovo", koprivshtitsa: "Koprivshtitsa" })[k] || k)}</h4>
+          <p><b>Menjar:</b> ${esc(v.eat)}</p><p><b>Beure:</b> ${esc(v.drink)}</p><p><b>Especialitats:</b> ${esc(v.specialties)}</p></div>`).join("")}</div>`)}
+      ${section("🎯", "Reptes gastronòmics", `<ul class="gbul challenge">${(fp.challenges || []).map((c) => `<li>${esc(c)}</li>`).join("")}</ul>`, false, String((fp.challenges || []).length))}
+      ${section("🤯", "Curiositats", `<ul class="gbul">${(fp.trivia || []).map((t) => `<li>${esc(t)}</li>`).join("")}</ul>`, false, String((fp.trivia || []).length))}
+      ${section("🏆", "Premis de final de viatge", `<ul class="gbul">${(fp.awards || []).map((a) => `<li><b>${esc(a.category)}:</b> ${esc(a.description)}</li>`).join("")}</ul>`)}
+      ${section("🗣️", "Vocabulari de restaurant", `<div class="vocab-table">${(fp.vocabulary || []).map((v) => `
+        <div class="vocab-row"><span class="vocab-cyr">${esc(v.cyrillic)}</span>
+          <span class="vocab-trans">${esc(v.transliteration)}</span>
+          <span class="vocab-ca">${esc(v.catalan)}</span></div>`).join("")}</div>`, false, String((fp.vocabulary || []).length))}
     </div>`;
 
   app.innerHTML = chrome("food", content);
   afterChrome();
-  wireFoodPassportEvents();
-}
+  wireFoodFilters();
 
-function wireFoodPassportEvents() {
-  app.querySelectorAll("[data-fp-item]").forEach((cb) => {
-    cb.addEventListener("change", () => {
-      const st = foodPassportState();
-      if (cb.checked) st.tasted[cb.dataset.fpItem] = { at: new Date().toISOString(), by: S.user?.username };
-      else delete st.tasted[cb.dataset.fpItem];
-      saveFoodPassportState(st);
-      renderFoodPassportPage();
-    });
+  const label = currentUserLabel();
+  document.getElementById("fp-pdf")?.addEventListener("click", () => {
+    TripExport.toPdf("Passaport gastronòmic · Bulgària 2026", label,
+      TripExport.foodBody(items, S.foodState, label, TYPE_LABELS));
   });
-
-  app.querySelectorAll("[data-fp-rate]").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      const id = btn.dataset.fpRate;
-      const item = S.foodPassport.checklist.find((x) => x.id === id);
-      const st = foodPassportState();
-      const cur = st.ratings[id] || {};
-      const taste = prompt(`Rate "${item?.name}" — Taste (1-10):`, cur.taste || "8");
-      if (taste === null) return;
-      const auth = prompt("Authenticity (1-10):", cur.authenticity || "8");
-      if (auth === null) return;
-      const val = prompt("Value for money (1-10):", cur.value || "8");
-      if (val === null) return;
-      const t = +taste, a = +auth, v = +val;
-      const overall = Math.round(((t + a + v) / 3) * 10) / 10;
-      st.ratings[id] = { taste: t, authenticity: a, value: v, overall, at: new Date().toISOString() };
-      st.tasted[id] = st.tasted[id] || { at: new Date().toISOString(), by: S.user?.username };
-      saveFoodPassportState(st);
-      toast(`Rated ${overall}/10 ⭐`);
-      renderFoodPassportPage();
-    });
+  document.getElementById("fp-word")?.addEventListener("click", () => {
+    TripExport.toWord("Passaport gastronòmic · Bulgària 2026", label,
+      TripExport.foodBody(items, S.foodState, label, TYPE_LABELS), "passaport-gastronomic.doc");
+    toast("Descarregant Word…");
   });
 }
 
-/* ---------------- info page ---------------- */
+function wireFoodFilters() {
+  const q = document.getElementById("f-q");
+  q?.addEventListener("input", () => {
+    S.foodFilters.q = q.value;
+    const pos = q.selectionStart;
+    renderFoodPage();
+    const nq = document.getElementById("f-q");
+    if (nq) { nq.focus(); nq.setSelectionRange(pos, pos); }
+  });
+  document.getElementById("f-type")?.addEventListener("change", (e) => { S.foodFilters.type = e.target.value; renderFoodPage(); });
+  document.getElementById("f-region")?.addEventListener("change", (e) => { S.foodFilters.region = e.target.value; renderFoodPage(); });
+  document.getElementById("f-sort")?.addEventListener("change", (e) => { S.foodFilters.sort = e.target.value; renderFoodPage(); });
+  app.querySelectorAll("[data-level]").forEach((b) => {
+    b.addEventListener("click", () => {
+      S.foodFilters.level = S.foodFilters.level === b.dataset.level ? "" : b.dataset.level;
+      renderFoodPage();
+    });
+  });
+  document.getElementById("f-clear")?.addEventListener("click", () => {
+    S.foodFilters = { region: "", type: "", level: "", sort: "default", q: "" };
+    renderFoodPage();
+  });
+}
+
+function renderFoodDetail(id) {
+  const item = (S.food?.items || []).find((i) => i.id === id);
+  if (!item) { location.hash = "#/food"; return; }
+  const st = S.foodState[item.id] || {};
+  const all = S.food.items;
+  const idx = all.findIndex((i) => i.id === id);
+  const prev = all[idx - 1], next = all[idx + 1];
+  const pl = item.place || {};
+  const bbox = pl.lat ? `${(pl.lng - 0.06).toFixed(4)},${(pl.lat - 0.035).toFixed(4)},${(pl.lng + 0.06).toFixed(4)},${(pl.lat + 0.035).toFixed(4)}` : null;
+
+  const content = `
+    <div class="day-nav">
+      <a href="#/food" class="back">← Passaport</a>
+      <div class="day-nav-arrows">
+        <a href="#/food/${prev ? esc(prev.id) : ""}" class="${prev ? "" : "disabled"}">←</a>
+        <a href="#/food/${next ? esc(next.id) : ""}" class="${next ? "" : "disabled"}">→</a>
+      </div>
+    </div>
+
+    <div class="fd-hero">
+      <img src="images/food/${esc(item.image)}.jpg" alt="${esc(item.name)}" data-zoom />
+      <div class="fd-hero-info">
+        <div class="fd-type">${TYPE_ICONS[item.type] || "🍴"} ${esc(TYPE_LABELS[item.type] || item.type)}</div>
+        <h1>${esc(item.name)}</h1>
+        <div class="fd-bg">${esc(item.nameBg)}</div>
+        <div class="fd-tags">
+          <span class="fp-level ${item.level === "Imprescindible" ? "must" : item.level === "Molt recomanable" ? "high" : "curio"}">${esc(item.level)}</span>
+          <span class="fd-tag">📍 ${esc(item.region)}</span>
+          ${(item.cities || []).map((c) => `<span class="fd-tag">${esc(c)}</span>`).join("")}
+        </div>
+      </div>
+    </div>
+
+    <div class="day-columns">
+      <div>
+        <div class="card">
+          <h2><span class="ico">📖</span> Què és</h2>
+          <p class="gp">${esc(item.description)}</p>
+          <div class="fd-ing"><b>Ingredients</b><p>${esc(item.ingredients)}</p></div>
+        </div>
+
+        <div class="card">
+          <h2><span class="ico">🍴</span> On tastar-lo</h2>
+          <p class="gp">${esc(item.whereToTry)}</p>
+          ${bbox ? `
+          <div class="fd-map">
+            <iframe title="Mapa de ${esc(pl.name)}" loading="lazy"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${pl.lat},${pl.lng}"></iframe>
+          </div>
+          <div class="fd-map-links">
+            <b>📍 ${esc(pl.name)}</b>
+            <a href="https://www.google.com/maps/search/${encodeURIComponent(item.name + " " + pl.name + " Bulgaria")}" target="_blank" rel="noopener">Buscar restaurants a Google Maps →</a>
+          </div>` : ""}
+        </div>
+      </div>
+
+      <div>
+        <div class="card fd-rate">
+          <h2><span class="ico">⭐</span> La meva valoració</h2>
+          <p class="private-note">🔒 Només tu veus això.</p>
+          <label class="fd-tasted">
+            <input type="checkbox" id="fd-tasted" ${st.tasted ? "checked" : ""} />
+            <span>Ja l'he tastat!</span>
+          </label>
+          <div class="fd-stars-wrap">
+            <div class="fd-label">Puntuació</div>
+            ${foodStars(item.id, st.stars || 0, true)}
+            <span class="fd-score">${st.stars ? st.stars + "/5" : "sense puntuar"}</span>
+          </div>
+          <div class="fd-notes-wrap">
+            <div class="fd-label">Les meves notes</div>
+            <textarea id="fd-notes" placeholder="On l'has tastat? Què t'ha semblat?">${esc(st.notes || "")}</textarea>
+            <button class="btn small" id="fd-save-notes">Guardar notes</button>
+          </div>
+          ${st.updatedAt ? `<div class="fd-updated">Actualitzat ${fmtWhen(st.updatedAt)}</div>` : ""}
+        </div>
+      </div>
+    </div>`;
+
+  app.innerHTML = chrome("food", content);
+  afterChrome();
+  wireZoom();
+
+  document.getElementById("fd-tasted")?.addEventListener("change", async (e) => {
+    try {
+      S.foodState[item.id] = await S.store.setFood(item.id, { tasted: e.target.checked });
+      renderFoodDetail(id);
+      toast(e.target.checked ? "Marcat com a tastat ✔" : "Desmarcat");
+    } catch (err) { toast(err.message, true); }
+  });
+
+  app.querySelectorAll("[data-stars-for] .star").forEach((s) => {
+    s.addEventListener("click", async () => {
+      const n = Number(s.dataset.star);
+      try {
+        const stars = (S.foodState[item.id]?.stars || 0) === n ? 0 : n;
+        S.foodState[item.id] = await S.store.setFood(item.id, { stars, tasted: stars > 0 ? true : S.foodState[item.id]?.tasted });
+        renderFoodDetail(id);
+        toast(stars ? `Puntuat ${stars}/5 ⭐` : "Puntuació esborrada");
+      } catch (err) { toast(err.message, true); }
+    });
+  });
+
+  document.getElementById("fd-save-notes")?.addEventListener("click", async () => {
+    try {
+      S.foodState[item.id] = await S.store.setFood(item.id, { notes: document.getElementById("fd-notes").value });
+      toast("Notes guardades 📝");
+      renderFoodDetail(id);
+    } catch (err) { toast(err.message, true); }
+  });
+}
+
+/* ---------------- info pràctica ---------------- */
 
 function renderInfoPage() {
   const t = S.itinerary.trip;
@@ -971,7 +1003,7 @@ function renderInfoPage() {
 
   const content = `
     <h1 class="page-title">ℹ️ Informació pràctica</h1>
-    <p class="page-sub">Vols, cotxe i altres coses a tenir a mà durant el viatge.</p>
+    <p class="page-sub">Vols, cotxe i coses a tenir a mà durant el viatge.</p>
     <div class="info-grid">
       <div class="card">
         <h2><span class="ico">✈️</span> Vols</h2>
@@ -996,6 +1028,13 @@ function renderInfoPage() {
         <div class="info-item"><b>Curiositat</b>Els búlgars mouen el cap al revés: assentir pot voler dir «no»!</div>
         <div class="info-item"><b>Gràcies</b>«Blagodarya» (благодаря) o el més fàcil: «mersí»</div>
       </div>
+      <div class="card">
+        <h2><span class="ico">💾</span> Les meves dades</h2>
+        <div class="info-item">${S.staticMode
+          ? "El diari i el passaport es guarden en una base de dades del navegador (IndexedDB) d'aquest dispositiu. Descarrega el PDF de tant en tant com a còpia de seguretat."
+          : "El diari i el passaport es guarden a la base de dades del servidor."}</div>
+        <div class="info-item"><b>Privacitat</b>El teu diari i les teves valoracions són només teves. Les activitats del dia són compartides.</div>
+      </div>
     </div>
     <details class="credits">
       <summary>Crèdits de les imatges (Wikimedia Commons)</summary>
@@ -1010,30 +1049,146 @@ function renderInfoPage() {
   afterChrome();
 }
 
-/* ---------------- boot ---------------- */
+/* ---------------- events compartits ---------------- */
+
+function wireChecks(n) {
+  app.querySelectorAll('input[type="checkbox"][data-item]').forEach((cb) => {
+    cb.addEventListener("change", async () => {
+      try {
+        S.checks[n] = await S.store.setCheck(n, cb.dataset.item, cb.checked);
+        const tab = (location.hash.split("/")[3]) || "pla";
+        renderDay(n, tab);
+      } catch (err) { toast(err.message, true); }
+    });
+  });
+}
+
+function wirePlanTab(n) {
+  document.getElementById("add-activity-form")?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const input = document.getElementById("new-activity");
+    if (!input.value.trim()) return;
+    try {
+      const item = await S.store.addCustomActivity(n, input.value.trim());
+      (S.customActivities[n] = S.customActivities[n] || []).push(item);
+      renderDay(n, "pla");
+      toast("Activitat afegida ✔");
+    } catch (err) { toast(err.message, true); }
+  });
+
+  app.querySelectorAll("[data-del-activity]").forEach((btn) => {
+    btn.addEventListener("click", async (e) => {
+      e.preventDefault();
+      if (!confirm("Esborrar aquesta activitat?")) return;
+      try {
+        await S.store.deleteCustomActivity(n, btn.dataset.delActivity);
+        S.customActivities[n] = (S.customActivities[n] || []).filter((i) => i.id !== btn.dataset.delActivity);
+        if (S.checks[n]) delete S.checks[n][btn.dataset.delActivity];
+        renderDay(n, "pla");
+      } catch (err) { toast(err.message, true); }
+    });
+  });
+}
+
+function wireZoom() {
+  app.querySelectorAll("[data-zoom]").forEach((img) => {
+    img.addEventListener("click", () => {
+      const lb = document.createElement("div");
+      lb.className = "lightbox";
+      lb.innerHTML = `<img src="${img.src}" alt="" />`;
+      lb.addEventListener("click", () => lb.remove());
+      document.body.appendChild(lb);
+    });
+  });
+}
+
+/* ---------------- router ---------------- */
+
+function route() {
+  if (!S.user) return renderLogin();
+  const parts = (location.hash || "#/").replace(/^#\/?/, "").split("/").filter(Boolean);
+  if (parts[0] === "dia" && parts[1]) return renderDay(parseInt(parts[1], 10), parts[2]);
+  if (parts[0] === "food" && parts[1]) return renderFoodDetail(parts[1]);
+  if (parts[0] === "food") return renderFoodPage();
+  if (parts[0] === "diari") return renderDiaryPage();
+  if (parts[0] === "info") return renderInfoPage();
+  return renderOverview();
+}
+
+function render() { route(); }
+window.addEventListener("hashchange", route);
+
+/* ---------------- càrrega de dades ---------------- */
+
+async function loadUserData() {
+  S.store.setUser(S.user.username);
+  await S.store.migrateFromLocalStorage();
+  const [checks, customs, food] = await Promise.all([
+    S.store.getAllChecks(),
+    S.store.getAllCustomActivities(),
+    S.store.getAllFood()
+  ]);
+  S.checks = checks || {};
+  S.customActivities = customs || {};
+  S.foodState = food || {};
+  const entries = await S.store.getDiary(null);
+  S.diary = {};
+  (entries || []).forEach((e) => { (S.diary[e.day] = S.diary[e.day] || []).push(e); });
+}
+
+async function loadStaticContent() {
+  const [itinerary, credits, users, guide, food] = await Promise.all([
+    fetch("data/itinerary.json").then((r) => r.json()),
+    fetch("data/image-credits.json").then((r) => r.json()).catch(() => ({})),
+    fetch("data/static-users.json").then((r) => r.json()),
+    fetch("data/travel-guide.json").then((r) => r.json()).catch(() => ({ days: {} })),
+    fetch("data/food-ca.json").then((r) => r.json()).catch(() => null)
+  ]);
+  S.itinerary = itinerary;
+  S.imageCredits = credits;
+  S.guide = guide;
+  S.food = food;
+  S.staticUsers = users;
+  S.users = Object.entries(users).map(([username, u]) => ({ username, displayName: u.displayName, emoji: u.emoji }));
+}
 
 async function bootstrap() {
   try {
     const res = await fetch("api/bootstrap", { headers: { "Content-Type": "application/json" } });
-    if (res.status === 404) {
-      // No hi ha servidor (p. ex. GitHub Pages) → mode estàtic al navegador
-      await enterStaticMode();
-      return;
-    }
+    if (res.status === 404) throw new Error("static");
+    S.staticMode = false;
+    S.store = new TripStore.ApiStore();
     if (res.ok) {
       const data = await res.json();
       S.user = data.user;
       S.users = data.users;
       S.itinerary = data.itinerary;
-      S.travelGuide = data.travelGuide;
-      S.foodPassport = data.foodPassport;
+      S.guide = data.travelGuide || { days: {} };
+      S.food = data.foodPassport;
       S.imageCredits = data.imageCredits;
-      S.state = data.state;
+      await loadUserData();
+    } else {
+      // 401: cal login. Necessitem la llista d'usuaris i el contingut públic.
+      const pub = await fetch("api/public").then((r) => r.json()).catch(() => null);
+      if (pub) {
+        S.users = pub.users;
+        S.itinerary = pub.itinerary;
+        S.guide = pub.travelGuide || { days: {} };
+        S.food = pub.foodPassport;
+        S.imageCredits = pub.imageCredits;
+      }
     }
-    render(); // si 401: pantalla de login del mode servidor
   } catch {
-    render();
+    S.staticMode = true;
+    S.store = new TripStore.IdbStore();
+    await loadStaticContent();
+    const saved = localStorage.getItem(SESSION_KEY);
+    if (saved && S.staticUsers[saved]) {
+      S.user = { username: saved, displayName: S.staticUsers[saved].displayName, emoji: S.staticUsers[saved].emoji };
+      await loadUserData();
+    }
   }
+  render();
 }
 
 bootstrap();

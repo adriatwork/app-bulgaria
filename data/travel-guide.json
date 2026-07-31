@@ -1,0 +1,2130 @@
+{
+  "days": {
+    "1": {
+      "destination": [
+        "Benvinguts a Sofia! La capital búlgara porta 7.000 anys d'història com si res: mesquites otomanes, monuments soviètics i bars de còctels comparteixen la mateixa vorera. Aterreu a l'aeroport de Sofia (SOF), a només 20 minuts del centre.",
+        "No espereu un nucli antic de postal. Sofia es descobreix a poc a poc: una muralla romana al costat del metro, art urbà en un pas subterrani comunista. Avui toca arribar, deixar les maletes i menjar una banitsa. Demà, muntanya!"
+      ],
+      "history": [
+        "Aquí ja hi vivien tribus tràcies fa 7.000 anys. Els romans hi van aixecar Serdica — l'emperador Constantí en deia 'la meva Roma'. L'any 809 el kan Krum la va fer part del Primer Imperi Búlgar.",
+        "Bizantins, otomans i soviètics hi han deixat capes: la mesquita Banya Bashi encara funciona, i la catedral d'Alexandre Nevski simbolitza la nació renascuda. Des de l'entrada a la UE el 2007, Sofia bull de vida creativa."
+      ],
+      "highlights": [
+        {
+          "name": "Catedral d'Alexandre Nevski",
+          "what": "La catedral ortodoxa més gran de Bulgària, amb cúpules daurades espectaculars.",
+          "why": "És la foto icònica de Sofia i un homenatge als caiguts contra el domini otomà.",
+          "notice": "Espatlles i genolls tapats; dins no es poden fer fotos sense permís."
+        },
+        {
+          "name": "Complex arqueològic de Serdica",
+          "what": "Ruïnes romanes integrades dins l'estació de metro Serdica.",
+          "why": "On més veureu que Sofia és una ciutat feta de capes.",
+          "notice": "Fixeu-vos en els carrers romans originals sota els vostres peus."
+        },
+        {
+          "name": "Bulevard Vitosha",
+          "what": "El carrer per a vianants principal, ple de terrasses i botigues.",
+          "why": "Perfecte per a la primera passejada nocturna amb la muntanya Vitosha al fons.",
+          "notice": "Al capvespre, la muntanya es tenyeix de rosa darrere el bulevard."
+        },
+        {
+          "name": "Palau Nacional de Cultura (NDK)",
+          "what": "Un mastodont cultural d'època comunista envoltat de parcs i fonts.",
+          "why": "Brutalisme en estat pur i el punt de trobada favorit dels locals.",
+          "notice": "Les fonts il·luminades de nit són tot un espectacle."
+        },
+        {
+          "name": "Teatre Nacional Ivan Vazov",
+          "what": "Un teatre d'estil vienès preciós amb un parc davant.",
+          "why": "És l'edifici més elegant de Sofia i surt al bitllet de 50 leva.",
+          "notice": "Mireu la façana daurada amb Apol·lo i les muses."
+        },
+        {
+          "name": "Sinagoga de Sofia",
+          "what": "La sinagoga sefardita més gran del sud-est d'Europa.",
+          "why": "Recorda que Bulgària va salvar quasi tots els seus jueus durant la II Guerra Mundial.",
+          "notice": "El canelobre de 2 tones és el més gran de Bulgària."
+        }
+      ],
+      "funFacts": [
+        "A Sofia pots esquiar i prendre el sol el mateix dia: Vitosha és a 30 minuts del centre.",
+        "Els llambordins grocs del centre van ser un regal de l'Imperi austrohongarès, col·locats a mà.",
+        "Les fonts termals del centre ragen des de fa 2.000 anys i la gent hi omple ampolles gratis.",
+        "Més del 40% de la ciutat són parcs i jardins.",
+        "Bulgària és el primer productor mundial d'oli de rosa — i alguns bars el posen als còctels.",
+        "El lleó és el símbol nacional: en veureu a fonts, façanes i a l'escut de la selecció.",
+        "Sofia s'escriu София en ciríl·lic — mateix so, alfabet diferent."
+      ],
+      "food": [
+        {
+          "name": "Banitsa",
+          "description": "Pasta de full farcida de formatge sirene, l'esmorzar nacional.",
+          "special": "Cruixent per fora, cremosa per dins — addictiva.",
+          "where": "Qualsevol fleca de barri, al matí."
+        },
+        {
+          "name": "Amanida xopska",
+          "description": "Tomàquet, cogombre, pebrot i una muntanya de formatge ratllat.",
+          "special": "Porta els colors de la bandera búlgara.",
+          "where": "A tot arreu, per començar el sopar."
+        },
+        {
+          "name": "Kebaptxe",
+          "description": "Rotllet de carn picada a la brasa amb comí i pebre.",
+          "special": "Es demana per unitats, amb pa i patates.",
+          "where": "Tavernes tradicionals (mehana)."
+        },
+        {
+          "name": "Tarator",
+          "description": "Sopa freda de iogurt, cogombre, anet i nous.",
+          "special": "El gaspatxo búlgar, refrescant i lleuger.",
+          "where": "Qualsevol restaurant a l'estiu."
+        }
+      ],
+      "phrase": {
+        "cyrillic": "Здравейте",
+        "transliteration": "Zdraveyte",
+        "catalan": "Hola (formal/plural)",
+        "when": "En entrar a botigues i restaurants: somriures garantits."
+      },
+      "challenges": [
+        {
+          "id": "d1-c1",
+          "text": "Trobeu un lleó de pedra o bronze pel centre i feu-li una foto."
+        },
+        {
+          "id": "d1-c2",
+          "text": "Ompliu una ampolla a les fonts termals públiques com fan els locals."
+        },
+        {
+          "id": "d1-c3",
+          "text": "Desxifreu una paraula en ciríl·lic d'un rètol sense traductor."
+        },
+        {
+          "id": "d1-c4",
+          "text": "Compreu una banitsa dient 'zdraveyte' i pagant en leva."
+        },
+        {
+          "id": "d1-c5",
+          "text": "Localitzeu els llambordins grocs i camineu-hi 100 metres."
+        }
+      ],
+      "insiderTips": [
+        "El metro de l'aeroport al centre costa menys d'1 euro i triga 20 minuts.",
+        "Canvieu diners en un banc o caixer — mai a les oficines de l'aeroport.",
+        "Sofia és molt segura, però vigileu els carteristes a les zones turístiques.",
+        "L'aigua de l'aixeta és potable: porteu cantimplora.",
+        "Aquí se sopa tard: a les 21 h els restaurants estan a vessar."
+      ],
+      "historicalFigure": {
+        "name": "Vassil Levski",
+        "who": "L'heroi nacional búlgar, revolucionari contra el domini otomà al segle XIX.",
+        "why": "Els búlgars en parlen amb una reverència gairebé religiosa.",
+        "detail": "Executat el 1873, la seva visió d'una Bulgària lliure el va sobreviure: el 19 de febrer és festa nacional."
+      },
+      "visualGuide": [
+        {
+          "name": "Cúpules daurades",
+          "what": "Les cúpules d'Alexandre Nevski dominant l'horitzó.",
+          "why": "L'or és pa d'or autèntic, regal de Rússia.",
+          "detail": "Mireu com canvien de color segons la llum del dia."
+        },
+        {
+          "name": "Paviment groc",
+          "what": "Llambordins ceràmics grocs al centre històric.",
+          "why": "Únics a Europa, més que centenaris.",
+          "detail": "Amb pluja rellisquen i brillen com or mullat."
+        },
+        {
+          "name": "Relíquies soviètiques",
+          "what": "Estrelles roges i monuments d'època comunista.",
+          "why": "Testimonis d'un passat recent que la ciutat encara digereix.",
+          "detail": "Busqueu els detalls d'obrers heroics als relleus."
+        },
+        {
+          "name": "Art urbà",
+          "what": "Murals gegants i grafits als passos subterranis.",
+          "why": "L'escena creativa jove de Sofia s'expressa a les parets.",
+          "detail": "Sovint barregen motius folklòrics búlgars amb estil modern."
+        },
+        {
+          "name": "Motius de roses",
+          "what": "Roses en souvenirs, cosmètics i decoració arreu.",
+          "why": "La rosa damascena és l'or líquid de Bulgària.",
+          "detail": "Compareu l'oli autèntic (caríssim) amb les imitacions."
+        },
+        {
+          "name": "Tramvies",
+          "what": "Tramvies vells i nous grinyolant pel centre.",
+          "why": "El batec quotidià de la ciutat des de fa més d'un segle.",
+          "detail": "Els models antics txecs són petites càpsules del temps."
+        }
+      ]
+    },
+    "2": {
+      "destination": [
+        "Avui deixem la ciutat i pugem a la joia de Bulgària: el monestir de Rila, amagat entre boscos a 1.150 metres. Els seus arcs de ratlles blanques i negres i els frescos de colors us deixaran bocabadats.",
+        "Després, la Santa Cova on va viure l'ermità Ivan Rilski, i acabem a Sapareva Banya, el poble amb el guèiser més calent d'Europa. Muntanya, espiritualitat i aigua termal en un sol dia."
+      ],
+      "history": [
+        "Al segle X, l'ermità Ivan Rilski es va retirar a aquestes muntanyes. Els seus seguidors hi van fundar el monestir, que va créixer fins a ser el cor espiritual del país.",
+        "Durant cinc segles de domini otomà, Rila va guardar la llengua i la cultura búlgares — fins i tot imprimint llibres d'amagat. Avui és Patrimoni de la Humanitat de la UNESCO."
+      ],
+      "highlights": [
+        {
+          "name": "Església major del monestir",
+          "what": "L'església principal, coberta de frescos de dalt a baix.",
+          "why": "Una de les esglésies més espectaculars dels Balcans.",
+          "notice": "Les escenes de l'infern als porxos exteriors són pura fantasia medieval."
+        },
+        {
+          "name": "Pati del monestir",
+          "what": "Un claustre enorme amb arcades ratllades i muntanyes al fons.",
+          "why": "L'estampa més fotogènica de tota Bulgària.",
+          "notice": "Els balcons de fusta de quatre pisos que envolten el pati."
+        },
+        {
+          "name": "Creu de Rafail",
+          "what": "Una creu de fusta tallada amb 104 escenes bíbliques minúscules.",
+          "why": "El monjo Rafail hi va dedicar 12 anys i hi va perdre la vista.",
+          "notice": "Es va tallar amb agulles: busqueu les figures de mig centímetre."
+        },
+        {
+          "name": "Santa Cova de Sant Ivan Rilski",
+          "what": "La cova on l'ermità va viure anys en solitud, a 4 km del monestir.",
+          "why": "Diu la tradició que només els de cor pur passen pel forat de sortida.",
+          "notice": "El pas estret de la roca: hi haureu de passar arrossegant-vos una mica."
+        },
+        {
+          "name": "Guèiser de Sapareva Banya",
+          "what": "L'únic guèiser dels Balcans, amb aigua a 103 °C.",
+          "why": "El brollador més calent d'Europa, al mig d'un poble tranquil.",
+          "notice": "El núvol de vapor constant que envolta el pavelló."
+        },
+        {
+          "name": "Museu del monestir",
+          "what": "Tresors, manuscrits i la famosa Creu de Rafail.",
+          "why": "Contextualitza mil anys d'història en mitja hora.",
+          "notice": "Els documents impresos d'amagat durant l'època otomana."
+        }
+      ],
+      "funFacts": [
+        "La cuina del monestir arribava a alimentar 500 persones en una sola taula llarguíssima.",
+        "El monestir tenia bombers, fleca i granja propis: un poble medieval autosuficient.",
+        "L'aigua del guèiser de Sapareva Banya bull ous — els locals ho fan per als turistes.",
+        "Rila va ser una impremta clandestina de llibres búlgars sota domini otomà.",
+        "Les relíquies de Sant Ivan Rilski encara es veneren a l'església major.",
+        "Rila és la serralada més alta dels Balcans: el pic Musala fa 2.925 metres.",
+        "Les ratlles de les parets no són decoració qualsevol: són arquitectura del Renaixement búlgar."
+      ],
+      "food": [
+        {
+          "name": "Bob txorbà (sopa de mongetes)",
+          "description": "Sopa de mongetes amb menta i pebre vermell, recepta monàstica.",
+          "special": "La versió del monestir és llegendària.",
+          "where": "Restaurants al costat del monestir."
+        },
+        {
+          "name": "Katxamak",
+          "description": "Polenta búlgara amb formatge i mantega, plat de pastors.",
+          "special": "Contundent i perfecte per a la muntanya.",
+          "where": "Mehanes de la zona de Rila."
+        },
+        {
+          "name": "Mekitsa",
+          "description": "Massa fregida esponjosa, empolvorada amb sucre o amb formatge.",
+          "special": "Millor calenta i acabada de fer.",
+          "where": "Paradetes davant del monestir."
+        },
+        {
+          "name": "Aigua mineral local",
+          "description": "Aigua termal i de deu de les fonts de Rila.",
+          "special": "Cada font té gust i minerals diferents.",
+          "where": "Fonts públiques de Sapareva Banya."
+        }
+      ],
+      "phrase": {
+        "cyrillic": "Благодаря",
+        "transliteration": "Blagodarya",
+        "catalan": "Gràcies",
+        "when": "Després de menjar o de rebre ajuda: obre totes les portes."
+      },
+      "challenges": [
+        {
+          "id": "d2-c1",
+          "text": "Compteu les escenes de l'infern als frescos exteriors de l'església."
+        },
+        {
+          "id": "d2-c2",
+          "text": "Trobeu la figura més petita de la Creu de Rafail al museu."
+        },
+        {
+          "id": "d2-c3",
+          "text": "Passeu pel forat de la Santa Cova per demostrar que teniu el cor pur."
+        },
+        {
+          "id": "d2-c4",
+          "text": "Feu una foto del guèiser just quan el vapor tapa el sol."
+        },
+        {
+          "id": "d2-c5",
+          "text": "Tasteu la sopa de mongetes i doneu les gràcies en búlgar."
+        }
+      ],
+      "insiderTips": [
+        "Sortiu de Sofia a les 8 h: cap a les 11 el monestir s'omple d'autocars.",
+        "L'aparcament del monestir és gratuït però petit — arribeu d'hora.",
+        "La carretera a la Santa Cova és estreta i amb revolts: conduïu amb calma.",
+        "Porteu banyador: Sapareva Banya té piscines termals públiques.",
+        "No hi ha caixer al monestir — porteu efectiu per a entrades i menjar."
+      ],
+      "historicalFigure": {
+        "name": "Sant Ivan Rilski",
+        "who": "Ermità i taumaturg del segle X, patró de Bulgària.",
+        "why": "Va triar la pobresa i la solitud, i és el gran símbol espiritual del país.",
+        "detail": "Va viure dècades en una cova; els seus seguidors van fundar el monestir que encara porta el seu nom."
+      },
+      "visualGuide": [
+        {
+          "name": "Arcades ratllades",
+          "what": "Les franges blanques i negres dels porxos del monestir.",
+          "why": "Marca registrada del Renaixement arquitectònic búlgar.",
+          "detail": "Seguiu el ritme dels arcs amb la mirada: hipnotitza."
+        },
+        {
+          "name": "Frescos",
+          "what": "Milers de figures pintades a l'església major.",
+          "why": "Obra de Zahari Zograf, el gran pintor búlgar del XIX.",
+          "detail": "Busqueu dimonis, monstres i pecadors als porxos exteriors."
+        },
+        {
+          "name": "Balcons de fusta",
+          "what": "Quatre pisos de galeries de fusta al voltant del pati.",
+          "why": "Allotjaven milers de pelegrins alhora.",
+          "detail": "Les bigues encaixen sense ni un clau, artesania pura."
+        },
+        {
+          "name": "Pavelló del guèiser",
+          "what": "L'estructura que envolta el brollador de Sapareva Banya.",
+          "why": "Marca el punt on la terra treu vapor a 103 °C.",
+          "detail": "Toqueu (amb compte!) el vapor que s'escapa: crema de debò."
+        },
+        {
+          "name": "Boira de muntanya",
+          "what": "Núvols baixos jugant entre els pics de Rila.",
+          "why": "Donen al monestir un aire místic irreal.",
+          "detail": "Al matí la boira puja del riu i embolcalla les torres."
+        },
+        {
+          "name": "Iconòstasi",
+          "what": "La paret daurada d'icones dins l'església major.",
+          "why": "Talla de fusta coberta d'or, feta durant cinc anys.",
+          "detail": "Fixeu-vos en els ocells i raïms tallats entre les icones."
+        }
+      ]
+    },
+    "3": {
+      "destination": [
+        "Avui, botes posades: pugem als Set Llacs de Rila, un dels paisatges més espectaculars dels Balcans. Set llacs glacials encadenats com esglaons entre 2.100 i 2.500 metres, cadascun amb nom propi: l'Ull, el Ronyó, la Llàgrima...",
+        "El telecadira us estalvia la pujada dura, i el circuit complet es fa en 4-5 hores. Al vespre, banyeu els músculs a les aigües termals de Sapareva Banya. Us ho haureu guanyat."
+      ],
+      "history": [
+        "Aquests llacs els van excavar les glaceres fa uns 10.000 anys. Els pastors els van batejar segons la seva forma vista des dels cims.",
+        "La zona és sagrada per als 'danovistes', seguidors del mestre espiritual Petar Danov: cada agost hi ballen la 'paneurítmia' en cercles enormes vora els llacs. Un espectacle únic."
+      ],
+      "highlights": [
+        {
+          "name": "Llac Salzata (la Llàgrima)",
+          "what": "El llac més alt, a 2.535 metres, amb aigua totalment transparent.",
+          "why": "El premi final de la pujada, amb vistes que tallen la respiració.",
+          "notice": "L'aigua és tan clara que sembla que no hi sigui."
+        },
+        {
+          "name": "Llac Okoto (l'Ull)",
+          "what": "El llac glacial més profund de Bulgària: 37,5 metres.",
+          "why": "Un oval perfecte de color blau intens, com un ull que us mira.",
+          "notice": "El color canvia del turquesa al blau marí segons el cel."
+        },
+        {
+          "name": "Llac Babreka (el Ronyó)",
+          "what": "Un llac amb forma de ronyó i les ribes més verdes del circuit.",
+          "why": "El punt més fotogènic del recorregut.",
+          "notice": "Des del mirador de dalt la forma és claríssima."
+        },
+        {
+          "name": "Telecadira dels llacs",
+          "what": "El remuntador des de Pionerska fins al refugi Rilski Ezera.",
+          "why": "Us estalvia 2 hores de pujada avorrida i les vistes són genials.",
+          "notice": "Els peus penjant sobre boscos de pins centenaris."
+        },
+        {
+          "name": "Passejada per la carena",
+          "what": "El tram alt del circuit amb vista sobre tots els llacs alhora.",
+          "why": "La panoràmica de postal que ho justifica tot.",
+          "notice": "En dies clars es veu fins al pic Musala."
+        },
+        {
+          "name": "Remull a Sapareva Banya",
+          "what": "Piscines termals per acabar el dia.",
+          "why": "Aigua calenta natural per a les cames després de la caminada.",
+          "notice": "L'olor lleugera de sofre: senyal d'aigua mineral autèntica."
+        }
+      ],
+      "funFacts": [
+        "Els set llacs estan esglaonats: cadascun cau 100-150 metres sobre el següent.",
+        "La llegenda diu que l'Okoto connecta amb el mar Negre per sota terra (mentida, però mola).",
+        "Per aquí campa l'isard balcànic, mig cabra mig antílop de documental.",
+        "El Musala és més alt que qualsevol pic dels Alps a l'est del Mont Blanc.",
+        "Els pastors encara pugen ramats als prats baixos: potser compartireu camí amb cabres.",
+        "El telecadira és dels anys 70: encantadorament retro i una mica terrorífic.",
+        "Des de la carena, en dia clar, es veuen tres països: Bulgària, Macedònia del Nord i Sèrbia."
+      ],
+      "food": [
+        {
+          "name": "Sopa de mongetes del refugi",
+          "description": "Bob txorbà calent servit al refugi de muntanya.",
+          "special": "A 2.100 metres té un gust diferent, paraula.",
+          "where": "Refugi Rilski Ezera."
+        },
+        {
+          "name": "Banitsa per emportar",
+          "description": "El clàssic esmorzar búlgar en versió motxilla.",
+          "special": "El pícnic perfecte vora un llac glacial.",
+          "where": "Fleques de Sapareva Banya, al matí."
+        },
+        {
+          "name": "Iogurt búlgar (kiselo mlyako)",
+          "description": "El iogurt més famós del món, amb bacteri autòcton propi.",
+          "special": "El Lactobacillus bulgaricus només viu aquí.",
+          "where": "Qualsevol botiga, millor de granja local."
+        },
+        {
+          "name": "Xkembe txorbà",
+          "description": "Sopa de tripa amb all i vinagre, per a valents.",
+          "special": "El remei búlgar per excel·lència contra el cansament.",
+          "where": "Mehanes de Sapareva Banya."
+        }
+      ],
+      "phrase": {
+        "cyrillic": "Къде е пътят?",
+        "transliteration": "Kade e patyat?",
+        "catalan": "On és el camí?",
+        "when": "Si dubteu entre senders, qualsevol excursionista us orientarà."
+      },
+      "challenges": [
+        {
+          "id": "d3-c1",
+          "text": "Fotografieu els set llacs des del mirador de la carena en una sola imatge."
+        },
+        {
+          "id": "d3-c2",
+          "text": "Toqueu l'aigua gelada d'un llac glacial i aguanteu 10 segons."
+        },
+        {
+          "id": "d3-c3",
+          "text": "Trobeu una fita de pedres i afegiu-hi la vostra pedra a dalt."
+        },
+        {
+          "id": "d3-c4",
+          "text": "Saludeu amb 'zdravei' tres excursionistes búlgars pel camí."
+        },
+        {
+          "id": "d3-c5",
+          "text": "Endevineu quin llac és el Ronyó abans de llegir cap cartell."
+        }
+      ],
+      "insiderTips": [
+        "Sortiu d'hora: el telecadira obre a les 8 h i els caps de setmana hi ha cua.",
+        "Botes de muntanya, no vambes: el terreny és rocós i irregular.",
+        "Porteu capes, impermeable, crema solar i 2 litres d'aigua — no hi ha botigues al camí.",
+        "El circuit complet és de dificultat moderada: amb forma física bàsica n'hi ha prou.",
+        "Consulteu el temps: amb núvols a dalt no es veu res i és perillós."
+      ],
+      "historicalFigure": {
+        "name": "Neofit Rilski",
+        "who": "Monjo i erudit del segle XIX, pare de l'educació moderna búlgara.",
+        "why": "Va crear la primera gramàtica búlgara i va salvar la llengua sota el domini otomà.",
+        "detail": "Va traduir la Bíblia al búlgar modern i va formar generacions de mestres des del monestir de Rila."
+      },
+      "visualGuide": [
+        {
+          "name": "Circs glacials",
+          "what": "Amfiteatres de roca excavats per glaceres antigues.",
+          "why": "Expliquen com es van formar els llacs fa 10.000 anys.",
+          "detail": "Les parets corbes que abracen cada llac com un bol."
+        },
+        {
+          "name": "Flors alpines",
+          "what": "Gencianes i flors silvestres entre les roques.",
+          "why": "Espècies que només sobreviuen a gran altitud.",
+          "detail": "Els blaus intensos de les gencianes, minúscules però brillants."
+        },
+        {
+          "name": "Vistes des del telecadira",
+          "what": "Boscos i valls lliscant sota els peus.",
+          "why": "La transició del bosc a l'alta muntanya en 20 minuts.",
+          "detail": "Mireu com els pins es van fent petits amb l'altura."
+        },
+        {
+          "name": "Fites de pedres",
+          "what": "Piles de pedres que marquen el camí.",
+          "why": "GPS ancestral construït per generacions de caminants.",
+          "detail": "L'equilibri impossible d'algunes torres de pedra."
+        },
+        {
+          "name": "Refugis de muntanya",
+          "what": "Cabanyes de pedra i fusta amb dècades d'història.",
+          "why": "La cultura excursionista búlgara en estat pur.",
+          "detail": "Els interiors amb banderoles, mapes i fotos antigues."
+        },
+        {
+          "name": "Pics de granit",
+          "what": "Les crestes grises i pelades que coronen el circ.",
+          "why": "El sostre dels Balcans, esculpit pel gel.",
+          "detail": "Les formes de les roques canvien amb cada núvol que passa."
+        }
+      ]
+    },
+    "4": {
+      "destination": [
+        "Avui toca doble ració: el Parc Nacional de Pirin al matí — granit salvatge, llacs turquesa i pins mil·lenaris — i Velingrad a la tarda, la capital balneària de Bulgària, amb més aigua mineral que cap altre poble del país.",
+        "És el dia perfecte de contrastos: caminar entre pics glaçats i acabar flotant en una piscina termal. Els búlgars en saben molt, d'això de combinar muntanya i spa."
+      ],
+      "history": [
+        "Pirin duu el nom de Perun, el déu eslau del tro, que segons la llegenda vivia als seus cims. El parc és Patrimoni de la Humanitat i refugi d'ossos, llops i àligues.",
+        "Velingrad va néixer el 1948 de la fusió de tres pobles, batejada en honor de la partisana Vela Peeva. Les seves 70 fonts termals ja les feien servir romans i tracis."
+      ],
+      "highlights": [
+        {
+          "name": "Zona del refugi Banderitsa",
+          "what": "El punt de partida clàssic per endinsar-se a Pirin.",
+          "why": "Boscos, cascades i pics de granit a tocar del cotxe.",
+          "notice": "El silenci: aquí només se senten ocells i aigua."
+        },
+        {
+          "name": "Llacs Vasilaixki",
+          "what": "Un grup de llacs glacials de color turquesa intens.",
+          "why": "Dels racons més bonics i menys massificats de Pirin.",
+          "notice": "El contrast del turquesa amb el granit gris."
+        },
+        {
+          "name": "Pi de Baikuixev",
+          "what": "Un pi de Bòsnia de més de 1.300 anys.",
+          "why": "És més vell que l'estat búlgar: un avi vivent.",
+          "notice": "El tronc fa gairebé 8 metres de perímetre."
+        },
+        {
+          "name": "Fonts termals de Velingrad",
+          "what": "Desenes de fonts i piscines d'aigua mineral calenta.",
+          "why": "El millor remei possible per a tres dies de muntanya.",
+          "notice": "Cada font té temperatura i minerals diferents."
+        },
+        {
+          "name": "Font càrstica de Kleptuza",
+          "what": "Una deu enorme que brolla d'una cova i forma dos llacs.",
+          "why": "La font càrstica més cabalosa de Bulgària, amb parc i barquetes.",
+          "notice": "L'aigua transparentíssima que surt directa de la roca."
+        },
+        {
+          "name": "Pics de granit de Pirin",
+          "what": "Les agulles i crestes que dominen el parc, amb el Vihren a 2.914 m.",
+          "why": "El perfil de muntanya més dramàtic de Bulgària.",
+          "notice": "El marbre blanc d'alguns cims sembla neu tot l'any."
+        }
+      ],
+      "funFacts": [
+        "Pirin té 40.000 hectàrees i cap carretera que en travessi el cor: natura pura.",
+        "Els pins de Bòsnia són relíquies de l'era glacial.",
+        "Velingrad produeix més de 17 milions de litres d'aigua mineral al dia.",
+        "Al parc hi viuen ossos bruns, llops i àligues daurades — no els veureu, però ells a vosaltres sí.",
+        "La cova de Kleptuza té dos nivells: el de dalt sec, el de baix ple d'aigua claríssima.",
+        "El microclima de Velingrad el fa càlid a l'hivern i fresc a l'estiu.",
+        "Bansko, als peus de Pirin, és la primera estació d'esquí del país."
+      ],
+      "food": [
+        {
+          "name": "Patatnik dels Ròdope",
+          "description": "Pastís de patata ratllada amb formatge i menta, fet a la brasa.",
+          "special": "El plat estrella de la cuina de muntanya búlgara.",
+          "where": "Mehanes de Velingrad."
+        },
+        {
+          "name": "Truita de riu",
+          "description": "Truita fresca de rierols de muntanya, a la brasa.",
+          "special": "Del riu a la taula en poques hores.",
+          "where": "Restaurants vora el riu, a Velingrad."
+        },
+        {
+          "name": "Aigua mineral de Velingrad",
+          "description": "Aigua termal bevible directa de les fonts públiques.",
+          "special": "Cada font té la seva 'personalitat' mineral.",
+          "where": "Fonts públiques del centre."
+        },
+        {
+          "name": "Kurabiiki",
+          "description": "Galetes de mantega tradicionals, senzilles i addictives.",
+          "special": "Perfectes amb el cafè de mitja tarda.",
+          "where": "Pastisseries de Velingrad."
+        }
+      ],
+      "phrase": {
+        "cyrillic": "Една бира, моля",
+        "transliteration": "Edna bira, molya",
+        "catalan": "Una cervesa, si us plau",
+        "when": "Després de la caminada, una Zagorka o Kamenitza fresca és sagrada."
+      },
+      "challenges": [
+        {
+          "id": "d4-c1",
+          "text": "Abraceu (o intenteu-ho) el pi de Baikuixev de 1.300 anys."
+        },
+        {
+          "id": "d4-c2",
+          "text": "Trobeu una pinya de pi de Bòsnia i mireu-ne les escates de prop."
+        },
+        {
+          "id": "d4-c3",
+          "text": "Tasteu l'aigua de dues fonts de Velingrad i decidiu quina és millor."
+        },
+        {
+          "id": "d4-c4",
+          "text": "Feu una foto de l'aigua turquesa de Kleptuza sense filtre."
+        },
+        {
+          "id": "d4-c5",
+          "text": "Demaneu una cervesa en búlgar sense assenyalar la carta."
+        }
+      ],
+      "insiderTips": [
+        "La ruta des de Sapareva Banya per Bansko és preciosa però lenta: compteu 2,5 hores.",
+        "Entrar a Pirin és gratis; aparcar a Banderitsa costa uns pocs leva.",
+        "Trieu hotel amb piscina termal a Velingrad: és l'experiència completa.",
+        "Kleptuza és ideal a la tarda, abans de sopar.",
+        "Porteu efectiu: molts locals petits de Velingrad no accepten targeta."
+      ],
+      "historicalFigure": {
+        "name": "Iane Sandanski",
+        "who": "Líder revolucionari que va lluitar per l'autonomia de Macedònia i Bulgària a principis del segle XX.",
+        "why": "Pirin era la seva base d'operacions: un personatge polèmic però clau dels Balcans.",
+        "detail": "Va organitzar l'aixecament d'Ilinden el 1903 des d'amagatalls en aquestes muntanyes; un pic de Pirin porta el seu nom."
+      },
+      "visualGuide": [
+        {
+          "name": "Agulles de granit",
+          "what": "Els pics esmolats i grisos de Pirin.",
+          "why": "Esculpits per glaceres, són els més dramàtics del país.",
+          "detail": "El Vihren, de marbre, brilla blanc sota el sol."
+        },
+        {
+          "name": "Llacs de circ turquesa",
+          "what": "Llacs glacials de colors impossibles.",
+          "why": "El color ve dels minerals en suspensió de la roca.",
+          "detail": "Mireu-los des de dalt: el turquesa s'intensifica."
+        },
+        {
+          "name": "Pins mil·lenaris",
+          "what": "Pins de Bòsnia retorçats i venerables.",
+          "why": "Supervivents de l'era glacial, més vells que regnes sencers.",
+          "detail": "L'escorça del pi de Baikuixev, clivellada com pell d'elefant."
+        },
+        {
+          "name": "Vapor de les fonts",
+          "what": "Columnes de vapor sortint de l'aigua termal de Velingrad.",
+          "why": "El senyal visible de l'energia geotèrmica del subsòl.",
+          "detail": "A primera hora del matí el vapor és més espès i fotogènic."
+        },
+        {
+          "name": "Aigua càrstica de Kleptuza",
+          "what": "L'aigua ultratransparent que brolla de la cova.",
+          "why": "Filtrada per quilòmetres de roca calcària.",
+          "detail": "Els reflexos verds dels arbres sobre l'aigua quieta."
+        },
+        {
+          "name": "Arquitectura dels Ròdope",
+          "what": "Cases de pedra i fusta amb teulades de lloses.",
+          "why": "L'estil constructiu únic de les muntanyes del sud.",
+          "detail": "Les teulades de pedra pesen tones i duren segles."
+        }
+      ]
+    },
+    "5": {
+      "destination": [
+        "Plovdiv és més antiga que Roma, Atenes i Constantinoble: 8.000 anys d'història sense interrupció. Teatre romà, casc antic del Renaixement búlgar i el barri de Kapana, ple de galeries, cerveseries i vida.",
+        "De camí des de Velingrad, tres parades pels Ròdope: el poblet de Xiroka Laka, el monestir de Batxkovo i la fortalesa d'Assen penjada sobre el congost. Un dia rodó."
+      ],
+      "history": [
+        "Filip II de Macedònia, pare d'Alexandre el Gran, va conquerir la ciutat el 342 aC i li va posar Filipòpolis. Els romans hi van construir teatre, estadi i fòrum: encara s'hi passeja per sobre.",
+        "Al segle XIX, Plovdiv va liderar el Renaixement búlgar: les cases de colors del casc antic ho proclamen. El 2019 va ser Capital Europea de la Cultura, amb Kapana com a epicentre."
+      ],
+      "highlights": [
+        {
+          "name": "Teatre romà de Filipòpolis",
+          "what": "Un teatre del segle I esplèndidament conservat, amb vistes als Ròdope.",
+          "why": "Encara s'hi fan concerts i òpera: 2.000 anys en actiu.",
+          "notice": "Els noms dels barris de la ciutat gravats als seients."
+        },
+        {
+          "name": "Barri de Kapana",
+          "what": "'La trampa': carrerons plens de galeries, bars i tallers.",
+          "why": "El barri creatiu més vibrant de Bulgària.",
+          "notice": "Els murals nous que apareixen cada mes a les parets."
+        },
+        {
+          "name": "Casc antic (Staria Grad)",
+          "what": "Cases senyorials de colors del segle XIX sobre carrers empedrats.",
+          "why": "El Renaixement búlgar en versió museu a l'aire lliure.",
+          "notice": "Els pisos superiors sobresurten sobre el carrer: era per pagar menys impostos."
+        },
+        {
+          "name": "Estadi romà",
+          "what": "Restes d'un estadi de 30.000 espectadors sota el carrer principal.",
+          "why": "Mireu cap avall des de la plaça i veureu l'antiguitat sota la ciutat moderna.",
+          "notice": "La maqueta que mostra la mida real de l'estadi sencer."
+        },
+        {
+          "name": "Nebet Tepe",
+          "what": "El turó amb ruïnes tràcies i la millor panoràmica de Plovdiv.",
+          "why": "Aquí va començar tot fa 8.000 anys.",
+          "notice": "El capvespre des d'aquí és ritual local obligat."
+        },
+        {
+          "name": "Mesquita Djumaia",
+          "what": "Mesquita otomana del segle XIV al bell mig del centre.",
+          "why": "Convivència de segles en un sol edifici, encara en ús.",
+          "notice": "Al cafè adjacent fan dolços turcs excel·lents."
+        },
+        {
+          "name": "Parades dels Ròdope",
+          "what": "Xiroka Laka, el monestir de Batxkovo i la fortalesa d'Assen.",
+          "why": "Tres joies de muntanya de camí a Plovdiv.",
+          "notice": "L'esglesiola de la fortalesa penjada sobre el precipici."
+        }
+      ],
+      "funFacts": [
+        "Plovdiv té set turons com Roma... però només en queden sis: un el van desfer per fer llambordes.",
+        "L'estadi romà tenia capacitat per a 30.000 persones.",
+        "Kapana vol dir 'la trampa': un cop hi entres, no en vols sortir.",
+        "La ciutat s'ha dit Filipòpolis, Trimontium, Filibe i Paldin abans de Plovdiv.",
+        "El carrer per a vianants del centre és dels més llargs d'Europa: 1,8 km.",
+        "Cada any fan òpera al teatre antic, amb acústica de fa 2.000 anys.",
+        "La torre del rellotge del casc antic funciona des del 1883."
+      ],
+      "food": [
+        {
+          "name": "Kapamà",
+          "description": "Guisat de carns, arròs i xucrut cuit hores en olla de fang.",
+          "special": "El plat d'hivern més estimat de la regió.",
+          "where": "Restaurants tradicionals del casc antic."
+        },
+        {
+          "name": "Cervesa artesana de Plovdiv",
+          "description": "L'escena craft més potent de Bulgària.",
+          "special": "Kapana és el paradís de les cerveseries independents.",
+          "where": "Bars de Kapana."
+        },
+        {
+          "name": "Guiuvetx",
+          "description": "Estofat de verdures i carn al forn en cassola de fang.",
+          "special": "El nom ve de la cassola mateixa.",
+          "where": "Mehanes de tota la ciutat."
+        },
+        {
+          "name": "Baklava",
+          "description": "Dolç de pasta fil·lo, nous i mel, herència otomana.",
+          "special": "A Plovdiv en fan de les millors del país.",
+          "where": "Cafè de la mesquita Djumaia."
+        }
+      ],
+      "phrase": {
+        "cyrillic": "Колко струва?",
+        "transliteration": "Kolko struva?",
+        "catalan": "Quant costa?",
+        "when": "Imprescindible a mercats i botigues de records."
+      },
+      "challenges": [
+        {
+          "id": "d5-c1",
+          "text": "Seieu al teatre romà i xiuxiuegeu: comproveu si l'acústica és tan bona com diuen."
+        },
+        {
+          "id": "d5-c2",
+          "text": "Trobeu el mural més gran de Kapana i feu-vos-hi una foto."
+        },
+        {
+          "id": "d5-c3",
+          "text": "Pugeu a Nebet Tepe per veure el capvespre com els locals."
+        },
+        {
+          "id": "d5-c4",
+          "text": "Compteu quants colors de façanes diferents veieu al casc antic."
+        },
+        {
+          "id": "d5-c5",
+          "text": "Pregunteu 'kolko struva?' en una botiga i acabeu la compra en búlgar."
+        }
+      ],
+      "insiderTips": [
+        "Aparqueu fora del casc antic: és zona de vianants i aparcar és un malson.",
+        "El teatre es veu parcialment gratis des del turó de sobre.",
+        "Kapana revifa a partir de les 18 h: reserveu-hi el sopar.",
+        "Plovdiv es fa tota a peu: oblideu els taxis pel centre.",
+        "De camí, atureu-vos 10 minuts al mirador de la fortalesa d'Assen."
+      ],
+      "historicalFigure": {
+        "name": "Filip II de Macedònia",
+        "who": "Rei de Macedònia i pare d'Alexandre el Gran; va conquerir la ciutat el 342 aC.",
+        "why": "Va veure el potencial d'aquest turó traci i el seu nom, Filipòpolis, va durar segles.",
+        "detail": "Les seves reformes militars van preparar l'imperi d'Alexandre; el teatre el van construir els romans que van venir després."
+      },
+      "visualGuide": [
+        {
+          "name": "Façanes del Renaixement búlgar",
+          "what": "Cases de colors amb pisos que sobresurten al casc antic.",
+          "why": "Símbol de l'orgull nacional del segle XIX.",
+          "detail": "Els frescos i sanefes pintats sota els ràfecs."
+        },
+        {
+          "name": "Marbre romà",
+          "what": "Columnes, seients i inscripcions de fa 2.000 anys.",
+          "why": "Plovdiv camina literalment sobre l'imperi romà.",
+          "detail": "Busqueu lletres gregues gravades als seients del teatre."
+        },
+        {
+          "name": "Art urbà de Kapana",
+          "what": "Murals i grafits a cada cantonada del barri.",
+          "why": "L'energia creativa que va valer la capitalitat cultural del 2019.",
+          "detail": "Molts murals amaguen referències a la història de la ciutat."
+        },
+        {
+          "name": "Carrerons empedrats",
+          "what": "Llambordes polides per segles de passes al casc antic.",
+          "why": "Les mateixes pedres que trepitjaven mercaders otomans.",
+          "detail": "Amb pluja brillen i reflecteixen les cases de colors."
+        },
+        {
+          "name": "Perfil de minarets i cúpules",
+          "what": "Mesquita, esglésies i teulades barrejades a l'horitzó.",
+          "why": "Resum visual de totes les cultures que hi han passat.",
+          "detail": "Des de Nebet Tepe es distingeixen totes les èpoques alhora."
+        },
+        {
+          "name": "Turons i vall",
+          "what": "Els sis turons de sienita sobresortint de la plana tràcia.",
+          "why": "Han decidit la forma de la ciutat durant mil·lennis.",
+          "detail": "Cada turó té nom propi: pregunteu-los a un local."
+        }
+      ]
+    },
+    "6": {
+      "destination": [
+        "Mar a la vista! Nessebar és una península minúscula al mar Negre plena de ruïnes d'esglésies medievals i cases de fusta sobre pedra: Patrimoni de la Humanitat sencer, unit a terra ferma per un istme estret.",
+        "Al costat mateix hi ha Sunny Beach, la platja festera més gran de Bulgària. La combinació és surrealista: basíliques bizantines a 10 minuts dels beach bars. Avui, banyada i posta de sol al port."
+      ],
+      "history": [
+        "Va començar com la Mesambria tràcia fa 3.000 anys, després colònia grega amb moneda pròpia, després port bizantí clau. Cada imperi hi va deixar esglésies: n'hi va haver més de 40.",
+        "A l'edat mitjana, Nessebar era moneda de canvi entre Bizanci i Bulgària: va canviar de mans un munt de vegades. Les seves esglésies de maó i ceràmica són úniques al món."
+      ],
+      "highlights": [
+        {
+          "name": "Església de Santa Sofia",
+          "what": "Basílica bizantina del segle V a cel obert, al cor del poble antic.",
+          "why": "Ruïnes majestuoses on abans hi havia la seu del bisbe.",
+          "notice": "Els arcs aguanten drets des de fa 1.500 anys."
+        },
+        {
+          "name": "Església de Crist Pantocràtor",
+          "what": "Església medieval de maó vermell amb decoració ceràmica.",
+          "why": "L'exemple més ben conservat de l'estil únic de Nessebar.",
+          "notice": "Les esvàstiques a la façana: símbol solar antic, molt anterior al segle XX."
+        },
+        {
+          "name": "Carrerons del poble antic",
+          "what": "Laberint de carrers empedrats amb cases de fusta del XIX.",
+          "why": "Perdre-s'hi és el millor pla del dia.",
+          "notice": "Les figueres i parres sortint dels patis de les cases."
+        },
+        {
+          "name": "Platja sud de Nessebar",
+          "what": "La platja tranquil·la a tocar del poble antic.",
+          "why": "Aigua calmada i vistes de la península mentre feu el gandul.",
+          "notice": "L'aigua del mar Negre és menys salada del que espereu."
+        },
+        {
+          "name": "El molí de vent",
+          "what": "Un molí de fusta al mig de l'istme d'entrada.",
+          "why": "El comitè de benvinguda més fotografiat del mar Negre.",
+          "notice": "Millor llum al capvespre, amb el poble al fons."
+        },
+        {
+          "name": "Museu Arqueològic",
+          "what": "Tresors tracis, grecs i bizantins de la península.",
+          "why": "3.000 anys d'història en mitja horeta ben aprofitada.",
+          "notice": "Les àncores de pedra antigues trobades al fons del mar."
+        },
+        {
+          "name": "Passeig del port al capvespre",
+          "what": "El moll amb barques de pescadors i llum daurada.",
+          "why": "El final de dia perfecte, amb gavines i xarxes esteses.",
+          "notice": "Els pescadors reparant xarxes com fa cent anys."
+        }
+      ],
+      "funFacts": [
+        "La península fa només 850 per 350 metres: es recorre en 20 minuts, però hi voldreu passar hores.",
+        "El mar Negre gairebé no té marees i és menys salat que el Mediterrani.",
+        "De les més de 40 esglésies que hi havia, en queden una dotzena.",
+        "Sunny Beach, aquí al costat, té més de 800 hotels.",
+        "El nom ve del traci 'Melsambria': 'ciutat de Melsas'.",
+        "Les platges búlgares són de les més barates d'Europa: gandula, para-sol i cervesa per menys de 10 euros."
+      ],
+      "food": [
+        {
+          "name": "Llobarro a la brasa",
+          "description": "Peix fresc del mar Negre amb llimona i herbes.",
+          "special": "Del port a la graella en el mateix dia.",
+          "where": "Restaurants amb vista al mar del poble antic."
+        },
+        {
+          "name": "Musclos al vi blanc",
+          "description": "Musclos del mar Negre cuits amb all i vi.",
+          "special": "Els crien aquí mateix, a la costa.",
+          "where": "Terrasses del port de Nessebar."
+        },
+        {
+          "name": "Rosat búlgar",
+          "description": "Vi rosat local, fresc i sorprenentment bo.",
+          "special": "Bulgària és terra de vins des dels tracis.",
+          "where": "Qualsevol terrassa amb posta de sol."
+        },
+        {
+          "name": "Tarator fresc",
+          "description": "La sopa freda de iogurt, ideal amb calor de platja.",
+          "special": "La versió costanera porta més anet.",
+          "where": "Restaurants del poble antic."
+        }
+      ],
+      "phrase": {
+        "cyrillic": "Още една, моля",
+        "transliteration": "Oshte edna, molya",
+        "catalan": "Una altra, si us plau",
+        "when": "Per a cerveses, cafès o qualsevol ronda: a la costa la fareu servir molt."
+      },
+      "challenges": [
+        {
+          "id": "d6-c1",
+          "text": "Compteu quantes esglésies (senceres o en ruïnes) trobeu passejant."
+        },
+        {
+          "id": "d6-c2",
+          "text": "Trobeu el símbol solar a la façana del Pantocràtor."
+        },
+        {
+          "id": "d6-c3",
+          "text": "Banyeu-vos al mar Negre i comproveu si flota més o menys que el Mediterrani."
+        },
+        {
+          "id": "d6-c4",
+          "text": "Fotografieu el molí de vent sense cap turista al quadre."
+        },
+        {
+          "id": "d6-c5",
+          "text": "Demaneu 'oshte edna' en una terrassa mirant la posta de sol."
+        }
+      ],
+      "insiderTips": [
+        "Aparqueu a la banda de terra ferma: dins el poble antic és car i escàs.",
+        "Visiteu les esglésies a primera hora o a última per esquivar els grups.",
+        "Sunny Beach és festa pura; si no és el vostre rotllo, quedeu-vos al poble antic.",
+        "La platja sud de la península és molt més tranquil·la que Sunny Beach.",
+        "Dormir dins el nucli antic val la pena: despertar-se entre muralles no té preu."
+      ],
+      "historicalFigure": {
+        "name": "Sant Nicolau de Nessebar",
+        "who": "Bisbe medieval que va consolidar Nessebar com a centre de l'ortodòxia.",
+        "why": "L'herència cristiana profunda del poble ve de figures com ell.",
+        "detail": "Nessebar era seu episcopal: les esglésies eren declaracions d'identitat cultural sota dominis estrangers."
+      },
+      "visualGuide": [
+        {
+          "name": "Maons de les esglésies medievals",
+          "what": "Franges de maó vermell i pedra blanca amb ceràmica verda.",
+          "why": "L'estil 'pintoresc' de Nessebar no existeix enlloc més.",
+          "detail": "Els discos de ceràmica vidriada encastats a les façanes."
+        },
+        {
+          "name": "Cases de fusta sobre pedra",
+          "what": "Planta baixa de pedra i pis superior de fusta que sobresurt.",
+          "why": "Arquitectura tradicional del mar Negre del segle XIX.",
+          "detail": "Les bigues tortes que aguanten els voladissos."
+        },
+        {
+          "name": "El color del mar Negre",
+          "what": "Un blau més fosc i profund que el Mediterrani.",
+          "why": "El nom no és casual: amb tempesta es torna gairebé negre.",
+          "detail": "Compareu el color al matí i al capvespre: canvia del tot."
+        },
+        {
+          "name": "El molí de vent",
+          "what": "El molí de fusta solitari a l'istme.",
+          "why": "L'única porta d'entrada al poble des de fa segles.",
+          "detail": "Les aspes i la pedra de la base, gastades pel vent salat."
+        },
+        {
+          "name": "Ruïnes d'esglésies",
+          "what": "Arcs i murs oberts al cel per tota la península.",
+          "why": "Cada ruïna és d'un segle i un imperi diferents.",
+          "detail": "Els nius de gavines dalt dels murs mil·lenaris."
+        },
+        {
+          "name": "Xarxes i barques",
+          "what": "Barques de pescadors de colors i xarxes esteses al port.",
+          "why": "Nessebar encara viu del mar, com fa 3.000 anys.",
+          "detail": "Els noms de les barques pintats a mà en ciríl·lic."
+        }
+      ]
+    },
+    "7": {
+      "destination": [
+        "Últim matí a Nessebar: aprofiteu la llum de l'alba amb els carrers buits, que és quan el poble és realment vostre. Després, ruta costanera cap al nord amb parada al cap Emine, el punt on la serralada dels Balcans mor al mar.",
+        "Destinació final: Varna, la capital marítima de Bulgària. Ciutat gran, jardí vora el mar, termes romanes i un museu amb l'or més antic del món. Final de trajecte per tot el alt."
+      ],
+      "history": [
+        "El 1972, una excavadora prop de Varna va destapar una necròpolis amb més de 3.000 peces d'or de fa 6.500 anys: l'or treballat més antic de la humanitat, anterior a Egipte i Mesopotàmia.",
+        "Varna va ser l'Odessos grec, després gran port romà amb termes per a 3.000 banyistes. Avui és la tercera ciutat del país i la seva finestra al mar."
+      ],
+      "highlights": [
+        {
+          "name": "Nessebar a l'alba",
+          "what": "El poble antic buit, amb llum daurada i gavines.",
+          "why": "L'única hora del dia que el tindreu per a vosaltres sols.",
+          "notice": "La llum del matí sobre els maons vermells de les esglésies."
+        },
+        {
+          "name": "Cap Emine",
+          "what": "El penya-segat on la serralada dels Balcans es troba amb el mar.",
+          "why": "530 km de muntanyes acaben exactament aquí: un lloc amb força.",
+          "notice": "El far i les vistes infinites de la costa en dues direccions."
+        },
+        {
+          "name": "Museu Arqueològic de Varna",
+          "what": "La casa del tresor d'or de Varna, de fa 6.500 anys.",
+          "why": "L'or treballat més antic del món: més vell que Stonehenge.",
+          "notice": "L'enterrament amb el cetre: el primer 'rei' de la història?"
+        },
+        {
+          "name": "Termes romanes",
+          "what": "Les ruïnes dels banys públics romans més grans dels Balcans.",
+          "why": "S'hi banyaven 3.000 persones alhora: xarxa social de l'antiguitat.",
+          "notice": "Les restes del sistema de calefacció sota els terres."
+        },
+        {
+          "name": "Jardí del Mar (Morska Gradina)",
+          "what": "Un parc immens del segle XIX estès al llarg de la costa.",
+          "why": "El passeig marítim més estimat de Bulgària.",
+          "notice": "Les fonts, els monuments i la barreja de locals de totes les edats."
+        },
+        {
+          "name": "Ruta costanera",
+          "what": "La carretera panoràmica de Nessebar a Varna.",
+          "why": "Penya-segats, cales i poblets de pescadors tot el camí.",
+          "notice": "Els camps de gira-sols entre el mar i les muntanyes."
+        },
+        {
+          "name": "Platja de Varna al capvespre",
+          "what": "L'última posta de sol del viatge, des de la sorra o un beach bar.",
+          "why": "El comiat perfecte de la costa búlgara.",
+          "notice": "Els vaixells de la marina búlgara a l'horitzó del port."
+        }
+      ],
+      "funFacts": [
+        "El tresor d'or de Varna té 6.500 anys: més antic que els sumeris i que Stonehenge.",
+        "El cap Emine és el quilòmetre final dels Balcans: 530 km de serralada des de Sèrbia.",
+        "Les termes romanes de Varna tenien lloc per a 3.000 banyistes alhora.",
+        "El Jardí del Mar el va dissenyar el paisatgista txec Anton Novák al segle XIX.",
+        "Varna acull el quarter general de la marina búlgara: veureu vaixells de guerra al port.",
+        "La costa búlgara del mar Negre fa 378 km — aquesta setmana n'heu vist un bon tros."
+      ],
+      "food": [
+        {
+          "name": "Esmorzar vora el mar",
+          "description": "Cafè, banitsa i vistes al mar Negre per començar el dia.",
+          "special": "L'últim esmorzar búlgar mereix escenari.",
+          "where": "Cafès del port de Nessebar o de Varna."
+        },
+        {
+          "name": "Tsatsa (peixet fregit)",
+          "description": "Amploies fregides cruixents, per menjar amb els dits.",
+          "special": "L'aperitiu de platja búlgar per excel·lència.",
+          "where": "Xiringuitos i bars de platja de Varna."
+        },
+        {
+          "name": "Safata de marisc",
+          "description": "Musclos, gambes i peix del dia del mar Negre.",
+          "special": "El festí de comiat que us mereixeu.",
+          "where": "Restaurants del Jardí del Mar."
+        },
+        {
+          "name": "Pastís Garash",
+          "description": "Pastís de xocolata i nous inventat a Bulgària al segle XIX.",
+          "special": "El dolç més famós del país, i és de Varna... més o menys.",
+          "where": "Pastisseries clàssiques del centre de Varna."
+        }
+      ],
+      "phrase": {
+        "cyrillic": "Довиждане",
+        "transliteration": "Dovizhdane",
+        "catalan": "Adeu (fins que ens retrobem)",
+        "when": "La paraula de comiat per a tothom que us hagi fet el viatge memorable."
+      },
+      "challenges": [
+        {
+          "id": "d7-c1",
+          "text": "Feu una foto de Nessebar abans de les 8 del matí, sense cap turista."
+        },
+        {
+          "id": "d7-c2",
+          "text": "Al cap Emine, mireu la costa en les dues direccions: nord i sud."
+        },
+        {
+          "id": "d7-c3",
+          "text": "Trobeu la peça d'or més antiga del museu de Varna i mireu-ne la data."
+        },
+        {
+          "id": "d7-c4",
+          "text": "Camineu descalços per la sorra de Varna com a comiat del mar Negre."
+        },
+        {
+          "id": "d7-c5",
+          "text": "Digueu 'dovizhdane' a l'últim cambrer del viatge."
+        }
+      ],
+      "insiderTips": [
+        "Sortiu de Nessebar cap a les 9 h per tenir temps de cap Emine i tarda sencera a Varna.",
+        "El desviament al cap Emine afegeix una hora: si aneu justos, la costa ja és prou bonica.",
+        "El Museu Arqueològic de Varna és imprescindible — no el canvieu per platja.",
+        "Aparcar a Varna és fàcil: hi ha un pàrquing al costat de les termes romanes.",
+        "Si voleu de l'aeroport de Varna (VAR), és a 15 minuts del centre."
+      ],
+      "historicalFigure": {
+        "name": "Els orfebres de Varna",
+        "who": "Artesans desconeguts de la cultura de Varna (4600 aC) que van crear l'or treballat més antic del món.",
+        "why": "Demostren que hi havia civilització sofisticada al mar Negre mil·lennis abans de les piràmides.",
+        "detail": "Les 3.000 peces trobades el 1972 usen tècniques de forja i filigrana que no es van igualar fins molt després."
+      },
+      "visualGuide": [
+        {
+          "name": "L'or de Varna",
+          "what": "Braçalets, cetres i plaques d'or de fa 6.500 anys.",
+          "why": "L'objecte d'or més antic mai treballat per humans.",
+          "detail": "La brillantor intacta: l'or no envelleix mai."
+        },
+        {
+          "name": "Columnes de les termes",
+          "what": "Murs i arcs romans gegants al mig de la ciutat moderna.",
+          "why": "Els banys públics més grans dels Balcans.",
+          "detail": "Els conductes de calefacció visibles entre els fonaments."
+        },
+        {
+          "name": "Penya-segats del cap Emine",
+          "what": "Roca abrupta caient al mar on acaben els Balcans.",
+          "why": "El final geològic d'una serralada de 530 km.",
+          "detail": "Les capes de roca inclinades que s'enfonsen a l'aigua."
+        },
+        {
+          "name": "Fonts del Jardí del Mar",
+          "what": "Fonts i parterres del gran parc costaner de Varna.",
+          "why": "Elegància del segle XIX vora el mar.",
+          "detail": "Els plàtans centenaris que fan voltes de les avingudes."
+        },
+        {
+          "name": "Colors de pobles pescadors",
+          "what": "Cases i barques de colors vius per la ruta costanera.",
+          "why": "La vida marinera autèntica lluny dels resorts.",
+          "detail": "Les boies i xarxes penjades als patis de les cases."
+        },
+        {
+          "name": "Boira matinal sobre Nessebar",
+          "what": "La calitja que embolcalla la península a primera hora.",
+          "why": "L'última imatge màgica del poble antic.",
+          "detail": "Les cúpules i teulades emergint del vapor del mar."
+        }
+      ]
+    },
+    "8": {
+      "destination": [
+        "Benvinguts a Varna, la reina del mar Negre! Després de dies de muntanyes i pobles antics, aquí tens cultura al matí i banyada al migdia. Cúpules daurades, termes romanes i l'or treballat més antic del món, tot a un pas de la platja.",
+        "Comença pel Jardí del Mar, un parc costaner que no s'acaba mai: palmeres, escultures curioses i el so de les onades darrere els arbres. Compra un gelat, perd la noció del temps i gaudeix."
+      ],
+      "history": [
+        "Varna va néixer com Odessos, colònia grega del segle VI aC. Els romans en van fer un gran port i hi van construir unes termes enormes que encara pots trepitjar avui, de les més grans dels Balcans.",
+        "El 1972, una excavadora va destapar per accident la Necròpolis de Varna: més de 6.000 peces d'or de fa 6.600 anys. Aquell dia es va reescriure la prehistòria europea, i tot és al museu del centre."
+      ],
+      "highlights": [
+        {
+          "name": "Jardí del Mar (Morska Gradina)",
+          "what": "Parc costaner de quilòmetres amb fonts, teatre a l'aire lliure i mil racons.",
+          "why": "És el menjador de Varna: aquí entendràs per què la ciutat és tan relaxada.",
+          "notice": "És enorme: lloga una bici o patinet a l'entrada principal."
+        },
+        {
+          "name": "Catedral de la Dormició",
+          "what": "La catedral ortodoxa de cúpules daurades que domina la ciutat.",
+          "why": "És LA postal de Varna, i l'interior pintat impressiona.",
+          "notice": "Espatlles i genolls tapats; compte amb les fotos durant les misses."
+        },
+        {
+          "name": "Termes romanes",
+          "what": "Ruïnes d'uns banys romans del segle IV amb el sistema de calefacció visible.",
+          "why": "Passejar per una sauna de fa 1.700 anys és surrealista.",
+          "notice": "Tanquen cap a les 17h: vine-hi al matí, abans de la catedral."
+        },
+        {
+          "name": "Museu Arqueològic",
+          "what": "La casa de l'Or de Varna: milers de peces prehistòriques d'or.",
+          "why": "Ets a un pam de joies fetes fa 6.600 anys, abans que les piràmides.",
+          "notice": "Reserva 90 minuts; la sala de l'or és a l'última planta."
+        },
+        {
+          "name": "Platja de Varna",
+          "what": "La platja urbana de sorra daurada, a dos passos del centre.",
+          "why": "Catedral, termes i or prehistòric al matí, i banyada a la tarda. On més?",
+          "notice": "A l'agost hi ha gentada; els matins són més tranquils."
+        },
+        {
+          "name": "Passeig del port",
+          "what": "Passarel·la de vianants amb vistes a la badia, els iots i la costa.",
+          "why": "A l'hora daurada, les cúpules brillen des de l'altra banda de la badia.",
+          "notice": "Al vespre s'aixeca vent: porta una jaqueta fina."
+        },
+        {
+          "name": "Monestir d'Aladzha",
+          "what": "Monestir medieval excavat en un penya-segat, a 15 km al nord.",
+          "why": "Si et sobra temps amb cotxe, sembla un capítol secret de Bulgària.",
+          "notice": "Compta 1-2 hores en total; hi ha força escales."
+        }
+      ],
+      "funFacts": [
+        "L'Or de Varna és més antic que les piràmides d'Egipte i que Stonehenge.",
+        "La ciutat es va dir Stalin entre 1949 i 1956, abans de recuperar el nom.",
+        "Les termes romanes podien acollir centenars de banyistes alhora: un spa de luxe antic.",
+        "El mar Negre és menys salat que el Mediterrani, però flotar hi és sorprenentment fàcil.",
+        "L'or més antic del món el va destapar una excavadora per accident el 1972.",
+        "Varna acull un dels concursos de ballet més prestigiosos del món.",
+        "Els locals tracten el Jardí del Mar com el pati de casa seva."
+      ],
+      "food": [
+        {
+          "name": "Tarator",
+          "description": "Sopa freda de iogurt amb cogombre, all, anet i nous.",
+          "special": "El gaspatxo búlgar: perfecte amb la calor d'agost.",
+          "where": "Qualsevol mehana amb terrassa prop del Jardí del Mar."
+        },
+        {
+          "name": "Mussaka",
+          "description": "Gratinat de carn picada i patata amb ou per sobre, versió búlgara.",
+          "special": "La patata la fa més contundent que la grega: pura cuina de consol.",
+          "where": "Restaurants del carrer Knyaz Boris I, al centre."
+        },
+        {
+          "name": "Tsatsa",
+          "description": "Peixets fregits que es mengen sencers amb un raig de llimona.",
+          "special": "El pica-pica de platja per excel·lència, amb cervesa freda.",
+          "where": "Bars de platja o xiringuitos prop del port."
+        },
+        {
+          "name": "Palachinki",
+          "description": "Creps fines farcides de melmelada, xocolata o formatge dolç.",
+          "special": "El berenar oficial: compra'n una pila i comparteix-la en un banc.",
+          "where": "Paradetes dins del Jardí del Mar."
+        }
+      ],
+      "phrase": {
+        "cyrillic": "Колко струва?",
+        "transliteration": "Kolko struva?",
+        "catalan": "Quant costa?",
+        "when": "Als mercats, venedors de platja o quan el menú no porta preus."
+      },
+      "challenges": [
+        {
+          "id": "d8-c1",
+          "text": "Troba l'escultura del rellotge de sol al Jardí del Mar i fes-hi una foto."
+        },
+        {
+          "id": "d8-c2",
+          "text": "Localitza la Tomba 43 al museu i compta quantes peces d'or hi veus."
+        },
+        {
+          "id": "d8-c3",
+          "text": "Flota d'esquena al mar Negre sense moure't durant 30 segons."
+        },
+        {
+          "id": "d8-c4",
+          "text": "Demana el preu d'alguna cosa en búlgar: 'Kolko struva?'"
+        },
+        {
+          "id": "d8-c5",
+          "text": "Troba el pilar d'hipocaust més alt de les termes romanes."
+        }
+      ],
+      "insiderTips": [
+        "Lloga una bici a l'entrada del Jardí del Mar: cobriràs el triple de terreny.",
+        "Pregunta al museu si hi ha entrada combinada per estalviar.",
+        "La platja pública gratuïta és just al sud del parc: passa de les gandules de pagament.",
+        "Els restaurants de platja són cars: camina dues illes cap a dins i menjaràs millor.",
+        "A l'agost l'aigua és al punt més càlid de l'any: la banyada no es negocia."
+      ],
+      "historicalFigure": {
+        "name": "L'orfebre de Varna (desconegut)",
+        "who": "Un mestre artesà anònim de fa 6.600 anys, autor del tresor d'or més antic del món.",
+        "why": "Les seves joies demostren que aquí hi havia una societat sofisticada mil·lennis abans de l'escriptura.",
+        "detail": "En només 300 tombes hi havia més de 6 kg d'or, amb tècniques que es creien impossibles per a l'època."
+      },
+      "visualGuide": [
+        {
+          "name": "Cúpules daurades",
+          "what": "Les cinc cúpules de la catedral brillant al sol.",
+          "why": "Són el far visual de la ciutat: t'orienten des de gairebé qualsevol punt.",
+          "detail": "A última hora de la tarda passen de daurat a ambre."
+        },
+        {
+          "name": "Passeig central del parc",
+          "what": "L'avinguda arbrada paral·lela a la costa, amb bancs i vistes al mar.",
+          "why": "És el ritme de Varna: entendre el parc és entendre la ciutat.",
+          "detail": "Busca el rellotge de sol i l'antic edifici del casino."
+        },
+        {
+          "name": "Hipocaust romà",
+          "what": "Els pilars que aixecaven el terra de les termes per fer-hi circular aire calent.",
+          "why": "És el moment 'aha' de l'enginyeria romana.",
+          "detail": "Posa't al caldarium i imagina el vapor pujant."
+        },
+        {
+          "name": "Tomba 43",
+          "what": "L'enterrament estrella del museu, amb més d'1,5 kg d'ornaments d'or.",
+          "why": "Aquesta sola tomba va reescriure la prehistòria europea.",
+          "detail": "Fixa't en el ceptre i els petits toros d'or: són icònics."
+        },
+        {
+          "name": "Horitzó del mar Negre",
+          "what": "El mar obert des de la platja, amb la corba de la badia.",
+          "why": "Portes dies terra endins: aquest és el moment que el viatge s'obre al mar.",
+          "detail": "La llum del matí és més suau; a la tarda el blau és més intens."
+        },
+        {
+          "name": "Carrers del casc antic",
+          "what": "Carrerons entre la catedral i les termes, amb edificis del segle XIX.",
+          "why": "Aquí es nota el pols quotidià de la ciutat, lluny dels monuments.",
+          "detail": "Passeja pel carrer Han Krum, tranquil i ple de detalls."
+        }
+      ]
+    },
+    "9": {
+      "destination": [
+        "Avui canvies el mar pel congost del riu Iantra i una de les ciutats més espectaculars de l'est d'Europa. Veliko Tarnovo, la 'ciutat dels tsars', va ser la capital medieval de Bulgària i encara sembla treta d'un mapa de fantasia.",
+        "El trajecte ja és aventura: parada al Cavaller de Madara, un genet tallat a la roca al segle VIII. A la tarda, fortalesa de Tsarevets, carrers d'artesans i miradors on la ciutat cau en cascada de teulades vermelles. Avui la càmera treballa."
+      ],
+      "history": [
+        "Veliko Tarnovo va ser capital del Segon Imperi Búlgar des del 1185, quan els germans Asen es van revoltar contra Bizanci. Durant dos segles va ser el cor polític i cultural del país, fins que els otomans la van prendre el 1393.",
+        "El Cavaller de Madara és encara més antic: un relleu del segle VIII, únic a l'Europa medieval, i avui emblema nacional. El trobaràs a monedes i segells oficials."
+      ],
+      "highlights": [
+        {
+          "name": "Cavaller de Madara",
+          "what": "Relleu de 23 metres d'un genet clavant una llança a un lleó, tallat al penya-segat.",
+          "why": "Patrimoni UNESCO i un dels monuments més misteriosos de Bulgària: ningú sap qui és.",
+          "notice": "Desviament de 15 minuts de la ruta; hi ha escales fins a la plataforma."
+        },
+        {
+          "name": "Fortalesa de Tsarevets",
+          "what": "La ciutadella medieval restaurada, amb muralles, catedral patriarcal i vistes al congost.",
+          "why": "Caminar per les muralles al capvespre és tornar a l'època dels tsars.",
+          "notice": "Sabates còmodes: molta pedra i escales. Pregunta si fan l'espectacle de llums."
+        },
+        {
+          "name": "Samovodska Charshia",
+          "what": "El carrer d'artesans del segle XIX: ceràmica, fusta, ferro i dolços tradicionals.",
+          "why": "Turístic però encantador: veus treballar els artesans i el record no és un imant.",
+          "notice": "Les botigues tanquen aviat: passa-hi abans de sopar."
+        },
+        {
+          "name": "Monument dels Asenevtsi",
+          "what": "Quatre espases gegants i estàtues de la dinastia Asen sobre el riu.",
+          "why": "Des d'aquí tens la millor panoràmica: fortalesa, riu i cases penjades.",
+          "notice": "Ves-hi a l'hora daurada; fa vent però la llum és imbatible."
+        },
+        {
+          "name": "Carrer Gurko",
+          "what": "Carreró empedrat i costerut amb cases del Renaixement búlgar penjades al vessant.",
+          "why": "El carrer més fotogènic de la ciutat: cada revolt és una postal.",
+          "notice": "Les llambordes rellisquen si plou: calçat bo i sense presses."
+        },
+        {
+          "name": "Poble d'Arbanasi",
+          "what": "Poble a 4 km amb cases fortificades del segle XVII i l'església de la Nativitat plena de frescos.",
+          "why": "Si tens temps extra, és una càpsula del temps de mercaders rics.",
+          "notice": "Curt trajecte en cotxe; l'interior de l'església és fosc però els frescos són brutals."
+        },
+        {
+          "name": "Cascada de Hotnitsa",
+          "what": "Cascada amb passarel·les de fusta per un congost verd, 20 minuts abans d'arribar.",
+          "why": "Parada perfecta per estirar les cames durant el trajecte.",
+          "notice": "El camí és fàcil però relliscós; compta 45-60 minuts."
+        }
+      ],
+      "funFacts": [
+        "El 'Veliko' (gran) es va afegir al nom el 1965 per subratllar la importància històrica.",
+        "El riu Iantra fa gairebé un cercle complet al voltant de la fortalesa: fossat natural gratuït.",
+        "El Tsarevets que veus és una reconstrucció del segle XX basada en excavacions.",
+        "Les esglésies d'Arbanasi es feien semblar graners per fora per pagar menys impostos otomans.",
+        "Els germans Asen van començar la revolta amb un casament fals per reunir seguidors.",
+        "L'espectacle de so i llum explica la història de la fortalesa amb làsers: dramàtic i una mica kitsch, en el millor sentit.",
+        "El Cavaller de Madara va ser candidat a nova meravella del món."
+      ],
+      "food": [
+        {
+          "name": "Kebapche",
+          "description": "Rotllets de carn picada a la brasa amb espècies, servits amb patates i lyutenitsa.",
+          "special": "El clàssic de la brasa búlgara: demana'l amb mostassa i cervesa freda.",
+          "where": "Mehanes del carrer Gurko amb terrassa sobre el riu."
+        },
+        {
+          "name": "Kyufte",
+          "description": "Mandonguilles especiades a la brasa, cruixents per fora i sucoses per dins.",
+          "special": "Demana un plat mixt de kyufte i kebapche, com fan els locals.",
+          "where": "Qualsevol skara (graella) del casc antic: segueix el fum."
+        },
+        {
+          "name": "Sudzhuk de Gorna Oryahovitsa",
+          "description": "Embotit curat de la zona, amb denominació protegida: fort d'all i per tallar fi.",
+          "special": "Orgull regional en un plat: demana'l d'entrant amb formatge i rakia.",
+          "where": "Restaurants tradicionals i botigues de la Samovodska Charshia."
+        },
+        {
+          "name": "Pastes de melmelada de rosa",
+          "description": "Dolços farcits de melmelada de pètals de rosa, especialitat de la regió.",
+          "special": "Floral sense ser perfum: acabades de fer són una altra cosa.",
+          "where": "Pastisseries de la Samovodska Charshia."
+        }
+      ],
+      "phrase": {
+        "cyrillic": "Къде е крепостта?",
+        "transliteration": "Kade e krepostta?",
+        "catalan": "On és la fortalesa?",
+        "when": "Perfecte per orientar-te pels carrerons: tothom sap on és Tsarevets."
+      },
+      "challenges": [
+        {
+          "id": "d9-c1",
+          "text": "Troba el gos que corre darrere el cavall al relleu de Madara."
+        },
+        {
+          "id": "d9-c2",
+          "text": "Puja a la Torre de Balduí i mira avall sense agafar-te a res (si t'atreveixes)."
+        },
+        {
+          "id": "d9-c3",
+          "text": "Compra alguna cosa feta a mà a la Samovodska Charshia que no sigui un imant."
+        },
+        {
+          "id": "d9-c4",
+          "text": "Compta les espases del monument dels Asenevtsi... des de lluny."
+        },
+        {
+          "id": "d9-c5",
+          "text": "Fes la foto del meandre del riu Iantra amb la fortalesa dins del marc."
+        }
+      ],
+      "insiderTips": [
+        "Pregunta a l'hotel per l'horari de l'espectacle de so i llum: si el fan, és inoblidable.",
+        "Para a la cascada de Hotnitsa a l'anada, no a la tornada, quan ja estaràs cansat.",
+        "Les botigues petites del carrer Gurko només accepten efectiu: porta'n.",
+        "El millor lloc per fotografiar la fortalesa és el mirador dels Asenevtsi, no la fortalesa mateixa.",
+        "Reserva sopar amb terrassa: veure la fortalesa il·luminada mentre sopes no té preu."
+      ],
+      "historicalFigure": {
+        "name": "Tsar Ivan Asen II",
+        "who": "Un dels grans governants del Segon Imperi Búlgar (1218-1241), que va portar Bulgària a la màxima extensió.",
+        "why": "El seu regnat va ser l'edat d'or de Tarnovo: comerç, esglésies i un imperi que rivalitzava amb els veïns.",
+        "detail": "Va fer gravar en una columna que havia conquerit 'de l'Adriàtic al mar Negre', i durant un temps va ser veritat."
+      },
+      "visualGuide": [
+        {
+          "name": "Muralles de Tsarevets",
+          "what": "Les muralles de pedra que coronen el turó, visibles des de tota la ciutat.",
+          "why": "Són el teu punt d'orientació: mira amunt i sempre les veuràs.",
+          "detail": "De nit s'il·luminen; de dia, puja fins a les ruïnes de la catedral patriarcal."
+        },
+        {
+          "name": "Meandre del Iantra",
+          "what": "La corba de ferradura del riu abraçant el turó de la fortalesa.",
+          "why": "La geografia explica per què això era la capital: defensa natural per tres costats.",
+          "detail": "La boira matinal al congost és màgica."
+        },
+        {
+          "name": "Cases del Renaixement búlgar",
+          "what": "Cases del segle XIX amb pisos superiors sortints i balcons de fusta al carrer Gurko.",
+          "why": "Els voladissos eren un truc fiscal: només es pagava per la planta baixa.",
+          "detail": "Fixa't en els colors i els finestrals: moltes són ara cafès i cases d'hostes."
+        },
+        {
+          "name": "Torre de Balduí",
+          "what": "Torre reconstruïda a la punta nord de la fortalesa, amb precipicis a banda i banda.",
+          "why": "És el punt més dramàtic de les muralles.",
+          "detail": "La llegenda diu que l'emperador llatí Balduí de Flandes va morir presoner aquí."
+        },
+        {
+          "name": "Silueta del Cavaller de Madara",
+          "what": "El genet i el cavall tallats a la roca, vistos des de la plataforma.",
+          "why": "És el símbol nacional de Bulgària: reconèixer-lo és entendre l'orgull local.",
+          "detail": "Busca el lleó sota les potes del cavall i el gos al darrere."
+        },
+        {
+          "name": "Tallers d'artesans",
+          "what": "Obradors oberts a la Samovodska Charshia: ceramistes, tallistes i ferrers en acció.",
+          "why": "Veure fer alguna cosa a mà et connecta amb l'origen del carrer.",
+          "detail": "Alguns ceramistes et deixen provar el torn per pocs leva."
+        }
+      ]
+    },
+    "10": {
+      "destination": [
+        "Prepara't per al dia més cinematogràfic del viatge: un OVNI comunista abandonat dalt d'un cim ventós i, a la tarda, Koprivshtitsa, un poble del segle XIX tan ben conservat que sembla un museu on encara hi viu gent.",
+        "Buzludzha és el monument abandonat del Partit Comunista búlgar, inaugurat el 1981 i deixat morir després del 1989. No s'hi pot entrar, però l'exterior —un plat volador de formigó amb estrella roja— és una de les ruïnes més al·lucinants d'Europa."
+      ],
+      "history": [
+        "Buzludzha es va triar pel simbolisme: aquí va caure el revolucionari Hadzhi Dimitar el 1868 i a prop es va fundar el socialisme búlgar el 1891. El monument, acabat el 1981, volia impressionar. Encara ho fa, fins i tot en ruïnes.",
+        "Koprivshtitsa va ser un pròsper poble de mercaders als segles XVIII i XIX. Les seves cases de colors van veure néixer l'Aixecament d'Abril del 1876: va fracassar, però va despertar el món davant la lluita búlgara per la independència."
+      ],
+      "highlights": [
+        {
+          "name": "Monument de Buzludzha",
+          "what": "El plat volador de formigó abandonat a 1.432 m, amb mosaics trencats i vistes èpiques.",
+          "why": "Una de les ruïnes més extraordinàries del planeta: arquitectura, política i bellesa postapocalíptica.",
+          "notice": "Prohibit i perillós entrar-hi: només des de fora. La carretera és estreta i amb revolts."
+        },
+        {
+          "name": "Església memorial de Shipka",
+          "what": "Església d'estil rus amb cúpules daurades enmig del bosc del pas de Shipka.",
+          "why": "Sembla un joier caigut al bosc: la trobaràs de camí i val molt la pena.",
+          "notice": "És a la ruta mateixa; 20-30 minuts. Vesteix discret a dins."
+        },
+        {
+          "name": "Casc antic de Koprivshtitsa",
+          "what": "Poble del segle XIX amb carrers empedrats i cases de colors del Renaixement nacional.",
+          "why": "El poble històric més autèntic de Bulgària: no és un parc temàtic, hi viu gent.",
+          "notice": "Petit i caminable: aparca al centre i explora a peu."
+        },
+        {
+          "name": "Cases museu de Koprivshtitsa",
+          "what": "Sis cases de mercaders i revolucionaris restaurades, amb mobles i pintures originals.",
+          "why": "L'entrada combinada és una ganga i cada casa explica una capa d'història diferent.",
+          "notice": "Tanquen cap a les 17h: comença abans de les 14h si en vols veure unes quantes."
+        },
+        {
+          "name": "Casa Oslekov",
+          "what": "La casa museu més bonica, amb façana blava i interiors de mercader ric.",
+          "why": "Les parets pintades i els sostres tallats són la millor introducció a l'estil local.",
+          "notice": "Inclosa a l'entrada combinada; pregunta si es poden fer fotos."
+        },
+        {
+          "name": "Casa de Dimcho Debelyanov",
+          "what": "La casa natal d'un dels poetes més estimats de Bulgària.",
+          "why": "Encara que no en coneguis els versos, és l'exemple perfecte de casa petita i íntima.",
+          "notice": "Visita curta, uns 20 minuts: bon punt de partida."
+        },
+        {
+          "name": "Monument del pas de Shipka",
+          "what": "Torre de pedra de 31 metres al cim, amb 894 esglaons i vistes panoràmiques.",
+          "why": "Si et queden forces després de Buzludzha, la vista és de les millors dels Balcans.",
+          "notice": "894 esglaons són molts esglaons: si estàs cansat, l'església de baix ja fa el fet."
+        }
+      ],
+      "funFacts": [
+        "L'interior de Buzludzha tenia 950 seients i el mosaic més gran de l'Europa de l'Est.",
+        "El monument va costar uns 14 milions de leva el 1981: una fortuna per a la Bulgària comunista.",
+        "Buzludzha surt a documentals, videoclips i videojocs: és la icona global de la decadència brutalista.",
+        "Les cases de Koprivshtitsa fan servir colors vius per presumir: blau, groc i vermell eren símbols d'estatus.",
+        "L'Aixecament d'Abril va durar poques setmanes però va acabar portant la independència el 1878.",
+        "Cada cinc anys Koprivshtitsa acull un festival de música folk que aplega músics de tot el país.",
+        "Dalt del cim fa fred i vent fins i tot a l'agost: estàs avisat."
+      ],
+      "food": [
+        {
+          "name": "Bob chorba",
+          "description": "Sopa de mongetes amb herbes i pebre vermell, de vegades amb carn fumada.",
+          "special": "Cuina de muntanya que reconforta després del vent de Buzludzha.",
+          "where": "Mehanes de Koprivshtitsa amb jardí; pregunta a la casa d'hostes."
+        },
+        {
+          "name": "Shkembe chorba",
+          "description": "Sopa de tripa amb all, vinagre i bitxo: el remei antiressaca nacional.",
+          "special": "Per a valents: fa una olor forta però està sorprenentment bona.",
+          "where": "Restaurants tradicionals de Koprivshtitsa."
+        },
+        {
+          "name": "Lukanka",
+          "description": "Salami curat amb espècies, tallat fi, amb formatge i pa.",
+          "special": "El clima de muntanya de Koprivshtitsa li dona un sabor únic.",
+          "where": "Esmorzars de casa d'hostes i entrants de mehana."
+        },
+        {
+          "name": "Melmelada i mel casolanes",
+          "description": "Pots de melmelada de fruits del bosc, mel de pi i confitura de rosa.",
+          "special": "Esmorzar a la terrassa amb pa calent i mel local és el ritual del poble.",
+          "where": "Botiguetes del carrer principal i la teva casa d'hostes."
+        }
+      ],
+      "phrase": {
+        "cyrillic": "Много е красиво!",
+        "transliteration": "Mnogo e krasivo!",
+        "catalan": "És molt bonic!",
+        "when": "Digues-ho a l'amfitrió o a qualsevol botiguer: aquí n'estan molt orgullosos, del poble."
+      },
+      "challenges": [
+        {
+          "id": "d10-c1",
+          "text": "Fes una foto de Buzludzha amb una persona al davant per mostrar l'escala del monstre."
+        },
+        {
+          "id": "d10-c2",
+          "text": "Troba un fragment de mosaic encara enganxat a la paret exterior (mirar, no tocar!)."
+        },
+        {
+          "id": "d10-c3",
+          "text": "Compta les cúpules daurades de l'església de Shipka."
+        },
+        {
+          "id": "d10-c4",
+          "text": "Troba la casa blava i la casa groga de Koprivshtitsa i decideix quina t'agrada més."
+        },
+        {
+          "id": "d10-c5",
+          "text": "Passeja pel poble de nit i escolta el silenci: quants llums de gas veus?"
+        }
+      ],
+      "insiderTips": [
+        "Para a l'església de Shipka encara que tinguis pressa: són cinc minuts i és preciosa.",
+        "Omple el dipòsit abans del tram de muntanya: hi ha poques benzineres.",
+        "Compra l'entrada combinada dels museus a la primera casa que visitis.",
+        "Passeja per Koprivshtitsa quan es fa fosc: els fanals i el silenci et transporten al 1800.",
+        "Descarrega mapes offline abans de sortir: el GPS falla a la muntanya."
+      ],
+      "historicalFigure": {
+        "name": "Todor Zhivkov",
+        "who": "El líder comunista de Bulgària del 1954 al 1989, que va encarregar el monument de Buzludzha.",
+        "why": "La seva ambició (i els seus excessos) expliquen l'escala del que estàs fotografiant.",
+        "detail": "Va governar més temps que gairebé cap altre líder del bloc de l'Est: Buzludzha va obrir el 1981 i es va abandonar vuit anys després, quan ell va caure."
+      },
+      "visualGuide": [
+        {
+          "name": "El plat volador de Buzludzha",
+          "what": "La coberta circular en forma d'OVNI amb l'estructura de l'estrella roja al damunt.",
+          "why": "És la silueta que defineix el monument.",
+          "detail": "Al voltant de l'entrada encara hi ha restes de lletres de lemes comunistes."
+        },
+        {
+          "name": "Mosaics trencats",
+          "what": "Retrats esmicolats d'obrers i líders que cobrien les parets.",
+          "why": "La decadència ja forma part de l'art: colors que sagnen entre esquerdes.",
+          "detail": "No toquis ni t'emportis cap peça: hi ha restauració en curs."
+        },
+        {
+          "name": "Colors de Koprivshtitsa",
+          "what": "Façanes blaves, grogues, ocres i vermelles amb voladissos de fusta fosca.",
+          "why": "La paleta de colors és la firma del poble: cada to era una declaració de riquesa.",
+          "detail": "Compara la casa Oslekov (blava) amb la de Kableshkov (groga)."
+        },
+        {
+          "name": "Carrerons empedrats",
+          "what": "Carrers de pedra amb pontets sobre rierols entre les cases.",
+          "why": "La textura sota els peus i els passadissos estrets creen la màgia del lloc.",
+          "detail": "El carreró darrere la casa Oslekov és el tram més tranquil i fotogènic."
+        },
+        {
+          "name": "Cúpules de Shipka",
+          "what": "Cinc cúpules daurades sobre una església de pedra ratllada enmig del bosc.",
+          "why": "El contrast entre or, verd i cel no sembla real.",
+          "detail": "Els frescos interiors expliquen la batalla de Shipka del 1877."
+        },
+        {
+          "name": "Panoràmica des de Buzludzha",
+          "what": "Vistes de 360 graus sobre la serralada dels Balcans, sovint amb núvols a sota.",
+          "why": "L'emplaçament explica per què van construir aquí: visibilitat i simbolisme.",
+          "detail": "Els dies clars s'hi veu a 100 km; els ennuvolats, ets per sobre dels núvols."
+        }
+      ]
+    },
+    "11": {
+      "destination": [
+        "Dia de transició, i dels bons: cafè en un poble del segle XIX, carretera entre turons verds i adéu al cotxe de lloguer que ha estat la teva llibertat durant nou dies.",
+        "Última passejada per Koprivshtitsa, cotxe a l'aeroport de Sofia cap a les 18h, i metro al centre. Al vespre, celebració al bulevard Vitosha: s'han acabat els aparcaments i el GPS. Has sobreviscut a les carreteres búlgares com un campió."
+      ],
+      "history": [
+        "Sofia és una de les ciutats habitades més antigues d'Europa: tracis, romans, bizantins, otomans i búlgars hi han deixat capes. La Serdica romana és sota el centre modern, visible a través de terres de vidre.",
+        "La ciutat va ser triada capital de la Bulgària independent el 1879. El nom ve de l'església de Santa Sofia, la 'saviesa divina'. I la carretera que fas avui la feien servir mercaders i exèrcits des de fa segles."
+      ],
+      "highlights": [
+        {
+          "name": "Matí a Koprivshtitsa",
+          "what": "Última volta pel poble: carrerons tranquils i esmorzar amb vistes.",
+          "why": "Demà trobaràs a faltar aquest ritme de vida: absorbeix-lo bé.",
+          "notice": "El checkout sol ser a les 11h; carrega el cotxe la nit abans si pots."
+        },
+        {
+          "name": "Retorn del cotxe a l'aeroport",
+          "what": "Entrega del cotxe de lloguer prop de l'aeroport de Sofia, cap a les 18h.",
+          "why": "Torna'l amb el dipòsit ple, documenta l'estat i respira tranquil.",
+          "notice": "Omple el dipòsit a prop de l'aeroport i fes fotos del cotxe en entregar-lo."
+        },
+        {
+          "name": "Metro fins al centre",
+          "what": "Línia M4 de l'aeroport al centre: ràpid, barat i sense sorpreses de taxi.",
+          "why": "El teu primer moment sense cotxe: el metro és net i eficient.",
+          "notice": "Compra el bitllet a la màquina i valida'l abans de pujar."
+        },
+        {
+          "name": "Bulevard Vitosha",
+          "what": "El gran carrer de vianants de Sofia, ple de cafès i terrasses, amb la muntanya al fons.",
+          "why": "El clàssic vespre a Sofia: passejar, mirar gent i notar l'ambient relaxat de la capital.",
+          "notice": "És llarg: tria un tram prop del teu apartament. Al vespre surt tothom."
+        },
+        {
+          "name": "Ruïnes de Serdica (tastet nocturn)",
+          "what": "Carrers romans visibles sota vidre al pas subterrani del metro.",
+          "why": "Un cop d'ull avui et prepara per a la immersió de demà: Roma sota els peus.",
+          "notice": "Ben il·luminat de nit i gratuït des de dalt."
+        },
+        {
+          "name": "Check-in a l'apartament",
+          "what": "La teva base per a les dues últimes nits, al centre de Sofia.",
+          "why": "Cuina i espai per estendre's: perfecte per als records i la bugada final.",
+          "notice": "Confirma l'hora d'entrada amb l'amfitrió."
+        }
+      ],
+      "funFacts": [
+        "Sofia és l'única capital europea on pots esquiar i visitar una vinya a 30 minuts del centre.",
+        "Les ruïnes de Serdica es van descobrir construint el metro: Sofia literalment construeix sobre Roma.",
+        "El bulevard Vitosha es va fer de vianants als anys 90 i ara és el cor social de la ciutat.",
+        "El símbol de Sofia és un lleó: el veuràs a monuments, tapes de claveguera i al logo del metro.",
+        "Sofia té més de 200 jaciments arqueològics, molts encara en excavació.",
+        "Si has sobreviscut nou dies de carreteres búlgares, ja pots conduir a qualsevol lloc del món."
+      ],
+      "food": [
+        {
+          "name": "Shopska salata",
+          "description": "L'amanida nacional: tomàquet, cogombre, ceba i formatge sirene ratllat per sobre.",
+          "special": "La primera shopska a Sofia marca la tornada a la vida urbana.",
+          "where": "Qualsevol terrassa plena de gent al bulevard Vitosha."
+        },
+        {
+          "name": "Graellada mixta (skara)",
+          "description": "Plat de kebapche, kyufte, bistec i salsitxes amb patates i lyutenitsa.",
+          "special": "Menjar de celebració: has tornat el cotxe sencer, t'ho has guanyat.",
+          "where": "Restaurants tradicionals del centre."
+        },
+        {
+          "name": "Rakia",
+          "description": "Aiguardent búlgar de raïm o pruna, servit en gots petits com a aperitiu.",
+          "special": "Brinda amb 'Nazdrave!' i beu a poc a poc: és més forta del que sembla.",
+          "where": "Qualsevol restaurant tradicional; la de pruna (slivova) és la clàssica."
+        },
+        {
+          "name": "Gelat al Vitosha",
+          "description": "Gelat estil italià de les gelateries del bulevard.",
+          "special": "Passejar amb gelat per un carrer de vianants és l'estiu europeu en estat pur.",
+          "where": "Gelateries a mig bulevard Vitosha."
+        }
+      ],
+      "phrase": {
+        "cyrillic": "Наздраве!",
+        "transliteration": "Nazdrave!",
+        "catalan": "Salut!",
+        "when": "En brindar amb rakia o vi al sopar de celebració: mira als ulls i digues-ho amb convicció."
+      },
+      "challenges": [
+        {
+          "id": "d11-c1",
+          "text": "Fes la foto ritual del cotxe abans d'entregar-lo: totes les cares, dipòsit i quilòmetres."
+        },
+        {
+          "id": "d11-c2",
+          "text": "Compra el bitllet de metro i valida'l sense ajuda de ningú."
+        },
+        {
+          "id": "d11-c3",
+          "text": "Troba un lleó (el símbol de Sofia) en algun lloc inesperat de la ciutat."
+        },
+        {
+          "id": "d11-c4",
+          "text": "Brinda amb rakia dient 'Nazdrave!' mirant als ulls."
+        },
+        {
+          "id": "d11-c5",
+          "text": "Localitza la muntanya Vitosha des del bulevard: sempre és al sud."
+        }
+      ],
+      "insiderTips": [
+        "Fotografia el cotxe de lloguer en entregar-lo: totes les bandes, dipòsit i quilometratge.",
+        "Les benzineres de l'avinguda Brussel·les, prop de l'aeroport, van perfectes per omplir al final.",
+        "El metro M4 va directe al centre sense transbord.",
+        "Descarrega TaxiMe com a pla B si vas massa carregat per al metro.",
+        "Guarda una moneda d'un lev per al carro del súper si compres per a l'apartament."
+      ],
+      "historicalFigure": {
+        "name": "Constantí el Gran",
+        "who": "L'emperador romà que va dir 'Serdica és la meva Roma': aquesta ciutat li encantava.",
+        "why": "El seu regnat va convertir Serdica en residència imperial: les ruïnes que trepitjaràs demà són en part seves.",
+        "detail": "Constantí va arribar a plantejar-se fer de Serdica la capital de l'Imperi Romà."
+      },
+      "visualGuide": [
+        {
+          "name": "Boira matinal a Koprivshtitsa",
+          "what": "Boira baixa entre teulades i turons, abans de les 9h.",
+          "why": "L'últim moment de poble: llum suau i silenci abans de la carretera.",
+          "detail": "Els ponts sobre el rierol, a l'est del centre, tenen les vistes més boiroses."
+        },
+        {
+          "name": "Estacions del metro de Sofia",
+          "what": "Metro modern i net, amb senyalística groga i blava.",
+          "why": "El teu nou transport: dominar-lo avui t'estalvia temps demà.",
+          "detail": "L'estació Serdika connecta línies i té ruïnes romanes al vestíbul."
+        },
+        {
+          "name": "Silueta del Vitosha",
+          "what": "La muntanya ampla i de cim pla al sud de Sofia.",
+          "why": "És el teló de fons de la ciutat: orienta't cap al sud i sempre la trobaràs.",
+          "detail": "El cim Cherni Vrah fa 2.290 m; de vegades hi ha neu fins i tot a l'estiu."
+        },
+        {
+          "name": "Terres de vidre de Serdica",
+          "what": "Panells de vidre transitables que mostren carrers romans a sota.",
+          "why": "La prova visual que Sofia és antiga: camines literalment sobre la història.",
+          "detail": "Millor il·luminats de nit, prop de l'estació Serdika."
+        },
+        {
+          "name": "Vista des del balcó",
+          "what": "El carrer o pati que es veu des del teu apartament.",
+          "why": "Desfés maletes, respira i fixa't en els detalls: aquest és el teu barri per dues nits.",
+          "detail": "Localitza el forn de pa, el metro i el súper més propers per demà."
+        }
+      ]
+    },
+    "12": {
+      "destination": [
+        "Dia sencer a Sofia, sense cotxe ni presses: una capital construïda sobre ruïnes romanes i or ortodox. Tens el free tour reservat, la millor manera d'orientar-te i escoltar les històries de debò.",
+        "Catedral d'Alexandre Nevski, la rotonda del segle IV amagada en un pati, Serdica sota els peus i les fonts d'aigua mineral gratuïta. Sofia és compacta: ho pots fer gairebé tot a peu."
+      ],
+      "history": [
+        "Sofia comença amb els serdis, una tribu tràcia, i creix amb la Serdica romana, tan important que Constantí el Gran la va ampliar. La rotonda de Sant Jordi, del segle IV, encara fa misses avui.",
+        "Després de cinc segles otomans, la independència del 1878 va portar els grans edificis d'identitat nacional: la catedral Nevski, el Teatre Nacional i els Banys Minerals. I al centre, quatre religions conviuen en 300 metres."
+      ],
+      "highlights": [
+        {
+          "name": "Free tour",
+          "what": "Visita guiada a canvi de propina pel centre de Sofia, amb història i anècdotes locals.",
+          "why": "Dues hores amb algú que estima la seva ciutat valen més que qualsevol guia de paper.",
+          "notice": "Confirma punt i hora de trobada; 10-20 leva de propina per persona és just."
+        },
+        {
+          "name": "Catedral d'Alexandre Nevski",
+          "what": "La icònica catedral neobizantina de cúpules verdes i daurades, de les més grans del món ortodox.",
+          "why": "L'interior brilla d'or i icones, i la cripta guarda la millor col·lecció d'icones del país.",
+          "notice": "La cripta té entrada separada al costat nord: no te la perdis."
+        },
+        {
+          "name": "Rotonda de Sant Jordi",
+          "what": "Església rodona de maó vermell del segle IV, amagada en un pati darrere d'un hotel.",
+          "why": "L'edifici més antic de Sofia: encara actiu i gairebé invisible des del carrer.",
+          "notice": "Fàcil de passar de llarg; entra pel pati i és gratuït."
+        },
+        {
+          "name": "Complex arqueològic de Serdica",
+          "what": "Carrers romans, mosaics i fonaments al descobert al voltant de l'estació Serdika.",
+          "why": "Camines sobre paviments de fa 1.700 anys, amb terres de vidre i excavacions obertes.",
+          "notice": "Gratuït i obert en horari de metro."
+        },
+        {
+          "name": "Església de Santa Sofia",
+          "what": "L'església del segle VI que dona nom a la ciutat, senzilla per fora i atmosfèrica per dins.",
+          "why": "Entendre aquesta església és entendre per què la ciutat es diu Sofia.",
+          "notice": "Al costat hi ha la tomba d'Ivan Vazov; molt més tranquil·la que Nevski."
+        },
+        {
+          "name": "Banys Minerals Centrals",
+          "what": "Edifici groc i blanc espectacular (ara Museu d'Història) amb fonts d'aigua termal a fora.",
+          "why": "Omple l'ampolla d'aigua mineral gratis: els locals hi confien cegament.",
+          "notice": "Porta una ampolla buida; les fonts són al costat est."
+        },
+        {
+          "name": "Mercat Central (Tsentralni Hali)",
+          "what": "Mercat cobert del 1911 amb parades de menjar, espècies i productes locals.",
+          "why": "Dinar i souvenirs en un sol lloc: lyutenitsa, mel i oli de rosa per endur.",
+          "notice": "Compara preus i tasta abans de comprar."
+        }
+      ],
+      "funFacts": [
+        "La catedral Nevski té capacitat per a 10.000 persones.",
+        "La rotonda de Sant Jordi va ser mesquita en època otomana i després va tornar a ser església.",
+        "L'aigua mineral de Sofia es fa servir des dels romans: les fonts són la raó de ser de la ciutat.",
+        "La 'plaça de la Tolerància' reuneix església ortodoxa, catedral catòlica, sinagoga i mesquita en 300 metres.",
+        "La sinagoga de Sofia és de les més grans d'Europa.",
+        "Sofia va ser bombardejada a la Segona Guerra Mundial, però bona part del centre va sobreviure.",
+        "Ivan Vazov, l'escriptor nacional, té la tomba en un jardí del centre."
+      ],
+      "food": [
+        {
+          "name": "Banitsa amb boza",
+          "description": "Pasta fullada amb formatge acompanyada de boza, una beguda fermentada de blat.",
+          "special": "La boza és dolça, espessa i polèmica: prova-la un cop per l'experiència.",
+          "where": "Qualsevol forn de barri amb cua al matí."
+        },
+        {
+          "name": "Meshana skara",
+          "description": "Graellada mixta per compartir: kebapche, kyufte, bistecs i salsitxes.",
+          "special": "El dinar fiable després d'una caminada llarga: dona per a dos.",
+          "where": "Parades del Mercat Central o una mehana del centre."
+        },
+        {
+          "name": "Lyutenitsa",
+          "description": "Crema de pebrot escalivat i tomàquet, per untar al pa o amb tot.",
+          "special": "Compra'n pots al mercat: és el sabor de Bulgària per endur.",
+          "where": "Parades del Mercat Central; compara la casolana amb la industrial."
+        },
+        {
+          "name": "Cuina búlgara moderna al Kvartal",
+          "description": "Restaurants contemporanis del barri Kvartal amb cuina búlgara actualitzada.",
+          "special": "Si vols un sopar 'especial' a Sofia, aquest és el pla: local però elevat.",
+          "where": "Barri Kvartal, al sud del centre; reserva per al vespre."
+        }
+      ],
+      "phrase": {
+        "cyrillic": "Благодаря за обиколката!",
+        "transliteration": "Blagodarya za obikolkata!",
+        "catalan": "Gràcies per la visita!",
+        "when": "Al final del free tour: els guies viuen de propines i d'agraïments sincers."
+      },
+      "challenges": [
+        {
+          "id": "d12-c1",
+          "text": "Omple una ampolla a les fonts d'aigua mineral com un local més."
+        },
+        {
+          "id": "d12-c2",
+          "text": "Troba la rotonda de Sant Jordi sense mirar el mapa: està ben amagada."
+        },
+        {
+          "id": "d12-c3",
+          "text": "Localitza els quatre temples de la plaça de la Tolerància en menys de 15 minuts."
+        },
+        {
+          "id": "d12-c4",
+          "text": "Camina sobre un terra de vidre de Serdica i identifica què hi ha a sota."
+        },
+        {
+          "id": "d12-c5",
+          "text": "Dona les gràcies al guia en búlgar: 'Blagodarya!'"
+        }
+      ],
+      "insiderTips": [
+        "La cripta de la catedral Nevski té el millor museu d'icones del país: no te la saltis.",
+        "Les fonts d'aigua mineral són gratuïtes: porta ampolla i fes cua amb els locals.",
+        "A l'estació Serdika pots passejar entre ruïnes romanes sense ni agafar el metro.",
+        "Els divendres al vespre el bulevard Vitosha té música en directe: allarga el dia.",
+        "Reserva sopar al Kvartal si vols un últim dia complet amb final especial."
+      ],
+      "historicalFigure": {
+        "name": "Ivan Vazov",
+        "who": "L'escriptor nacional de Bulgària (1850-1921), autor de 'Sota el jou', la gran novel·la de l'època otomana.",
+        "why": "La seva obra va donar forma a la identitat búlgara: el Teatre Nacional porta el seu nom.",
+        "detail": "El seu poema sobre els defensors de Shipka encara es recita a cada cerimònia patriòtica."
+      },
+      "visualGuide": [
+        {
+          "name": "Cúpules verdes de Nevski",
+          "what": "El grup de cúpules verdes i daurades de la catedral.",
+          "why": "La firma de l'horitzó de Sofia: et guien cap al centre des de lluny.",
+          "detail": "La millor foto exterior és des de la plaça sud; a dins, deixa que els ulls s'acostumin a l'or."
+        },
+        {
+          "name": "Maó vermell de la rotonda",
+          "what": "L'església cilíndrica del segle IV, de les més antigues dels Balcans.",
+          "why": "El contrast amb la Sofia moderna del voltant és un viatge en el temps.",
+          "detail": "Al mateix pati hi ha columnes i fonaments romans."
+        },
+        {
+          "name": "Mosaics de Serdica",
+          "what": "Paviments de mosaic romans visibles a través dels terres de vidre.",
+          "why": "Els colors encara són vius: els romans vivien bé aquí.",
+          "detail": "Camina a poc a poc pel pas subterrani de Serdika i mira avall."
+        },
+        {
+          "name": "Façana dels Banys Minerals",
+          "what": "L'edifici ratllat groc i blanc d'estil neobizantí.",
+          "why": "Un dels edificis més fotogènics de Sofia.",
+          "detail": "Les fonts públiques bullen al costat est: uneix-te a la cua amb l'ampolla."
+        },
+        {
+          "name": "Teatre Nacional i fonts",
+          "what": "Les columnes clàssiques del teatre Ivan Vazov i la plaça amb fonts del davant.",
+          "why": "El punt de trobada de la ciutat: aquí es nota el ritme de Sofia.",
+          "detail": "Al vespre s'il·lumina; el Jardí de la Ciutat del darrere és ple de bancs a l'ombra."
+        },
+        {
+          "name": "Plaça de la Tolerància",
+          "what": "Església ortodoxa, mesquita, sinagoga i catedral catòlica a un tir de pedra.",
+          "why": "Quatre religions en un barri: la història multicultural de Sofia en cinc minuts a peu.",
+          "detail": "Dins de la mesquita es veuen els fonaments d'uns banys minerals."
+        }
+      ]
+    },
+    "13": {
+      "destination": [
+        "Últim matí a Bulgària: fes que compti sense estressar-te. Vol a Barcelona a les 18:45, així que a l'aeroport cap a les 15:45. Temps de sobres per a un últim cafè, els souvenirs finals i un adéu tranquil a Sofia.",
+        "No intentis veure res de nou: torna al teu racó preferit, compra lyutenitsa i oli de rosa si et falten, i una última banitsa calenta. A la tarda, metro a l'aeroport i cap a casa amb dues setmanes de records."
+      ],
+      "history": [
+        "Sofia acomiada viatgers des de fa mil·lennis: calçades romanes, caravanes otomanes i ara vols. La porta de Serdica enviava mercaders cap a Constantinoble; avui l'aeroport t'envia cap a Barcelona.",
+        "Els souvenirs que t'emportes tenen segles d'història: oli de rosa de Kazanlak, rakia, i el iogurt amb Lactobacillus bulgaricus, el bacteri que porta el nom del país. Bulgària cap en una maleta."
+      ],
+      "highlights": [
+        {
+          "name": "Última volta pel Vitosha",
+          "what": "Un passeig final pel bulevard, cafè a la mà i muntanya al fons.",
+          "why": "Tancament de cercle: el mateix carrer on vas celebrar el dia 11, ara amb tot el viatge a l'esquena.",
+          "notice": "Al matí és més fresc i tranquil; vigila l'hora del checkout."
+        },
+        {
+          "name": "Compres al carrer Tsar Shishman",
+          "what": "Botiguetes locals amb cosmètica de rosa, joieria feta a mà i llibres sobre Bulgària.",
+          "why": "Souvenirs amb gust, lluny de les parades per a turistes.",
+          "notice": "Obren cap a les 10h; porta una mica d'efectiu per als petits venedors."
+        },
+        {
+          "name": "Mercat Central (si et falta res)",
+          "what": "Última passada per la lyutenitsa, la mel, les espècies i els pebrots secs.",
+          "why": "Els records comestibles duren més: un pot de lyutenitsa a Barcelona et teletransporta.",
+          "notice": "Líquids com rakia i oli de rosa, només a la maleta facturada."
+        },
+        {
+          "name": "Checkout de l'apartament",
+          "what": "Fer maletes, endreçar i deixar les claus, normalment abans de les 11h.",
+          "why": "El final poc glamurós però imprescindible: revisa calaixos, carregadors i sota el llit.",
+          "notice": "Metro a l'aeroport des de Serdika o Vitosha."
+        },
+        {
+          "name": "Metro a l'aeroport",
+          "what": "Línia M4 fins a la terminal, uns 30 minuts des del centre.",
+          "why": "Més barat i previsible que un taxi: ja domines el sistema.",
+          "notice": "Surt de l'apartament a les 15h com a màxim."
+        },
+        {
+          "name": "Vol cap a Barcelona",
+          "what": "Vol de tarda que surt a les 18:45 i aterra a Catalunya al vespre.",
+          "why": "El final del cercle: vas arribar de nit i marxes amb llum daurada de tarda.",
+          "notice": "Check-in online fet i targeta d'embarcament a punt."
+        }
+      ],
+      "funFacts": [
+        "Bulgària és el primer productor mundial d'oli de rosa: portes or líquid a la maleta.",
+        "El lev està lligat a l'euro: 1,96 leva per euro, càlcul mental fàcil.",
+        "El iogurt búlgar conté Lactobacillus bulgaricus, el bacteri batejat amb el nom del país.",
+        "Pots entrar legalment a la UE amb 1 litre de licor i 4 de vi des de Bulgària.",
+        "'Dovizhdane' vol dir 'fins que ens tornem a veure': més esperançador que un simple adéu.",
+        "El cafè búlgar sovint és a l'estil turc: petit, fort i sense filtrar."
+      ],
+      "food": [
+        {
+          "name": "L'última banitsa",
+          "description": "Una última pasta fullada amb formatge del forn del barri.",
+          "special": "Menja-la calenta, dret davant del forn, com un local amb pressa.",
+          "where": "El forn més proper a l'apartament: ja saps com va."
+        },
+        {
+          "name": "Lyutenitsa per endur",
+          "description": "Pots de crema de pebrot i tomàquet del mercat: la teva postal comestible.",
+          "special": "Les casolanes dels venedors del mercat guanyen a les de súper.",
+          "where": "Mercat Central o botigues del carrer Tsar Shishman."
+        },
+        {
+          "name": "Cafè d'aeroport",
+          "description": "Un últim cafè búlgar abans d'embarcar: probablement car, però és el ritual.",
+          "special": "Fort, petit i sense filtrar: l'última sacsejada abans de la porta d'embarcament.",
+          "where": "Cafeteria després del control de seguretat."
+        }
+      ],
+      "phrase": {
+        "cyrillic": "Довиждане!",
+        "transliteration": "Dovizhdane!",
+        "catalan": "Fins que ens tornem a veure!",
+        "when": "El teu adéu als botiguers, a la ciutat i a Bulgària de camí a l'aeroport."
+      },
+      "challenges": [
+        {
+          "id": "d13-c1",
+          "text": "Menja't l'última banitsa dret davant del forn, com un local."
+        },
+        {
+          "id": "d13-c2",
+          "text": "Digues 'Dovizhdane!' a algun botiguer i mira si somriu."
+        },
+        {
+          "id": "d13-c3",
+          "text": "Pesa la maleta abans de sortir: els pots de lyutenitsa sumen."
+        },
+        {
+          "id": "d13-c4",
+          "text": "Guarda una moneda de lev com a talismà del viatge."
+        },
+        {
+          "id": "d13-c5",
+          "text": "Aconsegueix seient de finestreta i fes la foto de Sofia empetitint-se amb el Vitosha al costat."
+        }
+      ],
+      "insiderTips": [
+        "Rakia i oli de rosa, només a la maleta facturada: molts viatgers ho han après per les males.",
+        "Embolica els pots de vidre amb roba al centre de la maleta.",
+        "Carrega-ho tot la nit abans: els endolls d'aeroport són territori de guerra.",
+        "Descarrega la targeta d'embarcament abans de deixar el wifi de l'apartament.",
+        "Posa una alarma per a 'sortir cap a l'aeroport', no només per a l'hora del vol."
+      ],
+      "historicalFigure": {
+        "name": "Santa Sofia (la saviesa divina)",
+        "who": "No és una persona sinó la saviesa divina que dona nom a la ciutat, a través de l'església de Santa Sofia.",
+        "why": "Marxes de la ciutat que encarna la saviesa: un final rodó per a un viatge que t'ha ensenyat més del que esperaves.",
+        "detail": "L'església és modesta comparada amb Nevski, però és la raó per la qual Sofia es diu Sofia."
+      },
+      "visualGuide": [
+        {
+          "name": "El Vitosha al matí",
+          "what": "Cafès obrint, terrasses a mig muntar i locals amb l'espresso a la mà.",
+          "why": "La Sofia real, sense filtre turístic: la ciutat que trobaràs a faltar.",
+          "detail": "Seu-hi 20 minuts mínim i observa el ritme: aquest és el record que perdura."
+        },
+        {
+          "name": "Etiquetes en ciríl·lic",
+          "what": "Les etiquetes de lyutenitsa, mel i productes de rosa: estranyes i ja familiars.",
+          "why": "Les veuràs al rebost durant mesos: tria les que quedin bé en un prestatge.",
+          "detail": "L'oli de rosa ve en vials petitíssims: unes gotes fan molta feina."
+        },
+        {
+          "name": "La maleta plena",
+          "what": "La bossa amb tresors búlgars entre la roba: la prova física del viatge.",
+          "why": "La imatge del retorn: caòtica però satisfactòria.",
+          "detail": "Pesa-la abans de sortir: el sobrepès es paga car."
+        },
+        {
+          "name": "Escales mecàniques del metro",
+          "what": "La baixada a l'andana amb les maletes, pel sistema que vas aprendre el dia 11.",
+          "why": "Cercle tancat: vas arribar perdut i marxes com un expert.",
+          "detail": "La M4 et deixa directament a la terminal."
+        },
+        {
+          "name": "Vista de l'enlairament",
+          "what": "Sofia empetitint-se des de la finestra, amb el Vitosha a un costat.",
+          "why": "L'última imatge de Bulgària: lluita pel seient de finestreta.",
+          "detail": "El costat dret de l'avió sol tenir les vistes de la muntanya en sortir."
+        }
+      ]
+    }
+  }
+}

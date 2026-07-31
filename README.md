@@ -11,8 +11,9 @@ App web per al viatge a Bulgària del **3 al 15 d'agost de 2026**, generada a pa
   - **Imatges** dels llocs (Wikimedia Commons, incloses al repositori).
   - On dormim cada nit (hotels de l'Excel).
 - **Llista d'activitats per completar cada dia**, adaptada a cada zona. Es poden marcar com a fetes (es veu qui i quan) i **afegir-ne de noves o canvis** sobre la marxa.
-- **Diari de viatge**: cada dia, cada viatger pot escriure les seves notes. Es veuen les notes de tots dos, però només pots editar o esborrar les teves.
-- Pàgina d'**informació pràctica**: vols, cotxe de lloguer, taxis, pla B, bàsics del país.
+- **Diari de viatge privat**: cada viatger escriu les seves notes i hi pot **afegir fotos**. 🔒 Cada usuari només veu el seu diari. Es pot **descarregar en PDF o Word** (fotos incloses) des de la pàgina «El meu diari», i també l'itinerari sencer en PDF.
+- **Guia del dia (en català)** — per a cadascun dels 13 dies: el lloc d'avui, reptes amb checkpoints, què no et pots perdre, història, curiositats, què tastar, frase en búlgar, consells locals, personatge del dia i guia visual. Tot en seccions plegables per llegir-ho còmodament al mòbil. Obre un dia → pestanya **Guia**.
+- **Passaport gastronòmic** — 30 plats i begudes amb foto, resum, regió i tipus. Toca'n un per veure la fitxa completa amb mapa d'on tastar-lo, valoració amb estrelles i les teves notes. A la llista pots **filtrar** per tipus, regió o ciutat i **ordenar** per puntuació. Descarregable en PDF/Word per compartir.
 
 ## Com engegar-la
 
@@ -67,22 +68,37 @@ npm run set-password -- viatger1 laMevaNovaContrasenya
 
 ## On es guarden les dades
 
-- `data/store.json` — diari, activitats marcades i activitats afegides (es crea sol, no es puja a git).
-- `data/users.json` — usuaris i contrasenyes (xifrades amb scrypt; tampoc es puja a git).
-- `data/itinerary.json` — tot el contingut del viatge. Si canvieu plans, editeu aquest fitxer!
+Les dades es guarden en una **base de dades** perquè no es perdin:
+
+- **Amb servidor**: SQLite a `data/trip.db` (es crea sol, no es puja a git). Si veniu d'una versió antiga, `data/store.json` es migra automàticament.
+- **A GitHub Pages**: **IndexedDB** al navegador de cada dispositiu — molt més robust que localStorage i suporta fotos. Les dades antigues de localStorage es migren soles el primer cop.
+
+Altres fitxers:
+
+- `data/users.json` — usuaris i contrasenyes (xifrades amb scrypt; no es puja a git).
+- `data/itinerary.json` — el pla del viatge. Si canvieu plans, editeu aquest fitxer!
+- `data/travel-guide.json` — la guia de cada dia.
+- `data/food-ca.json` — els 30 plats del passaport gastronòmic.
+
+> 💡 A GitHub Pages les dades viuen al dispositiu. Descarregueu el PDF del diari de tant en tant com a còpia de seguretat.
 
 ## Estructura
 
 ```
 ├── .github/workflows/deploy-pages.yml  # publicació automàtica a GitHub Pages
-├── server/server.js               # servidor Express: login, diari, checklists
+├── server/server.js               # servidor Express + SQLite: login, diari, passaport
 ├── server/set-password.js         # canviar contrasenyes (mode servidor)
 ├── server/set-static-password.js  # canviar contrasenyes (versió GitHub Pages)
 ├── data/itinerary.json            # itinerari complet (generat des de l'Excel + contingut extra)
+├── data/travel-guide.json         # guia turística de cada dia (en català)
+├── data/food-ca.json              # passaport gastronòmic: 30 plats amb regió, tipus i mapa
 ├── data/static-users.json         # usuaris de la versió GitHub Pages (contrasenyes xifrades)
 ├── data/image-credits.json        # crèdits de les imatges
 └── public/                        # frontend (HTML + CSS + JS, sense build)
-    └── images/                    # fotos dels llocs (Wikimedia Commons)
+    ├── js/store.js                # dades: IndexedDB (navegador) o API+SQLite (servidor)
+    ├── js/export.js               # exportació a PDF i Word
+    ├── images/                    # fotos dels llocs (Wikimedia Commons)
+    └── images/food/               # fotos dels plats (Wikimedia Commons)
 ```
 
 Bon viatge! 🌹✈️

@@ -2,3 +2,8 @@ node_modules/
 data/store.json
 data/users.json
 data/.secret
+data/trip.db
+data/trip.db-journal
+data/trip.db-wal
+data/trip.db-shm
+data/trip.db.migrated

@@ -66,7 +66,35 @@
     }
     setUser(u) { this.user = u; }
 
+    /** Els comptes es deien viatger1/viatger2: reassigna'ls a lorena/adria. */
+    async renameLegacyUsers() {
+      if (localStorage.getItem("bulgaria2026-users-renamed")) return;
+      const RENAMED = { viatger1: "lorena", viatger2: "adria" };
+      const db = await this.dbp;
+      for (const [oldName, newName] of Object.entries(RENAMED)) {
+        const notes = await tx(db, "diary", "readonly", (s) => wrap(s.index("byUser").getAll(oldName)));
+        for (const n of notes || []) {
+          await tx(db, "diary", "readwrite", (s) => s.put({ ...n, user: newName }));
+        }
+        const foods = await tx(db, "food", "readonly", (s) => wrap(s.index("byUser").getAll(oldName)));
+        for (const f of foods || []) {
+          await tx(db, "food", "readwrite", (s) => s.delete(f.key));
+          await tx(db, "food", "readwrite", (s) => s.put({ ...f, key: `${newName}|${f.itemId}`, user: newName }));
+        }
+        const checks = await tx(db, "checks", "readonly", (s) => wrap(s.getAll()));
+        for (const c of (checks || []).filter((x) => x.by === oldName)) {
+          await tx(db, "checks", "readwrite", (s) => s.put({ ...c, by: newName }));
+        }
+        const acts = await tx(db, "customActivities", "readonly", (s) => wrap(s.getAll()));
+        for (const a of (acts || []).filter((x) => x.by === oldName)) {
+          await tx(db, "customActivities", "readwrite", (s) => s.put({ ...a, by: newName }));
+        }
+      }
+      localStorage.setItem("bulgaria2026-users-renamed", "1");
+    }
+
     async migrateFromLocalStorage() {
+      await this.renameLegacyUsers();
       // Recupera dades antigues guardades a localStorage (versions anteriors de l'app).
       const done = localStorage.getItem("bulgaria2026-migrated");
       if (done) return;

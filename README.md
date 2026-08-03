@@ -31,7 +31,7 @@ L'app es publica sola a **https://adriatwork.github.io/app-bulgaria/** cada cop 
 En aquesta versió no hi ha servidor, així que **el diari i les activitats marcades es guarden al dispositiu de cadascú** (no es comparteixen entre mòbils). El login funciona igual, amb les mateixes contrasenyes per defecte; per canviar-les:
 
 ```bash
-npm run set-static-password -- viatger1 laMevaNovaContrasenya
+npm run set-static-password -- lorena laMevaNovaContrasenya
 # i després: git add data/static-users.json && git commit && git push
 ```
 
@@ -54,14 +54,14 @@ En arrencar per primera vegada (mode servidor) es crea `data/users.json` amb dos
 
 | Usuari     | Contrasenya per defecte |
 |------------|-------------------------|
-| `viatger1` | `rila2026`              |
-| `viatger2` | `pirin2026`             |
+| `lorena`   | `lorenamorena`          |
+| `adria`    | `adrianocapitano`       |
 
 **Canvieu les contrasenyes** (i, si voleu, els noms que es mostren):
 
 ```bash
 # canviar contrasenya
-npm run set-password -- viatger1 laMevaNovaContrasenya
+npm run set-password -- lorena laMevaNovaContrasenya
 
 # canviar el nom que es mostra: editeu "displayName" (i l'emoji!) a data/users.json
 ```

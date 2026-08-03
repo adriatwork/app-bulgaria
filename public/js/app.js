@@ -8,6 +8,7 @@ const S = {
   itinerary: null,
   guide: { days: {} },
   food: null,
+  vocabulary: null,
   imageCredits: {},
   staticMode: false,
   staticUsers: null,
@@ -130,8 +131,8 @@ async function doLogout() {
 
 function renderLogin() {
   const users = S.users.length ? S.users : [
-    { username: "viatger1", displayName: "Viatger 1", emoji: "🌻" },
-    { username: "viatger2", displayName: "Viatger 2", emoji: "🌊" }
+    { username: "lorena", displayName: "Lorena", emoji: "🌻" },
+    { username: "adria", displayName: "Adrià", emoji: "🌊" }
   ];
   if (!S.selectedLoginUser) S.selectedLoginUser = users[0].username;
 
@@ -995,6 +996,29 @@ function renderFoodDetail(id) {
   });
 }
 
+/* ---------------- vocabulari de supervivència ---------------- */
+
+function renderVocabulary() {
+  const v = S.vocabulary;
+  if (!v || !(v.groups || []).length) return "";
+
+  return `
+    <h2 class="page-title vocab-heading">🗣️ Vocabulari de supervivència</h2>
+    <p class="page-sub">${esc(v.intro)}</p>
+    ${v.warning ? `<div class="card vocab-warning">${esc(v.warning)}</div>` : ""}
+    <div class="vocab-groups">
+      ${v.groups.map((g, i) => section(g.icon || "🗣️", g.title,
+        `<div class="vocab-table">
+          ${g.items.map((it) => `
+            <div class="vocab-row">
+              <span class="vocab-cyr">${esc(it.cyrillic)}</span>
+              <span class="vocab-trans">${esc(it.transliteration)}</span>
+              <span class="vocab-ca">${esc(it.catalan)}</span>
+            </div>`).join("")}
+        </div>`, i === 0, String(g.items.length))).join("")}
+    </div>`;
+}
+
 /* ---------------- info pràctica ---------------- */
 
 function renderInfoPage() {
@@ -1020,22 +1044,10 @@ function renderInfoPage() {
         <h2><span class="ico">🔀</span> Pla B</h2>
         <div class="info-item">${esc(t.alternative)}</div>
       </div>
-      <div class="card">
-        <h2><span class="ico">🇧🇬</span> Bàsics de Bulgària</h2>
-        <div class="info-item"><b>Moneda</b>Lev búlgar (BGN) · 1 € ≈ 1,96 BGN</div>
-        <div class="info-item"><b>Hora</b>1 hora més que a Barcelona</div>
-        <div class="info-item"><b>Emergències</b>112 (com a tota la UE)</div>
-        <div class="info-item"><b>Curiositat</b>Els búlgars mouen el cap al revés: assentir pot voler dir «no»!</div>
-        <div class="info-item"><b>Gràcies</b>«Blagodarya» (благодаря) o el més fàcil: «mersí»</div>
-      </div>
-      <div class="card">
-        <h2><span class="ico">💾</span> Les meves dades</h2>
-        <div class="info-item">${S.staticMode
-          ? "El diari i el passaport es guarden en una base de dades del navegador (IndexedDB) d'aquest dispositiu. Descarrega el PDF de tant en tant com a còpia de seguretat."
-          : "El diari i el passaport es guarden a la base de dades del servidor."}</div>
-        <div class="info-item"><b>Privacitat</b>El teu diari i les teves valoracions són només teves. Les activitats del dia són compartides.</div>
-      </div>
     </div>
+
+    ${renderVocabulary()}
+
     <details class="credits">
       <summary>Crèdits de les imatges (Wikimedia Commons)</summary>
       <ul>
@@ -1137,17 +1149,19 @@ async function loadUserData() {
 }
 
 async function loadStaticContent() {
-  const [itinerary, credits, users, guide, food] = await Promise.all([
+  const [itinerary, credits, users, guide, food, vocabulary] = await Promise.all([
     fetch("data/itinerary.json").then((r) => r.json()),
     fetch("data/image-credits.json").then((r) => r.json()).catch(() => ({})),
     fetch("data/static-users.json").then((r) => r.json()),
     fetch("data/travel-guide.json").then((r) => r.json()).catch(() => ({ days: {} })),
-    fetch("data/food-ca.json").then((r) => r.json()).catch(() => null)
+    fetch("data/food-ca.json").then((r) => r.json()).catch(() => null),
+    fetch("data/vocabulary.json").then((r) => r.json()).catch(() => null)
   ]);
   S.itinerary = itinerary;
   S.imageCredits = credits;
   S.guide = guide;
   S.food = food;
+  S.vocabulary = vocabulary;
   S.staticUsers = users;
   S.users = Object.entries(users).map(([username, u]) => ({ username, displayName: u.displayName, emoji: u.emoji }));
 }
@@ -1165,6 +1179,7 @@ async function bootstrap() {
       S.itinerary = data.itinerary;
       S.guide = data.travelGuide || { days: {} };
       S.food = data.foodPassport;
+      S.vocabulary = data.vocabulary;
       S.imageCredits = data.imageCredits;
       await loadUserData();
     } else {
@@ -1175,6 +1190,7 @@ async function bootstrap() {
         S.itinerary = pub.itinerary;
         S.guide = pub.travelGuide || { days: {} };
         S.food = pub.foodPassport;
+        S.vocabulary = pub.vocabulary;
         S.imageCredits = pub.imageCredits;
       }
     }

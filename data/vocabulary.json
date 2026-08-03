@@ -1,0 +1,118 @@
+{
+  "intro": "El búlgar s'escriu en ciríl·lic i gairebé ningú parla castellà. Amb quatre paraules ben dites, però, la gent es desfà en somriures i us tractaran molt millor. Aquestes són les que realment fan servei.",
+  "warning": "⚠️ Compte amb el cap! A Bulgària el gest de dir «sí» i «no» està invertit: assentir amunt i avall sol voler dir NO, i moure el cap de banda a banda vol dir SÍ. Davant d'un dubte, digueu-ho en veu alta: «da» (sí) o «ne» (no).",
+  "groups": [
+    {
+      "icon": "👋",
+      "title": "Les imprescindibles",
+      "items": [
+        { "cyrillic": "Здравейте", "transliteration": "zdra-VÉI-te", "catalan": "Hola (formal, a botigues i hotels)" },
+        { "cyrillic": "Здравей", "transliteration": "zdra-VÉI", "catalan": "Hola (informal)" },
+        { "cyrillic": "Благодаря", "transliteration": "bla-go-da-RIÀ", "catalan": "Gràcies" },
+        { "cyrillic": "Мерси", "transliteration": "mer-SÍ", "catalan": "Gràcies (col·loquial, molt usat)" },
+        { "cyrillic": "Моля", "transliteration": "MO-lia", "catalan": "Si us plau / De res" },
+        { "cyrillic": "Да", "transliteration": "da", "catalan": "Sí" },
+        { "cyrillic": "Не", "transliteration": "ne", "catalan": "No" },
+        { "cyrillic": "Извинете", "transliteration": "iz-vi-NÉ-te", "catalan": "Perdoni / Disculpi" },
+        { "cyrillic": "Съжалявам", "transliteration": "sa-zha-LIÀ-vam", "catalan": "Ho sento" },
+        { "cyrillic": "Довиждане", "transliteration": "do-VIZH-da-ne", "catalan": "Adéu" },
+        { "cyrillic": "Чао", "transliteration": "txao", "catalan": "Adéu (informal)" },
+        { "cyrillic": "Наздраве!", "transliteration": "NAZ-dra-ve", "catalan": "Salut! (per brindar)" }
+      ]
+    },
+    {
+      "icon": "🗣️",
+      "title": "Fer-se entendre",
+      "items": [
+        { "cyrillic": "Говорите ли английски?", "transliteration": "go-VO-ri-te li an-GLÍI-ski", "catalan": "Parleu anglès?" },
+        { "cyrillic": "Не говоря български", "transliteration": "ne go-VO-ria BAL-gar-ski", "catalan": "No parlo búlgar" },
+        { "cyrillic": "Не разбирам", "transliteration": "ne raz-BÍ-ram", "catalan": "No ho entenc" },
+        { "cyrillic": "Разбирам", "transliteration": "raz-BÍ-ram", "catalan": "Ho entenc" },
+        { "cyrillic": "По-бавно, моля", "transliteration": "po-BAV-no MO-lia", "catalan": "Més a poc a poc, si us plau" },
+        { "cyrillic": "Можете ли да повторите?", "transliteration": "MO-zhe-te li da pov-TO-ri-te", "catalan": "Ho pot repetir?" },
+        { "cyrillic": "Как се казва това?", "transliteration": "kak se KAZ-va to-VÀ", "catalan": "Com es diu això?" },
+        { "cyrillic": "Аз се казвам…", "transliteration": "az se KAZ-vam…", "catalan": "Em dic…" },
+        { "cyrillic": "Как сте?", "transliteration": "kak ste", "catalan": "Com esteu?" },
+        { "cyrillic": "Добре съм", "transliteration": "do-BRÉ sam", "catalan": "Estic bé" }
+      ]
+    },
+    {
+      "icon": "🧭",
+      "title": "Moure's i orientar-se",
+      "items": [
+        { "cyrillic": "Къде е…?", "transliteration": "ka-DÉ e…", "catalan": "On és…?" },
+        { "cyrillic": "Колко е далеч?", "transliteration": "KOL-ko e da-LÉTX", "catalan": "Que lluny és?" },
+        { "cyrillic": "Наляво", "transliteration": "na-LIÀ-vo", "catalan": "A l'esquerra" },
+        { "cyrillic": "Надясно", "transliteration": "na-DIÀS-no", "catalan": "A la dreta" },
+        { "cyrillic": "Направо", "transliteration": "na-PRÀ-vo", "catalan": "Tot recte" },
+        { "cyrillic": "Тук / Там", "transliteration": "tuk / tam", "catalan": "Aquí / Allà" },
+        { "cyrillic": "Тоалетна", "transliteration": "to-a-LÉT-na", "catalan": "Lavabo" },
+        { "cyrillic": "Вход / Изход", "transliteration": "vhod / IZ-hod", "catalan": "Entrada / Sortida" },
+        { "cyrillic": "Отворено / Затворено", "transliteration": "ot-VO-re-no / zat-VO-re-no", "catalan": "Obert / Tancat" },
+        { "cyrillic": "Бензиностанция", "transliteration": "ben-zi-no-STAN-tsi-ia", "catalan": "Gasolinera" },
+        { "cyrillic": "Паркинг", "transliteration": "PAR-king", "catalan": "Aparcament" },
+        { "cyrillic": "Гара / Автогара", "transliteration": "GA-ra / AV-to-ga-ra", "catalan": "Estació de tren / d'autobusos" },
+        { "cyrillic": "Летище", "transliteration": "le-TÍSH-te", "catalan": "Aeroport" }
+      ]
+    },
+    {
+      "icon": "💳",
+      "title": "Comprar i pagar",
+      "items": [
+        { "cyrillic": "Колко струва?", "transliteration": "KOL-ko STRÚ-va", "catalan": "Quant costa?" },
+        { "cyrillic": "Скъпо е", "transliteration": "SKA-po e", "catalan": "És car" },
+        { "cyrillic": "Имате ли…?", "transliteration": "Í-ma-te li…", "catalan": "Teniu…?" },
+        { "cyrillic": "Само гледам", "transliteration": "SA-mo GLÉ-dam", "catalan": "Només estic mirant" },
+        { "cyrillic": "В брой", "transliteration": "v broi", "catalan": "En efectiu" },
+        { "cyrillic": "С карта", "transliteration": "s KAR-ta", "catalan": "Amb targeta" },
+        { "cyrillic": "Банкомат", "transliteration": "ban-ko-MAT", "catalan": "Caixer automàtic" },
+        { "cyrillic": "Аптека", "transliteration": "ap-TÉ-ka", "catalan": "Farmàcia" },
+        { "cyrillic": "Магазин", "transliteration": "ma-ga-ZÍN", "catalan": "Botiga" },
+        { "cyrillic": "Пазар", "transliteration": "pa-ZAR", "catalan": "Mercat" }
+      ]
+    },
+    {
+      "icon": "🏔️",
+      "title": "Muntanya i excursions",
+      "items": [
+        { "cyrillic": "Планина", "transliteration": "pla-ni-NÀ", "catalan": "Muntanya" },
+        { "cyrillic": "Хижа", "transliteration": "HÍ-zha", "catalan": "Refugi de muntanya" },
+        { "cyrillic": "Езеро", "transliteration": "É-ze-ro", "catalan": "Llac" },
+        { "cyrillic": "Връх", "transliteration": "vrah", "catalan": "Cim" },
+        { "cyrillic": "Пътека", "transliteration": "pa-TÉ-ka", "catalan": "Sender" },
+        { "cyrillic": "Лифт", "transliteration": "lift", "catalan": "Telecadira / telefèric" },
+        { "cyrillic": "Внимание", "transliteration": "vni-MÀ-ni-e", "catalan": "Atenció / Compte" },
+        { "cyrillic": "Опасно", "transliteration": "o-PÀS-no", "catalan": "Perillós" },
+        { "cyrillic": "Вода", "transliteration": "vo-DÀ", "catalan": "Aigua" }
+      ]
+    },
+    {
+      "icon": "🆘",
+      "title": "Emergències i salut",
+      "items": [
+        { "cyrillic": "Помощ!", "transliteration": "PO-mosht", "catalan": "Ajuda!" },
+        { "cyrillic": "Спешен случай", "transliteration": "SPÉ-shen SLÚ-txai", "catalan": "Emergència" },
+        { "cyrillic": "Извикайте лекар!", "transliteration": "iz-VÍ-kai-te LÉ-kar", "catalan": "Truqueu un metge!" },
+        { "cyrillic": "Болница", "transliteration": "BOL-ni-tsa", "catalan": "Hospital" },
+        { "cyrillic": "Полиция", "transliteration": "po-LÍ-tsi-ia", "catalan": "Policia" },
+        { "cyrillic": "Загубих се", "transliteration": "za-GÚ-bih se", "catalan": "M'he perdut" },
+        { "cyrillic": "Боли ме…", "transliteration": "bo-LÍ me…", "catalan": "Em fa mal…" },
+        { "cyrillic": "Имам алергия", "transliteration": "Í-mam a-ler-GÍ-ia", "catalan": "Tinc al·lèrgia" },
+        { "cyrillic": "Спешен номер: 112", "transliteration": "—", "catalan": "Número d'emergències (com a tota la UE)" }
+      ]
+    },
+    {
+      "icon": "🔢",
+      "title": "Números i temps",
+      "items": [
+        { "cyrillic": "едно · две · три", "transliteration": "ed-NÓ · dve · tri", "catalan": "1 · 2 · 3" },
+        { "cyrillic": "четири · пет · шест", "transliteration": "TXÉ-ti-ri · pet · shest", "catalan": "4 · 5 · 6" },
+        { "cyrillic": "седем · осем · девет", "transliteration": "SÉ-dem · O-sem · DÉ-vet", "catalan": "7 · 8 · 9" },
+        { "cyrillic": "десет · сто · хиляда", "transliteration": "DÉ-set · sto · hi-LIÀ-da", "catalan": "10 · 100 · 1000" },
+        { "cyrillic": "лев / лева", "transliteration": "lev / le-VÀ", "catalan": "Lev / levs (la moneda)" },
+        { "cyrillic": "Колко е часът?", "transliteration": "KOL-ko e txa-SÀT", "catalan": "Quina hora és?" },
+        { "cyrillic": "днес · утре · вчера", "transliteration": "dnes · Ú-tre · VTXÉ-ra", "catalan": "avui · demà · ahir" }
+      ]
+    }
+  ]
+}

@@ -41,18 +41,34 @@ function saveJSON(file, data) {
 if (!fs.existsSync(SECRET_FILE)) saveJSON(SECRET_FILE, crypto.randomBytes(32).toString("hex"));
 const SECRET = loadJSON(SECRET_FILE, "");
 
+const DEFAULT_USERS = {
+  lorena: { displayName: "Lorena", emoji: "🌻", password: hashPassword("lorenamorena") },
+  adria: { displayName: "Adrià", emoji: "🌊", password: hashPassword("adrianocapitano") }
+};
+
 if (!fs.existsSync(USERS_FILE)) {
-  saveJSON(USERS_FILE, {
-    viatger1: { displayName: "Viatger 1", emoji: "🌻", password: hashPassword("rila2026") },
-    viatger2: { displayName: "Viatger 2", emoji: "🌊", password: hashPassword("pirin2026") }
-  });
-  console.log("Creat data/users.json amb els usuaris per defecte (viatger1 / viatger2).");
+  saveJSON(USERS_FILE, DEFAULT_USERS);
+  console.log("Creat data/users.json amb els usuaris per defecte (lorena / adria).");
 }
 
 const users = loadJSON(USERS_FILE, {});
+
+// Els comptes es deien viatger1/viatger2: renombra'ls conservant les dades.
+const RENAMED = { viatger1: "lorena", viatger2: "adria" };
+let usersChanged = false;
+for (const [oldName, newName] of Object.entries(RENAMED)) {
+  if (users[oldName] && !users[newName]) {
+    users[newName] = { ...DEFAULT_USERS[newName] };
+    delete users[oldName];
+    usersChanged = true;
+    console.log(`Usuari "${oldName}" renombrat a "${newName}".`);
+  }
+}
+if (usersChanged) saveJSON(USERS_FILE, users);
 const itinerary = loadJSON(path.join(DATA_DIR, "itinerary.json"), { trip: {}, days: [] });
 const travelGuide = loadJSON(path.join(DATA_DIR, "travel-guide.json"), { days: {} });
 const foodPassport = loadJSON(path.join(DATA_DIR, "food-ca.json"), null);
+const vocabulary = loadJSON(path.join(DATA_DIR, "vocabulary.json"), null);
 const imageCredits = loadJSON(path.join(DATA_DIR, "image-credits.json"), {});
 
 // ---------- base de dades ----------
@@ -85,6 +101,14 @@ db.exec(`
     by_user TEXT NOT NULL, at TEXT NOT NULL
   );
 `);
+
+// Reassigna les dades ja guardades als comptes renombrats.
+for (const [oldName, newName] of Object.entries(RENAMED)) {
+  db.prepare("UPDATE diary SET user=? WHERE user=?").run(newName, oldName);
+  db.prepare("UPDATE OR REPLACE food SET user=? WHERE user=?").run(newName, oldName);
+  db.prepare("UPDATE checks SET by_user=? WHERE by_user=?").run(newName, oldName);
+  db.prepare("UPDATE custom_activities SET by_user=? WHERE by_user=?").run(newName, oldName);
+}
 
 // Migració única des de l'antic store.json
 if (fs.existsSync(LEGACY_STORE) && !fs.existsSync(DB_FILE + ".migrated")) {
@@ -188,7 +212,7 @@ app.post("/api/logout", (_req, res) => {
 
 const contentPayload = () => ({
   users: Object.keys(users).map(publicUser),
-  itinerary, travelGuide, foodPassport, imageCredits
+  itinerary, travelGuide, foodPassport, vocabulary, imageCredits
 });
 
 app.get("/api/public", (_req, res) => res.json(contentPayload()));

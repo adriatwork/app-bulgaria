@@ -1,14 +1,14 @@
 {
-  "viatger1": {
-    "displayName": "Viatger 1",
+  "lorena": {
+    "displayName": "Lorena",
     "emoji": "🌻",
-    "salt": "0c5c43f4ee19e5abe6d462987371f23f",
-    "hash": "f968c780e907f6041462c90fc10939a5d25c656c345f134acc39c248f5b7a5a8"
+    "salt": "cba7bb3166f0e31c9edd43cf0ccddc75",
+    "hash": "c4086220177dfc58f116301a32cd38495b33403db8f8dbc5332d3b317280ea57"
   },
-  "viatger2": {
-    "displayName": "Viatger 2",
+  "adria": {
+    "displayName": "Adrià",
     "emoji": "🌊",
-    "salt": "f76bb2c7a1d1e0245854dd17252456ab",
-    "hash": "2161b9ad495be74b5177380e8461b705f37f973f7e0ba98b6bf959f68c8ccc31"
+    "salt": "00aaf1cc29ae07ef3fcfff11a6f1cb10",
+    "hash": "fc76218b8a7ad70db623474c26240f60163ed718f232459e3c4a37fce4898c95"
   }
 }
